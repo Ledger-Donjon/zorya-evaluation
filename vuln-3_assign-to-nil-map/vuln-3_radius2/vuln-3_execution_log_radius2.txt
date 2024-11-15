@@ -3738,3 +3738,4 @@ xxx@xxx:~/$ radius2 -a 0x2036ee -v -p /xxx/tools/pcode-generator/tests/tinygo_as
 0x00202455      syscall                                  |  rax,()
 0x00202457      ret                                      |  rsp,[8],rip,=,8,rsp,+=
 0x00202483      mov rax, qword fs:[0]                    |  0,[8],rax,=
+xxx@xxx:~/$

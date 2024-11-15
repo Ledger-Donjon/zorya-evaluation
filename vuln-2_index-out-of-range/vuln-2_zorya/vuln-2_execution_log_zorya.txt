@@ -28,7 +28,7 @@ Initializing memory...
 
 Configuration and context have been initialized.
 Acquired target information.
-Binary path: /home/kgorna/Documents/tools/pcode-generator/tests/tinygo_index-out-of-range/tinygo_index-out-of-range
+Binary path: /xxx/pcode-generator/tests/tinygo_index-out-of-range/tinygo_index-out-of-range
 Python script executed successfully
 Python script output:
 

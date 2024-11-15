@@ -28,7 +28,7 @@ Initializing memory...
 
 Configuration and context have been initialized.
 Acquired target information.
-Binary path: /home/kgorna/Documents/tools/pcode-generator/tests/tinygo_assign-to-nil-map/tinygo_assign-to-nil-map
+Binary path: /xxx/pcode-generator/tests/tinygo_assign-to-nil-map/tinygo_assign-to-nil-map
 Python script executed successfully
 Python script output:
 

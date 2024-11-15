@@ -28,7 +28,7 @@ Initializing memory...
 
 Configuration and context have been initialized.
 Acquired target information.
-Binary path: /home/kgorna/Documents/tools/pcode-generator/tests/additiongo-tinygo_ptr-deref/additiongo-tinygo_ptr-deref
+Binary path: /xxx/pcode-generator/tests/additiongo-tinygo_ptr-deref/additiongo-tinygo_ptr-deref
 Python script executed successfully
 Python script output:
 
