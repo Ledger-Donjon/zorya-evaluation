@@ -241,4 +241,5 @@ EXECUTING INSTRUCTIONS AT ADDRESS: 0x203b6d
 -------> Processing instruction at index: 0, Inst { opcode: Copy, output: Some(Varnode { var: Unique(0xf000), size: Quad }), inputs: [Varnode { var: Register(0, Quad), size: Quad }] }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Attempt to execute 'runtime.nilPanic' detected at address 0x203b6d.
+You are trying to dereference a nil pointer.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

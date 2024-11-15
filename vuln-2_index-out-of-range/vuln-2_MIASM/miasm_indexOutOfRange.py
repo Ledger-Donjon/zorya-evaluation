@@ -3,13 +3,13 @@ from miasm.analysis.binary import Container
 from miasm.analysis.machine import Machine
 from miasm.core.locationdb import LocationDB
 from miasm.ir.symbexec import SymbolicExecutionEngine
-from miasm.expression.expression import ExprInt, ExprMem
+from miasm.expression.expression import ExprInt, ExprMem, ExprOp
 from miasm.core.asmblock import AsmCFG
 from miasm.ir.ir import IRCFG
 from future.utils import viewvalues
 
-binary_path = "/xxx/pcode-generator/tests/additiongo-tinygo_ptr-deref/additiongo-tinygo_ptr-deref"
-main_address = 0x2040d4
+binary_path = "/xxx/pcode-generator/tests/tinygo_index-out-of-range/tinygo_index-out-of-range"
+main_address = 0x203685
 
 def disassemble_and_execute_following_calls(machine, mdis, start_addr, follow_calls=True):
     """
@@ -60,6 +60,39 @@ def disassemble_and_execute_following_calls(machine, mdis, start_addr, follow_ca
 
     return ircfg_map
 
+def detect_index_out_of_bounds(ircfg_map):
+    """
+    Analyze the IRCFG to detect index out-of-bounds issues.
+    """
+    iob_violations = []
+
+    for addr, ircfg in ircfg_map.items():
+        for lbl, irblock in ircfg.blocks.items():
+            for assignblk in irblock:
+                written_elements = assignblk.get_w()
+                read_elements = assignblk.get_r()
+
+                # Check for out-of-bounds index on slices
+                for src in read_elements:
+                    if isinstance(src, ExprMem) and isinstance(src.ptr, ExprOp):
+                        op = src.ptr
+
+                        # Handle binary operations (e.g., addition)
+                        if op.op == "+" and len(op.args) == 2:
+                            base, offset = op.args
+                            if isinstance(base, ExprInt) and isinstance(offset, ExprInt):
+                                slice_size = base.arg
+                                index = offset.arg
+                                if index >= slice_size:
+                                    iob_violations.append((lbl, assignblk))
+                                    print(f"Index out of bounds detected at block {lbl}, instruction: {assignblk}")
+
+                        # Fallback: Warn for unsupported complex operations
+                        else:
+                            print(f"Complex operation detected at block {lbl}, instruction: {assignblk}. Skipping for now.")
+
+    return iob_violations
+
 
 def main():
     loc_db = LocationDB()
@@ -73,27 +106,16 @@ def main():
     mdis = machine.dis_engine(container.bin_stream, loc_db=loc_db)
     ircfg_map = disassemble_and_execute_following_calls(machine, mdis, main_address)
 
-    # Nil dereference check
-    nil_dereferences = []
-    for addr, ircfg in ircfg_map.items():
-        for lbl, irblock in ircfg.blocks.items():
-            for assignblk in irblock:
-                # Check for nil dereferences
-                written_elements = assignblk.get_w()
-                for dst in written_elements:
-                    if isinstance(dst, ExprMem) and isinstance(dst.ptr, ExprInt):
-                        addr = dst.ptr
-                        if addr == ExprInt(0, addr.size):
-                            nil_dereferences.append((lbl, assignblk))
-                            print(f"Nil dereference detected at block {lbl}, instruction: {assignblk}")
+    # Detect index out-of-bounds
+    iob_violations = detect_index_out_of_bounds(ircfg_map)
 
-    if not nil_dereferences:
-        print("No nil dereferences detected.")
+    if not iob_violations:
+        print("No index out-of-bounds issues detected.")
     else:
-        print(f"Detected {len(nil_dereferences)} potential nil dereferences.")
-        for lbl, assignblk in nil_dereferences:
+        print(f"Detected {len(iob_violations)} potential index out-of-bounds issues.")
+        for lbl, assignblk in iob_violations:
             print(f"Block: {lbl}, Instruction: {assignblk}")
-    
+
 
 if __name__ == "__main__":
     main()

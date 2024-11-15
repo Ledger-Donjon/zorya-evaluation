@@ -1,3 +1,5 @@
+xxx@xxx:~/$ radius2 -a 0x2040d4 -p /home/xxx/Documents/tools/pcode-generator/tests/additiongo-tinygo_ptr-deref/additiongo-tinygo_ptr-deref --crash
+
 xxx@xxx:~/$ radius2 -a 0x2040d4 -v -p /home/xxx/Documents/tools/pcode-generator/tests/additiongo-tinygo_ptr-deref/additiongo-tinygo_ptr-deref --crash
 0x002040d4      push rax                                 |  rax,8,rsp,-,=[8],8,rsp,-=
 0x002040d5      call sym.runtime.nilPanic                |  2112365,rip,8,rsp,-=,rsp,=[8],rip,=
