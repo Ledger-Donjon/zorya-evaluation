@@ -1,0 +1,244 @@
+Initializing State...
+
+Initializing mock CPU state...
+
+Uploading dumps to CPU registers...
+
+CPU state initialized.
+ : Mutex { data: CpuState { registers: {0: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x0000000000000000) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 8: CpuConcolicValue { concrete: Int(2107137), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x0000000000202701) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 16: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x0000000000000000) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 24: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x0000000000000000) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 32: CpuConcolicValue { concrete: Int(140736280432392), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x00007fffb8008f08) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 40: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x0000000000000000) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 48: CpuConcolicValue { concrete: Int(140736280432408), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x00007fffb8008f18) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 56: CpuConcolicValue { concrete: Int(2), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x0000000000000002) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 128: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x0000000000000000) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 136: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x0000000000000000) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 144: CpuConcolicValue { concrete: Int(8), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x0000000000000008) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 152: CpuConcolicValue { concrete: Int(582), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x0000000000000246) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 160: CpuConcolicValue { concrete: Int(2112650), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x0000000000203c8a) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 168: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x0000000000000000) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 176: CpuConcolicValue { concrete: Int(140736280432408), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x00007fffb8008f18) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 184: CpuConcolicValue { concrete: Int(2113749), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x00000000002040d5) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 256: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x0000 #x0000) (bvshl ((_ zero_extend 0) #x0000) #x0000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 258: CpuConcolicValue { concrete: Int(51), symbolic: Int((bvor (bvand #x0000 #x0000) (bvshl ((_ zero_extend 0) #x0033) #x0000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 260: CpuConcolicValue { concrete: Int(43), symbolic: Int((bvor (bvand #x0000 #x0000) (bvshl ((_ zero_extend 0) #x002b) #x0000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 262: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x0000 #x0000) (bvshl ((_ zero_extend 0) #x0000) #x0000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 264: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x0000 #x0000) (bvshl ((_ zero_extend 0) #x0000) #x0000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 266: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x0000 #x0000) (bvshl ((_ zero_extend 0) #x0000) #x0000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 272: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 280: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 512: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x00 #x00) (bvshl ((_ zero_extend 0) #x00) #x00))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 513: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x00), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 514: CpuConcolicValue { concrete: Int(1), symbolic: Int((bvor (bvand #x00 #x00) (bvshl ((_ zero_extend 0) #x01) #x00))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 515: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x00), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 516: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x00), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 517: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x00), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 518: CpuConcolicValue { concrete: Int(1), symbolic: Int((bvor (bvand #x00 #x00) (bvshl ((_ zero_extend 0) #x01) #x00))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 519: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x00 #x00) (bvshl ((_ zero_extend 0) #x00) #x00))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 520: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x00 #x00) (bvshl ((_ zero_extend 0) #x00) #x00))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 521: CpuConcolicValue { concrete: Int(1), symbolic: Int((bvor (bvand #x00 #x00) (bvshl ((_ zero_extend 0) #x01) #x00))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 522: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x00 #x00) (bvshl ((_ zero_extend 0) #x00) #x00))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 523: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x00 #x00) (bvshl ((_ zero_extend 0) #x00) #x00))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 524: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x0000 #x00ff) (bvshl ((_ zero_extend 8) #x00) #x0008))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 525: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x00), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 526: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x00), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 527: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x00 #x00) (bvshl ((_ zero_extend 0) #x00) #x00))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 528: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x00), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 529: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x00 #x00) (bvshl ((_ zero_extend 0) #x00) #x00))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 530: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x00), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 531: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x00), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 532: CpuConcolicValue { concrete: Int(0), symbolic: Int((bvor (bvand #x00 #x00) (bvshl ((_ zero_extend 0) #x00) #x00))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 648: CpuConcolicValue { concrete: Int(2107137), symbolic: Int((bvor (bvand #x0000000000000000 #x0000000000000000)
+      (bvshl ((_ zero_extend 0) #x0000000000202701) #x0000000000000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 768: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 776: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 784: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 792: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 800: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 808: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 816: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 824: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 896: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 912: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 920: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 928: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 960: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 1536: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 1792: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 1800: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 1808: CpuConcolicValue { concrete: Int(0), symbolic: Int(#x0000000000000000), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 1856: CpuConcolicValue { concrete: LargeInt([0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 1872: CpuConcolicValue { concrete: LargeInt([0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 1888: CpuConcolicValue { concrete: LargeInt([0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 1904: CpuConcolicValue { concrete: LargeInt([0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 4244: CpuConcolicValue { concrete: Int(8064), symbolic: Int((bvor (bvand #x00000000 #x00000000)
+      (bvshl ((_ zero_extend 0) #x00001f80) #x00000000))), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 4608: CpuConcolicValue { concrete: LargeInt([0, 0, 0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000, #x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 4640: CpuConcolicValue { concrete: LargeInt([0, 0, 0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000, #x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 4672: CpuConcolicValue { concrete: LargeInt([0, 0, 0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000, #x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 4704: CpuConcolicValue { concrete: LargeInt([0, 0, 0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000, #x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 4736: CpuConcolicValue { concrete: LargeInt([0, 0, 0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000, #x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 4768: CpuConcolicValue { concrete: LargeInt([0, 0, 0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000, #x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 4800: CpuConcolicValue { concrete: LargeInt([0, 0, 0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000, #x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 4832: CpuConcolicValue { concrete: LargeInt([0, 0, 0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000, #x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 4864: CpuConcolicValue { concrete: LargeInt([0, 0, 0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000, #x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 4896: CpuConcolicValue { concrete: LargeInt([0, 0, 0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000, #x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 4928: CpuConcolicValue { concrete: LargeInt([0, 0, 0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000, #x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 4960: CpuConcolicValue { concrete: LargeInt([0, 0, 0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000, #x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 4992: CpuConcolicValue { concrete: LargeInt([0, 0, 0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000, #x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 5024: CpuConcolicValue { concrete: LargeInt([0, 0, 0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000, #x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 5056: CpuConcolicValue { concrete: LargeInt([0, 0, 0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000, #x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 5088: CpuConcolicValue { concrete: LargeInt([0, 0, 0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000, #x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 5120: CpuConcolicValue { concrete: LargeInt([0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }, 5136: CpuConcolicValue { concrete: LargeInt([0, 0]), symbolic: LargeInt([#x0000000000000000, #x0000000000000000]), ctx: Context { z3_ctx: 0x575f2ef161d8 } }}, register_map: {0: ("RAX", 64), 8: ("RCX", 64), 16: ("RDX", 64), 24: ("RBX", 64), 32: ("RSP", 64), 40: ("RBP", 64), 48: ("RSI", 64), 56: ("RDI", 64), 128: ("R8", 64), 136: ("R9", 64), 144: ("R10", 64), 152: ("R11", 64), 160: ("R12", 64), 168: ("R13", 64), 176: ("R14", 64), 184: ("R15", 64), 256: ("ES", 16), 258: ("CS", 16), 260: ("SS", 16), 262: ("DS", 16), 264: ("FS", 16), 266: ("GS", 16), 272: ("FS_OFFSET", 64), 280: ("GS_OFFSET", 64), 512: ("CF", 8), 513: ("F1", 8), 514: ("PF", 8), 515: ("F3", 8), 516: ("AF", 8), 517: ("F5", 8), 518: ("ZF", 8), 519: ("SF", 8), 520: ("TF", 8), 521: ("IF", 8), 522: ("DF", 8), 523: ("OF", 8), 524: ("IOPL", 16), 525: ("NT", 8), 526: ("F15", 8), 527: ("RF", 8), 528: ("VM", 8), 529: ("AC", 8), 530: ("VIF", 8), 531: ("VIP", 8), 532: ("ID", 8), 648: ("RIP", 64), 768: ("DR0", 64), 776: ("DR1", 64), 784: ("DR2", 64), 792: ("DR3", 64), 800: ("DR4", 64), 808: ("DR5", 64), 816: ("DR6", 64), 824: ("DR7", 64), 896: ("CR0", 64), 912: ("CR2", 64), 920: ("CR3", 64), 928: ("CR4", 64), 960: ("CR8", 64), 1536: ("XCR0", 64), 1792: ("BNDCFGS", 64), 1800: ("BNDCFGU", 64), 1808: ("BNDSTATUS", 64), 1856: ("BND0", 128), 1872: ("BND1", 128), 1888: ("BND2", 128), 1904: ("BND3", 128), 4244: ("MXCSR", 32), 4608: ("YMM0", 256), 4640: ("YMM1", 256), 4672: ("YMM2", 256), 4704: ("YMM3", 256), 4736: ("YMM4", 256), 4768: ("YMM5", 256), 4800: ("YMM6", 256), 4832: ("YMM7", 256), 4864: ("YMM8", 256), 4896: ("YMM9", 256), 4928: ("YMM10", 256), 4960: ("YMM11", 256), 4992: ("YMM12", 256), 5024: ("YMM13", 256), 5056: ("YMM14", 256), 5088: ("YMM15", 256), 5120: ("xmmTmp1", 128), 5136: ("xmmTmp2", 128)}, ctx: Context { z3_ctx: 0x575f2ef161d8 } }, poisoned: false, .. }
+Initializing memory...
+
+Configuration and context have been initialized.
+Acquired target information.
+Binary path: /home/kgorna/Documents/tools/pcode-generator/tests/additiongo-tinygo_ptr-deref/additiongo-tinygo_ptr-deref
+Python script executed successfully
+Python script output:
+
+Symbol table has been populated:{"20208e": "_start_c", "2020b1": "_init", "2020b2": "__init_ssp", "2020b3": "__init_libc", "202222": "__libc_start_init", "20224e": "__libc_start_main", "202283": "libc_start_main_stage2", "2022b4": "__init_tp", "20231d": "__copy_tls", "20239e": "__init_tls", "202508": "abort", "202586": "_Exit", "20259a": "__stdio_exit", "20259b": "__libc_exit_fini", "2025ce": "exit", "2025e9": "__vm_wait", "2025ea": "mmap64", "202698": "__errno_location", "2026a6": "__syscall_ret", "2026c4": "__block_all_sigs", "2026da": "__block_app_sigs", "2026f0": "__restore_sigs", "202702": "raise", "202752": "__libc_sigaction", "202863": "sigaction", "2028e0": "__restore_rt", "2028e1": "memcpy", "202b2b": "memset", "202bfc": "strlen", "202c70": "__set_thread_area", "202c80": "__lock", "202d21": "__unlock", "202d57": "clock_gettime", "202dd4": "cgt_init", "202e1e": "__vdsosym", "20302a": "strcmp", "203046": "write", "20306c": "__syscall_cp_c", "203089": "__syscall_cp", "20308e": "memmove", "20316f": "tinygo_pause", "2031bf": "internal/task.start", "203245": "runtime.alloc", "203546": "runtime.runtimePanicAt", "20358f": "runtime.growHeap", "20361d": "runtime.printstring.llvm.11594978594701254684", "20364c": "runtime.printptr.llvm.11594978594701254684", "2036aa": "runtime.printnl.llvm.11594978594701254684", "2036b2": "runtime.runtimePanic", "2036c3": "runtime.putchar.llvm.11594978594701254684", "2036d9": "runtime.calculateHeapAddresses", "203714": "runtime.markRoots", "203739": "runtime.markRoot", "203795": "(runtime.gcBlock).markFree", "2037b0": "(runtime.gcBlock).findHead", "2037e5": "runtime.startMark", "203b5a": "runtime.lookupPanic", "203b6d": "runtime.nilPanic", "203b80": "runtime.slicePanic", "203b93": "runtime.initHeap", "203bb2": "tinygo_scanstack", "203bcc": "main", "203bf7": "runtime.preinit", "203c74": "runtime.runMain", "203c7a": "runtime.run", "203c8a": "runtime.run$1$gowrapper", "203c90": "runtime.scheduler", "203ce0": "runtime.waitForEvents", "203cee": "runtime.run$1", "203cf9": "runtime.initAll", "203f49": "tinygo_handle_fatal_signal", "20403b": "runtime.sliceAppend", "2040d4": "main.main", "2040da": "tinygo_register_fatal_signals", "20413d": "signal_handler.llvm.4838524226180608589"}
+Preprocessing the p-code file...
+Completed preprocessing.
+Logging the addresses of the XREFs of Panic functions...
+Read panic address: 0x2036be
+Read panic address: 0x203b68
+Read panic address: 0x203b7b
+Read panic address: 0x203b8e
+Read panic address: 0x203541
+Read panic address: 0x2031ba
+Read panic address: 0x203c54
+Read panic address: 0x203ce9
+Read panic address: 0x203f3f
+Read panic address: 0x203b55
+Read panic address: 0x2031ad
+Read panic address: 0x20352f
+Read panic address: 0x203f3a
+Read panic address: 0x2040d5
+Read panic address: 0x203f44
+Beginning execution from address: 0x2040d4
+*******************************************
+EXECUTING INSTRUCTIONS AT ADDRESS: 0x2040d4
+*******************************************
+-------> Processing instruction at index: 0, Inst { opcode: Copy, output: Some(Varnode { var: Unique(0xf000), size: Quad }), inputs: [Varnode { var: Register(0, Quad), size: Quad }] }
+* Fetching branch target from instruction.input[0]
+Converting Varnode to concolic type: Register(0, Quad)
+Varnode is a CPU register with offset: 0x0 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x0
+Output size in bits: 64
+Output is a Unique type
+Content of output "Unique(0xf000)" after copying: Int(0)
+The value of register at offset 0x0 - RAX is 0
+The value of register at offset 0x8 - RCX is 202701
+The value of register at offset 0x10 - RDX is 0
+The value of register at offset 0x18 - RBX is 0
+The value of register at offset 0x20 - RSP is 7fffb8008f08
+The value of register at offset 0x28 - RBP is 0
+The value of register at offset 0x30 - RSI is 7fffb8008f18
+The value of register at offset 0x38 - RDI is 2
+The value of register at offset 0x98 - R11 is 246
+The value of register at offset 0xa0 - R12 is 203c8a
+The value of register at offset 0xb0 - R14 is 7fffb8008f18
+The value of register at offset 0x1200 - YMM0 is LargeInt([0, 0, 0, 0]), i.e. when formatted 0000000000000000000000000000000000000000000000000000000000000000
+The value of register at offset 0x200 - CF is 0
+The value of register at offset 0x202 - PF is 1
+The value of register at offset 0x206 - ZF is 1
+The value of register at offset 0x207 - SF is 0
+The value of register at offset 0x20b - OF is 0
+The value of register at offset 0x110 - FS_OFFSET is 0
+-------> Processing instruction at index: 1, Inst { opcode: IntSub, output: Some(Varnode { var: Register(20, Quad), size: Quad }), inputs: [Varnode { var: Register(20, Quad), size: Quad }, Varnode { var: Const(0x8), size: Quad }] }
+* Fetching instruction.input[0] for INT_SUB
+Converting Varnode to concolic type: Register(20, Quad)
+Varnode is a CPU register with offset: 0x20 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x20
+* Fetching instruction.input[1] for INT_SUB
+Converting Varnode to concolic type: Const(0x8)
+Varnode is a constant with value: 0x8
+Parsed value: 8
+Constant treated as memory value: 8 with symbolic size 64
+Output size in bits: 64
+*** The result of INT_SUB is: 140736280432384
+
+Output is a Register type
+Updated register at offset 0x20 with value 0x7fffb8008f00, size 64 bits
+The value of register at offset 0x0 - RAX is 0
+The value of register at offset 0x8 - RCX is 202701
+The value of register at offset 0x10 - RDX is 0
+The value of register at offset 0x18 - RBX is 0
+The value of register at offset 0x20 - RSP is 7fffb8008f00
+The value of register at offset 0x28 - RBP is 0
+The value of register at offset 0x30 - RSI is 7fffb8008f18
+The value of register at offset 0x38 - RDI is 2
+The value of register at offset 0x98 - R11 is 246
+The value of register at offset 0xa0 - R12 is 203c8a
+The value of register at offset 0xb0 - R14 is 7fffb8008f18
+The value of register at offset 0x1200 - YMM0 is LargeInt([0, 0, 0, 0]), i.e. when formatted 0000000000000000000000000000000000000000000000000000000000000000
+The value of register at offset 0x200 - CF is 0
+The value of register at offset 0x202 - PF is 1
+The value of register at offset 0x206 - ZF is 1
+The value of register at offset 0x207 - SF is 0
+The value of register at offset 0x20b - OF is 0
+The value of register at offset 0x110 - FS_OFFSET is 0
+-------> Processing instruction at index: 2, Inst { opcode: Store, output: None, inputs: [Varnode { var: MemoryRam, size: Quad }, Varnode { var: Register(20, Quad), size: Quad }, Varnode { var: Unique(0xf000), size: Quad }] }
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Register(20, Quad)
+Varnode is a CPU register with offset: 0x20 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x20
+Pointer offset concrete: 7fffb8008f00
+* Fetching data to store from instruction.input[2]
+Converting Varnode to concolic type: Unique(0xf000)
+Varnode is of type 'unique' with ID: f000
+Retrieved unique variable: Int(0) with symbolic size: 64
+Data size in bits: 64
+Stored value 0x0 to memory at address 0x7fffb8008f00
+The value of register at offset 0x0 - RAX is 0
+The value of register at offset 0x8 - RCX is 202701
+The value of register at offset 0x10 - RDX is 0
+The value of register at offset 0x18 - RBX is 0
+The value of register at offset 0x20 - RSP is 7fffb8008f00
+The value of register at offset 0x28 - RBP is 0
+The value of register at offset 0x30 - RSI is 7fffb8008f18
+The value of register at offset 0x38 - RDI is 2
+The value of register at offset 0x98 - R11 is 246
+The value of register at offset 0xa0 - R12 is 203c8a
+The value of register at offset 0xb0 - R14 is 7fffb8008f18
+The value of register at offset 0x1200 - YMM0 is LargeInt([0, 0, 0, 0]), i.e. when formatted 0000000000000000000000000000000000000000000000000000000000000000
+The value of register at offset 0x200 - CF is 0
+The value of register at offset 0x202 - PF is 1
+The value of register at offset 0x206 - ZF is 1
+The value of register at offset 0x207 - SF is 0
+The value of register at offset 0x20b - OF is 0
+The value of register at offset 0x110 - FS_OFFSET is 0
+Moving to next address block: 0x2040d5
+*******************************************
+EXECUTING INSTRUCTIONS AT ADDRESS: 0x2040d5
+*******************************************
+-------> Processing instruction at index: 0, Inst { opcode: IntSub, output: Some(Varnode { var: Register(20, Quad), size: Quad }), inputs: [Varnode { var: Register(20, Quad), size: Quad }, Varnode { var: Const(0x8), size: Quad }] }
+* Fetching instruction.input[0] for INT_SUB
+Converting Varnode to concolic type: Register(20, Quad)
+Varnode is a CPU register with offset: 0x20 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x20
+* Fetching instruction.input[1] for INT_SUB
+Converting Varnode to concolic type: Const(0x8)
+Varnode is a constant with value: 0x8
+Parsed value: 8
+Constant treated as memory value: 8 with symbolic size 64
+Output size in bits: 64
+*** The result of INT_SUB is: 140736280432376
+
+Output is a Register type
+Updated register at offset 0x20 with value 0x7fffb8008ef8, size 64 bits
+The value of register at offset 0x0 - RAX is 0
+The value of register at offset 0x8 - RCX is 202701
+The value of register at offset 0x10 - RDX is 0
+The value of register at offset 0x18 - RBX is 0
+The value of register at offset 0x20 - RSP is 7fffb8008ef8
+The value of register at offset 0x28 - RBP is 0
+The value of register at offset 0x30 - RSI is 7fffb8008f18
+The value of register at offset 0x38 - RDI is 2
+The value of register at offset 0x98 - R11 is 246
+The value of register at offset 0xa0 - R12 is 203c8a
+The value of register at offset 0xb0 - R14 is 7fffb8008f18
+The value of register at offset 0x1200 - YMM0 is LargeInt([0, 0, 0, 0]), i.e. when formatted 0000000000000000000000000000000000000000000000000000000000000000
+The value of register at offset 0x200 - CF is 0
+The value of register at offset 0x202 - PF is 1
+The value of register at offset 0x206 - ZF is 1
+The value of register at offset 0x207 - SF is 0
+The value of register at offset 0x20b - OF is 0
+The value of register at offset 0x110 - FS_OFFSET is 0
+-------> Processing instruction at index: 1, Inst { opcode: Store, output: None, inputs: [Varnode { var: MemoryRam, size: Quad }, Varnode { var: Register(20, Quad), size: Quad }, Varnode { var: Const(0x2040da), size: Quad }] }
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Register(20, Quad)
+Varnode is a CPU register with offset: 0x20 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x20
+Pointer offset concrete: 7fffb8008ef8
+* Fetching data to store from instruction.input[2]
+Converting Varnode to concolic type: Const(0x2040da)
+Varnode is a constant with value: 0x2040da
+Parsed value: 2113754
+Constant treated as memory value: 2113754 with symbolic size 64
+Data size in bits: 64
+Stored value 0x2040da to memory at address 0x7fffb8008ef8
+The value of register at offset 0x0 - RAX is 0
+The value of register at offset 0x8 - RCX is 202701
+The value of register at offset 0x10 - RDX is 0
+The value of register at offset 0x18 - RBX is 0
+The value of register at offset 0x20 - RSP is 7fffb8008ef8
+The value of register at offset 0x28 - RBP is 0
+The value of register at offset 0x30 - RSI is 7fffb8008f18
+The value of register at offset 0x38 - RDI is 2
+The value of register at offset 0x98 - R11 is 246
+The value of register at offset 0xa0 - R12 is 203c8a
+The value of register at offset 0xb0 - R14 is 7fffb8008f18
+The value of register at offset 0x1200 - YMM0 is LargeInt([0, 0, 0, 0]), i.e. when formatted 0000000000000000000000000000000000000000000000000000000000000000
+The value of register at offset 0x200 - CF is 0
+The value of register at offset 0x202 - PF is 1
+The value of register at offset 0x206 - ZF is 1
+The value of register at offset 0x207 - SF is 0
+The value of register at offset 0x20b - OF is 0
+The value of register at offset 0x110 - FS_OFFSET is 0
+-------> Processing instruction at index: 2, Inst { opcode: Call, output: None, inputs: [Varnode { var: Memory(0x203b6d), size: Quad }] }
+* Fetching data to store from instruction.input[0]
+Data to store is a constant with value: 0x203b6d
+Data to call: 203b6d
+The value of register at offset 0x0 - RAX is 0
+The value of register at offset 0x8 - RCX is 202701
+The value of register at offset 0x10 - RDX is 0
+The value of register at offset 0x18 - RBX is 0
+The value of register at offset 0x20 - RSP is 7fffb8008ef8
+The value of register at offset 0x28 - RBP is 0
+The value of register at offset 0x30 - RSI is 7fffb8008f18
+The value of register at offset 0x38 - RDI is 2
+The value of register at offset 0x98 - R11 is 246
+The value of register at offset 0xa0 - R12 is 203c8a
+The value of register at offset 0xb0 - R14 is 7fffb8008f18
+The value of register at offset 0x1200 - YMM0 is LargeInt([0, 0, 0, 0]), i.e. when formatted 0000000000000000000000000000000000000000000000000000000000000000
+The value of register at offset 0x200 - CF is 0
+The value of register at offset 0x202 - PF is 1
+The value of register at offset 0x206 - ZF is 1
+The value of register at offset 0x207 - SF is 0
+The value of register at offset 0x20b - OF is 0
+The value of register at offset 0x110 - FS_OFFSET is 0
+Control flow change detected, switching execution to new address: 0x203b6d
+*******************************************
+EXECUTING INSTRUCTIONS AT ADDRESS: 0x203b6d
+*******************************************
+-------> Processing instruction at index: 0, Inst { opcode: Copy, output: Some(Varnode { var: Unique(0xf000), size: Quad }), inputs: [Varnode { var: Register(0, Quad), size: Quad }] }
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Attempt to execute 'runtime.nilPanic' detected at address 0x203b6d.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
