@@ -1,4 +1,4 @@
-Loading binary from /home/kgorna/Documents/tools/pcode-generator/tests/additiongo-tinygo_ptr-deref/additiongo-tinygo_ptr-deref
+Loading binary from /xxx/pcode-generator/tests/additiongo-tinygo_ptr-deref/additiongo-tinygo_ptr-deref
 Disassembled at address: 0x2040d4
 Instr PUSH       RAX
 Assignblk:
