@@ -13,7 +13,8 @@ Each ```vuln-x``` directory contains the execution logs and relevant data for an
 │   ├── c
 │   └── go
 ├── README.md
-├── other-languages 
+├── other-languages
+│   └── c
 ├── vuln-1_nil-dereference
 │   ├── additiongo-tinygo_ptr-deref
 │   ├── vuln-1_MIASM
