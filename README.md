@@ -10,14 +10,11 @@ Each ```vuln-x``` directory contains the execution logs and relevant data for an
 
 ```
 ├── pcode-files
-│   ├── additiongo-ptrderef_high_pcode.txt
-│   ├── additiongo-tinygo_ptr-deref_low_pcode.txt
-│   ├── tinygo_assign-to-nil-map_low_pcode.txt
-│   ├── tinygo_index-out-of-range_low_pcode.txt
-│   ├── tinygo_negative-shift_low_pcode.txt
-│   └── tinygo_too-large-channel-creation_low_pcode.txt
+│   ├── c
+│   └── go
 ├── README.md
-├── other-languages 
+├── other-languages
+│   └── c
 ├── vuln-1_nil-dereference
 │   ├── additiongo-tinygo_ptr-deref
 │   ├── vuln-1_MIASM
