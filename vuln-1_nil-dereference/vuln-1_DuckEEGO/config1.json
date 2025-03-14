@@ -1,0 +1,10 @@
+{
+  "ProjectPath": "/home/kgorna/zorya-evaluation/vuln-1_nil-dereference/additiongo-tinygo_ptr-deref/",
+  "Package": "main",
+  "ConfigData": [
+    {
+      "FilePath": "main.go",
+      "Functions": ["main"]
+    }
+  ]
+}
