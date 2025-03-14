@@ -1,0 +1,23 @@
+{
+    "ProjectPath": "/home/kgorna/zorya-evaluation/vuln-3_assign-to-nil-map/tinygo_assign-to-nil-map/",
+    "Package": "main",
+    "ConfigData": [
+        {
+            "FilePath": "main.go",
+            "Functions": [
+                {
+                    "Name": "nilMapPanic",
+                    "Object": "nil",
+                    "Input": [],
+                    "Output": []
+                },
+                {
+                    "Name": "main",
+                    "Object": "nil",
+                    "Input": [],
+                    "Output": []
+                }
+            ]
+        }
+    ]
+}
