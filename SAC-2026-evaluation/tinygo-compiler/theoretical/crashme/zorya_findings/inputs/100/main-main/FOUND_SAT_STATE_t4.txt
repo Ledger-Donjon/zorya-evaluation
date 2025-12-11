@@ -1,0 +1,11 @@
+Running command: /home/kgorna/Documents/zorya/zorya /home/kgorna/Documents/go-exploits-database/tinygo-compiler/theoretical/crashme/crashme --mode main 0x000000000022af70 --lang go --compiler tinygo --arg "100" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-08-27 09:12:57 UTC
+Mode: main
+Elapsed since start: 45.847s
+Instruction Address: 0x22af64
+------------------------------------------------------------
+To take the panic-branch => os.Args ptr=0x7fffb7e12040, len=2
+The user input nr.1 must be => "K ?", the raw value being [75, 32, 63] (len=3)
+
+================================================================================

@@ -1,0 +1,43 @@
+$ binsec -sse -sse-script ./tests/invalid-shift.ini core.snapshot -sse-depth 10000 -sse-engine multi-checks
+[sse:info] TTY: press [space] to switch between log and monitor modes.
+[sse:error] Cut path 2 (uninterpreted "syscall") @ 0x002183b7
+[sse:error]  Assertion failed @ 0x002123d0 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000001
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x0000000000000001 : 00 
+              #x0000000000000000 : 40  (@)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:info] Empty path worklist: halting ...
+[sse:info] SMT queries
+             Preprocessing simplifications
+               total          294
+               true           86
+               false          138
+               constant enum  70
+             
+             Satisfiability queries
+               total          2
+               sat            2
+               unsat          0
+               unknown        0
+               time           0.00
+               average        0.00
+             
+           Exploration
+             total paths                      2
+             completed/cut paths              1
+             pending paths                    0
+             stale paths                      1
+             failed assertions                1
+             branching points                 294
+             max path depth                   1700
+             visited instructions (unrolled)  1701
+             visited instructions (static)    3710

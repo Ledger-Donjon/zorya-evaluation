@@ -1,0 +1,14 @@
+$ radius2 -p Documents/go-exploits-database/tinygo-compiler/theoretical/broken-calculator/broken-calculator-tinygo -a 0x22f130
+thread 'main' panicked at /home/kgorna/.cargo/registry/src/index.crates.io-6f17d22bba15001f/radius2-1.0.28/src/processor.rs:758:52:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+$ radius2 -p Documents/go-exploits-database/tinygo-compiler/theoretical/broken-calculator/broken-calculator-tinygo -a 0x22f130 --crash
+thread 'main' panicked at /home/kgorna/.cargo/registry/src/index.crates.io-6f17d22bba15001f/radius2-1.0.28/src/processor.rs:758:52:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+$ radius2 -p Documents/go-exploits-database/tinygo-compiler/theoretical/broken-calculator/broken-calculator-tinygo -a 0x22f130 --crash -A a
+thread 'main' panicked at /home/kgorna/.cargo/registry/src/index.crates.io-6f17d22bba15001f/radius2-1.0.28/src/processor.rs:758:52:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

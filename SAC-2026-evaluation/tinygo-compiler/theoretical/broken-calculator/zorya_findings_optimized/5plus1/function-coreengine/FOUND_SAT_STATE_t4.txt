@@ -1,0 +1,49 @@
+Running command: /home/karolina-gorna/Documents/zorya/zorya /home/karolina-gorna/Documents/go-exploits-database/tinygo-compiler/theoretical/broken-calculator/broken-calculator-tinygo --mode function 0x22eff0 --lang go --compiler tinygo --arg "5 + 1" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-10-08 16:43:11 UTC
+Mode: function
+Elapsed since start: 46.089s
+Instruction Address: 0x22f06e
+Panic Address: 0x22f117
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 4 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 3 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'num1' must be 5 (unsigned: 5; signed: 5; ASCII: non-printable 0x05)
+  - The input 'num2' must be 5 (unsigned: 5; signed: 5; ASCII: non-printable 0x05)
+  - The input 'operator__len' must be 1 (unsigned: 1; signed: 1; ASCII: non-printable 0x01)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'num1':
+  num1_RDI!140 = #x0000000000000005
+    (unsigned: 5)
+    (signed: 5)
+    (ASCII: non-printable, code 5)
+
+Argument 'num2':
+  num2_RCX!143 = #x0000000000000005
+    (unsigned: 5)
+    (signed: 5)
+    (ASCII: non-printable, code 5)
+
+Argument 'operator__len':
+  operator__len!142 = #x0000000000000001
+    (unsigned: 1)
+    (signed: 1)
+    (ASCII: non-printable, code 1)
+
+Argument 'operator__ptr':
+  operator__ptr!141 = #x6d7086da3004c880
+    (unsigned: 7885951219192350848)
+    (signed: 7885951219192350848)
+    (ASCII LSB: non-printable 0x80)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================

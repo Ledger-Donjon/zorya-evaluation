@@ -1,39 +1,14 @@
 # zorya-evaluation
-This directory contains the evaluation of the Zorya concolic execution method in comparison with radius2 and MIASM. The evaluation includes a study of 5 common vulnerabilities in the Go language.
 
-### Architecture of the repository
-Each ```vuln-x``` directory contains the execution logs and relevant data for analyzing the targeted vulnerability by each tool MIASM, radius2 and Zorya. The Go programs have been compiled with the command ```tinygo build .```.
+This repository contains datasets and results for evaluating the **Zorya** concolic execution method in comparison with other analysis tools such as **radius2**, **Owi**, **DuckEEGO**, **BINSEC**, and **MIASM**.
+The benchmarks are based on common vulnerabilities in Go (and some C) programs taken from the
+[logic_bombs_go](https://github.com/kajaaz/logic_bombs_go) benchmark.
 
-```
-├── pcode-files
-│   ├── c
-│   └── go
-├── README.md
-├── other-languages
-│   └── c
-├── vuln-1_nil-dereference
-│   ├── additiongo-tinygo_ptr-deref
-│   ├── vuln-1_MIASM
-│   ├── vuln-1_radius2
-│   └── vuln-1_zorya
-├── vuln-2_index-out-of-range
-│   ├── tinygo_index-out-of-range
-│   ├── vuln-2_MIASM
-│   ├── vuln-2_radius2
-│   └── vuln-2_zorya
-├── vuln-3_assign-to-nil-map
-│   ├── tinygo_assign-to-nil-map
-│   ├── vuln-3_MIASM
-│   ├── vuln-3_radius2
-│   └── vuln-3_zorya
-├── vuln-4_create-too-large-channel
-│   ├── tinygo_too-large-channel-creation
-│   ├── vuln-4_MIASM
-│   ├── vuln-4_radius2
-│   └── vuln-4_zorya
-└── vuln-5_negative-shift
-    ├── tinygo_negative-shift
-    ├── vuln-5_MIASM
-    ├── vuln-5_radius2
-    └── vuln-5_zorya
-```
+## Repository layout
+
+- `SERA-2025-evaluation`: material used in the Zorya evaluation submitted to **SERA 2025** (configuration files, execution logs, and supporting artefacts for several logic bombs and tools).
+- `SAC-2026-evaluation`: material used in the Zorya evaluation submitted to **SAC 2026** (extended TinyGo-based benchmarks, detailed Zorya timing results, and cross-tool comparisons).
+
+All directories only contain **binaries, configuration files, logs, and derived artefacts**.
+The original source code for the logic bombs is hosted separately in the
+[logic_bombs_go](https://github.com/Ledger-Donjon/logic_bombs_go) repository.

@@ -1,0 +1,48 @@
+Running command: /home/kgorna/Documents/zorya/zorya /home/kgorna/Documents/go-exploits-database/tinygo-compiler/theoretical/broken-calculator/broken-calculator-tinygo --mode main 0x000000000022f130 --lang go --compiler tinygo --arg "2 + 3" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-08-27 13:44:03 UTC
+Mode: main
+Elapsed since start: 82.125s
+Instruction Address: 0x2255d7
+------------------------------------------------------------
+To take the panic-branch => os.Args ptr=0x7fffb7e12090, len=4
+The user input nr.1 must be => "0", the raw value being [48] (len=1)
+  as integer: 0
+The user input nr.2 must be => "?", the raw value being [63] (len=1)
+The user input nr.3 must be => " ", the raw value being [32] (len=1)
+
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/Documents/zorya/zorya /home/kgorna/Documents/go-exploits-database/tinygo-compiler/theoretical/broken-calculator/broken-calculator-tinygo --mode main 0x000000000022f130 --lang go --compiler tinygo --arg "2 + 3" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-08-27 13:50:15 UTC
+Mode: main
+Elapsed since start: 454.324s
+Instruction Address: 0x2255d7
+------------------------------------------------------------
+To take the panic-branch => os.Args ptr=0x7fffb7e12090, len=4
+The user input nr.1 must be => "0", the raw value being [48] (len=1)
+  as integer: 0
+The user input nr.2 must be => "?", the raw value being [63] (len=1)
+The user input nr.3 must be => "0", the raw value being [48] (len=1)
+  as integer: 0
+
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/Documents/zorya/zorya /home/kgorna/Documents/go-exploits-database/tinygo-compiler/theoretical/broken-calculator/broken-calculator-tinygo --mode main 0x000000000022f130 --lang go --compiler tinygo --arg "2 + 3" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-08-27 13:56:37 UTC
+Mode: main
+Elapsed since start: 836.100s
+Instruction Address: 0x22f068
+------------------------------------------------------------
+To take the panic-branch => os.Args ptr=0x7fffb7e12090, len=4
+The user input nr.1 must be => "0", the raw value being [48] (len=1)
+  as integer: 0
+The user input nr.2 must be => "?", the raw value being [63] (len=1)
+The user input nr.3 must be => "0", the raw value being [48] (len=1)
+  as integer: 0
+
+================================================================================

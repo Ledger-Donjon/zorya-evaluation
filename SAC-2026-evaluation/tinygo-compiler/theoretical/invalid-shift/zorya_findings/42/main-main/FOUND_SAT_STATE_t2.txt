@@ -1,0 +1,40 @@
+Running command: /home/kgorna/Documents/zorya/zorya /home/kgorna/Documents/go-exploits-database/tinygo-compiler/theoretical/invalid-shift/invalid-shift --mode main 0x000000000022afe0 --lang go --compiler tinygo --arg "42" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-08-28 12:50:11 UTC
+Mode: main
+Elapsed since start: 23.094s
+Instruction Address: 0x22afe9
+Panic Address: 0x22b01d
+------------------------------------------------------------
+To take the panic-branch => os.Args ptr=0x7fffb7e12040, len=2
+The user input nr.1 must be => "??", the raw value being [63, 63] (len=2)
+
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/Documents/zorya/zorya /home/kgorna/Documents/go-exploits-database/tinygo-compiler/theoretical/invalid-shift/invalid-shift --mode main 0x000000000022afe0 --lang go --compiler tinygo --arg "42" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-08-28 12:50:41 UTC
+Mode: main
+Elapsed since start: 53.320s
+Instruction Address: 0x22af97
+Panic Address: 0x22afce
+------------------------------------------------------------
+To take the panic-branch => os.Args ptr=0x7fffb7e12040, len=2
+The user input nr.1 must be => "H?", the raw value being [72, 63] (len=2)
+
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/Documents/zorya/zorya /home/kgorna/Documents/go-exploits-database/tinygo-compiler/theoretical/invalid-shift/invalid-shift --mode main 0x000000000022afe0 --lang go --compiler tinygo --arg "42" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-08-28 12:50:41 UTC
+Mode: main
+Elapsed since start: 53.370s
+Instruction Address: 0x22af97
+Panic Address: 0x22afce
+------------------------------------------------------------
+To take the panic-branch => os.Args ptr=0x7fffb7e12040, len=2
+The user input nr.1 must be => "H?", the raw value being [72, 63] (len=2)
+
+================================================================================

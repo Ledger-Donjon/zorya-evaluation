@@ -1,0 +1,62 @@
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-08-28 13:30:24 UTC
+Mode: function
+Elapsed since start: 270.753s
+Instruction Address: 0x2300d7
+Panic Address: 0x2303a3
+------------------------------------------------------------
+=== EVALUATING TRACKED Z3 VARIABLES ===
+
+Argument 'indices':
+  Slice components:
+    pointer (indices_ptr!249) = #x00007fffb800a720
+      (hex: 0x7fffb800a720)
+    length (indices_len!250) = #x0000000000000001
+      (decimal: 1)
+    capacity (indices_cap!251) = #x0000000000000000
+      (decimal: 0)
+
+Argument 'indices[0]':
+  slice_elem_indices_0_!260 = #x0000000000000001
+    (decimal: 1)
+
+Argument 'indices[1]':
+  slice_elem_indices_1_!261 = #x0000000000000000
+    (decimal: 0)
+
+Argument 'indices[2]':
+  slice_elem_indices_2_!262 = #x0000000000000000
+    (decimal: 0)
+
+Argument 'tree':
+  Slice components:
+    pointer (tree_ptr!140) = #x00007fffb800a5e0
+      (hex: 0x7fffb800a5e0)
+    length (tree_len!141) = #x0000000000000002
+      (decimal: 2)
+    capacity (tree_cap!142) = #x0000000000000000
+      (decimal: 0)
+
+Argument 'tree[0]':
+  slice_elem_tree_0_!255 = #x0000000000000000000000000000000000000000000000000000000000000000
+    (decimal: 0)
+
+Argument 'tree[1]':
+  slice_elem_tree_1_!256 = #x0000000000000000000000000000000000000000000000000000000000000000
+    (decimal: 0)
+
+Argument 'tree[2]':
+  slice_elem_tree_2_!257 = #x0000000000000000000000000000000000000000000000000000000000000000
+    (decimal: 0)
+
+Argument 'tree[3]':
+  slice_elem_tree_3_!258 = #x0000000000000000000000000000000000000000000000000000000000000000
+    (decimal: 0)
+
+Argument 'tree[4]':
+  slice_elem_tree_4_!259 = #x0000000000000000000000000000000000000000000000000000000000000000
+    (decimal: 0)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================

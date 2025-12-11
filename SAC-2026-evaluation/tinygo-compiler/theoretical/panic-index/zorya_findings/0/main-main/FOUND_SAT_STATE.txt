@@ -1,0 +1,40 @@
+Running command: /home/kgorna/Documents/zorya/zorya /home/kgorna/Documents/go-exploits-database/tinygo-compiler/theoretical/panic-index/panic-index --mode main 0x000000000022c180 --lang go --compiler tinygo --arg "0" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-08-27 12:22:33 UTC
+Mode: main
+Elapsed since start: 75.909s
+Instruction Address: 0x223d27
+------------------------------------------------------------
+To take the panic-branch => os.Args ptr=0x7fffb7e12040, len=2
+The user input nr.1 must be => "0", the raw value being [48] (len=1)
+  as integer: 0
+
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/Documents/zorya/zorya /home/kgorna/Documents/go-exploits-database/tinygo-compiler/theoretical/panic-index/panic-index --mode main 0x000000000022c180 --lang go --compiler tinygo --arg "0" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-08-27 12:27:01 UTC
+Mode: main
+Elapsed since start: 343.851s
+Instruction Address: 0x223db5
+------------------------------------------------------------
+To take the panic-branch => os.Args ptr=0x7fffb7e12040, len=2
+The user input nr.1 must be => "0", the raw value being [48] (len=1)
+  as integer: 0
+
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/Documents/zorya/zorya /home/kgorna/Documents/go-exploits-database/tinygo-compiler/theoretical/panic-index/panic-index --mode main 0x000000000022c180 --lang go --compiler tinygo --arg "0" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-08-27 12:29:40 UTC
+Mode: main
+Elapsed since start: 502.824s
+Instruction Address: 0x22c13e
+------------------------------------------------------------
+To take the panic-branch => os.Args ptr=0x7fffb7e12040, len=2
+The user input nr.1 must be => "8", the raw value being [56] (len=1)
+  as integer: 8
+
+================================================================================

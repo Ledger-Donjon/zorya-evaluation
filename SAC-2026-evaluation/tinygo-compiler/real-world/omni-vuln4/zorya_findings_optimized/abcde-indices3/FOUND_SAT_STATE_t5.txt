@@ -1,0 +1,174 @@
+Running command: /home/karolina-gorna/Documents/zorya/zorya /home/karolina-gorna/Documents/go-exploits-database/tinygo-compiler/real-world/omni-vuln4/omni-vuln4 --mode function 0x24b4a0 --lang go --compiler tinygo --arg "a b c d e --indices 3" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-10-09 09:52:21 UTC
+Mode: function
+Elapsed since start: 65.294s
+Instruction Address: 0x24bac8
+Panic Address: 0x217c8c
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 12 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 18 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'indices.len' must be 1 (unsigned: 1; signed: 1; ASCII: non-printable 0x01)
+  - The input 'indices[0]' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+  - The input 'tree.len' must be 2 (unsigned: 2; signed: 2; ASCII: non-printable 0x02)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'indices':
+  Slice components:
+    pointer (indices_ptr!249) = #x00007fffb7e02520
+      (hex: 0x7fffb7e02520)
+    length (indices_len!250) = #x0000000000000001
+      (decimal: 1)
+    capacity (indices_cap!251) = #x0000000000000000
+      (decimal: 0)
+
+Argument 'indices[0]':
+  slice_elem_indices_0_!260 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'indices[1]':
+  slice_elem_indices_1_!261 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'indices[2]':
+  slice_elem_indices_2_!262 = #x6ffffbdfffbf76df
+    (unsigned: 8070445996758234847)
+    (signed: 8070445996758234847)
+    (ASCII LSB: non-printable 0xdf)
+
+Argument 'tree':
+  Slice components:
+    pointer (tree_ptr!140) = #x00007fffb7e02480
+      (hex: 0x7fffb7e02480)
+    length (tree_len!141) = #x0000000000000002
+      (decimal: 2)
+    capacity (tree_cap!142) = #x0000000000000000
+      (decimal: 0)
+
+Argument 'tree[0]':
+  slice_elem_tree_0_!255 = #x7f3ff6bddffe7d5fdbb7767f7df6e5e55ee7ffff73b1ffffb7e7e7c3ffffffbb
+    (unsigned: n/a)
+    (signed: n/a)
+
+Argument 'tree[1]':
+  slice_elem_tree_1_!256 = #x200002000000000040000000000000400c400404010000100000010004004000
+    (unsigned: n/a)
+    (signed: n/a)
+
+Argument 'tree[2]':
+  slice_elem_tree_2_!257 = #x8000000000000000000000000000000000000000000000000000000000020000
+    (unsigned: n/a)
+    (signed: n/a)
+
+Argument 'tree[3]':
+  slice_elem_tree_3_!258 = #xffdfbffed7dfffefdbddfdfffb7fffd1e6fe7f9fffffb7f77eebe9fd9fffffde
+    (unsigned: n/a)
+    (signed: n/a)
+
+Argument 'tree[4]':
+  slice_elem_tree_4_!259 = #x7ffffffffffff5ffffbfffffffffffffffffdfffffffffffffffefffffdfffff
+    (unsigned: n/a)
+    (signed: n/a)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================
+
+================================================================================
+Running command: /home/karolina-gorna/Documents/zorya/zorya /home/karolina-gorna/Documents/go-exploits-database/tinygo-compiler/real-world/omni-vuln4/omni-vuln4 --mode function 0x24b4a0 --lang go --compiler tinygo --arg "a b c d e --indices 3" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-10-09 09:52:34 UTC
+Mode: function
+Elapsed since start: 78.243s
+Instruction Address: 0x24b503
+Panic Address: 0x24baa3
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 12 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 20 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'indices.len' must be 2 (unsigned: 2; signed: 2; ASCII: non-printable 0x02)
+  - The input 'indices[0]' must be 1 (unsigned: 1; signed: 1; ASCII: non-printable 0x01)
+  - The input 'tree.len' must be 2 (unsigned: 2; signed: 2; ASCII: non-printable 0x02)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'indices':
+  Slice components:
+    pointer (indices_ptr!249) = #x00007fffb7e02520
+      (hex: 0x7fffb7e02520)
+    length (indices_len!250) = #x0000000000000002
+      (decimal: 2)
+    capacity (indices_cap!251) = #x0000000000000000
+      (decimal: 0)
+
+Argument 'indices[0]':
+  slice_elem_indices_0_!260 = #x0000000000000001
+    (unsigned: 1)
+    (signed: 1)
+    (ASCII: non-printable, code 1)
+
+Argument 'indices[1]':
+  slice_elem_indices_1_!261 = #x7f97f3f8d9fdd952
+    (unsigned: 9194085414434888018)
+    (signed: 9194085414434888018)
+    (ASCII LSB: 'R')
+
+Argument 'indices[2]':
+  slice_elem_indices_2_!262 = #x4600283644dd4d1a
+    (unsigned: 5044075796203654426)
+    (signed: 5044075796203654426)
+    (ASCII LSB: non-printable 0x1a)
+
+Argument 'tree':
+  Slice components:
+    pointer (tree_ptr!140) = #x00007fffb7e02480
+      (hex: 0x7fffb7e02480)
+    length (tree_len!141) = #x0000000000000002
+      (decimal: 2)
+    capacity (tree_cap!142) = #x0000000000000000
+      (decimal: 0)
+
+Argument 'tree[0]':
+  slice_elem_tree_0_!255 = #xc9c0c31a15793e6cbf08420ca5ac680241bb629c4e80357e11313d215bc1847a
+    (unsigned: n/a)
+    (signed: n/a)
+
+Argument 'tree[1]':
+  slice_elem_tree_1_!256 = #x7c71c5f65f3d7ef1bffddf1ceefdecfbe3f53d79fbdffadcf5c1ff6fcffc6ea7
+    (unsigned: n/a)
+    (signed: n/a)
+
+Argument 'tree[2]':
+  slice_elem_tree_2_!257 = #x93809c795247a8da5a4060bf9c3a641004cd42d09c44810847152e42304db582
+    (unsigned: n/a)
+    (signed: n/a)
+
+Argument 'tree[3]':
+  slice_elem_tree_3_!258 = #xabccab0b055bc8b15209155098eb00e0ac244418009084eecc4e4032a507778e
+    (unsigned: n/a)
+    (signed: n/a)
+
+Argument 'tree[4]':
+  slice_elem_tree_4_!259 = #x460070c01c6099708190492734338202b7560142a8025da1385997b835ef8e12
+    (unsigned: n/a)
+    (signed: n/a)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================

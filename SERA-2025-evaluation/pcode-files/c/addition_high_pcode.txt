@@ -1,0 +1,4143 @@
+0x2708f  MOV EDI,0x6fffffff
+0x27094  MOV R10D,0x6ffffdff
+0x2709a  MOV EBX,0x6ffffeff
+0x2709f  MOV R13D,0x6fffff41
+0x270a5  LEA RCX,[0x40b30]
+0x270ac  MOV R11D,0x6ffffe35
+0x270b2  MOV R9D,0x32
+0x270b8  MOV R8D,0x70000022
+0x270be  JMP 0x270da
+<L0> (entry=0x2708f):
+	instruction(0x2708f)
+	RDI = 0x6fffffff:8
+	instruction(0x27094)
+	R10 = 0x6ffffdff:8
+	instruction(0x2709a)
+	RBX = 0x6ffffeff:8
+	instruction(0x2709f)
+	R13 = 0x6fffff41:8
+	instruction(0x270a5)
+	RCX = 0x40b30:8
+	instruction(0x270ac)
+	R11 = 0x6ffffe35:8
+	instruction(0x270b2)
+	R9 = 0x32:8
+	instruction(0x270b8)
+	R8 = 0x70000022:8
+	instruction(0x270be)
+	jump 0x270da:8
+
+0x2575f  JMP 0x25538
+<L0> (entry=0x2575f):
+	jump 0x25538:8
+
+0x19719  XOR EAX,EAX
+0x1971b  CMP dword ptr [RSP + 0xc],0x1
+0x19720  SETNZ AL
+0x19723  MOV dword ptr [0x3fe08],EAX
+0x19729  ADD RSP,0x18
+0x1972d  RET
+<L0> (entry=0x19719):
+	instruction(0x19719)
+	CF = 0x0:1
+	OF = 0x0:1
+	EAX = EAX ^ EAX
+	RAX = zext(EAX)
+	SF = EAX s< 0x0:4
+	ZF = EAX == 0x0:4
+	$U1:4 = EAX & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x1971b)
+	$U6:8 = 0xc:8 + RSP
+	$U1:4 = ram[$U6:8]
+	CF = $U1:4 < 0x1:4
+	OF = $U1:4 sborrow 0x1:4
+	$U2:4 = $U1:4 - 0x1:4
+	SF = $U2:4 s< 0x0:4
+	ZF = $U2:4 == 0x0:4
+	$U3:4 = $U2:4 & 0xff:4
+	$U4:1 = popcount($U3:4)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x19720)
+	$U1:1 = !ZF
+	AL = $U1:1
+	instruction(0x19723)
+	$U1:4 = EAX
+	ram[0x3fe08:8] = $U1:4
+	instruction(0x19729)
+	CF = RSP carry 0x18:8
+	OF = RSP scarry 0x18:8
+	RSP = RSP + 0x18:8
+	SF = RSP s< 0x0:8
+	ZF = RSP == 0x0:8
+	$U1:8 = RSP & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x1972d)
+	RIP = ram[RSP]
+	RSP = RSP + 0x8:8
+	return RIP
+
+0x27263  MOV RCX,qword ptr [RCX + 0x8]
+0x27267  TEST DIL,DIL
+0x2726a  MOV R9,qword ptr [0x40c78]
+0x27271  LEA RSI,[RCX + R12*0x1]
+0x27275  CMOVNZ RCX,RSI
+0x27279  MOV RSI,qword ptr [0x40b70]
+0x27280  MOV RSI,qword ptr [RSI + 0x8]
+0x27284  MOVQ XMM0, RCX
+0x27289  MOVQ XMM2, RSI
+0x2728e  LEA R8,[RSI + RCX*0x1]
+0x27292  PUNPCKLQDQ XMM0, XMM2
+0x27296  MOVAPS xmmword ptr [RBP + -0x70], XMM0
+0x2729a  TEST R9,R9
+0x2729d  JZ 0x272a7
+<L0> (entry=0x27263):
+	instruction(0x27263)
+	$U1:8 = RCX + 0x8:8
+	RCX = ram[$U1:8]
+	instruction(0x27267)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:1 = DIL & DIL
+	SF = $U1:1 s< 0x0:1
+	ZF = $U1:1 == 0x0:1
+	$U2:1 = $U1:1 & 0xff:1
+	$U3:1 = popcount($U2:1)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x2726a)
+	R9 = ram[0x40c78:8]
+	instruction(0x27271)
+	$U2:8 = R12 * 0x1:8
+	$U1:8 = RCX + $U2:8
+	RSI = $U1:8
+	instruction(0x27275)
+	$U2:1 = !ZF
+	$U1:1 = !$U2:1
+	if $U1:1 jump <L31>
+<L1>:
+	RCX = RSI
+<L2>:
+	instruction(0x27279)
+	RSI = ram[0x40b70:8]
+	instruction(0x27280)
+	$U1:8 = RSI + 0x8:8
+	RSI = ram[$U1:8]
+	instruction(0x27284)
+	XMM0 = zext(RCX)
+	instruction(0x27289)
+	XMM2 = zext(RSI)
+	instruction(0x2728e)
+	$U2:8 = RCX * 0x1:8
+	$U1:8 = RSI + $U2:8
+	R8 = $U1:8
+	instruction(0x27292)
+	XMM0_Qb = XMM2_Qa
+	instruction(0x27296)
+	$U1:8 = RBP + 0xffffffffffffff90:8
+	$U2:16 = XMM0
+	ram[$U1:8] = $U2:16
+	instruction(0x2729a)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = R9 & R9
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x2729d)
+	if ZF jump 0x272a7:8
+
+0x273f6  JA 0x27450
+<L0> (entry=0x273f6):
+	$U2:1 = CF || ZF
+	$U1:1 = !$U2:1
+	if $U1:1 jump 0x27450:8
+
+0x27435  MOV R12,qword ptr [0x40af0]
+0x2743c  MOVZX EDX,byte ptr [0x40e0e]
+0x27443  JMP 0x27307
+<L0> (entry=0x27435):
+	instruction(0x27435)
+	R12 = ram[0x40af0:8]
+	instruction(0x2743c)
+	$U1:1 = ram[0x40e0e:8]
+	EDX = zext($U1:1)
+	RDX = zext(EDX)
+	instruction(0x27443)
+	jump 0x27307:8
+
+0x275d0  MOV RSI,RBX
+0x275d3  SUB RSI,RAX
+0x275d6  CMP RSI,0xa
+0x275da  JA 0x270cd
+<L0> (entry=0x275d0):
+	instruction(0x275d0)
+	RSI = RBX
+	instruction(0x275d3)
+	CF = RSI < RAX
+	OF = RSI sborrow RAX
+	RSI = RSI - RAX
+	SF = RSI s< 0x0:8
+	ZF = RSI == 0x0:8
+	$U1:8 = RSI & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x275d6)
+	$U1:8 = RSI
+	CF = $U1:8 < 0xa:8
+	OF = $U1:8 sborrow 0xa:8
+	$U2:8 = $U1:8 - 0xa:8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x275da)
+	$U2:1 = CF || ZF
+	$U1:1 = !$U2:1
+	if $U1:1 jump 0x270cd:8
+
+0x27371  MOV RDX,R12
+0x27374  CMP RDI,RBX
+0x27377  JA 0x27397
+<L0> (entry=0x27371):
+	instruction(0x27371)
+	RDX = R12
+	instruction(0x27374)
+	$U1:8 = RDI
+	CF = $U1:8 < RBX
+	OF = $U1:8 sborrow RBX
+	$U2:8 = $U1:8 - RBX
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x27377)
+	$U2:1 = CF || ZF
+	$U1:1 = !$U2:1
+	if $U1:1 jump 0x27397:8
+
+0x19530  ENDBR64
+0x19534  MOV RDX,qword ptr [RDI + 0x2a0]
+0x1953b  MOV RAX,RDI
+0x1953e  TEST RDX,RDX
+0x19541  JZ 0x195b8
+<L0> (entry=0x19530):
+	instruction(0x19530)
+	instruction(0x19534)
+	$U1:8 = RDI + 0x2a0:8
+	RDX = ram[$U1:8]
+	instruction(0x1953b)
+	RAX = RDI
+	instruction(0x1953e)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RDX & RDX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x19541)
+	if ZF jump 0x195b8:8
+
+0x27450  CMP R14,0x24
+0x27454  JNZ 0x2738a
+<L0> (entry=0x27450):
+	instruction(0x27450)
+	$U1:8 = R14
+	CF = $U1:8 < 0x24:8
+	OF = $U1:8 sborrow 0x24:8
+	$U2:8 = $U1:8 - 0x24:8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x27454)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x2738a:8
+
+0x25508  SUB RAX,0x3
+0x2550c  CMP RAX,0x30
+0x25510  JA 0x25528
+<L0> (entry=0x25508):
+	instruction(0x25508)
+	CF = RAX < 0x3:8
+	OF = RAX sborrow 0x3:8
+	RAX = RAX - 0x3:8
+	SF = RAX s< 0x0:8
+	ZF = RAX == 0x0:8
+	$U1:8 = RAX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2550c)
+	$U1:8 = RAX
+	CF = $U1:8 < 0x30:8
+	OF = $U1:8 sborrow 0x30:8
+	$U2:8 = $U1:8 - 0x30:8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x25510)
+	$U2:1 = CF || ZF
+	$U1:1 = !$U2:1
+	if $U1:1 jump 0x25528:8
+
+0x25718  MOV RAX,qword ptr [RDX + 0x8]
+0x2571c  ADD RDX,0x10
+0x25720  MOV R14D,0x1
+0x25726  MOV qword ptr [RSP + 0x28],RAX
+0x2572b  MOV RAX,qword ptr [RDX]
+0x2572e  TEST RAX,RAX
+0x25731  JNZ 0x25508
+<L0> (entry=0x25718):
+	instruction(0x25718)
+	$U1:8 = RDX + 0x8:8
+	RAX = ram[$U1:8]
+	instruction(0x2571c)
+	CF = RDX carry 0x10:8
+	OF = RDX scarry 0x10:8
+	RDX = RDX + 0x10:8
+	SF = RDX s< 0x0:8
+	ZF = RDX == 0x0:8
+	$U1:8 = RDX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x25720)
+	R14 = 0x1:8
+	instruction(0x25726)
+	$U1:8 = 0x28:8 + RSP
+	$U2:8 = RAX
+	ram[$U1:8] = $U2:8
+	instruction(0x2572b)
+	RAX = ram[RDX]
+	instruction(0x2572e)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x25731)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x25508:8
+
+0x27397  MOV R13,qword ptr [RBX + 0x8]
+0x2739b  MOV R12,qword ptr [RBX]
+0x2739e  MOV RAX,R13
+0x273a1  MOV R14,R13
+0x273a4  ADD R12,RDX
+0x273a7  SHR RAX,0x20
+0x273ab  LEA RAX,[RAX + RAX*0x2]
+0x273af  LEA R15,[RSI + RAX*0x8]
+0x273b3  AND R14D,0xffffffff
+0x273b7  JZ 0x2738a
+<L0> (entry=0x27397):
+	instruction(0x27397)
+	$U1:8 = RBX + 0x8:8
+	R13 = ram[$U1:8]
+	instruction(0x2739b)
+	R12 = ram[RBX]
+	instruction(0x2739e)
+	RAX = R13
+	instruction(0x273a1)
+	R14 = R13
+	instruction(0x273a4)
+	CF = R12 carry RDX
+	OF = R12 scarry RDX
+	R12 = R12 + RDX
+	SF = R12 s< 0x0:8
+	ZF = R12 == 0x0:8
+	$U1:8 = R12 & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x273a7)
+	$U1:8 = 0x20:8 & 0x3f:8
+	$U2:8 = RAX
+	RAX = RAX >> $U1:8
+	$U3:1 = $U1:8 != 0x0:8
+	$U5:8 = $U1:8 - 0x1:8
+	$U6:8 = $U2:8 >> $U5:8
+	$U7:8 = $U6:8 & 0x1:8
+	$U4:1 = $U7:8 != 0x0:8
+	$U8:1 = !$U3:1
+	$U9:1 = $U8:1 & CF
+	$U10:1 = $U3:1 & $U4:1
+	CF = $U9:1 | $U10:1
+	$U11:1 = $U1:8 == 0x1:8
+	$U12:1 = $U2:8 s< 0x0:8
+	$U13:1 = !$U11:1
+	$U14:1 = $U13:1 & OF
+	$U15:1 = $U11:1 & $U12:1
+	OF = $U14:1 | $U15:1
+	$U16:1 = $U1:8 != 0x0:8
+	$U17:1 = RAX s< 0x0:8
+	$U18:1 = !$U16:1
+	$U19:1 = $U18:1 & SF
+	$U20:1 = $U16:1 & $U17:1
+	SF = $U19:1 | $U20:1
+	$U21:1 = RAX == 0x0:8
+	$U22:1 = !$U16:1
+	$U23:1 = $U22:1 & ZF
+	$U24:1 = $U16:1 & $U21:1
+	ZF = $U23:1 | $U24:1
+	$U26:8 = RAX & 0xff:8
+	$U27:1 = popcount($U26:8)
+	$U28:1 = $U27:1 & 0x1:1
+	$U25:1 = $U28:1 == 0x0:1
+	$U29:1 = !$U16:1
+	$U30:1 = $U29:1 & PF
+	$U31:1 = $U16:1 & $U25:1
+	PF = $U30:1 | $U31:1
+	instruction(0x273ab)
+	$U2:8 = RAX * 0x2:8
+	$U1:8 = RAX + $U2:8
+	RAX = $U1:8
+	instruction(0x273af)
+	$U2:8 = RAX * 0x8:8
+	$U1:8 = RSI + $U2:8
+	R15 = $U1:8
+	instruction(0x273b3)
+	CF = 0x0:1
+	OF = 0x0:1
+	R14D = R14D & 0xffffffff:4
+	R14 = zext(R14D)
+	SF = R14D s< 0x0:4
+	ZF = R14D == 0x0:4
+	$U1:4 = R14D & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x273b7)
+	if ZF jump 0x2738a:8
+
+0x27379  JMP 0x27428
+<L0> (entry=0x27379):
+	jump 0x27428:8
+
+0x25520  MOV RBP,qword ptr [RDX + 0x8]
+0x25524  NOP dword ptr [RAX]
+0x25528  MOV RAX,qword ptr [RDX + 0x10]
+0x2552c  ADD RDX,0x10
+0x25530  TEST RAX,RAX
+0x25533  JNZ 0x25508
+<L0> (entry=0x25520):
+	instruction(0x25520)
+	$U1:8 = RDX + 0x8:8
+	RBP = ram[$U1:8]
+	instruction(0x25524)
+	instruction(0x25528)
+	$U1:8 = RDX + 0x10:8
+	RAX = ram[$U1:8]
+	instruction(0x2552c)
+	CF = RDX carry 0x10:8
+	OF = RDX scarry 0x10:8
+	RDX = RDX + 0x10:8
+	SF = RDX s< 0x0:8
+	ZF = RDX == 0x0:8
+	$U1:8 = RDX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x25530)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x25533)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x25508:8
+
+0x2559b  TEST R14B,R14B
+0x2559e  JZ 0x255ac
+<L0> (entry=0x2559b):
+	instruction(0x2559b)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:1 = R14B & R14B
+	SF = $U1:1 s< 0x0:1
+	ZF = $U1:1 == 0x0:1
+	$U2:1 = $U1:1 & 0xff:1
+	$U3:1 = popcount($U2:1)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x2559e)
+	if ZF jump 0x255ac:8
+
+0x27108  MOV RSI,R10
+0x2710b  SUB RSI,RAX
+0x2710e  CMP RSI,0xb
+0x27112  JA 0x275d0
+<L0> (entry=0x27108):
+	instruction(0x27108)
+	RSI = R10
+	instruction(0x2710b)
+	CF = RSI < RAX
+	OF = RSI sborrow RAX
+	RSI = RSI - RAX
+	SF = RSI s< 0x0:8
+	ZF = RSI == 0x0:8
+	$U1:8 = RSI & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2710e)
+	$U1:8 = RSI
+	CF = $U1:8 < 0xb:8
+	OF = $U1:8 sborrow 0xb:8
+	$U2:8 = $U1:8 - 0xb:8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x27112)
+	$U2:1 = CF || ZF
+	$U1:1 = !$U2:1
+	if $U1:1 jump 0x275d0:8
+
+0x255b1  MOV RAX,qword ptr [RSP + 0x30]
+0x255b6  MOV qword ptr [0x3fae8],RAX
+0x255bd  CMP byte ptr [RSP + 0x1b],0x0
+0x255c2  JZ 0x255ce
+<L0> (entry=0x255b1):
+	instruction(0x255b1)
+	$U1:8 = 0x30:8 + RSP
+	RAX = ram[$U1:8]
+	instruction(0x255b6)
+	$U1:8 = RAX
+	ram[0x3fae8:8] = $U1:8
+	instruction(0x255bd)
+	$U6:8 = 0x1b:8 + RSP
+	$U1:1 = ram[$U6:8]
+	CF = $U1:1 < 0x0:1
+	OF = $U1:1 sborrow 0x0:1
+	$U2:1 = $U1:1 - 0x0:1
+	SF = $U2:1 s< 0x0:1
+	ZF = $U2:1 == 0x0:1
+	$U3:1 = $U2:1 & 0xff:1
+	$U4:1 = popcount($U3:1)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x255c2)
+	if ZF jump 0x255ce:8
+
+0x1d993  LEA RBX,[0x3eb00]
+0x1d99a  MOV R12,-0x58
+0x1d9a1  SUB R12,RBX
+0x1d9a4  NOP dword ptr [RAX]
+0x1d9a8  TEST RBP,RBP
+0x1d9ab  JZ 0x1d9ed
+<L0> (entry=0x1d993):
+	instruction(0x1d993)
+	RBX = 0x3eb00:8
+	instruction(0x1d99a)
+	R12 = 0xffffffffffffffa8:8
+	instruction(0x1d9a1)
+	CF = R12 < RBX
+	OF = R12 sborrow RBX
+	R12 = R12 - RBX
+	SF = R12 s< 0x0:8
+	ZF = R12 == 0x0:8
+	$U1:8 = R12 & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x1d9a4)
+	instruction(0x1d9a8)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RBP & RBP
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x1d9ab)
+	if ZF jump 0x1d9ed:8
+
+0x255c4  MOV EAX,dword ptr [RSP + 0x3c]
+0x255c8  MOV dword ptr [0x3fa98],EAX
+0x255ce  CMP byte ptr [RSP + 0x1c],0x0
+0x255d3  JZ 0x255df
+<L0> (entry=0x255c4):
+	instruction(0x255c4)
+	$U1:8 = 0x3c:8 + RSP
+	EAX = ram[$U1:8]
+	RAX = zext(EAX)
+	instruction(0x255c8)
+	$U1:4 = EAX
+	ram[0x3fa98:8] = $U1:4
+	instruction(0x255ce)
+	$U6:8 = 0x1c:8 + RSP
+	$U1:1 = ram[$U6:8]
+	CF = $U1:1 < 0x0:1
+	OF = $U1:1 sborrow 0x0:1
+	$U2:1 = $U1:1 - 0x0:1
+	SF = $U2:1 s< 0x0:1
+	ZF = $U2:1 == 0x0:1
+	$U3:1 = $U2:1 & 0xff:1
+	$U4:1 = popcount($U3:1)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x255d3)
+	if ZF jump 0x255df:8
+
+0x1d9ed  ADD RSP,0x28
+0x1d9f1  POP RBX
+0x1d9f2  POP RBP
+0x1d9f3  POP R12
+0x1d9f5  POP R13
+0x1d9f7  POP R14
+0x1d9f9  POP R15
+0x1d9fb  RET
+<L0> (entry=0x1d9ed):
+	instruction(0x1d9ed)
+	CF = RSP carry 0x28:8
+	OF = RSP scarry 0x28:8
+	RSP = RSP + 0x28:8
+	SF = RSP s< 0x0:8
+	ZF = RSP == 0x0:8
+	$U1:8 = RSP & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x1d9f1)
+	$U1:8 = 0x0:8
+	$U1:8 = ram[RSP]
+	RSP = RSP + 0x8:8
+	RBX = $U1:8
+	instruction(0x1d9f2)
+	$U1:8 = 0x0:8
+	$U1:8 = ram[RSP]
+	RSP = RSP + 0x8:8
+	RBP = $U1:8
+	instruction(0x1d9f3)
+	$U1:8 = 0x0:8
+	$U1:8 = ram[RSP]
+	RSP = RSP + 0x8:8
+	R12 = $U1:8
+	instruction(0x1d9f5)
+	$U1:8 = 0x0:8
+	$U1:8 = ram[RSP]
+	RSP = RSP + 0x8:8
+	R13 = $U1:8
+	instruction(0x1d9f7)
+	$U1:8 = 0x0:8
+	$U1:8 = ram[RSP]
+	RSP = RSP + 0x8:8
+	R14 = $U1:8
+	instruction(0x1d9f9)
+	$U1:8 = 0x0:8
+	$U1:8 = ram[RSP]
+	RSP = RSP + 0x8:8
+	R15 = $U1:8
+	instruction(0x1d9fb)
+	RIP = ram[RSP]
+	RSP = RSP + 0x8:8
+	return RIP
+
+0x1dd9d  TEST R8D,R8D
+0x1dda0  JNZ 0x1ddd8
+<L0> (entry=0x1dd9d):
+	instruction(0x1dd9d)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:4 = R8D & R8D
+	SF = $U1:4 s< 0x0:4
+	ZF = $U1:4 == 0x0:4
+	$U2:4 = $U1:4 & 0xff:4
+	$U3:1 = popcount($U2:4)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x1dda0)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x1ddd8:8
+
+0x271a6  ADD qword ptr [RAX + 0x8],R12
+0x271aa  MOV RAX,qword ptr [0x40d90]
+0x271b1  TEST RAX,RAX
+0x271b4  JZ 0x271ba
+<L0> (entry=0x271a6):
+	instruction(0x271a6)
+	$U4:8 = RAX + 0x8:8
+	$U5:8 = ram[$U4:8]
+	CF = $U5:8 carry R12
+	$U6:8 = ram[$U4:8]
+	OF = $U6:8 scarry R12
+	$U7:8 = ram[$U4:8]
+	$U8:8 = $U7:8 + R12
+	ram[$U4:8] = $U8:8
+	$U9:8 = ram[$U4:8]
+	SF = $U9:8 s< 0x0:8
+	$U10:8 = ram[$U4:8]
+	ZF = $U10:8 == 0x0:8
+	$U11:8 = ram[$U4:8]
+	$U1:8 = $U11:8 & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x271aa)
+	RAX = ram[0x40d90:8]
+	instruction(0x271b1)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x271b4)
+	if ZF jump 0x271ba:8
+
+0x257ee  CALL 0x207b0
+<L0> (entry=0x257ee):
+	$U1:8 = 0x257f3:8
+	RSP = RSP - 0x8:8
+	ram[RSP] = 0x257f3:8
+	call 0x207b0:8
+
+0x27549  LEA RAX,[0x412d8]
+0x27550  LEA RDI,[0x6000]
+0x27557  MOV qword ptr [0x40b18],RBX
+0x2755e  MOVQ XMM1, RAX
+0x27563  MOVQ XMM0, RDI
+0x27568  MOV RDI,qword ptr [RBP + -0x78]
+0x2756c  LEA RAX,[0x31315]
+0x27573  PUNPCKLQDQ XMM0, XMM1
+0x27577  LEA RSI,[0x278e0]
+0x2757e  MOV qword ptr [0x40e58],RAX
+0x27585  MOV qword ptr [0x3fa90],RBP
+0x2758c  MOVUPS xmmword ptr [0x40e48], XMM0
+0x27593  CALL 0x25440
+<L0> (entry=0x27549):
+	instruction(0x27549)
+	RAX = 0x412d8:8
+	instruction(0x27550)
+	RDI = 0x6000:8
+	instruction(0x27557)
+	$U1:8 = RBX
+	ram[0x40b18:8] = $U1:8
+	instruction(0x2755e)
+	XMM1 = zext(RAX)
+	instruction(0x27563)
+	XMM0 = zext(RDI)
+	instruction(0x27568)
+	$U1:8 = RBP + 0xffffffffffffff88:8
+	RDI = ram[$U1:8]
+	instruction(0x2756c)
+	RAX = 0x31315:8
+	instruction(0x27573)
+	XMM0_Qb = XMM1_Qa
+	instruction(0x27577)
+	RSI = 0x278e0:8
+	instruction(0x2757e)
+	$U1:8 = RAX
+	ram[0x40e58:8] = $U1:8
+	instruction(0x27585)
+	$U1:8 = RBP
+	ram[0x3fa90:8] = $U1:8
+	instruction(0x2758c)
+	$U1:16 = XMM0
+	ram[0x40e48:8] = $U1:16
+	instruction(0x27593)
+	$U1:8 = 0x27598:8
+	RSP = RSP - 0x8:8
+	ram[RSP] = 0x27598:8
+	call 0x25440:8
+
+0x270c0  MOV RSI,R8
+0x270c3  SUB RSI,RAX
+0x270c6  MOV RAX,RSI
+0x270c9  MOV qword ptr [RCX + RAX*0x8],RDX
+0x270cd  MOV RAX,qword ptr [RDX + 0x10]
+0x270d1  ADD RDX,0x10
+0x270d5  TEST RAX,RAX
+0x270d8  JZ 0x27128
+<L0> (entry=0x270c0):
+	instruction(0x270c0)
+	RSI = R8
+	instruction(0x270c3)
+	CF = RSI < RAX
+	OF = RSI sborrow RAX
+	RSI = RSI - RAX
+	SF = RSI s< 0x0:8
+	ZF = RSI == 0x0:8
+	$U1:8 = RSI & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x270c6)
+	RAX = RSI
+	instruction(0x270c9)
+	$U2:8 = RAX * 0x8:8
+	$U1:8 = RCX + $U2:8
+	$U3:8 = RDX
+	ram[$U1:8] = $U3:8
+	instruction(0x270cd)
+	$U1:8 = RDX + 0x10:8
+	RAX = ram[$U1:8]
+	instruction(0x270d1)
+	CF = RDX carry 0x10:8
+	OF = RDX scarry 0x10:8
+	RDX = RDX + 0x10:8
+	SF = RDX s< 0x0:8
+	ZF = RDX == 0x0:8
+	$U1:8 = RDX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x270d5)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x270d8)
+	if ZF jump 0x27128:8
+
+0x273c0  MOVZX ECX,byte ptr [R15 + 0x4]
+0x273c5  MOVZX R11D,word ptr [R15 + 0x6]
+0x273ca  MOV RAX,qword ptr [R15 + 0x8]
+0x273ce  AND ECX,0xf
+0x273d1  CMP R11W,-0xf
+0x273d6  JZ 0x274b0
+<L0> (entry=0x273c0):
+	instruction(0x273c0)
+	$U1:8 = R15 + 0x4:8
+	$U2:1 = ram[$U1:8]
+	ECX = zext($U2:1)
+	RCX = zext(ECX)
+	instruction(0x273c5)
+	$U1:8 = R15 + 0x6:8
+	$U2:2 = ram[$U1:8]
+	R11D = zext($U2:2)
+	R11 = zext(R11D)
+	instruction(0x273ca)
+	$U1:8 = R15 + 0x8:8
+	RAX = ram[$U1:8]
+	instruction(0x273ce)
+	CF = 0x0:1
+	OF = 0x0:1
+	ECX = ECX & 0xf:4
+	RCX = zext(ECX)
+	SF = ECX s< 0x0:4
+	ZF = ECX == 0x0:4
+	$U1:4 = ECX & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x273d1)
+	$U1:2 = R11W
+	CF = $U1:2 < 0xfff1:2
+	OF = $U1:2 sborrow 0xfff1:2
+	$U2:2 = $U1:2 - 0xfff1:2
+	SF = $U2:2 s< 0x0:2
+	ZF = $U2:2 == 0x0:2
+	$U3:2 = $U2:2 & 0xff:2
+	$U4:1 = popcount($U3:2)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x273d6)
+	if ZF jump 0x274b0:8
+
+0x255d5  MOV RAX,qword ptr [RSP + 0x48]
+0x255da  MOV qword ptr [RSP + 0x58],RAX
+0x255df  CMP byte ptr [RSP + 0x1d],0x0
+0x255e4  JZ 0x257dd
+<L0> (entry=0x255d5):
+	instruction(0x255d5)
+	$U1:8 = 0x48:8 + RSP
+	RAX = ram[$U1:8]
+	instruction(0x255da)
+	$U1:8 = 0x58:8 + RSP
+	$U2:8 = RAX
+	ram[$U1:8] = $U2:8
+	instruction(0x255df)
+	$U6:8 = 0x1d:8 + RSP
+	$U1:1 = ram[$U6:8]
+	CF = $U1:1 < 0x0:1
+	OF = $U1:1 sborrow 0x0:1
+	$U2:1 = $U1:1 - 0x0:1
+	SF = $U2:1 s< 0x0:1
+	ZF = $U2:1 == 0x0:1
+	$U3:1 = $U2:1 & 0xff:1
+	$U4:1 = popcount($U3:1)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x255e4)
+	if ZF jump 0x257dd:8
+
+0x1dda2  MOV dword ptr [RSI],EAX
+0x1dda4  LEA RAX,[RDI*0x8]
+0x1ddac  SUB RAX,RDI
+0x1ddaf  SHL RAX,0x4
+0x1ddb3  CMP byte ptr [RCX + RAX*0x1 + 0x50],0x0
+0x1ddb8  JZ 0x1ddd0
+<L0> (entry=0x1dda2):
+	instruction(0x1dda2)
+	$U1:4 = EAX
+	ram[RSI] = $U1:4
+	instruction(0x1dda4)
+	$U1:8 = RDI * 0x8:8
+	RAX = $U1:8
+	instruction(0x1ddac)
+	CF = RAX < RDI
+	OF = RAX sborrow RDI
+	RAX = RAX - RDI
+	SF = RAX s< 0x0:8
+	ZF = RAX == 0x0:8
+	$U1:8 = RAX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x1ddaf)
+	$U1:8 = 0x4:8 & 0x3f:8
+	$U2:8 = RAX
+	RAX = RAX << $U1:8
+	$U3:1 = $U1:8 != 0x0:8
+	$U5:8 = $U1:8 - 0x1:8
+	$U6:8 = $U2:8 << $U5:8
+	$U4:1 = $U6:8 s< 0x0:8
+	$U7:1 = !$U3:1
+	$U8:1 = $U7:1 & CF
+	$U9:1 = $U3:1 & $U4:1
+	CF = $U8:1 | $U9:1
+	$U10:1 = $U1:8 == 0x1:8
+	$U12:1 = RAX s< 0x0:8
+	$U11:1 = CF ^ $U12:1
+	$U13:1 = !$U10:1
+	$U14:1 = $U13:1 & OF
+	$U15:1 = $U10:1 & $U11:1
+	OF = $U14:1 | $U15:1
+	$U16:1 = $U1:8 != 0x0:8
+	$U17:1 = RAX s< 0x0:8
+	$U18:1 = !$U16:1
+	$U19:1 = $U18:1 & SF
+	$U20:1 = $U16:1 & $U17:1
+	SF = $U19:1 | $U20:1
+	$U21:1 = RAX == 0x0:8
+	$U22:1 = !$U16:1
+	$U23:1 = $U22:1 & ZF
+	$U24:1 = $U16:1 & $U21:1
+	ZF = $U23:1 | $U24:1
+	$U26:8 = RAX & 0xff:8
+	$U27:1 = popcount($U26:8)
+	$U28:1 = $U27:1 & 0x1:1
+	$U25:1 = $U28:1 == 0x0:1
+	$U29:1 = !$U16:1
+	$U30:1 = $U29:1 & PF
+	$U31:1 = $U16:1 & $U25:1
+	PF = $U30:1 | $U31:1
+	instruction(0x1ddb3)
+	$U7:8 = 0x50:8 + RCX
+	$U8:8 = RAX * 0x1:8
+	$U6:8 = $U7:8 + $U8:8
+	$U1:1 = ram[$U6:8]
+	CF = $U1:1 < 0x0:1
+	OF = $U1:1 sborrow 0x0:1
+	$U2:1 = $U1:1 - 0x0:1
+	SF = $U2:1 s< 0x0:1
+	ZF = $U2:1 == 0x0:1
+	$U3:1 = $U2:1 & 0xff:1
+	$U4:1 = popcount($U3:1)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x1ddb8)
+	if ZF jump 0x1ddd0:8
+
+0x207c0  JMP 0x1f530
+<L0> (entry=0x207c0):
+	jump 0x1f530:8
+
+0x25740  MOV RAX,qword ptr [RDX + 0x8]
+0x25744  ADD RDX,0x10
+0x25748  MOV R15D,0x1
+0x2574e  MOV qword ptr [RSP + 0x30],RAX
+0x25753  MOV RAX,qword ptr [RDX]
+0x25756  TEST RAX,RAX
+0x25759  JNZ 0x25508
+<L0> (entry=0x25740):
+	instruction(0x25740)
+	$U1:8 = RDX + 0x8:8
+	RAX = ram[$U1:8]
+	instruction(0x25744)
+	CF = RDX carry 0x10:8
+	OF = RDX scarry 0x10:8
+	RDX = RDX + 0x10:8
+	SF = RDX s< 0x0:8
+	ZF = RDX == 0x0:8
+	$U1:8 = RDX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x25748)
+	R15 = 0x1:8
+	instruction(0x2574e)
+	$U1:8 = 0x30:8 + RSP
+	$U2:8 = RAX
+	ram[$U1:8] = $U2:8
+	instruction(0x25753)
+	RAX = ram[RDX]
+	instruction(0x25756)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x25759)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x25508:8
+
+0x25512  MOVSXD RAX,dword ptr [RCX + RAX*0x4]
+0x25516  ADD RAX,RCX
+0x25519  JMP RAX
+<L0> (entry=0x25512):
+	instruction(0x25512)
+	$U2:8 = RAX * 0x4:8
+	$U1:8 = RCX + $U2:8
+	$U3:4 = ram[$U1:8]
+	RAX = sext($U3:4)
+	instruction(0x25516)
+	CF = RAX carry RCX
+	OF = RAX scarry RCX
+	RAX = RAX + RCX
+	SF = RAX s< 0x0:8
+	ZF = RAX == 0x0:8
+	$U1:8 = RAX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x25519)
+	jump RAX
+
+0x26290  MOV RDI,RSP
+0x26293  CALL 0x27030
+<L0> (entry=0x26290):
+	instruction(0x26290)
+	RDI = RSP
+	instruction(0x26293)
+	$U1:8 = 0x26298:8
+	RSP = RSP - 0x8:8
+	ram[RSP] = 0x26298:8
+	call 0x27030:8
+
+0x2554d  MOV RAX,qword ptr [RSP + 0x8]
+0x25552  MOV qword ptr [0x3fa88],RAX
+0x25559  TEST R9B,R9B
+0x2555c  JZ 0x2556a
+<L0> (entry=0x2554d):
+	instruction(0x2554d)
+	$U1:8 = 0x8:8 + RSP
+	RAX = ram[$U1:8]
+	instruction(0x25552)
+	$U1:8 = RAX
+	ram[0x3fa88:8] = $U1:8
+	instruction(0x25559)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:1 = R9B & R9B
+	SF = $U1:1 s< 0x0:1
+	ZF = $U1:1 == 0x0:1
+	$U2:1 = $U1:1 & 0xff:1
+	$U3:1 = popcount($U2:1)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x2555c)
+	if ZF jump 0x2556a:8
+
+0x270e0  MOV RSI,RDI
+0x270e3  SUB RSI,RAX
+0x270e6  CMP RSI,0xf
+0x270ea  JBE 0x270c0
+<L0> (entry=0x270e0):
+	instruction(0x270e0)
+	RSI = RDI
+	instruction(0x270e3)
+	CF = RSI < RAX
+	OF = RSI sborrow RAX
+	RSI = RSI - RAX
+	SF = RSI s< 0x0:8
+	ZF = RSI == 0x0:8
+	$U1:8 = RSI & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x270e6)
+	$U1:8 = RSI
+	CF = $U1:8 < 0xf:8
+	OF = $U1:8 sborrow 0xf:8
+	$U2:8 = $U1:8 - 0xf:8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x270ea)
+	$U1:1 = CF || ZF
+	if $U1:1 jump 0x270c0:8
+
+0x19550  MOV ESI,dword ptr [RCX]
+0x19552  MOV dword ptr [RAX + 0x2f4],ESI
+0x19558  MOV EDX,dword ptr [RCX + 0x8]
+0x1955b  MOV R8D,dword ptr [RCX + 0x4]
+0x1955f  LEA EDI,[RDX + -0x1]
+0x19562  TEST EDI,EDX
+0x19564  JNZ 0x195f7
+<L0> (entry=0x19550):
+	instruction(0x19550)
+	ESI = ram[RCX]
+	RSI = zext(ESI)
+	instruction(0x19552)
+	$U1:8 = RAX + 0x2f4:8
+	$U2:4 = ESI
+	ram[$U1:8] = $U2:4
+	instruction(0x19558)
+	$U1:8 = RCX + 0x8:8
+	EDX = ram[$U1:8]
+	RDX = zext(EDX)
+	instruction(0x1955b)
+	$U1:8 = RCX + 0x4:8
+	R8D = ram[$U1:8]
+	R8 = zext(R8D)
+	instruction(0x1955f)
+	$U1:8 = RDX + 0xffffffffffffffff:8
+	EDI = $U1:4
+	RDI = zext(EDI)
+	instruction(0x19562)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:4 = EDI & EDX
+	SF = $U1:4 s< 0x0:4
+	ZF = $U1:4 == 0x0:4
+	$U2:4 = $U1:4 & 0xff:4
+	$U3:1 = popcount($U2:4)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x19564)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x195f7:8
+
+0x255a0  MOV RAX,qword ptr [RSP + 0x28]
+0x255a5  MOV qword ptr [0x3fb40],RAX
+0x255ac  TEST R15B,R15B
+0x255af  JZ 0x255bd
+<L0> (entry=0x255a0):
+	instruction(0x255a0)
+	$U1:8 = 0x28:8 + RSP
+	RAX = ram[$U1:8]
+	instruction(0x255a5)
+	$U1:8 = RAX
+	ram[0x3fb40:8] = $U1:8
+	instruction(0x255ac)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:1 = R15B & R15B
+	SF = $U1:1 s< 0x0:1
+	ZF = $U1:1 == 0x0:1
+	$U2:1 = $U1:1 & 0xff:1
+	$U3:1 = popcount($U2:1)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x255af)
+	if ZF jump 0x255bd:8
+
+0x2ba8b  MOV qword ptr [0x41298],RAX
+0x2ba92  CMP RAX,RDI
+0x2ba95  JC 0x2baa0
+<L0> (entry=0x2ba8b):
+	instruction(0x2ba8b)
+	$U1:8 = RAX
+	ram[0x41298:8] = $U1:8
+	instruction(0x2ba92)
+	$U1:8 = RAX
+	CF = $U1:8 < RDI
+	OF = $U1:8 sborrow RDI
+	$U2:8 = $U1:8 - RDI
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x2ba95)
+	if CF jump 0x2baa0:8
+
+0x2557b  TEST R11B,R11B
+0x2557e  JZ 0x2558a
+<L0> (entry=0x2557b):
+	instruction(0x2557b)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:1 = R11B & R11B
+	SF = $U1:1 s< 0x0:1
+	ZF = $U1:1 == 0x0:1
+	$U2:1 = $U1:1 & 0xff:1
+	$U3:1 = popcount($U2:1)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x2557e)
+	if ZF jump 0x2558a:8
+
+0x257b8  MOV R12D,dword ptr [RDX + 0x8]
+0x257bc  MOV RAX,qword ptr [RDX + 0x10]
+0x257c0  ADD RDX,0x10
+0x257c4  TEST RAX,RAX
+0x257c7  JNZ 0x25508
+<L0> (entry=0x257b8):
+	instruction(0x257b8)
+	$U1:8 = RDX + 0x8:8
+	R12D = ram[$U1:8]
+	R12 = zext(R12D)
+	instruction(0x257bc)
+	$U1:8 = RDX + 0x10:8
+	RAX = ram[$U1:8]
+	instruction(0x257c0)
+	CF = RDX carry 0x10:8
+	OF = RDX scarry 0x10:8
+	RDX = RDX + 0x10:8
+	SF = RDX s< 0x0:8
+	ZF = RDX == 0x0:8
+	$U1:8 = RDX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x257c4)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x257c7)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x25508:8
+
+0x27307  MOV RSI,qword ptr [0x40b60]
+0x2730e  MOV RAX,qword ptr [R8]
+0x27311  MOV RCX,qword ptr [R8 + 0x10]
+0x27315  MOV RDI,qword ptr [R8 + 0x8]
+0x27319  MOV RSI,qword ptr [RSI + 0x8]
+0x2731d  ADD RDI,RAX
+0x27320  AND EDX,0x20
+0x27323  LEA RDX,[RCX + RCX*0x2]
+0x27327  LEA R11,[RSI + R12*0x1]
+0x2732b  LEA RBX,[RAX + RDX*0x8]
+0x2732f  CMOVNZ RSI,R11
+0x27333  CMP RAX,RBX
+0x27336  JNC 0x27363
+<L0> (entry=0x27307):
+	instruction(0x27307)
+	RSI = ram[0x40b60:8]
+	instruction(0x2730e)
+	RAX = ram[R8]
+	instruction(0x27311)
+	$U1:8 = R8 + 0x10:8
+	RCX = ram[$U1:8]
+	instruction(0x27315)
+	$U1:8 = R8 + 0x8:8
+	RDI = ram[$U1:8]
+	instruction(0x27319)
+	$U1:8 = RSI + 0x8:8
+	RSI = ram[$U1:8]
+	instruction(0x2731d)
+	CF = RDI carry RAX
+	OF = RDI scarry RAX
+	RDI = RDI + RAX
+	SF = RDI s< 0x0:8
+	ZF = RDI == 0x0:8
+	$U1:8 = RDI & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x27320)
+	CF = 0x0:1
+	OF = 0x0:1
+	EDX = EDX & 0x20:4
+	RDX = zext(EDX)
+	SF = EDX s< 0x0:4
+	ZF = EDX == 0x0:4
+	$U1:4 = EDX & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x27323)
+	$U2:8 = RCX * 0x2:8
+	$U1:8 = RCX + $U2:8
+	RDX = $U1:8
+	instruction(0x27327)
+	$U2:8 = R12 * 0x1:8
+	$U1:8 = RSI + $U2:8
+	R11 = $U1:8
+	instruction(0x2732b)
+	$U2:8 = RDX * 0x8:8
+	$U1:8 = RAX + $U2:8
+	RBX = $U1:8
+	instruction(0x2732f)
+	$U2:1 = !ZF
+	$U1:1 = !$U2:1
+	if $U1:1 jump <L61>
+<L1>:
+	RSI = R11
+<L2>:
+	instruction(0x27333)
+	$U1:8 = RAX
+	CF = $U1:8 < RBX
+	OF = $U1:8 sborrow RBX
+	$U2:8 = $U1:8 - RBX
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x27336)
+	$U1:1 = !CF
+	if $U1:1 jump 0x27363:8
+
+0x25495  LEA RDX,[RAX + 0x8]
+0x25499  MOV RAX,qword ptr [RAX + 0x8]
+0x2549d  LEA RSI,[0x26290]
+0x254a4  MOV qword ptr [0x3fae8],0x0
+0x254af  MOV qword ptr [0x3fb48],RDX
+0x254b6  MOV qword ptr [RSP + 0x58],RSI
+0x254bb  MOV qword ptr [0x3fb00],0x0
+0x254c6  TEST RAX,RAX
+0x254c9  JZ 0x257d8
+<L0> (entry=0x25495):
+	instruction(0x25495)
+	$U1:8 = RAX + 0x8:8
+	RDX = $U1:8
+	instruction(0x25499)
+	$U1:8 = RAX + 0x8:8
+	RAX = ram[$U1:8]
+	instruction(0x2549d)
+	RSI = 0x26290:8
+	instruction(0x254a4)
+	$U1:8 = 0x0:8
+	ram[0x3fae8:8] = $U1:8
+	instruction(0x254af)
+	$U1:8 = RDX
+	ram[0x3fb48:8] = $U1:8
+	instruction(0x254b6)
+	$U1:8 = 0x58:8 + RSP
+	$U2:8 = RSI
+	ram[$U1:8] = $U2:8
+	instruction(0x254bb)
+	$U1:8 = 0x0:8
+	ram[0x3fb00:8] = $U1:8
+	instruction(0x254c6)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x254c9)
+	if ZF jump 0x257d8:8
+
+0x1d9ad  MOV R9,qword ptr [RBP]
+0x1d9b1  TEST R9,R9
+0x1d9b4  JZ 0x1d9ed
+<L0> (entry=0x1d9ad):
+	instruction(0x1d9ad)
+	R9 = ram[RBP]
+	instruction(0x1d9b1)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = R9 & R9
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x1d9b4)
+	if ZF jump 0x1d9ed:8
+
+0x271d1  MOV RCX,qword ptr [0x40b68]
+0x271d8  TEST RCX,RCX
+0x271db  JZ 0x271ef
+<L0> (entry=0x271d1):
+	instruction(0x271d1)
+	RCX = ram[0x40b68:8]
+	instruction(0x271d8)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RCX & RCX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x271db)
+	if ZF jump 0x271ef:8
+
+0x27340  MOV RDX,qword ptr [RAX]
+0x27343  ADD RDX,R12
+0x27346  CMP dword ptr [RAX + 0x8],0x8
+0x2734a  JNZ 0x27641
+<L0> (entry=0x27340):
+	instruction(0x27340)
+	RDX = ram[RAX]
+	instruction(0x27343)
+	CF = RDX carry R12
+	OF = RDX scarry R12
+	RDX = RDX + R12
+	SF = RDX s< 0x0:8
+	ZF = RDX == 0x0:8
+	$U1:8 = RDX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x27346)
+	$U6:8 = RAX + 0x8:8
+	$U1:4 = ram[$U6:8]
+	CF = $U1:4 < 0x8:4
+	OF = $U1:4 sborrow 0x8:4
+	$U2:4 = $U1:4 - 0x8:4
+	SF = $U2:4 s< 0x0:4
+	ZF = $U2:4 == 0x0:4
+	$U3:4 = $U2:4 & 0xff:4
+	$U4:1 = popcount($U3:4)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x2734a)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x27641:8
+
+0x272e1  CMP RAX,R8
+0x272e4  JZ 0x275ee
+<L0> (entry=0x272e1):
+	instruction(0x272e1)
+	$U1:8 = RAX
+	CF = $U1:8 < R8
+	OF = $U1:8 sborrow R8
+	$U2:8 = $U1:8 - R8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x272e4)
+	if ZF jump 0x275ee:8
+
+0x27156  ADD qword ptr [RAX + 0x8],R12
+0x2715a  MOV RAX,qword ptr [0x40b58]
+0x27161  TEST RAX,RAX
+0x27164  JZ 0x2716a
+<L0> (entry=0x27156):
+	instruction(0x27156)
+	$U4:8 = RAX + 0x8:8
+	$U5:8 = ram[$U4:8]
+	CF = $U5:8 carry R12
+	$U6:8 = ram[$U4:8]
+	OF = $U6:8 scarry R12
+	$U7:8 = ram[$U4:8]
+	$U8:8 = $U7:8 + R12
+	ram[$U4:8] = $U8:8
+	$U9:8 = ram[$U4:8]
+	SF = $U9:8 s< 0x0:8
+	$U10:8 = ram[$U4:8]
+	ZF = $U10:8 == 0x0:8
+	$U11:8 = ram[$U4:8]
+	$U1:8 = $U11:8 & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2715a)
+	RAX = ram[0x40b58:8]
+	instruction(0x27161)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x27164)
+	if ZF jump 0x2716a:8
+
+0x27196  ADD qword ptr [RAX + 0x8],R12
+0x2719a  MOV RAX,qword ptr [0x40cc0]
+0x271a1  TEST RAX,RAX
+0x271a4  JZ 0x271aa
+<L0> (entry=0x27196):
+	instruction(0x27196)
+	$U4:8 = RAX + 0x8:8
+	$U5:8 = ram[$U4:8]
+	CF = $U5:8 carry R12
+	$U6:8 = ram[$U4:8]
+	OF = $U6:8 scarry R12
+	$U7:8 = ram[$U4:8]
+	$U8:8 = $U7:8 + R12
+	ram[$U4:8] = $U8:8
+	$U9:8 = ram[$U4:8]
+	SF = $U9:8 s< 0x0:8
+	$U10:8 = ram[$U4:8]
+	ZF = $U10:8 == 0x0:8
+	$U11:8 = ram[$U4:8]
+	$U1:8 = $U11:8 & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2719a)
+	RAX = ram[0x40cc0:8]
+	instruction(0x271a1)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x271a4)
+	if ZF jump 0x271aa:8
+
+0x27428  ADD R8,0x20
+0x2742c  CMP R8,R10
+0x2742f  JZ 0x27510
+<L0> (entry=0x27428):
+	instruction(0x27428)
+	CF = R8 carry 0x20:8
+	OF = R8 scarry 0x20:8
+	R8 = R8 + 0x20:8
+	SF = R8 s< 0x0:8
+	ZF = R8 == 0x0:8
+	$U1:8 = R8 & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2742c)
+	$U1:8 = R8
+	CF = $U1:8 < R10
+	OF = $U1:8 sborrow R10
+	$U2:8 = $U1:8 - R10
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x2742f)
+	if ZF jump 0x27510:8
+
+0x2751c  LEA RAX,[0xb420]
+0x27523  MOV qword ptr [0x3fe58],RAX
+0x2752a  RDTSC
+0x2752c  LEA RBX,[0x40af0]
+0x27533  MOV RDI,RBX
+0x27536  SHL RDX,0x20
+0x2753a  OR RAX,RDX
+0x2753d  MOV qword ptr [0x3faa0],RAX
+0x27544  CALL 0x19530
+<L0> (entry=0x2751c):
+	instruction(0x2751c)
+	RAX = 0xb420:8
+	instruction(0x27523)
+	$U1:8 = RAX
+	ram[0x3fe58:8] = $U1:8
+	instruction(0x2752a)
+	$U1:8 = rdtsc()
+	EDX = $U1[4]:4
+	EAX = $U1:4
+	instruction(0x2752c)
+	RBX = 0x40af0:8
+	instruction(0x27533)
+	RDI = RBX
+	instruction(0x27536)
+	$U1:8 = 0x20:8 & 0x3f:8
+	$U2:8 = RDX
+	RDX = RDX << $U1:8
+	$U3:1 = $U1:8 != 0x0:8
+	$U5:8 = $U1:8 - 0x1:8
+	$U6:8 = $U2:8 << $U5:8
+	$U4:1 = $U6:8 s< 0x0:8
+	$U7:1 = !$U3:1
+	$U8:1 = $U7:1 & CF
+	$U9:1 = $U3:1 & $U4:1
+	CF = $U8:1 | $U9:1
+	$U10:1 = $U1:8 == 0x1:8
+	$U12:1 = RDX s< 0x0:8
+	$U11:1 = CF ^ $U12:1
+	$U13:1 = !$U10:1
+	$U14:1 = $U13:1 & OF
+	$U15:1 = $U10:1 & $U11:1
+	OF = $U14:1 | $U15:1
+	$U16:1 = $U1:8 != 0x0:8
+	$U17:1 = RDX s< 0x0:8
+	$U18:1 = !$U16:1
+	$U19:1 = $U18:1 & SF
+	$U20:1 = $U16:1 & $U17:1
+	SF = $U19:1 | $U20:1
+	$U21:1 = RDX == 0x0:8
+	$U22:1 = !$U16:1
+	$U23:1 = $U22:1 & ZF
+	$U24:1 = $U16:1 & $U21:1
+	ZF = $U23:1 | $U24:1
+	$U26:8 = RDX & 0xff:8
+	$U27:1 = popcount($U26:8)
+	$U28:1 = $U27:1 & 0x1:1
+	$U25:1 = $U28:1 == 0x0:1
+	$U29:1 = !$U16:1
+	$U30:1 = $U29:1 & PF
+	$U31:1 = $U16:1 & $U25:1
+	PF = $U30:1 | $U31:1
+	instruction(0x2753a)
+	CF = 0x0:1
+	OF = 0x0:1
+	RAX = RAX | RDX
+	SF = RAX s< 0x0:8
+	ZF = RAX == 0x0:8
+	$U1:8 = RAX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2753d)
+	$U1:8 = RAX
+	ram[0x3faa0:8] = $U1:8
+	instruction(0x27544)
+	$U1:8 = 0x27549:8
+	RSP = RSP - 0x8:8
+	ram[RSP] = 0x27549:8
+	call 0x19530:8
+
+0x270c9  MOV qword ptr [RCX + RAX*0x8],RDX
+0x270cd  MOV RAX,qword ptr [RDX + 0x10]
+0x270d1  ADD RDX,0x10
+0x270d5  TEST RAX,RAX
+0x270d8  JZ 0x27128
+<L0> (entry=0x270c9):
+	instruction(0x270c9)
+	$U2:8 = RAX * 0x8:8
+	$U1:8 = RCX + $U2:8
+	$U3:8 = RDX
+	ram[$U1:8] = $U3:8
+	instruction(0x270cd)
+	$U1:8 = RDX + 0x10:8
+	RAX = ram[$U1:8]
+	instruction(0x270d1)
+	CF = RDX carry 0x10:8
+	OF = RDX scarry 0x10:8
+	RDX = RDX + 0x10:8
+	SF = RDX s< 0x0:8
+	ZF = RDX == 0x0:8
+	$U1:8 = RDX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x270d5)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x270d8)
+	if ZF jump 0x27128:8
+
+0x254cf  MOV byte ptr [RSP + 0x1b],0x0
+0x254d4  XOR ESI,ESI
+0x254d6  XOR R8D,R8D
+0x254d9  XOR R9D,R9D
+0x254dc  MOV byte ptr [RSP + 0x1c],0x0
+0x254e1  XOR R10D,R10D
+0x254e4  XOR R11D,R11D
+0x254e7  XOR R13D,R13D
+0x254ea  MOV byte ptr [RSP + 0x1d],0x0
+0x254ef  XOR R14D,R14D
+0x254f2  XOR R15D,R15D
+0x254f5  XOR R12D,R12D
+0x254f8  XOR EBP,EBP
+0x254fa  LEA RCX,[0x329fc]
+0x25501  NOP dword ptr [RAX]
+0x25508  SUB RAX,0x3
+0x2550c  CMP RAX,0x30
+0x25510  JA 0x25528
+<L0> (entry=0x254cf):
+	instruction(0x254cf)
+	$U1:8 = 0x1b:8 + RSP
+	$U2:1 = 0x0:1
+	ram[$U1:8] = $U2:1
+	instruction(0x254d4)
+	CF = 0x0:1
+	OF = 0x0:1
+	ESI = ESI ^ ESI
+	RSI = zext(ESI)
+	SF = ESI s< 0x0:4
+	ZF = ESI == 0x0:4
+	$U1:4 = ESI & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x254d6)
+	CF = 0x0:1
+	OF = 0x0:1
+	R8D = R8D ^ R8D
+	R8 = zext(R8D)
+	SF = R8D s< 0x0:4
+	ZF = R8D == 0x0:4
+	$U1:4 = R8D & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x254d9)
+	CF = 0x0:1
+	OF = 0x0:1
+	R9D = R9D ^ R9D
+	R9 = zext(R9D)
+	SF = R9D s< 0x0:4
+	ZF = R9D == 0x0:4
+	$U1:4 = R9D & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x254dc)
+	$U1:8 = 0x1c:8 + RSP
+	$U2:1 = 0x0:1
+	ram[$U1:8] = $U2:1
+	instruction(0x254e1)
+	CF = 0x0:1
+	OF = 0x0:1
+	R10D = R10D ^ R10D
+	R10 = zext(R10D)
+	SF = R10D s< 0x0:4
+	ZF = R10D == 0x0:4
+	$U1:4 = R10D & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x254e4)
+	CF = 0x0:1
+	OF = 0x0:1
+	R11D = R11D ^ R11D
+	R11 = zext(R11D)
+	SF = R11D s< 0x0:4
+	ZF = R11D == 0x0:4
+	$U1:4 = R11D & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x254e7)
+	CF = 0x0:1
+	OF = 0x0:1
+	R13D = R13D ^ R13D
+	R13 = zext(R13D)
+	SF = R13D s< 0x0:4
+	ZF = R13D == 0x0:4
+	$U1:4 = R13D & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x254ea)
+	$U1:8 = 0x1d:8 + RSP
+	$U2:1 = 0x0:1
+	ram[$U1:8] = $U2:1
+	instruction(0x254ef)
+	CF = 0x0:1
+	OF = 0x0:1
+	R14D = R14D ^ R14D
+	R14 = zext(R14D)
+	SF = R14D s< 0x0:4
+	ZF = R14D == 0x0:4
+	$U1:4 = R14D & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x254f2)
+	CF = 0x0:1
+	OF = 0x0:1
+	R15D = R15D ^ R15D
+	R15 = zext(R15D)
+	SF = R15D s< 0x0:4
+	ZF = R15D == 0x0:4
+	$U1:4 = R15D & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x254f5)
+	CF = 0x0:1
+	OF = 0x0:1
+	R12D = R12D ^ R12D
+	R12 = zext(R12D)
+	SF = R12D s< 0x0:4
+	ZF = R12D == 0x0:4
+	$U1:4 = R12D & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x254f8)
+	CF = 0x0:1
+	OF = 0x0:1
+	EBP = EBP ^ EBP
+	RBP = zext(EBP)
+	SF = EBP s< 0x0:4
+	ZF = EBP == 0x0:4
+	$U1:4 = EBP & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x254fa)
+	RCX = 0x329fc:8
+	instruction(0x25501)
+	instruction(0x25508)
+	CF = RAX < 0x3:8
+	OF = RAX sborrow 0x3:8
+	RAX = RAX - 0x3:8
+	SF = RAX s< 0x0:8
+	ZF = RAX == 0x0:8
+	$U1:8 = RAX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2550c)
+	$U1:8 = RAX
+	CF = $U1:8 < 0x30:8
+	OF = $U1:8 sborrow 0x30:8
+	$U2:8 = $U1:8 - 0x30:8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x25510)
+	$U2:1 = CF || ZF
+	$U1:1 = !$U2:1
+	if $U1:1 jump 0x25528:8
+
+0x25628  MOV RAX,qword ptr [RDX + 0x8]
+0x2562c  ADD RDX,0x10
+0x25630  MOV R9D,0x1
+0x25636  MOV qword ptr [RSP + 0x10],RAX
+0x2563b  MOV RAX,qword ptr [RDX]
+0x2563e  TEST RAX,RAX
+0x25641  JNZ 0x25508
+<L0> (entry=0x25628):
+	instruction(0x25628)
+	$U1:8 = RDX + 0x8:8
+	RAX = ram[$U1:8]
+	instruction(0x2562c)
+	CF = RDX carry 0x10:8
+	OF = RDX scarry 0x10:8
+	RDX = RDX + 0x10:8
+	SF = RDX s< 0x0:8
+	ZF = RDX == 0x0:8
+	$U1:8 = RDX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x25630)
+	R9 = 0x1:8
+	instruction(0x25636)
+	$U1:8 = 0x10:8 + RSP
+	$U2:8 = RAX
+	ram[$U1:8] = $U2:8
+	instruction(0x2563b)
+	RAX = ram[RDX]
+	instruction(0x2563e)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x25641)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x25508:8
+
+0x25678  MOV RAX,qword ptr [RDX + 0x8]
+0x2567c  ADD RDX,0x10
+0x25680  MOV R8D,0x1
+0x25686  MOV qword ptr [RSP + 0x8],RAX
+0x2568b  MOV RAX,qword ptr [RDX]
+0x2568e  TEST RAX,RAX
+0x25691  JNZ 0x25508
+<L0> (entry=0x25678):
+	instruction(0x25678)
+	$U1:8 = RDX + 0x8:8
+	RAX = ram[$U1:8]
+	instruction(0x2567c)
+	CF = RDX carry 0x10:8
+	OF = RDX scarry 0x10:8
+	RDX = RDX + 0x10:8
+	SF = RDX s< 0x0:8
+	ZF = RDX == 0x0:8
+	$U1:8 = RDX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x25680)
+	R8 = 0x1:8
+	instruction(0x25686)
+	$U1:8 = 0x8:8 + RSP
+	$U2:8 = RAX
+	ram[$U1:8] = $U2:8
+	instruction(0x2568b)
+	RAX = ram[RDX]
+	instruction(0x2568e)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x25691)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x25508:8
+
+0x27225  MOV RSI,qword ptr [0x40c20]
+0x2722c  TEST RSI,RSI
+0x2722f  JZ 0x2723f
+<L0> (entry=0x27225):
+	instruction(0x27225)
+	RSI = ram[0x40c20:8]
+	instruction(0x2722c)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RSI & RSI
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x2722f)
+	if ZF jump 0x2723f:8
+
+0x273dc  ADD RAX,qword ptr [0x40af0]
+0x273e3  CMP CL,0xa
+0x273e6  JZ 0x275c0
+<L0> (entry=0x273dc):
+	instruction(0x273dc)
+	$U4:8 = ram[0x40af0:8]
+	CF = RAX carry $U4:8
+	$U5:8 = ram[0x40af0:8]
+	OF = RAX scarry $U5:8
+	$U6:8 = ram[0x40af0:8]
+	RAX = RAX + $U6:8
+	SF = RAX s< 0x0:8
+	ZF = RAX == 0x0:8
+	$U1:8 = RAX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x273e3)
+	$U1:1 = CL
+	CF = $U1:1 < 0xa:1
+	OF = $U1:1 sborrow 0xa:1
+	$U2:1 = $U1:1 - 0xa:1
+	SF = $U2:1 s< 0x0:1
+	ZF = $U2:1 == 0x0:1
+	$U3:1 = $U2:1 & 0xff:1
+	$U4:1 = popcount($U3:1)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x273e6)
+	if ZF jump 0x275c0:8
+
+0x27480  ADD RAX,qword ptr [RBX + 0x10]
+0x27484  MOV qword ptr [R12],RAX
+0x27488  JMP 0x2738a
+<L0> (entry=0x27480):
+	instruction(0x27480)
+	$U4:8 = RBX + 0x10:8
+	$U5:8 = ram[$U4:8]
+	CF = RAX carry $U5:8
+	$U6:8 = ram[$U4:8]
+	OF = RAX scarry $U6:8
+	$U7:8 = ram[$U4:8]
+	RAX = RAX + $U7:8
+	SF = RAX s< 0x0:8
+	ZF = RAX == 0x0:8
+	$U1:8 = RAX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x27484)
+	$U1:8 = RAX
+	ram[R12] = $U1:8
+	instruction(0x27488)
+	jump 0x2738a:8
+
+0x271dd  MOV RSI,qword ptr [0x40b78]
+0x271e4  CMP qword ptr [RSI + 0x8],0x18
+0x271e9  JNZ 0x276bd
+<L0> (entry=0x271dd):
+	instruction(0x271dd)
+	RSI = ram[0x40b78:8]
+	instruction(0x271e4)
+	$U6:8 = RSI + 0x8:8
+	$U1:8 = ram[$U6:8]
+	CF = $U1:8 < 0x18:8
+	OF = $U1:8 sborrow 0x18:8
+	$U2:8 = $U1:8 - 0x18:8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x271e9)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x276bd:8
+
+0x1956a  MOV dword ptr [RAX + 0x2f8],EDI
+0x19570  ADD EDX,EDX
+0x19572  LEA RDI,[RCX + 0x10]
+0x19576  SUB RSI,R8
+0x19579  LEA RDX,[RDI + RDX*0x4]
+0x1957d  MOV ECX,dword ptr [RCX + 0xc]
+0x19580  MOVQ XMM0, RDI
+0x19585  MOVQ XMM1, RDX
+0x1958a  LEA RDX,[RDX + RSI*0x4]
+0x1958e  PUNPCKLQDQ XMM0, XMM1
+0x19592  MOV dword ptr [RAX + 0x2fc],ECX
+0x19598  MOV qword ptr [RAX + 0x310],RDX
+0x1959f  MOVUPS xmmword ptr [RAX + 0x300], XMM0
+0x195a6  RET
+<L0> (entry=0x1956a):
+	instruction(0x1956a)
+	$U1:8 = RAX + 0x2f8:8
+	$U2:4 = EDI
+	ram[$U1:8] = $U2:4
+	instruction(0x19570)
+	CF = EDX carry EDX
+	OF = EDX scarry EDX
+	EDX = EDX + EDX
+	RDX = zext(EDX)
+	SF = EDX s< 0x0:4
+	ZF = EDX == 0x0:4
+	$U1:4 = EDX & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x19572)
+	$U1:8 = RCX + 0x10:8
+	RDI = $U1:8
+	instruction(0x19576)
+	CF = RSI < R8
+	OF = RSI sborrow R8
+	RSI = RSI - R8
+	SF = RSI s< 0x0:8
+	ZF = RSI == 0x0:8
+	$U1:8 = RSI & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x19579)
+	$U2:8 = RDX * 0x4:8
+	$U1:8 = RDI + $U2:8
+	RDX = $U1:8
+	instruction(0x1957d)
+	$U1:8 = RCX + 0xc:8
+	ECX = ram[$U1:8]
+	RCX = zext(ECX)
+	instruction(0x19580)
+	XMM0 = zext(RDI)
+	instruction(0x19585)
+	XMM1 = zext(RDX)
+	instruction(0x1958a)
+	$U2:8 = RSI * 0x4:8
+	$U1:8 = RDX + $U2:8
+	RDX = $U1:8
+	instruction(0x1958e)
+	XMM0_Qb = XMM1_Qa
+	instruction(0x19592)
+	$U1:8 = RAX + 0x2fc:8
+	$U2:4 = ECX
+	ram[$U1:8] = $U2:4
+	instruction(0x19598)
+	$U1:8 = RAX + 0x310:8
+	$U2:8 = RDX
+	ram[$U1:8] = $U2:8
+	instruction(0x1959f)
+	$U1:8 = RAX + 0x300:8
+	$U2:16 = XMM0
+	ram[$U1:8] = $U2:16
+	instruction(0x195a6)
+	RIP = ram[RSP]
+	RSP = RSP + 0x8:8
+	return RIP
+
+0x255ea  MOV RAX,qword ptr [RSP + 0x40]
+0x255ef  MOV qword ptr [0x3faf8],RAX
+0x255f6  JMP 0x257dd
+<L0> (entry=0x255ea):
+	instruction(0x255ea)
+	$U1:8 = 0x40:8 + RSP
+	RAX = ram[$U1:8]
+	instruction(0x255ef)
+	$U1:8 = RAX
+	ram[0x3faf8:8] = $U1:8
+	instruction(0x255f6)
+	jump 0x257dd:8
+
+0x257e2  CALL 0x19700
+<L0> (entry=0x257e2):
+	$U1:8 = 0x257e7:8
+	RSP = RSP - 0x8:8
+	ram[RSP] = 0x257e7:8
+	call 0x19700:8
+
+0x2720b  MOV RSI,qword ptr [0x40c68]
+0x27212  TEST RSI,RSI
+0x27215  JZ 0x27225
+<L0> (entry=0x2720b):
+	instruction(0x2720b)
+	RSI = ram[0x40c68:8]
+	instruction(0x27212)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RSI & RSI
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x27215)
+	if ZF jump 0x27225:8
+
+0x27350  MOV RCX,qword ptr [RAX + 0x10]
+0x27354  ADD RAX,0x18
+0x27358  ADD RCX,R12
+0x2735b  MOV qword ptr [RDX],RCX
+0x2735e  CMP RBX,RAX
+0x27361  JA 0x27340
+<L0> (entry=0x27350):
+	instruction(0x27350)
+	$U1:8 = RAX + 0x10:8
+	RCX = ram[$U1:8]
+	instruction(0x27354)
+	CF = RAX carry 0x18:8
+	OF = RAX scarry 0x18:8
+	RAX = RAX + 0x18:8
+	SF = RAX s< 0x0:8
+	ZF = RAX == 0x0:8
+	$U1:8 = RAX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x27358)
+	CF = RCX carry R12
+	OF = RCX scarry R12
+	RCX = RCX + R12
+	SF = RCX s< 0x0:8
+	ZF = RCX == 0x0:8
+	$U1:8 = RCX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2735b)
+	$U1:8 = RCX
+	ram[RDX] = $U1:8
+	instruction(0x2735e)
+	$U1:8 = RBX
+	CF = $U1:8 < RAX
+	OF = $U1:8 sborrow RAX
+	$U2:8 = $U1:8 - RAX
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x27361)
+	$U2:1 = CF || ZF
+	$U1:1 = !$U2:1
+	if $U1:1 jump 0x27340:8
+
+0x273ec  CMP R14,0x12
+0x273f0  JZ 0x27490
+<L0> (entry=0x273ec):
+	instruction(0x273ec)
+	$U1:8 = R14
+	CF = $U1:8 < 0x12:8
+	OF = $U1:8 sborrow 0x12:8
+	$U2:8 = $U1:8 - 0x12:8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x273f0)
+	if ZF jump 0x27490:8
+
+0x2729f  MOV R9,qword ptr [R9 + 0x8]
+0x272a3  MOV qword ptr [RBP + -0x60],R9
+0x272a7  TEST RAX,RAX
+0x272aa  JZ 0x272ee
+<L0> (entry=0x2729f):
+	instruction(0x2729f)
+	$U1:8 = R9 + 0x8:8
+	R9 = ram[$U1:8]
+	instruction(0x272a3)
+	$U1:8 = RBP + 0xffffffffffffffa0:8
+	$U2:8 = R9
+	ram[$U1:8] = $U2:8
+	instruction(0x272a7)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x272aa)
+	if ZF jump 0x272ee:8
+
+0x271fd  CMP qword ptr [0x40ba8],0x0
+0x27205  JNZ 0x2767f
+<L0> (entry=0x271fd):
+	instruction(0x271fd)
+	$U1:8 = ram[0x40ba8:8]
+	CF = $U1:8 < 0x0:8
+	OF = $U1:8 sborrow 0x0:8
+	$U2:8 = $U1:8 - 0x0:8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x27205)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x2767f:8
+
+0x2713a  MOV RAX,qword ptr [0x40b50]
+0x27141  TEST RAX,RAX
+0x27144  JZ 0x2714a
+<L0> (entry=0x2713a):
+	instruction(0x2713a)
+	RAX = ram[0x40b50:8]
+	instruction(0x27141)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x27144)
+	if ZF jump 0x2714a:8
+
+0x27338  NOP dword ptr [RAX + RAX*0x1]
+0x27340  MOV RDX,qword ptr [RAX]
+0x27343  ADD RDX,R12
+0x27346  CMP dword ptr [RAX + 0x8],0x8
+0x2734a  JNZ 0x27641
+<L0> (entry=0x27338):
+	instruction(0x27338)
+	$U2:8 = RAX * 0x1:8
+	$U1:8 = RAX + $U2:8
+	instruction(0x27340)
+	RDX = ram[RAX]
+	instruction(0x27343)
+	CF = RDX carry R12
+	OF = RDX scarry R12
+	RDX = RDX + R12
+	SF = RDX s< 0x0:8
+	ZF = RDX == 0x0:8
+	$U1:8 = RDX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x27346)
+	$U6:8 = RAX + 0x8:8
+	$U1:4 = ram[$U6:8]
+	CF = $U1:4 < 0x8:4
+	OF = $U1:4 sborrow 0x8:4
+	$U2:4 = $U1:4 - 0x8:4
+	SF = $U2:4 s< 0x0:4
+	ZF = $U2:4 == 0x0:4
+	$U3:4 = $U2:4 & 0xff:4
+	$U4:1 = popcount($U3:4)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x2734a)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x27641:8
+
+0x27380  CMP R14,0x5
+0x27384  JA 0x27480
+<L0> (entry=0x27380):
+	instruction(0x27380)
+	$U1:8 = R14
+	CF = $U1:8 < 0x5:8
+	OF = $U1:8 sborrow 0x5:8
+	$U2:8 = $U1:8 - 0x5:8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x27384)
+	$U2:1 = CF || ZF
+	$U1:1 = !$U2:1
+	if $U1:1 jump 0x27480:8
+
+0x1d970  ENDBR64
+0x1d974  PUSH R15
+0x1d976  PUSH R14
+0x1d978  PUSH R13
+0x1d97a  PUSH R12
+0x1d97c  PUSH RBP
+0x1d97d  MOV RBP,RDI
+0x1d980  PUSH RBX
+0x1d981  SUB RSP,0x28
+0x1d985  MOV EAX,dword ptr [0x3fa98]
+0x1d98b  TEST EAX,EAX
+0x1d98d  JNZ 0x1dc25
+<L0> (entry=0x1d970):
+	instruction(0x1d970)
+	instruction(0x1d974)
+	$U1:8 = R15
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x1d976)
+	$U1:8 = R14
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x1d978)
+	$U1:8 = R13
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x1d97a)
+	$U1:8 = R12
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x1d97c)
+	$U1:8 = RBP
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x1d97d)
+	RBP = RDI
+	instruction(0x1d980)
+	$U1:8 = RBX
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x1d981)
+	CF = RSP < 0x28:8
+	OF = RSP sborrow 0x28:8
+	RSP = RSP - 0x28:8
+	SF = RSP s< 0x0:8
+	ZF = RSP == 0x0:8
+	$U1:8 = RSP & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x1d985)
+	EAX = ram[0x3fa98:8]
+	RAX = zext(EAX)
+	instruction(0x1d98b)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:4 = EAX & EAX
+	SF = $U1:4 s< 0x0:4
+	ZF = $U1:4 == 0x0:4
+	$U2:4 = $U1:4 & 0xff:4
+	$U3:1 = popcount($U2:4)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x1d98d)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x1dc25:8
+
+0x1ddd0  RET
+<L0> (entry=0x1ddd0):
+	RIP = ram[RSP]
+	RSP = RSP + 0x8:8
+	return RIP
+
+0x19543  MOV RCX,qword ptr [RDX + 0x8]
+0x19547  TEST byte ptr [RDI + 0x31e],0x20
+0x1954e  JNZ 0x195b0
+<L0> (entry=0x19543):
+	instruction(0x19543)
+	$U1:8 = RDX + 0x8:8
+	RCX = ram[$U1:8]
+	instruction(0x19547)
+	$U5:8 = RDI + 0x31e:8
+	CF = 0x0:1
+	OF = 0x0:1
+	$U6:1 = ram[$U5:8]
+	$U1:1 = $U6:1 & 0x20:1
+	SF = $U1:1 s< 0x0:1
+	ZF = $U1:1 == 0x0:1
+	$U2:1 = $U1:1 & 0xff:1
+	$U3:1 = popcount($U2:1)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x1954e)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x195b0:8
+
+0x273f8  TEST R13D,0xfffffff8
+0x273ff  JZ 0x27380
+<L0> (entry=0x273f8):
+	instruction(0x273f8)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:4 = R13D & 0xfffffff8:4
+	SF = $U1:4 s< 0x0:4
+	ZF = $U1:4 == 0x0:4
+	$U2:4 = $U1:4 & 0xff:4
+	$U3:1 = popcount($U2:4)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x273ff)
+	if ZF jump 0x27380:8
+
+0x275e0  MOV RSI,R13
+0x275e3  SUB RSI,RAX
+0x275e6  MOV RAX,RSI
+0x275e9  JMP 0x270c9
+<L0> (entry=0x275e0):
+	instruction(0x275e0)
+	RSI = R13
+	instruction(0x275e3)
+	CF = RSI < RAX
+	OF = RSI sborrow RAX
+	RSI = RSI - RAX
+	SF = RSI s< 0x0:8
+	ZF = RSI == 0x0:8
+	$U1:8 = RSI & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x275e6)
+	RAX = RSI
+	instruction(0x275e9)
+	jump 0x270c9:8
+
+0x242e0  ENDBR64
+0x242e4  LEA RAX,[0x134f0]
+0x242eb  MOV qword ptr [0x3fa70],RAX
+0x242f2  LEA RAX,[0x13530]
+0x242f9  MOV qword ptr [0x3fa68],RAX
+0x24300  LEA RAX,[0x133d0]
+0x24307  MOV qword ptr [0x3fa60],RAX
+0x2430e  LEA RAX,[0x13570]
+0x24315  MOV qword ptr [0x3fa58],RAX
+0x2431c  RET
+<L0> (entry=0x242e0):
+	instruction(0x242e0)
+	instruction(0x242e4)
+	RAX = 0x134f0:8
+	instruction(0x242eb)
+	$U1:8 = RAX
+	ram[0x3fa70:8] = $U1:8
+	instruction(0x242f2)
+	RAX = 0x13530:8
+	instruction(0x242f9)
+	$U1:8 = RAX
+	ram[0x3fa68:8] = $U1:8
+	instruction(0x24300)
+	RAX = 0x133d0:8
+	instruction(0x24307)
+	$U1:8 = RAX
+	ram[0x3fa60:8] = $U1:8
+	instruction(0x2430e)
+	RAX = 0x13570:8
+	instruction(0x24315)
+	$U1:8 = RAX
+	ram[0x3fa58:8] = $U1:8
+	instruction(0x2431c)
+	RIP = ram[RSP]
+	RSP = RSP + 0x8:8
+	return RIP
+
+0x271c6  CMP qword ptr [RAX + 0x8],0x7
+0x271cb  JNZ 0x2771a
+<L0> (entry=0x271c6):
+	instruction(0x271c6)
+	$U6:8 = RAX + 0x8:8
+	$U1:8 = ram[$U6:8]
+	CF = $U1:8 < 0x7:8
+	OF = $U1:8 sborrow 0x7:8
+	$U2:8 = $U1:8 - 0x7:8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x271cb)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x2771a:8
+
+0x1dd70  ENDBR64
+0x1dd74  MOV EDI,EDI
+0x1dd76  LEA RCX,[0x3eb00]
+0x1dd7d  LEA RAX,[RDI*0x8]
+0x1dd85  SUB RAX,RDI
+0x1dd88  SHL RAX,0x4
+0x1dd8c  ADD RAX,RCX
+0x1dd8f  MOV R8D,dword ptr [RAX + 0x30]
+0x1dd93  MOV RAX,qword ptr [RAX + 0x48]
+0x1dd97  CMP R8D,0x2
+0x1dd9b  JA 0x1ddd8
+<L0> (entry=0x1dd70):
+	instruction(0x1dd70)
+	instruction(0x1dd74)
+	EDI = EDI
+	RDI = zext(EDI)
+	instruction(0x1dd76)
+	RCX = 0x3eb00:8
+	instruction(0x1dd7d)
+	$U1:8 = RDI * 0x8:8
+	RAX = $U1:8
+	instruction(0x1dd85)
+	CF = RAX < RDI
+	OF = RAX sborrow RDI
+	RAX = RAX - RDI
+	SF = RAX s< 0x0:8
+	ZF = RAX == 0x0:8
+	$U1:8 = RAX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x1dd88)
+	$U1:8 = 0x4:8 & 0x3f:8
+	$U2:8 = RAX
+	RAX = RAX << $U1:8
+	$U3:1 = $U1:8 != 0x0:8
+	$U5:8 = $U1:8 - 0x1:8
+	$U6:8 = $U2:8 << $U5:8
+	$U4:1 = $U6:8 s< 0x0:8
+	$U7:1 = !$U3:1
+	$U8:1 = $U7:1 & CF
+	$U9:1 = $U3:1 & $U4:1
+	CF = $U8:1 | $U9:1
+	$U10:1 = $U1:8 == 0x1:8
+	$U12:1 = RAX s< 0x0:8
+	$U11:1 = CF ^ $U12:1
+	$U13:1 = !$U10:1
+	$U14:1 = $U13:1 & OF
+	$U15:1 = $U10:1 & $U11:1
+	OF = $U14:1 | $U15:1
+	$U16:1 = $U1:8 != 0x0:8
+	$U17:1 = RAX s< 0x0:8
+	$U18:1 = !$U16:1
+	$U19:1 = $U18:1 & SF
+	$U20:1 = $U16:1 & $U17:1
+	SF = $U19:1 | $U20:1
+	$U21:1 = RAX == 0x0:8
+	$U22:1 = !$U16:1
+	$U23:1 = $U22:1 & ZF
+	$U24:1 = $U16:1 & $U21:1
+	ZF = $U23:1 | $U24:1
+	$U26:8 = RAX & 0xff:8
+	$U27:1 = popcount($U26:8)
+	$U28:1 = $U27:1 & 0x1:1
+	$U25:1 = $U28:1 == 0x0:1
+	$U29:1 = !$U16:1
+	$U30:1 = $U29:1 & PF
+	$U31:1 = $U16:1 & $U25:1
+	PF = $U30:1 | $U31:1
+	instruction(0x1dd8c)
+	CF = RAX carry RCX
+	OF = RAX scarry RCX
+	RAX = RAX + RCX
+	SF = RAX s< 0x0:8
+	ZF = RAX == 0x0:8
+	$U1:8 = RAX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x1dd8f)
+	$U1:8 = RAX + 0x30:8
+	R8D = ram[$U1:8]
+	R8 = zext(R8D)
+	instruction(0x1dd93)
+	$U1:8 = RAX + 0x48:8
+	RAX = ram[$U1:8]
+	instruction(0x1dd97)
+	$U1:4 = R8D
+	CF = $U1:4 < 0x2:4
+	OF = $U1:4 sborrow 0x2:4
+	$U2:4 = $U1:4 - 0x2:4
+	SF = $U2:4 s< 0x0:4
+	ZF = $U2:4 == 0x0:4
+	$U3:4 = $U2:4 & 0xff:4
+	$U4:1 = popcount($U3:4)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x1dd9b)
+	$U2:1 = CF || ZF
+	$U1:1 = !$U2:1
+	if $U1:1 jump 0x1ddd8:8
+
+0x257e7  XOR EDI,EDI
+0x257e9  CALL 0x2ba80
+<L0> (entry=0x257e7):
+	instruction(0x257e7)
+	CF = 0x0:1
+	OF = 0x0:1
+	EDI = EDI ^ EDI
+	RDI = zext(EDI)
+	SF = EDI s< 0x0:4
+	ZF = EDI == 0x0:4
+	$U1:4 = EDI & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x257e9)
+	$U1:8 = 0x257ee:8
+	RSP = RSP - 0x8:8
+	ram[RSP] = 0x257ee:8
+	call 0x2ba80:8
+
+0x2ba97  XOR EAX,EAX
+0x2ba99  RET
+<L0> (entry=0x2ba97):
+	instruction(0x2ba97)
+	CF = 0x0:1
+	OF = 0x0:1
+	EAX = EAX ^ EAX
+	RAX = zext(EAX)
+	SF = EAX s< 0x0:4
+	ZF = EAX == 0x0:4
+	$U1:4 = EAX & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2ba99)
+	RIP = ram[RSP]
+	RSP = RSP + 0x8:8
+	return RIP
+
+0x25790  MOV RAX,qword ptr [RDX + 0x8]
+0x25794  ADD RDX,0x10
+0x25798  MOV byte ptr [RSP + 0x1d],0x1
+0x2579d  MOV qword ptr [RSP + 0x40],RAX
+0x257a2  MOV RAX,qword ptr [RDX]
+0x257a5  TEST RAX,RAX
+0x257a8  JNZ 0x25508
+<L0> (entry=0x25790):
+	instruction(0x25790)
+	$U1:8 = RDX + 0x8:8
+	RAX = ram[$U1:8]
+	instruction(0x25794)
+	CF = RDX carry 0x10:8
+	OF = RDX scarry 0x10:8
+	RDX = RDX + 0x10:8
+	SF = RDX s< 0x0:8
+	ZF = RDX == 0x0:8
+	$U1:8 = RDX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x25798)
+	$U1:8 = 0x1d:8 + RSP
+	$U2:1 = 0x1:1
+	ram[$U1:8] = $U2:1
+	instruction(0x2579d)
+	$U1:8 = 0x40:8 + RSP
+	$U2:8 = RAX
+	ram[$U1:8] = $U2:8
+	instruction(0x257a2)
+	RAX = ram[RDX]
+	instruction(0x257a5)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x257a8)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x25508:8
+
+0x207b0  ENDBR64
+0x207b4  MOV EAX,dword ptr [0x3fb50]
+0x207ba  TEST EAX,EAX
+0x207bc  JZ 0x207c0
+<L0> (entry=0x207b0):
+	instruction(0x207b0)
+	instruction(0x207b4)
+	EAX = ram[0x3fb50:8]
+	RAX = zext(EAX)
+	instruction(0x207ba)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:4 = EAX & EAX
+	SF = $U1:4 s< 0x0:4
+	ZF = $U1:4 == 0x0:4
+	$U2:4 = $U1:4 & 0xff:4
+	$U3:1 = popcount($U2:4)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x207bc)
+	if ZF jump 0x207c0:8
+
+0x1f530  PUSH R15
+0x1f532  XOR EAX,EAX
+0x1f534  PUSH R14
+0x1f536  PUSH R13
+0x1f538  PUSH R12
+0x1f53a  PUSH RBP
+0x1f53b  PUSH RBX
+0x1f53c  SUB RSP,0xd8
+0x1f543  MOV dword ptr [RSP + 0x88],0x0
+0x1f54e  MOV dword ptr [RSP + 0x8c],0x0
+0x1f559  MOV dword ptr [RSP + 0x90],0x0
+0x1f564  CPUID
+0x1f566  MOV dword ptr [0x3fb54],EAX
+0x1f56c  CMP EBX,0x756e6547
+0x1f572  JNZ 0x1f6e0
+<L0> (entry=0x1f530):
+	instruction(0x1f530)
+	$U1:8 = R15
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x1f532)
+	CF = 0x0:1
+	OF = 0x0:1
+	EAX = EAX ^ EAX
+	RAX = zext(EAX)
+	SF = EAX s< 0x0:4
+	ZF = EAX == 0x0:4
+	$U1:4 = EAX & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x1f534)
+	$U1:8 = R14
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x1f536)
+	$U1:8 = R13
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x1f538)
+	$U1:8 = R12
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x1f53a)
+	$U1:8 = RBP
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x1f53b)
+	$U1:8 = RBX
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x1f53c)
+	CF = RSP < 0xd8:8
+	OF = RSP sborrow 0xd8:8
+	RSP = RSP - 0xd8:8
+	SF = RSP s< 0x0:8
+	ZF = RSP == 0x0:8
+	$U1:8 = RSP & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x1f543)
+	$U1:8 = 0x88:8 + RSP
+	$U2:4 = 0x0:4
+	ram[$U1:8] = $U2:4
+	instruction(0x1f54e)
+	$U1:8 = 0x8c:8 + RSP
+	$U2:4 = 0x0:4
+	ram[$U1:8] = $U2:4
+	instruction(0x1f559)
+	$U1:8 = 0x90:8 + RSP
+	$U2:4 = 0x0:4
+	ram[$U1:8] = $U2:4
+	instruction(0x1f564)
+	$tmp0:8 = 0x0:8
+	$U2:1 = EAX == 0x0:4
+	if $U2:1 jump <L136>
+<L1>:
+	$U3:1 = EAX == 0x1:4
+	if $U3:1 jump <L137>
+<L2>:
+	$U4:1 = EAX == 0x2:4
+	if $U4:1 jump <L138>
+<L3>:
+	$U5:1 = EAX == 0x3:4
+	if $U5:1 jump <L139>
+<L4>:
+	$U6:1 = EAX == 0x4:4
+	if $U6:1 jump <L140>
+<L5>:
+	$U7:1 = EAX == 0x5:4
+	if $U7:1 jump <L141>
+<L6>:
+	$U8:1 = EAX == 0x6:4
+	if $U8:1 jump <L142>
+<L7>:
+	$U9:1 = EAX == 0x7:4
+	if $U9:1 jump <L143>
+<L8>:
+	$U10:1 = EAX == 0x9:4
+	if $U10:1 jump <L144>
+<L9>:
+	$U11:1 = EAX == 0xa:4
+	if $U11:1 jump <L145>
+<L10>:
+	$U12:1 = EAX == 0xb:4
+	if $U12:1 jump <L146>
+<L11>:
+	$U13:1 = EAX == 0xd:4
+	if $U13:1 jump <L147>
+<L12>:
+	$U14:1 = EAX == 0xf:4
+	if $U14:1 jump <L148>
+<L13>:
+	$U15:1 = EAX == 0x80000002:4
+	if $U15:1 jump <L149>
+<L14>:
+	$U16:1 = EAX == 0x80000003:4
+	if $U16:1 jump <L150>
+<L15>:
+	$U17:1 = EAX == 0x80000004:4
+	if $U17:1 jump <L151>
+<L16>:
+	$tmp0:8 = cpuid(EAX)
+	jump <L152>
+<L17>:
+	$tmp0:8 = cpuid_basic_info(EAX)
+	jump <L152>
+<L18>:
+	$tmp0:8 = cpuid_Version_info(EAX)
+	jump <L152>
+<L19>:
+	$tmp0:8 = cpuid_cache_tlb_info(EAX)
+	jump <L152>
+<L20>:
+	$tmp0:8 = cpuid_serial_info(EAX)
+	jump <L152>
+<L21>:
+	$tmp0:8 = cpuid_Deterministic_Cache_Parameters_info(EAX)
+	jump <L152>
+<L22>:
+	$tmp0:8 = cpuid_MONITOR_MWAIT_Features_info(EAX)
+	jump <L152>
+<L23>:
+	$tmp0:8 = cpuid_Thermal_Power_Management_info(EAX)
+	jump <L152>
+<L24>:
+	$tmp0:8 = cpuid_Extended_Feature_Enumeration_info(EAX)
+	jump <L152>
+<L25>:
+	$tmp0:8 = cpuid_Direct_Cache_Access_info(EAX)
+	jump <L152>
+<L26>:
+	$tmp0:8 = cpuid_Architectural_Performance_Monitoring_info(EAX)
+	jump <L152>
+<L27>:
+	$tmp0:8 = cpuid_Extended_Topology_info(EAX)
+	jump <L152>
+<L28>:
+	$tmp0:8 = cpuid_Processor_Extended_States_info(EAX)
+	jump <L152>
+<L29>:
+	$tmp0:8 = cpuid_Quality_of_Service_info(EAX)
+	jump <L152>
+<L30>:
+	$tmp0:8 = cpuid_brand_part1_info(EAX)
+	jump <L152>
+<L31>:
+	$tmp0:8 = cpuid_brand_part2_info(EAX)
+	jump <L152>
+<L32>:
+	$tmp0:8 = cpuid_brand_part3_info(EAX)
+<L33>:
+	$U18:4 = ram[$tmp0:8]
+	RAX = zext($U18:4)
+	$U19:8 = $tmp0:8 + 0x4:8
+	$U20:4 = ram[$U19:8]
+	RBX = zext($U20:4)
+	$U21:8 = $tmp0:8 + 0x8:8
+	$U22:4 = ram[$U21:8]
+	RDX = zext($U22:4)
+	$U23:8 = $tmp0:8 + 0xc:8
+	$U24:4 = ram[$U23:8]
+	RCX = zext($U24:4)
+	instruction(0x1f566)
+	$U1:4 = EAX
+	ram[0x3fb54:8] = $U1:4
+	instruction(0x1f56c)
+	$U1:4 = EBX
+	CF = $U1:4 < 0x756e6547:4
+	OF = $U1:4 sborrow 0x756e6547:4
+	$U2:4 = $U1:4 - 0x756e6547:4
+	SF = $U2:4 s< 0x0:4
+	ZF = $U2:4 == 0x0:4
+	$U3:4 = $U2:4 & 0xff:4
+	$U4:1 = popcount($U3:4)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x1f572)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x1f6e0:8
+
+0x270ec  LEA ESI,[RAX + RAX*0x1]
+0x270ef  MOV R14D,ESI
+0x270f2  SAR R14D,0x1
+0x270f5  CMP ESI,-0x8
+0x270f8  JBE 0x27108
+<L0> (entry=0x270ec):
+	instruction(0x270ec)
+	$U2:8 = RAX * 0x1:8
+	$U1:8 = RAX + $U2:8
+	ESI = $U1:4
+	RSI = zext(ESI)
+	instruction(0x270ef)
+	R14D = ESI
+	R14 = zext(R14D)
+	instruction(0x270f2)
+	$U1:4 = R14D & 0x1:4
+	CF = $U1:4 != 0x0:4
+	OF = 0x0:1
+	R14D = R14D s>> 0x1:8
+	R14 = zext(R14D)
+	SF = R14D s< 0x0:4
+	ZF = R14D == 0x0:4
+	$U2:4 = R14D & 0xff:4
+	$U3:1 = popcount($U2:4)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x270f5)
+	$U1:4 = ESI
+	CF = $U1:4 < 0xfffffff8:4
+	OF = $U1:4 sborrow 0xfffffff8:4
+	$U2:4 = $U1:4 - 0xfffffff8:4
+	SF = $U2:4 s< 0x0:4
+	ZF = $U2:4 == 0x0:4
+	$U3:4 = $U2:4 & 0xff:4
+	$U4:1 = popcount($U3:4)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x270f8)
+	$U1:1 = CF || ZF
+	if $U1:1 jump 0x27108:8
+
+0x27363  CMP qword ptr [0x40cc0],0x0
+0x2736b  JZ 0x276fb
+<L0> (entry=0x27363):
+	instruction(0x27363)
+	$U1:8 = ram[0x40cc0:8]
+	CF = $U1:8 < 0x0:8
+	OF = $U1:8 sborrow 0x0:8
+	$U2:8 = $U1:8 - 0x0:8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x2736b)
+	if ZF jump 0x276fb:8
+
+0x270da  CMP RAX,0x22
+0x270de  JBE 0x270c9
+<L0> (entry=0x270da):
+	instruction(0x270da)
+	$U1:8 = RAX
+	CF = $U1:8 < 0x22:8
+	OF = $U1:8 sborrow 0x22:8
+	$U2:8 = $U1:8 - 0x22:8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x270de)
+	$U1:1 = CF || ZF
+	if $U1:1 jump 0x270c9:8
+
+0x272ee  LEA RAX,[RBP + -0x70]
+0x272f2  LEA R10,[RBP + -0x30]
+0x272f6  MOV qword ptr [RBP + -0xa8],RAX
+0x272fd  MOV R8,RAX
+0x27300  LEA R9,[0x1e100]
+0x27307  MOV RSI,qword ptr [0x40b60]
+0x2730e  MOV RAX,qword ptr [R8]
+0x27311  MOV RCX,qword ptr [R8 + 0x10]
+0x27315  MOV RDI,qword ptr [R8 + 0x8]
+0x27319  MOV RSI,qword ptr [RSI + 0x8]
+0x2731d  ADD RDI,RAX
+0x27320  AND EDX,0x20
+0x27323  LEA RDX,[RCX + RCX*0x2]
+0x27327  LEA R11,[RSI + R12*0x1]
+0x2732b  LEA RBX,[RAX + RDX*0x8]
+0x2732f  CMOVNZ RSI,R11
+0x27333  CMP RAX,RBX
+0x27336  JNC 0x27363
+<L0> (entry=0x272ee):
+	instruction(0x272ee)
+	$U1:8 = RBP + 0xffffffffffffff90:8
+	RAX = $U1:8
+	instruction(0x272f2)
+	$U1:8 = RBP + 0xffffffffffffffd0:8
+	R10 = $U1:8
+	instruction(0x272f6)
+	$U1:8 = RBP + 0xffffffffffffff58:8
+	$U2:8 = RAX
+	ram[$U1:8] = $U2:8
+	instruction(0x272fd)
+	R8 = RAX
+	instruction(0x27300)
+	R9 = 0x1e100:8
+	instruction(0x27307)
+	RSI = ram[0x40b60:8]
+	instruction(0x2730e)
+	RAX = ram[R8]
+	instruction(0x27311)
+	$U1:8 = R8 + 0x10:8
+	RCX = ram[$U1:8]
+	instruction(0x27315)
+	$U1:8 = R8 + 0x8:8
+	RDI = ram[$U1:8]
+	instruction(0x27319)
+	$U1:8 = RSI + 0x8:8
+	RSI = ram[$U1:8]
+	instruction(0x2731d)
+	CF = RDI carry RAX
+	OF = RDI scarry RAX
+	RDI = RDI + RAX
+	SF = RDI s< 0x0:8
+	ZF = RDI == 0x0:8
+	$U1:8 = RDI & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x27320)
+	CF = 0x0:1
+	OF = 0x0:1
+	EDX = EDX & 0x20:4
+	RDX = zext(EDX)
+	SF = EDX s< 0x0:4
+	ZF = EDX == 0x0:4
+	$U1:4 = EDX & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x27323)
+	$U2:8 = RCX * 0x2:8
+	$U1:8 = RCX + $U2:8
+	RDX = $U1:8
+	instruction(0x27327)
+	$U2:8 = R12 * 0x1:8
+	$U1:8 = RSI + $U2:8
+	R11 = $U1:8
+	instruction(0x2732b)
+	$U2:8 = RDX * 0x8:8
+	$U1:8 = RAX + $U2:8
+	RBX = $U1:8
+	instruction(0x2732f)
+	$U2:1 = !ZF
+	$U1:1 = !$U2:1
+	if $U1:1 jump <L40>
+<L1>:
+	RSI = R11
+<L2>:
+	instruction(0x27333)
+	$U1:8 = RAX
+	CF = $U1:8 < RBX
+	OF = $U1:8 sborrow RBX
+	$U2:8 = $U1:8 - RBX
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x27336)
+	$U1:1 = !CF
+	if $U1:1 jump 0x27363:8
+
+0x25538  TEST SIL,SIL
+0x2553b  JZ 0x25548
+<L0> (entry=0x25538):
+	instruction(0x25538)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:1 = SIL & SIL
+	SF = $U1:1 s< 0x0:1
+	ZF = $U1:1 == 0x0:1
+	$U2:1 = $U1:1 & 0xff:1
+	$U3:1 = popcount($U2:1)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x2553b)
+	if ZF jump 0x25548:8
+
+0x27030  ENDBR64
+0x27034  PUSH RBP
+0x27035  MOV RBP,RSP
+0x27038  PUSH R15
+0x2703a  PUSH R14
+0x2703c  PUSH R13
+0x2703e  PUSH R12
+0x27040  PUSH RBX
+0x27041  SUB RSP,0x88
+0x27048  MOV qword ptr [RBP + -0x78],RDI
+0x2704c  RDTSC
+0x2704e  LEA R12,[0x6000]
+0x27055  AND byte ptr [0x40e0e],0xdf
+0x2705c  MOV qword ptr [0x40af0],R12
+0x27063  SHL RDX,0x20
+0x27067  OR RAX,RDX
+0x2706a  LEA RDX,[0x3fe80]
+0x27071  MOV qword ptr [0x3faa0],RAX
+0x27078  MOV RAX,qword ptr [0x3fe80]
+0x2707f  MOV qword ptr [0x40b00],RDX
+0x27086  TEST RAX,RAX
+0x27089  JZ 0x27128
+<L0> (entry=0x27030):
+	instruction(0x27030)
+	instruction(0x27034)
+	$U1:8 = RBP
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x27035)
+	RBP = RSP
+	instruction(0x27038)
+	$U1:8 = R15
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x2703a)
+	$U1:8 = R14
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x2703c)
+	$U1:8 = R13
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x2703e)
+	$U1:8 = R12
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x27040)
+	$U1:8 = RBX
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x27041)
+	CF = RSP < 0x88:8
+	OF = RSP sborrow 0x88:8
+	RSP = RSP - 0x88:8
+	SF = RSP s< 0x0:8
+	ZF = RSP == 0x0:8
+	$U1:8 = RSP & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x27048)
+	$U1:8 = RBP + 0xffffffffffffff88:8
+	$U2:8 = RDI
+	ram[$U1:8] = $U2:8
+	instruction(0x2704c)
+	$U1:8 = rdtsc()
+	EDX = $U1[4]:4
+	EAX = $U1:4
+	instruction(0x2704e)
+	R12 = 0x6000:8
+	instruction(0x27055)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U4:1 = ram[0x40e0e:8]
+	$U5:1 = $U4:1 & 0xdf:1
+	ram[0x40e0e:8] = $U5:1
+	$U6:1 = ram[0x40e0e:8]
+	SF = $U6:1 s< 0x0:1
+	$U7:1 = ram[0x40e0e:8]
+	ZF = $U7:1 == 0x0:1
+	$U8:1 = ram[0x40e0e:8]
+	$U1:1 = $U8:1 & 0xff:1
+	$U2:1 = popcount($U1:1)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2705c)
+	$U1:8 = R12
+	ram[0x40af0:8] = $U1:8
+	instruction(0x27063)
+	$U1:8 = 0x20:8 & 0x3f:8
+	$U2:8 = RDX
+	RDX = RDX << $U1:8
+	$U3:1 = $U1:8 != 0x0:8
+	$U5:8 = $U1:8 - 0x1:8
+	$U6:8 = $U2:8 << $U5:8
+	$U4:1 = $U6:8 s< 0x0:8
+	$U7:1 = !$U3:1
+	$U8:1 = $U7:1 & CF
+	$U9:1 = $U3:1 & $U4:1
+	CF = $U8:1 | $U9:1
+	$U10:1 = $U1:8 == 0x1:8
+	$U12:1 = RDX s< 0x0:8
+	$U11:1 = CF ^ $U12:1
+	$U13:1 = !$U10:1
+	$U14:1 = $U13:1 & OF
+	$U15:1 = $U10:1 & $U11:1
+	OF = $U14:1 | $U15:1
+	$U16:1 = $U1:8 != 0x0:8
+	$U17:1 = RDX s< 0x0:8
+	$U18:1 = !$U16:1
+	$U19:1 = $U18:1 & SF
+	$U20:1 = $U16:1 & $U17:1
+	SF = $U19:1 | $U20:1
+	$U21:1 = RDX == 0x0:8
+	$U22:1 = !$U16:1
+	$U23:1 = $U22:1 & ZF
+	$U24:1 = $U16:1 & $U21:1
+	ZF = $U23:1 | $U24:1
+	$U26:8 = RDX & 0xff:8
+	$U27:1 = popcount($U26:8)
+	$U28:1 = $U27:1 & 0x1:1
+	$U25:1 = $U28:1 == 0x0:1
+	$U29:1 = !$U16:1
+	$U30:1 = $U29:1 & PF
+	$U31:1 = $U16:1 & $U25:1
+	PF = $U30:1 | $U31:1
+	instruction(0x27067)
+	CF = 0x0:1
+	OF = 0x0:1
+	RAX = RAX | RDX
+	SF = RAX s< 0x0:8
+	ZF = RAX == 0x0:8
+	$U1:8 = RAX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2706a)
+	RDX = 0x3fe80:8
+	instruction(0x27071)
+	$U1:8 = RAX
+	ram[0x3faa0:8] = $U1:8
+	instruction(0x27078)
+	RAX = ram[0x3fe80:8]
+	instruction(0x2707f)
+	$U1:8 = RDX
+	ram[0x40b00:8] = $U1:8
+	instruction(0x27086)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x27089)
+	if ZF jump 0x27128:8
+
+0x25580  MOV EAX,dword ptr [RSP + 0x38]
+0x25584  MOV dword ptr [0x3fb20],EAX
+0x2558a  TEST R13B,R13B
+0x2558d  JZ 0x2559b
+<L0> (entry=0x25580):
+	instruction(0x25580)
+	$U1:8 = 0x38:8 + RSP
+	EAX = ram[$U1:8]
+	RAX = zext(EAX)
+	instruction(0x25584)
+	$U1:4 = EAX
+	ram[0x3fb20:8] = $U1:4
+	instruction(0x2558a)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:1 = R13B & R13B
+	SF = $U1:1 s< 0x0:1
+	ZF = $U1:1 == 0x0:1
+	$U2:1 = $U1:1 & 0xff:1
+	$U3:1 = popcount($U2:1)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x2558d)
+	if ZF jump 0x2559b:8
+
+0x27510  OR byte ptr [0x40e0c],0x4
+0x27517  CALL 0x242e0
+<L0> (entry=0x27510):
+	instruction(0x27510)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U4:1 = ram[0x40e0c:8]
+	$U5:1 = $U4:1 | 0x4:1
+	ram[0x40e0c:8] = $U5:1
+	$U6:1 = ram[0x40e0c:8]
+	SF = $U6:1 s< 0x0:1
+	$U7:1 = ram[0x40e0c:8]
+	ZF = $U7:1 == 0x0:1
+	$U8:1 = ram[0x40e0c:8]
+	$U1:1 = $U8:1 & 0xff:1
+	$U2:1 = popcount($U1:1)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x27517)
+	$U1:8 = 0x2751c:8
+	RSP = RSP - 0x8:8
+	ram[RSP] = 0x2751c:8
+	call 0x242e0:8
+
+0x256f0  MOV EAX,dword ptr [RDX + 0x8]
+0x256f3  ADD RDX,0x10
+0x256f7  MOV R11D,0x1
+0x256fd  MOV dword ptr [RSP + 0x38],EAX
+0x25701  MOV RAX,qword ptr [RDX]
+0x25704  TEST RAX,RAX
+0x25707  JNZ 0x25508
+<L0> (entry=0x256f0):
+	instruction(0x256f0)
+	$U1:8 = RDX + 0x8:8
+	EAX = ram[$U1:8]
+	RAX = zext(EAX)
+	instruction(0x256f3)
+	CF = RDX carry 0x10:8
+	OF = RDX scarry 0x10:8
+	RDX = RDX + 0x10:8
+	SF = RDX s< 0x0:8
+	ZF = RDX == 0x0:8
+	$U1:8 = RDX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x256f7)
+	R11 = 0x1:8
+	instruction(0x256fd)
+	$U1:8 = 0x38:8 + RSP
+	$U2:4 = EAX
+	ram[$U1:8] = $U2:4
+	instruction(0x25701)
+	RAX = ram[RDX]
+	instruction(0x25704)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x25707)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x25508:8
+
+0x25528  MOV RAX,qword ptr [RDX + 0x10]
+0x2552c  ADD RDX,0x10
+0x25530  TEST RAX,RAX
+0x25533  JNZ 0x25508
+<L0> (entry=0x25528):
+	instruction(0x25528)
+	$U1:8 = RDX + 0x10:8
+	RAX = ram[$U1:8]
+	instruction(0x2552c)
+	CF = RDX carry 0x10:8
+	OF = RDX scarry 0x10:8
+	RDX = RDX + 0x10:8
+	SF = RDX s< 0x0:8
+	ZF = RDX == 0x0:8
+	$U1:8 = RDX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x25530)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x25533)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x25508:8
+
+0x25768  MOV RAX,qword ptr [RDX + 0x8]
+0x2576c  ADD RDX,0x10
+0x25770  MOV byte ptr [RSP + 0x1c],0x1
+0x25775  MOV qword ptr [RSP + 0x48],RAX
+0x2577a  MOV RAX,qword ptr [RDX]
+0x2577d  TEST RAX,RAX
+0x25780  JNZ 0x25508
+<L0> (entry=0x25768):
+	instruction(0x25768)
+	$U1:8 = RDX + 0x8:8
+	RAX = ram[$U1:8]
+	instruction(0x2576c)
+	CF = RDX carry 0x10:8
+	OF = RDX scarry 0x10:8
+	RDX = RDX + 0x10:8
+	SF = RDX s< 0x0:8
+	ZF = RDX == 0x0:8
+	$U1:8 = RDX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x25770)
+	$U1:8 = 0x1c:8 + RSP
+	$U2:1 = 0x1:1
+	ram[$U1:8] = $U2:1
+	instruction(0x25775)
+	$U1:8 = 0x48:8 + RSP
+	$U2:8 = RAX
+	ram[$U1:8] = $U2:8
+	instruction(0x2577a)
+	RAX = ram[RDX]
+	instruction(0x2577d)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x25780)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x25508:8
+
+0x256a0  MOV EAX,dword ptr [RDX + 0x8]
+0x256a3  ADD RDX,0x10
+0x256a7  MOV byte ptr [RSP + 0x1b],0x1
+0x256ac  MOV dword ptr [RSP + 0x3c],EAX
+0x256b0  MOV RAX,qword ptr [RDX]
+0x256b3  TEST RAX,RAX
+0x256b6  JNZ 0x25508
+<L0> (entry=0x256a0):
+	instruction(0x256a0)
+	$U1:8 = RDX + 0x8:8
+	EAX = ram[$U1:8]
+	RAX = zext(EAX)
+	instruction(0x256a3)
+	CF = RDX carry 0x10:8
+	OF = RDX scarry 0x10:8
+	RDX = RDX + 0x10:8
+	SF = RDX s< 0x0:8
+	ZF = RDX == 0x0:8
+	$U1:8 = RDX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x256a7)
+	$U1:8 = 0x1b:8 + RSP
+	$U2:1 = 0x1:1
+	ram[$U1:8] = $U2:1
+	instruction(0x256ac)
+	$U1:8 = 0x3c:8 + RSP
+	$U2:4 = EAX
+	ram[$U1:8] = $U2:4
+	instruction(0x256b0)
+	RAX = ram[RDX]
+	instruction(0x256b3)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x256b6)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x25508:8
+
+0x2723f  PXOR XMM0, XMM0
+0x27243  MOV R10,qword ptr [0x40be8]
+0x2724a  MOVAPS xmmword ptr [RBP + -0x70], XMM0
+0x2724e  MOVAPS xmmword ptr [RBP + -0x60], XMM0
+0x27252  MOVAPS xmmword ptr [RBP + -0x50], XMM0
+0x27256  MOVAPS xmmword ptr [RBP + -0x40], XMM0
+0x2725a  TEST RCX,RCX
+0x2725d  JZ 0x27610
+<L0> (entry=0x2723f):
+	instruction(0x2723f)
+	XMM0 = XMM0 ^ XMM0
+	instruction(0x27243)
+	R10 = ram[0x40be8:8]
+	instruction(0x2724a)
+	$U1:8 = RBP + 0xffffffffffffff90:8
+	$U2:16 = XMM0
+	ram[$U1:8] = $U2:16
+	instruction(0x2724e)
+	$U1:8 = RBP + 0xffffffffffffffa0:8
+	$U2:16 = XMM0
+	ram[$U1:8] = $U2:16
+	instruction(0x27252)
+	$U1:8 = RBP + 0xffffffffffffffb0:8
+	$U2:16 = XMM0
+	ram[$U1:8] = $U2:16
+	instruction(0x27256)
+	$U1:8 = RBP + 0xffffffffffffffc0:8
+	$U2:16 = XMM0
+	ram[$U1:8] = $U2:16
+	instruction(0x2725a)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RCX & RCX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x2725d)
+	if ZF jump 0x27610:8
+
+0x27128  MOVZX EDX,byte ptr [0x40e0e]
+0x2712f  MOV EDI,EDX
+0x27131  AND EDI,0x20
+0x27134  JNZ 0x271ba
+<L0> (entry=0x27128):
+	instruction(0x27128)
+	$U1:1 = ram[0x40e0e:8]
+	EDX = zext($U1:1)
+	RDX = zext(EDX)
+	instruction(0x2712f)
+	EDI = EDX
+	RDI = zext(EDI)
+	instruction(0x27131)
+	CF = 0x0:1
+	OF = 0x0:1
+	EDI = EDI & 0x20:4
+	RDI = zext(EDI)
+	SF = EDI s< 0x0:4
+	ZF = EDI == 0x0:4
+	$U1:4 = EDI & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x27134)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x271ba:8
+
+0x273b9  XOR EAX,EAX
+0x273bb  TEST R15,R15
+0x273be  JZ 0x273ec
+<L0> (entry=0x273b9):
+	instruction(0x273b9)
+	CF = 0x0:1
+	OF = 0x0:1
+	EAX = EAX ^ EAX
+	RAX = zext(EAX)
+	SF = EAX s< 0x0:4
+	ZF = EAX == 0x0:4
+	$U1:4 = EAX & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x273bb)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = R15 & R15
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x273be)
+	if ZF jump 0x273ec:8
+
+0x25440  ENDBR64
+0x25444  PUSH R15
+0x25446  MOV RAX,RDI
+0x25449  PUSH R14
+0x2544b  ADD RAX,0x8
+0x2544f  PUSH R13
+0x25451  PUSH R12
+0x25453  PUSH RBP
+0x25454  PUSH RBX
+0x25455  MOV RBX,RSI
+0x25458  SUB RSP,0x68
+0x2545c  MOV RDX,qword ptr [RDI]
+0x2545f  MOV qword ptr [0x3fa90],RDI
+0x25466  MOV qword ptr [0x3fac0],RAX
+0x2546d  MOV dword ptr [0x3fac8],EDX
+0x25473  MOVSXD RDX,EDX
+0x25476  LEA RDI,[RAX + RDX*0x8 + 0x8]
+0x2547b  MOV qword ptr [0x412d0],RDI
+0x25482  CMP qword ptr [RDI],0x0
+0x25486  MOV RAX,RDI
+0x25489  JZ 0x25495
+<L0> (entry=0x25440):
+	instruction(0x25440)
+	instruction(0x25444)
+	$U1:8 = R15
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x25446)
+	RAX = RDI
+	instruction(0x25449)
+	$U1:8 = R14
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x2544b)
+	CF = RAX carry 0x8:8
+	OF = RAX scarry 0x8:8
+	RAX = RAX + 0x8:8
+	SF = RAX s< 0x0:8
+	ZF = RAX == 0x0:8
+	$U1:8 = RAX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2544f)
+	$U1:8 = R13
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x25451)
+	$U1:8 = R12
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x25453)
+	$U1:8 = RBP
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x25454)
+	$U1:8 = RBX
+	RSP = RSP - 0x8:8
+	ram[RSP] = $U1:8
+	instruction(0x25455)
+	RBX = RSI
+	instruction(0x25458)
+	CF = RSP < 0x68:8
+	OF = RSP sborrow 0x68:8
+	RSP = RSP - 0x68:8
+	SF = RSP s< 0x0:8
+	ZF = RSP == 0x0:8
+	$U1:8 = RSP & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2545c)
+	RDX = ram[RDI]
+	instruction(0x2545f)
+	$U1:8 = RDI
+	ram[0x3fa90:8] = $U1:8
+	instruction(0x25466)
+	$U1:8 = RAX
+	ram[0x3fac0:8] = $U1:8
+	instruction(0x2546d)
+	$U1:4 = EDX
+	ram[0x3fac8:8] = $U1:4
+	instruction(0x25473)
+	RDX = sext(EDX)
+	instruction(0x25476)
+	$U2:8 = 0x8:8 + RAX
+	$U3:8 = RDX * 0x8:8
+	$U1:8 = $U2:8 + $U3:8
+	RDI = $U1:8
+	instruction(0x2547b)
+	$U1:8 = RDI
+	ram[0x412d0:8] = $U1:8
+	instruction(0x25482)
+	$U1:8 = ram[RDI]
+	CF = $U1:8 < 0x0:8
+	OF = $U1:8 sborrow 0x0:8
+	$U2:8 = $U1:8 - 0x0:8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x25486)
+	RAX = RDI
+	instruction(0x25489)
+	if ZF jump 0x25495:8
+
+0x2555e  MOV RAX,qword ptr [RSP + 0x10]
+0x25563  MOV qword ptr [0x3fdc8],RAX
+0x2556a  TEST R10B,R10B
+0x2556d  JZ 0x2557b
+<L0> (entry=0x2555e):
+	instruction(0x2555e)
+	$U1:8 = 0x10:8 + RSP
+	RAX = ram[$U1:8]
+	instruction(0x25563)
+	$U1:8 = RAX
+	ram[0x3fdc8:8] = $U1:8
+	instruction(0x2556a)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:1 = R10B & R10B
+	SF = $U1:1 s< 0x0:1
+	ZF = $U1:1 == 0x0:1
+	$U2:1 = $U1:1 & 0xff:1
+	$U3:1 = popcount($U2:1)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x2556d)
+	if ZF jump 0x2557b:8
+
+0x257dd  CALL 0x1d970
+<L0> (entry=0x257dd):
+	$U1:8 = 0x257e2:8
+	RSP = RSP - 0x8:8
+	ram[RSP] = 0x257e2:8
+	call 0x1d970:8
+
+0x19700  ENDBR64
+0x19704  SUB RSP,0x18
+0x19708  XOR EDX,EDX
+0x1970a  MOV EDI,0xc
+0x1970f  LEA RSI,[RSP + 0xc]
+0x19714  CALL 0x1dd70
+<L0> (entry=0x19700):
+	instruction(0x19700)
+	instruction(0x19704)
+	CF = RSP < 0x18:8
+	OF = RSP sborrow 0x18:8
+	RSP = RSP - 0x18:8
+	SF = RSP s< 0x0:8
+	ZF = RSP == 0x0:8
+	$U1:8 = RSP & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x19708)
+	CF = 0x0:1
+	OF = 0x0:1
+	EDX = EDX ^ EDX
+	RDX = zext(EDX)
+	SF = EDX s< 0x0:4
+	ZF = EDX == 0x0:4
+	$U1:4 = EDX & 0xff:4
+	$U2:1 = popcount($U1:4)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x1970a)
+	RDI = 0xc:8
+	instruction(0x1970f)
+	$U1:8 = 0xc:8 + RSP
+	RSI = $U1:8
+	instruction(0x19714)
+	$U1:8 = 0x19719:8
+	RSP = RSP - 0x8:8
+	ram[RSP] = 0x19719:8
+	call 0x1dd70:8
+
+0x25548  TEST R8B,R8B
+0x2554b  JZ 0x25559
+<L0> (entry=0x25548):
+	instruction(0x25548)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:1 = R8B & R8B
+	SF = $U1:1 s< 0x0:1
+	ZF = $U1:1 == 0x0:1
+	$U2:1 = $U1:1 & 0xff:1
+	$U3:1 = popcount($U2:1)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x2554b)
+	if ZF jump 0x25559:8
+
+0x2ba80  ENDBR64
+0x2ba84  MOV EAX,0xc
+0x2ba89  SYSCALL
+<L0> (entry=0x2ba80):
+	instruction(0x2ba80)
+	instruction(0x2ba84)
+	RAX = 0xc:8
+	instruction(0x2ba89)
+	NEXT_PC = 0x2ba8b:8
+	exception(0x101:4, 0x0:4)
+
+0x27166  ADD qword ptr [RAX + 0x8],R12
+0x2716a  MOV RAX,qword ptr [0x40b60]
+0x27171  TEST RAX,RAX
+0x27174  JZ 0x2717a
+<L0> (entry=0x27166):
+	instruction(0x27166)
+	$U4:8 = RAX + 0x8:8
+	$U5:8 = ram[$U4:8]
+	CF = $U5:8 carry R12
+	$U6:8 = ram[$U4:8]
+	OF = $U6:8 scarry R12
+	$U7:8 = ram[$U4:8]
+	$U8:8 = $U7:8 + R12
+	ram[$U4:8] = $U8:8
+	$U9:8 = ram[$U4:8]
+	SF = $U9:8 s< 0x0:8
+	$U10:8 = ram[$U4:8]
+	ZF = $U10:8 == 0x0:8
+	$U11:8 = ram[$U4:8]
+	$U1:8 = $U11:8 & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2716a)
+	RAX = ram[0x40b60:8]
+	instruction(0x27171)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x27174)
+	if ZF jump 0x2717a:8
+
+0x27176  ADD qword ptr [RAX + 0x8],R12
+0x2717a  MOV RAX,qword ptr [0x40b68]
+0x27181  TEST RAX,RAX
+0x27184  JZ 0x2718a
+<L0> (entry=0x27176):
+	instruction(0x27176)
+	$U4:8 = RAX + 0x8:8
+	$U5:8 = ram[$U4:8]
+	CF = $U5:8 carry R12
+	$U6:8 = ram[$U4:8]
+	OF = $U6:8 scarry R12
+	$U7:8 = ram[$U4:8]
+	$U8:8 = $U7:8 + R12
+	ram[$U4:8] = $U8:8
+	$U9:8 = ram[$U4:8]
+	SF = $U9:8 s< 0x0:8
+	$U10:8 = ram[$U4:8]
+	ZF = $U10:8 == 0x0:8
+	$U11:8 = ram[$U4:8]
+	$U1:8 = $U11:8 & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2717a)
+	RAX = ram[0x40b68:8]
+	instruction(0x27181)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x27184)
+	if ZF jump 0x2718a:8
+
+0x271b6  ADD qword ptr [RAX + 0x8],R12
+0x271ba  MOV RAX,qword ptr [0x40bd0]
+0x271c1  TEST RAX,RAX
+0x271c4  JZ 0x271d1
+<L0> (entry=0x271b6):
+	instruction(0x271b6)
+	$U4:8 = RAX + 0x8:8
+	$U5:8 = ram[$U4:8]
+	CF = $U5:8 carry R12
+	$U6:8 = ram[$U4:8]
+	OF = $U6:8 scarry R12
+	$U7:8 = ram[$U4:8]
+	$U8:8 = $U7:8 + R12
+	ram[$U4:8] = $U8:8
+	$U9:8 = ram[$U4:8]
+	SF = $U9:8 s< 0x0:8
+	$U10:8 = ram[$U4:8]
+	ZF = $U10:8 == 0x0:8
+	$U11:8 = ram[$U4:8]
+	$U1:8 = $U11:8 & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x271ba)
+	RAX = ram[0x40bd0:8]
+	instruction(0x271c1)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x271c4)
+	if ZF jump 0x271d1:8
+
+0x275ee  ADD RDI,RSI
+0x275f1  MOV qword ptr [RBP + -0x68],RDI
+0x275f5  JMP 0x272ee
+<L0> (entry=0x275ee):
+	instruction(0x275ee)
+	CF = RDI carry RSI
+	OF = RDI scarry RSI
+	RDI = RDI + RSI
+	SF = RDI s< 0x0:8
+	ZF = RDI == 0x0:8
+	$U1:8 = RDI & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x275f1)
+	$U1:8 = RBP + 0xffffffffffffff98:8
+	$U2:8 = RDI
+	ram[$U1:8] = $U2:8
+	instruction(0x275f5)
+	jump 0x272ee:8
+
+0x272ac  MOV RAX,qword ptr [R10 + 0x8]
+0x272b0  TEST DIL,DIL
+0x272b3  MOV RDI,qword ptr [0x40b40]
+0x272ba  LEA R9,[RAX + R12*0x1]
+0x272be  MOV RDI,qword ptr [RDI + 0x8]
+0x272c2  CMOVNZ RAX,R9
+0x272c6  MOVQ XMM3, RDI
+0x272cb  MOVQ XMM0, RAX
+0x272d0  LEA R9,[RDI + RAX*0x1]
+0x272d4  PUNPCKLQDQ XMM0, XMM3
+0x272d8  CMP R9,R8
+0x272db  JZ 0x275fa
+<L0> (entry=0x272ac):
+	instruction(0x272ac)
+	$U1:8 = R10 + 0x8:8
+	RAX = ram[$U1:8]
+	instruction(0x272b0)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:1 = DIL & DIL
+	SF = $U1:1 s< 0x0:1
+	ZF = $U1:1 == 0x0:1
+	$U2:1 = $U1:1 & 0xff:1
+	$U3:1 = popcount($U2:1)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x272b3)
+	RDI = ram[0x40b40:8]
+	instruction(0x272ba)
+	$U2:8 = R12 * 0x1:8
+	$U1:8 = RAX + $U2:8
+	R9 = $U1:8
+	instruction(0x272be)
+	$U1:8 = RDI + 0x8:8
+	RDI = ram[$U1:8]
+	instruction(0x272c2)
+	$U2:1 = !ZF
+	$U1:1 = !$U2:1
+	if $U1:1 jump <L35>
+<L1>:
+	RAX = R9
+<L2>:
+	instruction(0x272c6)
+	XMM3 = zext(RDI)
+	instruction(0x272cb)
+	XMM0 = zext(RAX)
+	instruction(0x272d0)
+	$U2:8 = RAX * 0x1:8
+	$U1:8 = RDI + $U2:8
+	R9 = $U1:8
+	instruction(0x272d4)
+	XMM0_Qb = XMM3_Qa
+	instruction(0x272d8)
+	$U1:8 = R9
+	CF = $U1:8 < R8
+	OF = $U1:8 sborrow R8
+	$U2:8 = $U1:8 - R8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x272db)
+	if ZF jump 0x275fa:8
+
+0x2738a  ADD RBX,0x18
+0x2738e  CMP RDI,RBX
+0x27391  JBE 0x27428
+<L0> (entry=0x2738a):
+	instruction(0x2738a)
+	CF = RBX carry 0x18:8
+	OF = RBX scarry 0x18:8
+	RBX = RBX + 0x18:8
+	SF = RBX s< 0x0:8
+	ZF = RBX == 0x0:8
+	$U1:8 = RBX & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2738e)
+	$U1:8 = RDI
+	CF = $U1:8 < RBX
+	OF = $U1:8 sborrow RBX
+	$U2:8 = $U1:8 - RBX
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x27391)
+	$U1:1 = CF || ZF
+	if $U1:1 jump 0x27428:8
+
+0x27146  ADD qword ptr [RAX + 0x8],R12
+0x2714a  MOV RAX,qword ptr [0x40b48]
+0x27151  TEST RAX,RAX
+0x27154  JZ 0x2715a
+<L0> (entry=0x27146):
+	instruction(0x27146)
+	$U4:8 = RAX + 0x8:8
+	$U5:8 = ram[$U4:8]
+	CF = $U5:8 carry R12
+	$U6:8 = ram[$U4:8]
+	OF = $U6:8 scarry R12
+	$U7:8 = ram[$U4:8]
+	$U8:8 = $U7:8 + R12
+	ram[$U4:8] = $U8:8
+	$U9:8 = ram[$U4:8]
+	SF = $U9:8 s< 0x0:8
+	$U10:8 = ram[$U4:8]
+	ZF = $U10:8 == 0x0:8
+	$U11:8 = ram[$U4:8]
+	$U1:8 = $U11:8 & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2714a)
+	RAX = ram[0x40b48:8]
+	instruction(0x27151)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x27154)
+	if ZF jump 0x2715a:8
+
+0x27186  ADD qword ptr [RAX + 0x8],R12
+0x2718a  MOV RAX,qword ptr [0x40be8]
+0x27191  TEST RAX,RAX
+0x27194  JZ 0x2719a
+<L0> (entry=0x27186):
+	instruction(0x27186)
+	$U4:8 = RAX + 0x8:8
+	$U5:8 = ram[$U4:8]
+	CF = $U5:8 carry R12
+	$U6:8 = ram[$U4:8]
+	OF = $U6:8 scarry R12
+	$U7:8 = ram[$U4:8]
+	$U8:8 = $U7:8 + R12
+	ram[$U4:8] = $U8:8
+	$U9:8 = ram[$U4:8]
+	SF = $U9:8 s< 0x0:8
+	$U10:8 = ram[$U4:8]
+	ZF = $U10:8 == 0x0:8
+	$U11:8 = ram[$U4:8]
+	$U1:8 = $U11:8 & 0xff:8
+	$U2:1 = popcount($U1:8)
+	$U3:1 = $U2:1 & 0x1:1
+	PF = $U3:1 == 0x0:1
+	instruction(0x2718a)
+	RAX = ram[0x40be8:8]
+	instruction(0x27191)
+	CF = 0x0:1
+	OF = 0x0:1
+	$U1:8 = RAX & RAX
+	SF = $U1:8 s< 0x0:8
+	ZF = $U1:8 == 0x0:8
+	$U2:8 = $U1:8 & 0xff:8
+	$U3:1 = popcount($U2:8)
+	$U4:1 = $U3:1 & 0x1:1
+	PF = $U4:1 == 0x0:1
+	instruction(0x27194)
+	if ZF jump 0x2719a:8
+
+0x271ef  CMP qword ptr [0x40c18],0x0
+0x271f7  JNZ 0x2769e
+<L0> (entry=0x271ef):
+	instruction(0x271ef)
+	$U1:8 = ram[0x40c18:8]
+	CF = $U1:8 < 0x0:8
+	OF = $U1:8 sborrow 0x0:8
+	$U2:8 = $U1:8 - 0x0:8
+	SF = $U2:8 s< 0x0:8
+	ZF = $U2:8 == 0x0:8
+	$U3:8 = $U2:8 & 0xff:8
+	$U4:1 = popcount($U3:8)
+	$U5:1 = $U4:1 & 0x1:1
+	PF = $U5:1 == 0x0:1
+	instruction(0x271f7)
+	$U1:1 = !ZF
+	if $U1:1 jump 0x2769e:8
+

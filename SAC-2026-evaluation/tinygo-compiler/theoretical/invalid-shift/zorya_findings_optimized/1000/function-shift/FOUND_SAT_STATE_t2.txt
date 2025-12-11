@@ -1,0 +1,60 @@
+Running command: /home/karolina-gorna/Documents/zorya/zorya /home/karolina-gorna/Documents/go-exploits-database/tinygo-compiler/theoretical/invalid-shift/invalid-shift --mode function 0x22af70 --lang go --compiler tinygo --arg "1000" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-10-08 16:08:14 UTC
+Mode: function
+Elapsed since start: 40.060s
+Instruction Address: 0x22af97
+Panic Address: 0x22afce
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 0 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 2 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 's__len' must be 1 (unsigned: 1; signed: 1; ASCII: non-printable 0x01)
+  - The input 's_byte_0' must be 163 (unsigned: 163; signed: 163; ASCII: non-printable 0xa3)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 's__len':
+  s__len!141 = #x0000000000000001
+    (unsigned: 1)
+    (signed: 1)
+    (ASCII: non-printable, code 1)
+
+Argument 's__ptr':
+  s__ptr!140 = #xfffffffffffffff8
+    (unsigned: 18446744073709551608)
+    (signed: -8)
+    (ASCII LSB: non-printable 0xf8)
+
+Argument 's_byte_0':
+  s_byte_0!142 = #x00000000000000a3
+    (unsigned: 163)
+    (signed: 163)
+    (ASCII: non-printable, code 163)
+
+Argument 's_byte_1':
+  s_byte_1!143 = #x000000000000007f
+    (unsigned: 127)
+    (signed: 127)
+    (ASCII: non-printable, code 127)
+
+Argument 's_byte_2':
+  s_byte_2!144 = #x0000000000000088
+    (unsigned: 136)
+    (signed: 136)
+    (ASCII: non-printable, code 136)
+
+Argument 's_byte_3':
+  s_byte_3!145 = #x00000000000000fd
+    (unsigned: 253)
+    (signed: 253)
+    (ASCII: non-printable, code 253)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================

@@ -1,0 +1,36 @@
+Universal Binary Analyzer
+Target: ./../../panic-index
+Entry: 0x22c0f0
+
+Phase 1: Disassembly
+Analyzed 10 code segments
+Phase 2: Operation Extraction
+Extracted 14628 IR operations
+Phase 3: Instruction Extraction
+Extracted 5738 assembly instructions
+Phase 4: Pattern Analysis
+
+ANALYSIS RESULTS
+==================================================
+Total IR Operations: 16608
+Memory Operations: 1303
+Arithmetic Operations: 800
+Comparison Operations: 0
+Unique Immediate Values: 15
+
+Call Instructions: 456
+Jump Instructions: 230
+Compare Instructions: 355
+Unique Mnemonics: 43
+
+Immediate Values Found: [0, 1, 2, 3, 5, 6, 8, 17, 2098448, 2115393, 2115399, 2115404, 33619968, 9223372036854775807, 18446744073709551615]...
+
+Sample Memory Operations:
+  1. Memory write at RSP + -0x8
+  2. Memory read at 0x22C101 + 0x713F
+  3. Memory read at RSP
+  4. Memory read at RSP[0:64]
+  5. Memory read at RSP[0:64]
+
+Control flow graph saved to: analysis_output.dot
+Analysis complete

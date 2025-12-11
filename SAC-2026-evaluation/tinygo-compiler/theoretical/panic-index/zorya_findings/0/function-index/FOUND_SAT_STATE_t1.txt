@@ -1,0 +1,17 @@
+Running command: /home/kgorna/Documents/zorya/zorya /home/kgorna/Documents/go-exploits-database/tinygo-compiler/theoretical/panic-index/panic-index --mode function 0x22c110 --lang go --compiler tinygo --arg "0" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-08-27 10:07:53 UTC
+Mode: function
+Elapsed since start: 141.597s
+Instruction Address: 0x22c13e
+Panic Address: 0x22c172
+------------------------------------------------------------
+=== EVALUATING TRACKED Z3 VARIABLES ===
+
+Argument 'n':
+  n_RDI!140 = #x0000000000000003
+    (decimal: 3)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================

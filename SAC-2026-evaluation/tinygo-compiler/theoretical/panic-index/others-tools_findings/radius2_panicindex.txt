@@ -1,0 +1,28 @@
+// All three radius2 executions panic at processor.rs:758 when running the `panic-index` binary.
+// Analysis:
+// 1. radius2 expects certain internal state structures (memory mappings, argv, or symbolic values)
+//    to exist at the start of execution.
+// 2. Running with `-a 0x22c0f0` or `-a 0x22c0f0 --crash` fails because the initial state
+//    is incomplete, causing an unwrap() on a None when the processor tries to access expected data.
+// 3. Running with `-A a` also fails because radius2 cannot inject concrete arguments into
+//    a TinyGo binary correctly; the argument mapping is missing, triggering the same panic.
+//
+// Conclusion: The panics are due to radius2’s incomplete support for TinyGo binaries’ memory layout
+// and argument handling, not due to errors in the `panic-index` binary itself.
+
+
+
+$ radius2 -p ./panic-index -a 0x22c0f0 
+thread 'main' panicked at /home/kgorna/.cargo/registry/src/index.crates.io-6f17d22bba15001f/radius2-1.0.28/src/processor.rs:758:52:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a RUST_BACKTRACE
+
+$ radius2 -p ./panic-index -a 0x22c0f0 --crash
+thread 'main' panicked at /home/kgorna/.cargo/registry/src/index.crates.io-6f17d22bba15001f/radius2-1.0.28/src/processor.rs:758:52:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+$ radius2 -p ./panic-index -a 0x22c0f0 -A a
+thread 'main' panicked at /home/kgorna/.cargo/registry/src/index.crates.io-6f17d22bba15001f/radius2-1.0.28/src/processor.rs:758:52:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

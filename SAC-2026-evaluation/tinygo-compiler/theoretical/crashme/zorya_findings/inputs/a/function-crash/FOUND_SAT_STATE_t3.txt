@@ -1,0 +1,17 @@
+Running command: /home/kgorna/Documents/zorya/zorya /home/kgorna/Documents/go-exploits-database/tinygo-compiler/theoretical/crashme/crashme --mode function 0x22af60 --lang go --compiler tinygo --arg "a" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-08-27 08:24:25 UTC
+Mode: function
+Elapsed since start: 24.732s
+Instruction Address: 0x22af64
+Panic Address: 0x22af67
+------------------------------------------------------------
+=== EVALUATING TRACKED Z3 VARIABLES ===
+
+Argument 'arg':
+  arg_RDI!140 = #x000000000000004b
+    (decimal: 75)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================

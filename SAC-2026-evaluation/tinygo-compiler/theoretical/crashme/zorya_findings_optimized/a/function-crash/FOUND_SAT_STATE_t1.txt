@@ -1,0 +1,29 @@
+Running command: /home/karolina-gorna/Documents/zorya/zorya /home/karolina-gorna/Documents/go-exploits-database/tinygo-compiler/theoretical/crashme/crashme --mode function 0x22af60 --lang go --compiler tinygo --arg "a" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-10-08 12:02:44 UTC
+Mode: function
+Elapsed since start: 35.626s
+Instruction Address: 0x22af64
+Panic Address: 0x22af67
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 0 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 1 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'arg' must be 75 (unsigned: 75; signed: 75; ASCII: 'K')
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'arg':
+  arg_RDI!140 = #x000000000000004b
+    (unsigned: 75)
+    (signed: 75)
+    (ASCII: 'K')
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================

@@ -1,0 +1,4451 @@
+// only false positives found
+
+=== MIASM Out-of-Bounds Vulnerability Discovery ===
+Target: ./../../invalid-shift
+Entry point: 0x22afe0
+SUCCESS: Binary loaded successfully
+
+=== Phase 1: Disassembly and IR Generation ===
+Starting OOB analysis from: 0x22afe0
+Analyzing block at 0x22afe0: 23 basic blocks
+Analyzing block at 0x211920: 33 basic blocks
+Analyzing block at 0x22af50: 2 basic blocks
+Analyzing block at 0x2123d0: 2 basic blocks
+Analyzing block at 0x22af70: 42 basic blocks
+Analyzing block at 0x20c75f: 10 basic blocks
+Analyzing block at 0x20c497: 13 basic blocks
+Analyzing block at 0x2114b0: 1 basic blocks
+Analyzing block at 0x211ad0: 7 basic blocks
+Analyzing block at 0x211bc0: 1 basic blocks
+Analyzing block at 0x211b30: 5 basic blocks
+Analyzing block at 0x211b50: 6 basic blocks
+Analyzing block at 0x211ce0: 1 basic blocks
+Analyzing block at 0x211bf0: 2 basic blocks
+Analyzing block at 0x211d10: 2 basic blocks
+Analyzing block at 0x22aed0: 12 basic blocks
+Analyzing block at 0x20c2cc: 1 basic blocks
+Analyzing block at 0x20c2f8: 2 basic blocks
+Analyzing block at 0x20c386: 17 basic blocks
+Analyzing block at 0x20c8b4: 16 basic blocks
+Analyzing block at 0x20c955: 7 basic blocks
+Analyzing block at 0x20c324: 2 basic blocks
+Analyzing block at 0x211c00: 5 basic blocks
+Analyzing block at 0x211c40: 12 basic blocks
+Analyzing block at 0x211cd0: 2 basic blocks
+Analyzing block at 0x20c13c: 7 basic blocks
+Analyzing block at 0x211eb0: 6 basic blocks
+Analyzing block at 0x211f10: 37 basic blocks
+Analyzing block at 0x211fb0: 11 basic blocks
+Analyzing block at 0x212060: 17 basic blocks
+Analyzing block at 0x211e10: 3 basic blocks
+Analyzing block at 0x211e00: 1 basic blocks
+Analyzing block at 0x22ae00: 66 basic blocks
+Analyzing block at 0x228540: 936 basic blocks
+Analyzing block at 0x2123f0: 2 basic blocks
+Analyzing block at 0x217a50: 136 basic blocks
+Analyzing block at 0x228fd0: 594 basic blocks
+Analyzing block at 0x20c2da: 4 basic blocks
+Analyzing block at 0x211d40: 3 basic blocks
+Analyzing block at 0x20c336: 5 basic blocks
+Analyzing block at 0x20bc60: 2 basic blocks
+Analyzing block at 0x2118f0: 2 basic blocks
+Analyzing block at 0x212410: 5 basic blocks
+Analyzing block at 0x211ee0: 5 basic blocks
+Analyzing block at 0x2121b0: 32 basic blocks
+Analyzing block at 0x2120f0: 1 basic blocks
+Analyzing block at 0x212120: 1 basic blocks
+Analyzing block at 0x211e50: 1 basic blocks
+Analyzing block at 0x211ea0: 2 basic blocks
+Analyzing block at 0x217860: 57 basic blocks
+Analyzing block at 0x227b60: 205 basic blocks
+Analyzing block at 0x214cc0: 4 basic blocks
+Analyzing block at 0x2262e0: 84 basic blocks
+Analyzing block at 0x229ce0: 437 basic blocks
+Analyzing block at 0x226440: 5 basic blocks
+Analyzing block at 0x2280c0: 1030 basic blocks
+Analyzing block at 0x226b60: 219 basic blocks
+Analyzing block at 0x226470: 3 basic blocks
+Analyzing block at 0x226490: 2 basic blocks
+Analyzing block at 0x215a10: 44 basic blocks
+Analyzing block at 0x210250: 22 basic blocks
+Analyzing block at 0x2263a0: 45 basic blocks
+Analyzing block at 0x2271a0: 63 basic blocks
+Analyzing block at 0x22a0d0: 312 basic blocks
+Analyzing block at 0x2285d0: 921 basic blocks
+Analyzing block at 0x20f030: 438 basic blocks
+Analyzing block at 0x2264c0: 408 basic blocks
+Analyzing block at 0x20f800: 269 basic blocks
+Analyzing block at 0x227290: 25 basic blocks
+Analyzing block at 0x227860: 276 basic blocks
+Analyzing block at 0x228b60: 742 basic blocks
+Analyzing block at 0x227c80: 154 basic blocks
+Analyzing block at 0x2106b0: 241 basic blocks
+Analyzing block at 0x210800: 186 basic blocks
+Analyzing block at 0x227300: 3 basic blocks
+Analyzing block at 0x213360: 2 basic blocks
+Analyzing block at 0x214ce0: 75 basic blocks
+Analyzing block at 0x214d50: 48 basic blocks
+Analyzing block at 0x2282b0: 980 basic blocks
+Analyzing block at 0x22ad90: 1 basic blocks
+Analyzing block at 0x2130a0: 21 basic blocks
+Analyzing block at 0x217970: 18 basic blocks
+Analyzing block at 0x22ada0: 15 basic blocks
+Analyzing block at 0x20efb0: 461 basic blocks
+Analyzing block at 0x20d8e0: 4 basic blocks
+Analyzing block at 0x210650: 6 basic blocks
+Analyzing block at 0x228d20: 692 basic blocks
+Analyzing block at 0x22adb0: 4 basic blocks
+Analyzing block at 0x228670: 902 basic blocks
+Analyzing block at 0x210080: 50 basic blocks
+Analyzing block at 0x228ad0: 769 basic blocks
+Analyzing block at 0x213170: 16 basic blocks
+Analyzing block at 0x2103a0: 83 basic blocks
+Analyzing block at 0x229140: 550 basic blocks
+Analyzing block at 0x210a90: 105 basic blocks
+Analyzing block at 0x211300: 73 basic blocks
+Analyzing block at 0x22add0: 83 basic blocks
+Analyzing block at 0x228f10: 632 basic blocks
+Analyzing block at 0x213200: 55 basic blocks
+Analyzing block at 0x210920: 142 basic blocks
+Analyzing block at 0x210820: 172 basic blocks
+Analyzing block at 0x20fad0: 189 basic blocks
+Analyzing block at 0x210700: 220 basic blocks
+Analyzing block at 0x20f6d0: 316 basic blocks
+Analyzing block at 0x210e50: 241 basic blocks
+Analyzing block at 0x20f8f0: 232 basic blocks
+Analyzing block at 0x2106e0: 234 basic blocks
+Analyzing block at 0x20ef90: 475 basic blocks
+Analyzing block at 0x215f10: 54 basic blocks
+Analyzing block at 0x22ac80: 29 basic blocks
+Analyzing block at 0x2286a0: 891 basic blocks
+Analyzing block at 0x20faa0: 197 basic blocks
+Analyzing block at 0x210460: 61 basic blocks
+Analyzing block at 0x210370: 95 basic blocks
+Analyzing block at 0x20f060: 430 basic blocks
+Analyzing block at 0x210c50: 54 basic blocks
+Analyzing block at 0x20f160: 403 basic blocks
+Analyzing block at 0x213310: 7 basic blocks
+Analyzing block at 0x22ad20: 8 basic blocks
+Analyzing block at 0x227830: 2 basic blocks
+Analyzing block at 0x228950: 823 basic blocks
+Analyzing block at 0x226510: 385 basic blocks
+Analyzing block at 0x2211c0: 10 basic blocks
+Analyzing block at 0x221340: 18 basic blocks
+Analyzing block at 0x2215b0: 81 basic blocks
+Analyzing block at 0x217af0: 98 basic blocks
+Analyzing block at 0x217a00: 2 basic blocks
+Analyzing block at 0x217c10: 43 basic blocks
+Analyzing block at 0x2280a0: 1038 basic blocks
+Analyzing block at 0x221390: 2 basic blocks
+Analyzing block at 0x217a30: 2 basic blocks
+Analyzing block at 0x214f30: 26 basic blocks
+Analyzing block at 0x217c60: 12 basic blocks
+Analyzing block at 0x20ce40: 6 basic blocks
+Analyzing block at 0x2158e0: 72 basic blocks
+Analyzing block at 0x20cd32: 6 basic blocks
+Analyzing block at 0x20c30e: 2 basic blocks
+Analyzing block at 0x2133b0: 6 basic blocks
+Analyzing block at 0x211800: 1 basic blocks
+Analyzing block at 0x211900: 1 basic blocks
+Analyzing block at 0x212430: 2 basic blocks
+Analyzing block at 0x212010: 10 basic blocks
+Analyzing block at 0x212360: 1 basic blocks
+Analyzing block at 0x212370: 1 basic blocks
+Analyzing block at 0x212380: 10 basic blocks
+Analyzing block at 0x2123c0: 2 basic blocks
+Analyzing block at 0x212170: 1 basic blocks
+Analyzing block at 0x212180: 5 basic blocks
+Analyzing block at 0x20c515: 38 basic blocks
+Analyzing block at 0x215740: 5 basic blocks
+Analyzing block at 0x217a20: 1 basic blocks
+Analyzing block at 0x2263f0: 25 basic blocks
+Analyzing block at 0x226290: 104 basic blocks
+Analyzing block at 0x20d680: 79 basic blocks
+Analyzing block at 0x227ef0: 62 basic blocks
+Analyzing block at 0x20d790: 44 basic blocks
+Analyzing block at 0x20d0a0: 70 basic blocks
+Analyzing block at 0x213340: 4 basic blocks
+Analyzing block at 0x215c80: 54 basic blocks
+Analyzing block at 0x211d20: 2 basic blocks
+Analyzing block at 0x20d4d0: 6 basic blocks
+Analyzing block at 0x214db0: 28 basic blocks
+Analyzing block at 0x226360: 64 basic blocks
+Analyzing block at 0x2124e0: 130 basic blocks
+Analyzing block at 0x227e60: 87 basic blocks
+Analyzing block at 0x226200: 25 basic blocks
+Analyzing block at 0x226170: 2 basic blocks
+Analyzing block at 0x226190: 2 basic blocks
+Analyzing block at 0x227b80: 191 basic blocks
+Analyzing block at 0x2261b0: 2 basic blocks
+Analyzing block at 0x2261d0: 2 basic blocks
+Analyzing block at 0x227d70: 122 basic blocks
+Analyzing block at 0x227320: 116 basic blocks
+Analyzing block at 0x214c80: 22 basic blocks
+Analyzing block at 0x20d900: 149 basic blocks
+Analyzing block at 0x20efe0: 453 basic blocks
+Analyzing block at 0x20daa0: 53 basic blocks
+Analyzing block at 0x2124c0: 140 basic blocks
+Analyzing block at 0x213eb0: 339 basic blocks
+Analyzing block at 0x20da30: 80 basic blocks
+Analyzing block at 0x20d930: 138 basic blocks
+Analyzing block at 0x210330: 3 basic blocks
+Analyzing block at 0x20ff80: 98 basic blocks
+Analyzing block at 0x2102f0: 1 basic blocks
+Analyzing block at 0x2102b0: 4 basic blocks
+Analyzing block at 0x20de90: 341 basic blocks
+Analyzing block at 0x20e3c0: 152 basic blocks
+Analyzing block at 0x214c40: 30 basic blocks
+Analyzing block at 0x2100f0: 29 basic blocks
+Analyzing block at 0x210060: 64 basic blocks
+Analyzing block at 0x2100c0: 37 basic blocks
+Analyzing block at 0x20fea0: 122 basic blocks
+Analyzing block at 0x20db10: 16 basic blocks
+Analyzing block at 0x20db40: 1 basic blocks
+Analyzing block at 0x20e760: 57 basic blocks
+Analyzing block at 0x226090: 2 basic blocks
+Analyzing block at 0x221f00: 33 basic blocks
+Analyzing block at 0x20d340: 14 basic blocks
+Analyzing block at 0x20d3a0: 47 basic blocks
+Analyzing block at 0x20dbc0: 2 basic blocks
+Analyzing block at 0x20df10: 300 basic blocks
+Analyzing block at 0x20dbd0: 33 basic blocks
+Analyzing block at 0x20e360: 186 basic blocks
+Analyzing block at 0x20ded0: 324 basic blocks
+Analyzing block at 0x2133e0: 2 basic blocks
+Analyzing block at 0x20e340: 201 basic blocks
+Analyzing block at 0x210680: 250 basic blocks
+Analyzing block at 0x210630: 15 basic blocks
+Analyzing block at 0x214e20: 2 basic blocks
+Analyzing block at 0x21e9e0: 11 basic blocks
+Analyzing block at 0x21a040: 113 basic blocks
+Analyzing block at 0x217c40: 27 basic blocks
+Analyzing block at 0x221700: 30 basic blocks
+Analyzing block at 0x210350: 2 basic blocks
+Analyzing block at 0x210170: 54 basic blocks
+Analyzing block at 0x20db50: 22 basic blocks
+Analyzing block at 0x221470: 115 basic blocks
+Analyzing block at 0x2214d0: 104 basic blocks
+Analyzing block at 0x221210: 1 basic blocks
+Analyzing block at 0x220f20: 58 basic blocks
+Analyzing block at 0x217bf0: 57 basic blocks
+Analyzing block at 0x22ae90: 40 basic blocks
+Analyzing block at 0x22aeb0: 26 basic blocks
+Analyzing block at 0x211120: 115 basic blocks
+Analyzing block at 0x2110c0: 139 basic blocks
+Analyzing block at 0x21ea30: 2 basic blocks
+Analyzing block at 0x217cd0: 2 basic blocks
+Analyzing block at 0x210360: 2 basic blocks
+Analyzing block at 0x21ef20: 123 basic blocks
+Analyzing block at 0x220ae0: 2 basic blocks
+Analyzing block at 0x21ef40: 119 basic blocks
+Analyzing block at 0x21ef00: 130 basic blocks
+Analyzing block at 0x221220: 17 basic blocks
+Analyzing block at 0x228060: 7 basic blocks
+Analyzing block at 0x210140: 17 basic blocks
+Analyzing block at 0x2210c0: 31 basic blocks
+Analyzing block at 0x221250: 18 basic blocks
+Analyzing block at 0x220b00: 2 basic blocks
+Analyzing block at 0x221240: 2 basic blocks
+Analyzing block at 0x228080: 2 basic blocks
+Analyzing block at 0x210160: 2 basic blocks
+Analyzing block at 0x221180: 2 basic blocks
+Analyzing block at 0x221270: 2 basic blocks
+Analyzing block at 0x211d70: 9 basic blocks
+Analyzing block at 0x20de80: 2 basic blocks
+Analyzing block at 0x20ffb0: 88 basic blocks
+Analyzing block at 0x214590: 145 basic blocks
+Analyzing block at 0x215aa0: 34 basic blocks
+Analyzing block at 0x210cc0: 40 basic blocks
+Analyzing block at 0x210ed0: 224 basic blocks
+Analyzing block at 0x216190: 2 basic blocks
+Analyzing block at 0x211070: 157 basic blocks
+Analyzing block at 0x216c70: 121 basic blocks
+Analyzing block at 0x2161b0: 16 basic blocks
+Analyzing block at 0x210f50: 203 basic blocks
+Analyzing block at 0x221360: 3 basic blocks
+Analyzing block at 0x218390: 2 basic blocks
+Analyzing block at 0x2212d0: 12 basic blocks
+Analyzing block at 0x2216c0: 50 basic blocks
+Analyzing block at 0x2217e0: 2 basic blocks
+Analyzing block at 0x221800: 193 basic blocks
+Analyzing block at 0x214fd0: 7 basic blocks
+Analyzing block at 0x22b050: 5 basic blocks
+Analyzing block at 0x215050: 2 basic blocks
+Analyzing block at 0x20ce70: 20 basic blocks
+Analyzing block at 0x20cd2d: 3 basic blocks
+Analyzing block at 0x212440: 1 basic blocks
+Analyzing block at 0x212150: 3 basic blocks
+Analyzing block at 0x2157b0: 41 basic blocks
+Analyzing block at 0x213380: 2 basic blocks
+Analyzing block at 0x215ce0: 31 basic blocks
+Analyzing block at 0x215e90: 1 basic blocks
+Analyzing block at 0x20d530: 16 basic blocks
+Analyzing block at 0x212820: 5 basic blocks
+Analyzing block at 0x212550: 117 basic blocks
+Analyzing block at 0x20bc7b: 1 basic blocks
+Analyzing block at 0x211cb0: 5 basic blocks
+Analyzing block at 0x212850: 2 basic blocks
+Analyzing block at 0x212860: 2 basic blocks
+Analyzing block at 0x212870: 5 basic blocks
+Analyzing block at 0x212890: 2 basic blocks
+Analyzing block at 0x2128a0: 2 basic blocks
+Analyzing block at 0x2128b0: 2 basic blocks
+Analyzing block at 0x2128c0: 146 basic blocks
+Analyzing block at 0x212c60: 76 basic blocks
+Analyzing block at 0x213010: 5 basic blocks
+Analyzing block at 0x213050: 5 basic blocks
+Analyzing block at 0x2132f0: 2 basic blocks
+Analyzing block at 0x20d1f0: 42 basic blocks
+Analyzing block at 0x2218c0: 167 basic blocks
+Analyzing block at 0x2260a0: 9 basic blocks
+Analyzing block at 0x20dae0: 36 basic blocks
+Analyzing block at 0x213e90: 2 basic blocks
+Analyzing block at 0x213550: 1 basic blocks
+Analyzing block at 0x213400: 3 basic blocks
+Analyzing block at 0x213ed0: 329 basic blocks
+Analyzing block at 0x213560: 1 basic blocks
+Analyzing block at 0x2144c0: 173 basic blocks
+Analyzing block at 0x213f10: 318 basic blocks
+Analyzing block at 0x2142a0: 213 basic blocks
+Analyzing block at 0x213f40: 299 basic blocks
+Analyzing block at 0x212450: 2 basic blocks
+Analyzing block at 0x213e50: 20 basic blocks
+Analyzing block at 0x213f80: 290 basic blocks
+Analyzing block at 0x2149c0: 40 basic blocks
+Analyzing block at 0x20e3a0: 169 basic blocks
+Analyzing block at 0x20db90: 10 basic blocks
+Analyzing block at 0x20e950: 117 basic blocks
+Analyzing block at 0x20e570: 108 basic blocks
+Analyzing block at 0x20e510: 123 basic blocks
+Analyzing block at 0x20e5d0: 86 basic blocks
+Analyzing block at 0x222cb0: 530 basic blocks
+Analyzing block at 0x2220f0: 251 basic blocks
+Analyzing block at 0x2220a0: 267 basic blocks
+Analyzing block at 0x21ea00: 3 basic blocks
+Analyzing block at 0x21a1e0: 70 basic blocks
+Analyzing block at 0x215ea0: 68 basic blocks
+Analyzing block at 0x210340: 1 basic blocks
+Analyzing block at 0x220cb0: 110 basic blocks
+Analyzing block at 0x220b20: 170 basic blocks
+Analyzing block at 0x220cd0: 96 basic blocks
+Analyzing block at 0x220760: 51 basic blocks
+Analyzing block at 0x2203d0: 57 basic blocks
+Analyzing block at 0x21aa80: 6 basic blocks
+Analyzing block at 0x21a5e0: 90 basic blocks
+Analyzing block at 0x21a5c0: 2 basic blocks
+Analyzing block at 0x21ef60: 115 basic blocks
+Analyzing block at 0x21cab0: 24 basic blocks
+Analyzing block at 0x219b10: 66 basic blocks
+Analyzing block at 0x21f5c0: 4 basic blocks
+Analyzing block at 0x219af0: 3 basic blocks
+Analyzing block at 0x21f630: 3 basic blocks
+Analyzing block at 0x219ee0: 158 basic blocks
+Analyzing block at 0x2185a0: 15 basic blocks
+Analyzing block at 0x221040: 3 basic blocks
+Analyzing block at 0x221100: 15 basic blocks
+Analyzing block at 0x220b40: 156 basic blocks
+Analyzing block at 0x220f10: 1 basic blocks
+Analyzing block at 0x220fc0: 41 basic blocks
+Analyzing block at 0x220b60: 142 basic blocks
+Analyzing block at 0x213650: 4 basic blocks
+Analyzing block at 0x2171a0: 12 basic blocks
+Analyzing block at 0x2171f0: 12 basic blocks
+Analyzing block at 0x217240: 14 basic blocks
+Analyzing block at 0x2172c0: 12 basic blocks
+Analyzing block at 0x210e10: 2 basic blocks
+Analyzing block at 0x217370: 12 basic blocks
+Analyzing block at 0x217410: 1 basic blocks
+Analyzing block at 0x217320: 12 basic blocks
+Analyzing block at 0x2162d0: 110 basic blocks
+Analyzing block at 0x2164b0: 84 basic blocks
+Analyzing block at 0x2183a0: 10 basic blocks
+Analyzing block at 0x221b60: 113 basic blocks
+Analyzing block at 0x222070: 4 basic blocks
+Analyzing block at 0x20d8a0: 9 basic blocks
+Analyzing block at 0x20c21e: 15 basic blocks
+Analyzing block at 0x215060: 4 basic blocks
+Analyzing block at 0x20cf60: 3 basic blocks
+Analyzing block at 0x214e40: 2 basic blocks
+Analyzing block at 0x214f20: 2 basic blocks
+Analyzing block at 0x214e90: 3 basic blocks
+Analyzing block at 0x20cd58: 27 basic blocks
+Analyzing block at 0x212470: 1 basic blocks
+Analyzing block at 0x20ebc0: 72 basic blocks
+Analyzing block at 0x20ef50: 8 basic blocks
+Analyzing block at 0x20d070: 2 basic blocks
+Analyzing block at 0x20d040: 2 basic blocks
+Analyzing block at 0x222930: 64 basic blocks
+Analyzing block at 0x223260: 428 basic blocks
+Analyzing block at 0x2233c0: 411 basic blocks
+Analyzing block at 0x224000: 175 basic blocks
+Analyzing block at 0x223dd0: 220 basic blocks
+Analyzing block at 0x2239d0: 306 basic blocks
+Analyzing block at 0x225d90: 16 basic blocks
+Analyzing block at 0x20cf40: 3 basic blocks
+Analyzing block at 0x224770: 1 basic blocks
+Analyzing block at 0x2242f0: 111 basic blocks
+Analyzing block at 0x224530: 60 basic blocks
+Analyzing block at 0x224bb0: 465 basic blocks
+Analyzing block at 0x224780: 29 basic blocks
+Analyzing block at 0x224880: 7 basic blocks
+Analyzing block at 0x224c60: 445 basic blocks
+Analyzing block at 0x222140: 233 basic blocks
+Analyzing block at 0x224d90: 412 basic blocks
+Analyzing block at 0x2251a0: 304 basic blocks
+Analyzing block at 0x20cf80: 4 basic blocks
+Analyzing block at 0x20cfa0: 3 basic blocks
+Analyzing block at 0x2248e0: 70 basic blocks
+Analyzing block at 0x222920: 1 basic blocks
+Analyzing block at 0x225330: 238 basic blocks
+Analyzing block at 0x2259f0: 104 basic blocks
+Analyzing block at 0x225740: 159 basic blocks
+Analyzing block at 0x222290: 184 basic blocks
+Analyzing block at 0x2225a0: 107 basic blocks
+Analyzing block at 0x2228d0: 14 basic blocks
+Analyzing block at 0x222800: 50 basic blocks
+Analyzing block at 0x215b50: 14 basic blocks
+Analyzing block at 0x221280: 3 basic blocks
+Analyzing block at 0x220e40: 61 basic blocks
+Analyzing block at 0x220e80: 41 basic blocks
+Analyzing block at 0x220ec0: 21 basic blocks
+Analyzing block at 0x221430: 140 basic blocks
+Analyzing block at 0x2210a0: 39 basic blocks
+Analyzing block at 0x221160: 2 basic blocks
+Analyzing block at 0x221450: 130 basic blocks
+Analyzing block at 0x2210e0: 23 basic blocks
+Analyzing block at 0x2211a0: 2 basic blocks
+Analyzing block at 0x221410: 151 basic blocks
+Analyzing block at 0x221080: 47 basic blocks
+Analyzing block at 0x221140: 2 basic blocks
+Analyzing block at 0x2212b0: 26 basic blocks
+Analyzing block at 0x221290: 41 basic blocks
+Analyzing block at 0x21f0d0: 80 basic blocks
+Analyzing block at 0x220720: 63 basic blocks
+Analyzing block at 0x2205c0: 29 basic blocks
+Analyzing block at 0x220660: 10 basic blocks
+Analyzing block at 0x21f1d0: 49 basic blocks
+Analyzing block at 0x21f670: 238 basic blocks
+Analyzing block at 0x217680: 87 basic blocks
+Analyzing block at 0x21ebd0: 227 basic blocks
+Analyzing block at 0x21be40: 271 basic blocks
+Analyzing block at 0x21eb80: 240 basic blocks
+Analyzing block at 0x21a500: 13 basic blocks
+Analyzing block at 0x219eb0: 1 basic blocks
+Analyzing block at 0x21eee0: 144 basic blocks
+Analyzing block at 0x219ec0: 1 basic blocks
+Analyzing block at 0x219ed0: 3 basic blocks
+Analyzing block at 0x218620: 10 basic blocks
+Analyzing block at 0x2136a0: 83 basic blocks
+Analyzing block at 0x217400: 1 basic blocks
+Analyzing block at 0x2173f0: 2 basic blocks
+Analyzing block at 0x215890: 10 basic blocks
+Analyzing block at 0x2173e0: 1 basic blocks
+Analyzing block at 0x2173d0: 1 basic blocks
+Analyzing block at 0x216a50: 10 basic blocks
+Analyzing block at 0x216b30: 137 basic blocks
+Analyzing block at 0x217ce0: 9 basic blocks
+Analyzing block at 0x20c21d: 1 basic blocks
+Analyzing block at 0x213390: 3 basic blocks
+Analyzing block at 0x2118a0: 4 basic blocks
+Analyzing block at 0x215090: 63 basic blocks
+Analyzing block at 0x20c98b: 15 basic blocks
+Analyzing block at 0x214ea0: 2 basic blocks
+Analyzing block at 0x214eb0: 1 basic blocks
+Analyzing block at 0x222ca0: 1 basic blocks
+Analyzing block at 0x20cf20: 3 basic blocks
+Analyzing block at 0x214e60: 2 basic blocks
+Analyzing block at 0x224ba0: 1 basic blocks
+Analyzing block at 0x2221d0: 212 basic blocks
+Analyzing block at 0x2252f0: 250 basic blocks
+Analyzing block at 0x2251f0: 289 basic blocks
+Analyzing block at 0x225e30: 1 basic blocks
+Analyzing block at 0x225e60: 72 basic blocks
+Analyzing block at 0x20cff0: 1 basic blocks
+Analyzing block at 0x20cfc0: 1 basic blocks
+Analyzing block at 0x220f00: 1 basic blocks
+Analyzing block at 0x221000: 22 basic blocks
+Analyzing block at 0x2186e0: 429 basic blocks
+Analyzing block at 0x220130: 28 basic blocks
+Analyzing block at 0x220200: 1 basic blocks
+Analyzing block at 0x220240: 54 basic blocks
+Analyzing block at 0x220310: 24 basic blocks
+Analyzing block at 0x217440: 75 basic blocks
+Analyzing block at 0x217490: 50 basic blocks
+Analyzing block at 0x21ed40: 184 basic blocks
+Analyzing block at 0x215840: 22 basic blocks
+Analyzing block at 0x21c3c0: 180 basic blocks
+Analyzing block at 0x21c550: 133 basic blocks
+Analyzing block at 0x21c700: 89 basic blocks
+Analyzing block at 0x21ccd0: 392 basic blocks
+Analyzing block at 0x21cfb0: 325 basic blocks
+Analyzing block at 0x21cc50: 1 basic blocks
+Analyzing block at 0x210e20: 253 basic blocks
+Analyzing block at 0x211750: 31 basic blocks
+Analyzing block at 0x213300: 2 basic blocks
+Analyzing block at 0x215310: 1 basic blocks
+Analyzing block at 0x2114d0: 174 basic blocks
+Analyzing block at 0x215330: 20 basic blocks
+Analyzing block at 0x215320: 1 basic blocks
+Analyzing block at 0x211680: 84 basic blocks
+Analyzing block at 0x215360: 2 basic blocks
+Analyzing block at 0x215380: 2 basic blocks
+Analyzing block at 0x211550: 152 basic blocks
+Analyzing block at 0x214ec0: 2 basic blocks
+Analyzing block at 0x2186c0: 436 basic blocks
+Analyzing block at 0x219ac0: 25 basic blocks
+Analyzing block at 0x2174e0: 33 basic blocks
+Analyzing block at 0x217500: 20 basic blocks
+Analyzing block at 0x211640: 95 basic blocks
+Analyzing block at 0x211810: 28 basic blocks
+Analyzing block at 0x2115e0: 123 basic blocks
+Analyzing block at 0x217420: 83 basic blocks
+Analyzing block at 0x217530: 3 basic blocks
+Analyzing block at 0x217430: 79 basic blocks
+Analyzing block at 0x21a570: 21 basic blocks
+Analyzing block at 0x21e4a0: 54 basic blocks
+Analyzing block at 0x21d1b0: 262 basic blocks
+Analyzing block at 0x21e9a0: 4 basic blocks
+Analyzing block at 0x21e9c0: 2 basic blocks
+Analyzing block at 0x21ea50: 300 basic blocks
+Analyzing block at 0x21eb00: 270 basic blocks
+Analyzing block at 0x2110e0: 125 basic blocks
+Analyzing block at 0x21eb50: 252 basic blocks
+Analyzing block at 0x21e9d0: 2 basic blocks
+Analyzing block at 0x218370: 2 basic blocks
+Analyzing block at 0x211700: 52 basic blocks
+Analyzing block at 0x20bc8f: 1 basic blocks
+Analyzing block at 0x211490: 1 basic blocks
+Analyzing block at 0x2114a0: 1 basic blocks
+Analyzing block at 0x2114c0: 1 basic blocks
+Analyzing block at 0x2116e0: 61 basic blocks
+Analyzing block at 0x2153b0: 1 basic blocks
+Analyzing block at 0x20cc7a: 2 basic blocks
+Analyzing block at 0x214ed0: 19 basic blocks
+Analyzing block at 0x2117d0: 14 basic blocks
+Analyzing block at 0x218330: 5 basic blocks
+Analyzing block at 0x218610: 2 basic blocks
+Analyzing block at 0x218670: 5 basic blocks
+Analyzing block at 0x218400: 9 basic blocks
+Analyzing block at 0x20cca8: 6 basic blocks
+Analyzing block at 0x218490: 45 basic blocks
+Analyzing block at 0x20ccc3: 7 basic blocks
+Analyzing block at 0x2184e0: 25 basic blocks
+Analyzing block at 0x217bc0: 68 basic blocks
+SUCCESS: Analyzed 524 code segments
+
+=== Phase 2: Bounds Check Pattern Detection ===
+Found 0 potential bounds check operations
+Found 18679 array access patterns
+
+=== Phase 3: Panic Call Detection ===
+Found 0 potential panic/runtime calls
+
+=== Phase 4: Index Operation Analysis ===
+Found 6901 index-related operations
+
+=== Phase 5: Out-of-Bounds Vulnerability Analysis ===
+
+OUT-OF-BOUNDS VULNERABILITY REPORT:
+Found 457 potential OOB vulnerabilities
+
+--- OOB Vulnerability #1 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x22afe0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RAX + 0x8
+  - Memory access: 0x22B02E + 0x751A
+
+--- OOB Vulnerability #2 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211920
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #3 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x22af50
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: 0x22AF61 + 0x70DF
+
+--- OOB Vulnerability #4 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2123d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #5 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x22af70
+Array accesses found:
+  - Memory access: RSP + 0x38
+  - Memory access: RSP + 0x28
+  - Memory access: RSP + 0x18
+
+--- OOB Vulnerability #6 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20c75f
+Array accesses found:
+  - Memory access: RAX + RDX + 0xFFFFFFFFFFFFFFFF
+  - Memory access: RAX + 0x1
+  - Memory access: RAX + 0x2
+
+--- OOB Vulnerability #7 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20c497
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #8 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211ad0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #9 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211bc0
+Array accesses found:
+  - Memory access: 0x211BCA + 0x207B6
+
+--- OOB Vulnerability #10 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211b30
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #11 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211b50
+Array accesses found:
+  - Memory access: 0x211B57 + 0x1B739
+  - Memory access: 0x211B6A + 0x1B726
+  - Memory access: 0x211B8C + 0x1B704
+
+--- OOB Vulnerability #12 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211ce0
+Array accesses found:
+  - Memory access: 0x211D05 + 0x2067B
+  - Memory access: RAX + RDX
+
+--- OOB Vulnerability #13 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211bf0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #14 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211d10
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #15 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x22aed0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #16 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20c2f8
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #17 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20c386
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #18 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20c8b4
+Array accesses found:
+  - Memory access: 0x20C8D8 + 0x25A0B
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #19 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20c955
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #20 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20c324
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #21 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211c00
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #22 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211c40
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #23 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211cd0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #24 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20c13c
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSI + 0x10
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #25 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211eb0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: 0x211ECB + 0x20505
+
+--- OOB Vulnerability #26 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211f10
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #27 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211fb0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: 0x211FD0 + 0x203F8
+
+--- OOB Vulnerability #28 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x212060
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #29 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211e10
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #30 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x22ae00
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RBX + 0xB2
+  - Memory access: RBX + 0xB3
+
+--- OOB Vulnerability #31 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x228540
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #32 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2123f0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #33 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217a50
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #34 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x228fd0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDX + 0x10
+  - Memory access: RDX + 0x10
+
+--- OOB Vulnerability #35 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20c2da
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #36 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211d40
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #37 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20c336
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #38 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20bc60
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #39 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2118f0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #40 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x212410
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #41 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211ee0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #42 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2121b0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #43 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2120f0
+Array accesses found:
+  - Memory access: 0x2120FA + 0x20286
+  - Memory access: RAX + RDX
+
+--- OOB Vulnerability #44 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x212120
+Array accesses found:
+  - Memory access: 0x21212A + 0x20256
+  - Memory access: RAX + RDX
+
+--- OOB Vulnerability #45 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211e50
+Array accesses found:
+  - Memory access: 0x211E57 + 0x20569
+  - Memory access: 0x211E5E + 0x2055A
+  - Memory access: 0x211E83 + 0x204FD
+
+--- OOB Vulnerability #46 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211ea0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #47 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217860
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RAX + 0x8
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #48 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x227b60
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #49 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214cc0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #50 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2262e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #51 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x229ce0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #52 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x226440
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #53 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2280c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #54 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x226b60
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #55 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x226470
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #56 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x226490
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #57 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x215a10
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x10
+
+--- OOB Vulnerability #58 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210250
+Array accesses found:
+  - Memory access: RSP + 0x10
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+
+--- OOB Vulnerability #59 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2263a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x10
+  - Memory access: RBX + 0x8
+
+--- OOB Vulnerability #60 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2271a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #61 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x22a0d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #62 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2285d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #63 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20f030
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #64 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2264c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #65 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20f800
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+
+--- OOB Vulnerability #66 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x227290
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #67 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x227860
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #68 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x228b60
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #69 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x227c80
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #70 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2106b0
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #71 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210800
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #72 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x227300
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #73 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x213360
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #74 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214ce0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #75 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214d50
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RBX + 0x8
+
+--- OOB Vulnerability #76 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2282b0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #77 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217970
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #78 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x22ada0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #79 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20efb0
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #80 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20d8e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #81 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210650
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #82 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x228d20
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #83 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x228670
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #84 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210080
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #85 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x228ad0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #86 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2103a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+
+--- OOB Vulnerability #87 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x229140
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #88 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210a90
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+
+--- OOB Vulnerability #89 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211300
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #90 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x22add0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RBX + 0xB2
+
+--- OOB Vulnerability #91 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x228f10
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RDX + 0x10
+
+--- OOB Vulnerability #92 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x213200
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #93 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210920
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+
+--- OOB Vulnerability #94 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210820
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #95 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20fad0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #96 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210700
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #97 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20f6d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+
+--- OOB Vulnerability #98 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210e50
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #99 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20f8f0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #100 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2106e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #101 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20ef90
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+
+--- OOB Vulnerability #102 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x215f10
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #103 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x22ac80
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #104 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2286a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #105 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20faa0
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #106 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210460
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+
+--- OOB Vulnerability #107 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210370
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #108 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20f060
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+
+--- OOB Vulnerability #109 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210c50
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x18
+
+--- OOB Vulnerability #110 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20f160
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #111 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x22ad20
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #112 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x227830
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #113 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x228950
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #114 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x226510
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #115 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2211c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #116 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221340
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #117 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2215b0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #118 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217af0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #119 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217a00
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #120 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217c10
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #121 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2280a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #122 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221390
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #123 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217a30
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #124 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214f30
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #125 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217c60
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #126 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20ce40
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #127 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2158e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #128 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20cd32
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #129 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20c30e
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #130 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2133b0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: 0x2133C4 + 0x1F00C
+
+--- OOB Vulnerability #131 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211800
+Array accesses found:
+  - Memory access: 0x211807 + 0x20B59
+
+--- OOB Vulnerability #132 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211900
+Array accesses found:
+  - Memory access: 0x211907 + 0x20A61
+
+--- OOB Vulnerability #133 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x212430
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #134 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x212010
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #135 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x212380
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #136 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2123c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #137 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x212180
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #138 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20c515
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RAX + RDI
+  - Memory access: RDI + RSI
+
+--- OOB Vulnerability #139 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x215740
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #140 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2263f0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x10
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #141 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x226290
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x10
+  - Memory access: RBX + 0x8
+
+--- OOB Vulnerability #142 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20d680
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #143 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x227ef0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #144 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20d790
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #145 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20d0a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #146 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x213340
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #147 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x215c80
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #148 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211d20
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #149 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20d4d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #150 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214db0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RCX + 0x18
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #151 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x226360
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x10
+  - Memory access: RBX + 0x8
+
+--- OOB Vulnerability #152 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2124e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #153 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x227e60
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #154 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x226200
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #155 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x226170
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #156 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x226190
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #157 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x227b80
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #158 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x227d70
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #159 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x227320
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #160 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214c80
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #161 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20d900
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #162 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20efe0
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #163 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20daa0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: 0x20DAC7 + 0x1F7A1
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #164 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2124c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #165 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x213eb0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #166 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20da30
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: 0x20DA8A + 0x1F7C6
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #167 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20d930
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #168 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20ff80
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #169 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20de90
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: 0x20DEB7 + 0x1F3B9
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #170 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20e3c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #171 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214c40
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+
+--- OOB Vulnerability #172 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2100f0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #173 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210060
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #174 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2100c0
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #175 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20fea0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+
+--- OOB Vulnerability #176 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20db10
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #177 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20e760
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #178 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x226090
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #179 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221f00
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #180 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20d3a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x1
+  - Memory access: RDI + 0x1
+
+--- OOB Vulnerability #181 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20dbc0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #182 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20df10
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #183 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20dbd0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #184 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20e360
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: 0x20E387 + 0x1EED1
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #185 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20ded0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #186 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2133e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #187 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20e340
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: 0x20E387 + 0x1EED1
+
+--- OOB Vulnerability #188 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210680
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+
+--- OOB Vulnerability #189 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210630
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #190 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214e20
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #191 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21e9e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #192 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21a040
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #193 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217c40
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #194 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221700
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #195 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210350
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #196 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210170
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #197 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20db50
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #198 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221470
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #199 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2214d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #200 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220f20
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #201 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217bf0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #202 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x22ae90
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #203 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x22aeb0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #204 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211120
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #205 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2110c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #206 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21ea30
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #207 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217cd0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #208 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210360
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #209 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21ef20
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x10
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #210 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220ae0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x10
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #211 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21ef40
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x10
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #212 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21ef00
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RAX + 0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #213 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221220
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #214 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x228060
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #215 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210140
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #216 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2210c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #217 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221250
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #218 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220b00
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x10
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #219 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221240
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #220 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x228080
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #221 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210160
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #222 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221180
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #223 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221270
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #224 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211d70
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0xC
+  - Memory access: RSP + 0x1C
+
+--- OOB Vulnerability #225 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20de80
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #226 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20ffb0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #227 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214590
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #228 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x215aa0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x10
+
+--- OOB Vulnerability #229 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210cc0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #230 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210ed0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #231 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x216190
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #232 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211070
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #233 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x216c70
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #234 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2161b0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #235 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210f50
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RBX + 0x20
+  - Memory access: RBX + 0x28
+
+--- OOB Vulnerability #236 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221360
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #237 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x218390
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #238 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2212d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #239 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2216c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #240 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2217e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #241 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221800
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #242 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214fd0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: 0x214FDC + 0x1D424
+  - Memory access: 0x21500F + 0x1D3F1
+
+--- OOB Vulnerability #243 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x22b050
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RBP + 0xFFFFFFFFFFFFFFF0
+  - Memory access: RBP + 0xFFFFFFFFFFFFFF68
+
+--- OOB Vulnerability #244 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x215050
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #245 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20ce70
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RCX + RDI
+  - Memory access: RCX + RDI
+
+--- OOB Vulnerability #246 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20cd2d
+Array accesses found:
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #247 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2157b0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #248 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x213380
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #249 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x215ce0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #250 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20d530
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #251 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x212820
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #252 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x212550
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x10
+
+--- OOB Vulnerability #253 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20bc7b
+Array accesses found:
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #254 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211cb0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #255 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x212850
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #256 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x212860
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #257 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x212870
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #258 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x212890
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #259 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2128a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #260 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2128b0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #261 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2128c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #262 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x212c60
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #263 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x213010
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x4
+
+--- OOB Vulnerability #264 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x213050
+Array accesses found:
+  - Memory access: RSP + 0x10
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #265 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2132f0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #266 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20d1f0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #267 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2218c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #268 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2260a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #269 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20dae0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #270 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x213e90
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #271 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x213ed0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #272 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2144c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #273 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x213f10
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x18
+
+--- OOB Vulnerability #274 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2142a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #275 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x213f40
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x18
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #276 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x212450
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: 0x212462 + 0x1AE26
+
+--- OOB Vulnerability #277 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x213e50
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x18
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #278 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x213f80
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #279 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2149c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #280 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20e3a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #281 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20db90
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: 0x20DBAF + 0x1F6C9
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #282 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20e950
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #283 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20e570
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #284 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20e510
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #285 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20e5d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #286 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x222cb0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #287 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2220f0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #288 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2220a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #289 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21ea00
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #290 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21a1e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #291 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x215ea0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x20
+
+--- OOB Vulnerability #292 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220cb0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #293 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220b20
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #294 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220cd0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #295 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220760
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #296 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2203d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #297 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21aa80
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #298 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21a5e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #299 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21a5c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #300 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21ef60
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #301 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21cab0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #302 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x219b10
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #303 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21f630
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #304 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x219ee0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #305 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2185a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #306 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221040
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #307 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221100
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #308 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220b40
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #309 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220fc0
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #310 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220b60
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #311 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x213650
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #312 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2171a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #313 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2171f0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #314 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217240
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #315 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2172c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #316 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210e10
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #317 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217370
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #318 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217320
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #319 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2162d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #320 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2164b0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #321 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2183a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #322 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221b60
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #323 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x222070
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: 0x222085 + 0xEC83
+  - Memory access: 0x22208C + 0xEC74
+
+--- OOB Vulnerability #324 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20c21e
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #325 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x215060
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #326 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214e40
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #327 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214f20
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #328 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214e90
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #329 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20cd58
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RBX + RDX + 0xFFFFFFFFFFFFFFFF
+  - Memory access: RAX + RCX
+
+--- OOB Vulnerability #330 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20ebc0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #331 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20d070
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x4
+
+--- OOB Vulnerability #332 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20d040
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #333 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x222930
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #334 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x223260
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #335 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2233c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #336 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x224000
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #337 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x223dd0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #338 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2239d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #339 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x225d90
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RAX + 0x18
+  - Memory access: RAX + 0x10
+
+--- OOB Vulnerability #340 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2242f0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #341 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x224530
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #342 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x224bb0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #343 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x224780
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #344 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x224c60
+Array accesses found:
+  - Memory access: RSP + 0x10
+  - Memory access: RCX + RSP
+  - Memory access: RDI + 0x320
+
+--- OOB Vulnerability #345 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x222140
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #346 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x224d90
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #347 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2251a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #348 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2248e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: R8 * 0x8 + 0x230BF8
+  - Memory access: R8 + RDX + 0xFFFFFFFFFFFFFFFF
+
+--- OOB Vulnerability #349 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x225330
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #350 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2259f0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #351 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x225740
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #352 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x222290
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #353 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2225a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x328
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #354 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2228d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #355 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x222800
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x320
+  - Memory access: RDI + 0x320
+
+--- OOB Vulnerability #356 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x215b50
+Array accesses found:
+  - Memory access: RSP + 0xFFFFFFFFFFFFFFF0
+  - Memory access: RSP + 0xFFFFFFFFFFFFFFF1
+  - Memory access: RSP + 0xFFFFFFFFFFFFFFF2
+
+--- OOB Vulnerability #357 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221280
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #358 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220e40
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #359 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220e80
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #360 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220ec0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #361 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221430
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #362 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2210a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #363 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221160
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #364 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221450
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #365 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2210e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #366 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2211a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #367 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221410
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #368 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221080
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #369 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221140
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #370 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2212b0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #371 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221290
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #372 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21f0d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #373 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220720
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+  - Memory access: 0x22074F + 0xD6D1
+
+--- OOB Vulnerability #374 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2205c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #375 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220660
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #376 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21f1d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #377 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21f670
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #378 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217680
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #379 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21ebd0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RAX + 0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #380 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21be40
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #381 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21eb80
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RAX + 0x8
+
+--- OOB Vulnerability #382 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21eee0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RAX + 0x8
+
+--- OOB Vulnerability #383 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x218620
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #384 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2136a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #385 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2173f0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #386 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x216a50
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #387 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x216b30
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #388 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217ce0
+Array accesses found:
+  - Memory access: 0x217CF2 + 0x155A6
+  - Memory access: 0x217CF9 + 0x155A7
+  - Memory access: 0x217D0C + 0x1559C
+
+--- OOB Vulnerability #389 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x213390
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: 0x21339D + 0x1F023
+  - Memory access: 0x2133A4 + 0x1EFDC
+
+--- OOB Vulnerability #390 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2118a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #391 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x215090
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #392 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20c98b
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #393 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214ea0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #394 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214e60
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #395 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2221d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #396 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2252f0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #397 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2251f0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x320
+  - Memory access: RDI + 0x328
+
+--- OOB Vulnerability #398 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x225e60
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #399 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x221000
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #400 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2186e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #401 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220130
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #402 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220240
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #403 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x220310
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RCX + RDI
+  - Memory access: RCX + RDI + 0xFFFFFFFFFFFFFFFF
+
+--- OOB Vulnerability #404 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217440
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #405 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217490
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #406 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21ed40
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+  - Memory access: RAX + RSI
+
+--- OOB Vulnerability #407 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x215840
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #408 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21c3c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #409 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21c550
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #410 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21c700
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #411 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21ccd0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #412 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21cfb0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #413 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x210e20
+Array accesses found:
+  - Memory access: RSP + 0x8
+  - Memory access: RSP + 0x10
+  - Memory access: RSP + 0x8
+
+--- OOB Vulnerability #414 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211750
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #415 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x213300
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #416 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2114d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #417 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x215330
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #418 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211680
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #419 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x215360
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #420 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x215380
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #421 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211550
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #422 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214ec0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #423 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2186c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #424 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x219ac0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #425 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2174e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #426 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217500
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #427 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211640
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #428 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211810
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: 0x211818 + 0x20B48
+  - Memory access: 0x21186E + 0x20AF2
+
+--- OOB Vulnerability #429 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2115e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #430 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217420
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #431 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217430
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #432 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21a570
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #433 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21e4a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #434 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21d1b0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #435 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21e9a0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #436 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21e9c0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #437 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21ea50
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #438 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21eb00
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #439 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2110e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #440 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21eb50
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #441 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x21e9d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #442 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x218370
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #443 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x211700
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSI + 0x30
+  - Memory access: RSI + 0x10
+
+--- OOB Vulnerability #444 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20bc8f
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #445 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2116e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSI + 0x30
+
+--- OOB Vulnerability #446 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20cc7a
+Array accesses found:
+  - Memory access: RDI + 0x8
+
+--- OOB Vulnerability #447 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x214ed0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #448 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2117d0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: 0x2117DB + 0x20B8D
+  - Memory access: 0x2117E6 + 0x20B82
+
+--- OOB Vulnerability #449 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x218330
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #450 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x218610
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #451 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x218670
+Array accesses found:
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #452 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x218400
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #453 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20cca8
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #454 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x218490
+Array accesses found:
+  - Memory access: RSP + 0x18
+  - Memory access: RSP + 0x20
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #455 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x20ccc3
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #456 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x2184e0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+
+--- OOB Vulnerability #457 ---
+Type: unchecked_access
+Severity: MEDIUM
+Location: CFG at 0x217bc0
+Array accesses found:
+  - Memory access: RSP + -0x8
+  - Memory access: RSP + -0x8
+  - Memory access: RDI + 0x8
+
+SUCCESS: Control flow graph saved to oob_analysis.dot
+
+=== Analysis Complete ===
+ALERT: POTENTIAL OUT-OF-BOUNDS VULNERABILITIES DETECTED
+Look for:
+- Bounds checks with small constants (array sizes like 64)
+- Index operations reading from strings (s[0] patterns)
+- Memory accesses following comparisons

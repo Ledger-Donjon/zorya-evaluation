@@ -1,0 +1,48 @@
+Running command: /home/karolina-gorna/Documents/zorya/zorya /home/karolina-gorna/Documents/go-exploits-database/tinygo-compiler/theoretical/invalid-shift/invalid-shift --mode function 0x22af70 --lang go --compiler tinygo --arg "42" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-10-08 15:59:12 UTC
+Mode: function
+Elapsed since start: 42.618s
+Instruction Address: 0x22af97
+Panic Address: 0x22afce
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 0 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 2 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 's__len' must be 1 (unsigned: 1; signed: 1; ASCII: non-printable 0x01)
+  - The input 's_byte_0' must be 255 (unsigned: 255; signed: 255; ASCII: non-printable 0xff)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 's__len':
+  s__len!141 = #x0000000000000001
+    (unsigned: 1)
+    (signed: 1)
+    (ASCII: non-printable, code 1)
+
+Argument 's__ptr':
+  s__ptr!140 = #x0000000000000008
+    (unsigned: 8)
+    (signed: 8)
+    (ASCII: non-printable, code 8)
+
+Argument 's_byte_0':
+  s_byte_0!142 = #x00000000000000ff
+    (unsigned: 255)
+    (signed: 255)
+    (ASCII: non-printable, code 255)
+
+Argument 's_byte_1':
+  s_byte_1!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================

@@ -1,0 +1,154 @@
+Running command: /home/karolina-gorna/Documents/zorya/zorya /home/karolina-gorna/Documents/go-exploits-database/tinygo-compiler/real-world/omni-vuln4/omni-vuln4 --mode function 0x24b4a0 --lang go --compiler tinygo --arg "0 0 0 --indices 1" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-10-09 09:19:35 UTC
+Mode: function
+Elapsed since start: 81.929s
+Instruction Address: 0x24bac8
+Panic Address: 0x217c8c
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 12 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 18 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'indices.len' must be 1 (unsigned: 1; signed: 1; ASCII: non-printable 0x01)
+  - The input 'indices[0]' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+  - The input 'tree.len' must be 2 (unsigned: 2; signed: 2; ASCII: non-printable 0x02)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'indices':
+  Slice components:
+    pointer (indices_ptr!249) = #x00007fffb7e024c0
+      (hex: 0x7fffb7e024c0)
+    length (indices_len!250) = #x0000000000000001
+      (decimal: 1)
+    capacity (indices_cap!251) = #x0000000000000000
+      (decimal: 0)
+
+Argument 'indices[0]':
+  slice_elem_indices_0_!258 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'indices[1]':
+  slice_elem_indices_1_!259 = #xa9000a5052804100
+    (unsigned: 12177744732507619584)
+    (signed: -6268999341201932032)
+    (ASCII LSB: \0)
+
+Argument 'indices[2]':
+  slice_elem_indices_2_!260 = #xf5654e21ab3c45ca
+    (unsigned: 17682625418453861834)
+    (signed: -764118655255689782)
+    (ASCII LSB: non-printable 0xca)
+
+Argument 'tree':
+  Slice components:
+    pointer (tree_ptr!140) = #x00007fffb7e02460
+      (hex: 0x7fffb7e02460)
+    length (tree_len!141) = #x0000000000000002
+      (decimal: 2)
+    capacity (tree_cap!142) = #x0000000000000000
+      (decimal: 0)
+
+Argument 'tree[0]':
+  slice_elem_tree_0_!255 = #xca92050040806660906634428022470431005180f3c0d0108013c122bc000650
+    (unsigned: n/a)
+    (signed: n/a)
+
+Argument 'tree[1]':
+  slice_elem_tree_1_!256 = #x005020001121405c084222610088080204b00050174200420000460080400001
+    (unsigned: n/a)
+    (signed: n/a)
+
+Argument 'tree[2]':
+  slice_elem_tree_2_!257 = #x8340510003010018a484a400028a8c042280000208200248c802000030082008
+    (unsigned: n/a)
+    (signed: n/a)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================
+
+================================================================================
+Running command: /home/karolina-gorna/Documents/zorya/zorya /home/karolina-gorna/Documents/go-exploits-database/tinygo-compiler/real-world/omni-vuln4/omni-vuln4 --mode function 0x24b4a0 --lang go --compiler tinygo --arg "0 0 0 --indices 1" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-10-09 09:19:46 UTC
+Mode: function
+Elapsed since start: 93.420s
+Instruction Address: 0x24b503
+Panic Address: 0x24baa3
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 12 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 20 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'indices.len' must be 2 (unsigned: 2; signed: 2; ASCII: non-printable 0x02)
+  - The input 'indices[0]' must be 1 (unsigned: 1; signed: 1; ASCII: non-printable 0x01)
+  - The input 'tree.len' must be 2 (unsigned: 2; signed: 2; ASCII: non-printable 0x02)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'indices':
+  Slice components:
+    pointer (indices_ptr!249) = #x00007fffb7e024c0
+      (hex: 0x7fffb7e024c0)
+    length (indices_len!250) = #x0000000000000002
+      (decimal: 2)
+    capacity (indices_cap!251) = #x0000000000000000
+      (decimal: 0)
+
+Argument 'indices[0]':
+  slice_elem_indices_0_!258 = #x0000000000000001
+    (unsigned: 1)
+    (signed: 1)
+    (ASCII: non-printable, code 1)
+
+Argument 'indices[1]':
+  slice_elem_indices_1_!259 = #x4a65a4c36cc5e2bb
+    (unsigned: 5360872090704929467)
+    (signed: 5360872090704929467)
+    (ASCII LSB: non-printable 0xbb)
+
+Argument 'indices[2]':
+  slice_elem_indices_2_!260 = #x099e8b5a9250be70
+    (unsigned: 693144613779717744)
+    (signed: 693144613779717744)
+    (ASCII LSB: 'p')
+
+Argument 'tree':
+  Slice components:
+    pointer (tree_ptr!140) = #x00007fffb7e02460
+      (hex: 0x7fffb7e02460)
+    length (tree_len!141) = #x0000000000000002
+      (decimal: 2)
+    capacity (tree_cap!142) = #x0000000000000000
+      (decimal: 0)
+
+Argument 'tree[0]':
+  slice_elem_tree_0_!255 = #x5fddce6e6ec1be8d61ecaba90912fabdffc75683cf69fbf6cfbe1beab3d2e612
+    (unsigned: n/a)
+    (signed: n/a)
+
+Argument 'tree[1]':
+  slice_elem_tree_1_!256 = #xb3523d9ac1ac8b1f3738d6025a1da858a20a8a05a8e4217b9ab6e5c5c1a85078
+    (unsigned: n/a)
+    (signed: n/a)
+
+Argument 'tree[2]':
+  slice_elem_tree_2_!257 = #xdcebdffb9f79dc90c5b64e5df3fec14e77bcf57f4d7b53dffcb70e7d7ef447ce
+    (unsigned: n/a)
+    (signed: n/a)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================

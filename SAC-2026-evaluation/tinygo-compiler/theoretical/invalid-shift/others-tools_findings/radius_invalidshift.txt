@@ -1,0 +1,26 @@
+// All three radius2 runs panic at processor.rs:758 for the `invalid-shift` binary.
+// Observations:
+// 1. radius2 expects certain internal state (like memory regions, argv, or symbolic values) 
+//    to be present at the start of execution.
+// 2. Using `-a 0x2` or `-a 0x22afe0 --crash` fails because the initial program state
+//    is incomplete; radius2 tries to unwrap a None when accessing expected state.
+// 3. Using `-A a` also fails because radius2 cannot correctly inject concrete arguments 
+//    into a TinyGo binary, so the argument mapping is missing and unwrap() panics.
+//
+// In short: the panic is caused by radius2 not fully supporting TinyGo binaries’ memory 
+// layout and argv setup, not by any error in the binary itself.
+
+$ radius2 -p ./invalid-shift -a 0x22afe0 
+thread 'main' panicked at /home/kgorna/.cargo/registry/src/index.crates.io-6f17d22bba15001f/radius2-1.0.28/src/processor.rs:758:52:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+$ radius2 -p ./invalid-shift -a 0x22afe0 --crash
+thread 'main' panicked at /home/kgorna/.cargo/registry/src/index.crates.io-6f17d22bba15001f/radius2-1.0.28/src/processor.rs:758:52:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+$ radius2 -p ./invalid-shift -A a
+thread 'main' panicked at /home/kgorna/.cargo/registry/src/index.crates.io-6f17d22bba15001f/radius2-1.0.28/src/processor.rs:758:52:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

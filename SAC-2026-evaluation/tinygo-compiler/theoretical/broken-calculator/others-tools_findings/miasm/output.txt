@@ -1,0 +1,53 @@
+$ python3 tests/broken-calculator-miasm.py go-exploits-database/tinygo-compiler/theoretical/broken-calculator/broken-calculator-tinygo 22f130
+============================================================
+GENERIC VULNERABILITY SCANNER
+============================================================
+Target: go-exploits-database/tinygo-compiler/theoretical/broken-calculator/broken-calculator-tinygo
+Entry Point: 0x22f130
+
+[*] Phase 1: Disassembling binary...
+[+] Analyzed 15 code segments
+
+[*] Phase 2: Running vulnerability scanners...
+
+[*] Scanning for null pointer dereferences...
+    Found 0 potential issues
+[*] Scanning for integer overflows...
+    Found 13 potential issues
+[*] Scanning for buffer overflows...
+    Found 21 potential issues
+[*] Scanning for use-after-free...
+    Found 0 potential issues
+[*] Scanning for unchecked conditions...
+    Found 0 potential issues
+[*] Scanning for format string vulnerabilities...
+    Found 167 potential issues
+
+============================================================
+VULNERABILITY REPORT
+============================================================
+Total potential vulnerabilities found: 201
+
+HIGH severity issues: 0
+MEDIUM severity issues: 201
+
+MEDIUM SEVERITY VULNERABILITIES (sample):
+------------------------------------------------------------
+1. Type: INTEGER_OVERFLOW_RISK
+   Location: CFG 0x22f130, Block loc_key_1718
+
+2. Type: INTEGER_OVERFLOW_RISK
+   Location: CFG 0x22f130, Block loc_key_1767
+
+3. Type: INTEGER_OVERFLOW_RISK
+   Location: CFG 0x22f130, Block loc_key_1768
+
+4. Type: INTEGER_OVERFLOW_RISK
+   Location: CFG 0x22f130, Block loc_key_1769
+
+5. Type: INTEGER_OVERFLOW_RISK
+   Location: CFG 0x2255a0, Block loc_key_1829
+
+============================================================
+Scan complete. Review findings carefully for false positives.
+============================================================

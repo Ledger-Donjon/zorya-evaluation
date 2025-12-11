@@ -1,0 +1,83 @@
+Generic Binary Analysis Framework
+Target: ./../../omni-vuln4
+Phase 1: Code Discovery
+Analysis warning for 0x230530: list index out of range
+Analysis warning for 0x23093e: list index out of range
+Analysis warning for 0x21a700: list index out of range
+Analysis warning for 0x219790: list index out of range
+Analysis warning for 0x2305c1: list index out of range
+Analysis warning for 0x23091d: list index out of range
+Analysis warning for 0x218f90: list index out of range
+Analysis warning for 0x230939: list index out of range
+Analysis warning for 0x219070: list index out of range
+Analysis warning for 0x23074b: list index out of range
+Analysis warning for 0x219770: list index out of range
+Analysis warning for 0x21a6b0: list index out of range
+Analysis warning for 0x20d7ef: list index out of range
+Analysis warning for 0x20d527: list index out of range
+Analysis warning for 0x218e60: list index out of range
+Discovered 15 code segments
+Phase 2: Operation Extraction
+Extracted 1673 operations, 683 instructions
+Phase 3: Pattern Analysis
+
+============================================================
+GENERIC BINARY ANALYSIS REPORT
+============================================================
+
+Binary: ./../../omni-vuln4
+Entry Point: 0x230530
+Architecture: x86_64
+
+Extraction Results:
+  IR Operations: 1673
+  Assembly Instructions: 683
+
+Operation Type Distribution:
+  ExprCompose: 3
+  ExprCond: 94
+  ExprId: 126
+  ExprInt: 168
+  ExprLoc: 160
+  ExprMem: 125
+  ExprOp: 916
+  ExprSlice: 81
+
+Operator Usage:
+  +: 146
+  zeroExt_64: 126
+  FLAG_SIGN_SUB: 110
+  parity: 110
+  FLAG_EQ_CMP: 105
+  call_func_ret: 94
+  call_func_stack: 94
+  FLAG_SUB_OF: 39
+  FLAG_SUB_CF: 38
+  FLAG_ADD_OF: 26
+
+Instruction Distribution (Top 10):
+  MOV: 229
+  CALL: 94
+  POP: 43
+  INT: 32
+  XOR: 31
+  CMP: 30
+  MOVUPS: 28
+  LEA: 27
+  PUSH: 26
+  ADD: 19
+
+Constants Found (9):
+  [0, 2, 3, 22, 2116824, 2296272, 2147483652, 4294967297, 18446744073709551615]
+
+Memory Access Patterns: 219
+  Sample patterns:
+    memory_access: RSP + -0x8
+    memory_access: RSP + -0x8
+    memory_access: RSP + -0x8
+    memory_access: RSP + -0x8
+    memory_access: RSP + -0x8
+
+Control flow graph saved: generic_analysis.dot
+
+Analysis completed successfully

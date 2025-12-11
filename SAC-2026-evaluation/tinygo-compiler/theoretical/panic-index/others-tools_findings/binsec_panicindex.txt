@@ -1,0 +1,953 @@
+$ binsec -sse -sse-script ./tests/panic-index.ini core.snapshot -sse-depth 10000 -sse-engine multi-checks
+[sse:info] TTY: press [space] to switch between log and monitor modes.
+[sse:error] Cut path 19 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x000000000000000b
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000b : 00 
+              #x000000000000000a : 39  (9)
+              #x0000000000000009 : 39  (9)
+              #x0000000000000008 : 39  (9)
+              #x0000000000000007 : 39  (9)
+              #x0000000000000006 : 39  (9)
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2b  (+)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 17 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 16 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 15 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 14 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 13 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 12 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 11 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 10 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 9 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 8 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 29 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x000000000000000a
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 39  (9)
+              #x0000000000000008 : 39  (9)
+              #x0000000000000007 : 39  (9)
+              #x0000000000000006 : 39  (9)
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2b  (+)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 27 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 26 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 25 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 24 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 23 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 22 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 21 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 20 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 7 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 38 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000008
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 39  (9)
+              #x0000000000000006 : 39  (9)
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2b  (+)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 36 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 35 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 34 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 33 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 32 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 31 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 30 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 47 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000009
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 39  (9)
+              #x0000000000000007 : 39  (9)
+              #x0000000000000006 : 39  (9)
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2b  (+)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 45 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 44 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 43 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 42 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 41 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 40 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 39 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 6 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 56 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000007
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 39  (9)
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2b  (+)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 54 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 53 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 52 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 51 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 50 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 49 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 63 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000006
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 00 
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2b  (+)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 61 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 60 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 59 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 58 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 57 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 68 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000005
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 00 
+              #x0000000000000005 : 00 
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2b  (+)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 66 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 65 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 64 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 48 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 72 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000004
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 00 
+              #x0000000000000005 : 00 
+              #x0000000000000004 : 00 
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2b  (+)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 70 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 69 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 5 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 76 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000003
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 00 
+              #x0000000000000005 : 00 
+              #x0000000000000004 : 00 
+              #x0000000000000003 : 00 
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2b  (+)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 74 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 73 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 78 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000002
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 00 
+              #x0000000000000005 : 00 
+              #x0000000000000004 : 00 
+              #x0000000000000003 : 00 
+              #x0000000000000002 : 00 
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2b  (+)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 4 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 3 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 94 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x000000000000000b
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000b : 00 
+              #x000000000000000a : 39  (9)
+              #x0000000000000009 : 39  (9)
+              #x0000000000000008 : 39  (9)
+              #x0000000000000007 : 39  (9)
+              #x0000000000000006 : 39  (9)
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 38  (8)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 92 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 91 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 90 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 89 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 88 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 87 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 86 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 85 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 84 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 83 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 82 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 106 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x000000000000000a
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 39  (9)
+              #x0000000000000008 : 39  (9)
+              #x0000000000000007 : 39  (9)
+              #x0000000000000006 : 39  (9)
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 38  (8)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 104 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 103 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 102 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 101 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 100 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 99 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 98 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 97 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 96 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 95 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 116 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000009
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 39  (9)
+              #x0000000000000007 : 39  (9)
+              #x0000000000000006 : 39  (9)
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 39  (9)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 114 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 113 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 112 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 111 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 110 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 109 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 108 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 107 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 81 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 126 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000008
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 39  (9)
+              #x0000000000000006 : 39  (9)
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 38  (8)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 124 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 123 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 122 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 121 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 120 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 119 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 118 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 117 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 134 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000007
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 39  (9)
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 39  (9)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 132 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 131 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 130 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 129 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 128 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 127 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 80 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 143 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000006
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 00 
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 38  (8)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 141 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 140 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 139 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 138 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 137 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 136 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 149 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000005
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 00 
+              #x0000000000000005 : 00 
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 39  (9)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 147 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 146 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 145 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 144 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 135 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 155 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000004
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 00 
+              #x0000000000000005 : 00 
+              #x0000000000000004 : 00 
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 38  (8)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 153 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 152 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 151 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 150 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 159 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000003
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 00 
+              #x0000000000000005 : 00 
+              #x0000000000000004 : 00 
+              #x0000000000000003 : 00 
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 39  (9)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 157 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 156 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 79 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 163 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000002
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 00 
+              #x0000000000000005 : 00 
+              #x0000000000000004 : 00 
+              #x0000000000000003 : 00 
+              #x0000000000000002 : 00 
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 38  (8)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 161 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 160 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 165 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000001
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 00 
+              #x0000000000000005 : 00 
+              #x0000000000000004 : 00 
+              #x0000000000000003 : 00 
+              #x0000000000000002 : 00 
+              #x0000000000000001 : 00 
+              #x0000000000000000 : 39  (9)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 2 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 181 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x000000000000000b
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000b : 00 
+              #x000000000000000a : 39  (9)
+              #x0000000000000009 : 39  (9)
+              #x0000000000000008 : 39  (9)
+              #x0000000000000007 : 39  (9)
+              #x0000000000000006 : 39  (9)
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2d  (-)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 179 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 178 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 177 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 176 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 175 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 174 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 173 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 172 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 171 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 170 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 191 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x000000000000000a
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 39  (9)
+              #x0000000000000008 : 39  (9)
+              #x0000000000000007 : 39  (9)
+              #x0000000000000006 : 39  (9)
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2d  (-)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 189 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 188 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 187 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 186 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 185 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 184 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 183 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 182 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 169 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 200 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000008
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 39  (9)
+              #x0000000000000006 : 39  (9)
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2d  (-)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 198 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 197 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 196 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 195 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 194 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 193 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 192 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 209 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000009
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 39  (9)
+              #x0000000000000007 : 39  (9)
+              #x0000000000000006 : 39  (9)
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2d  (-)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 207 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 206 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 205 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 204 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 203 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 202 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 201 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 168 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 218 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000007
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 39  (9)
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2d  (-)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 216 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 215 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 214 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 213 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 212 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 211 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 225 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000006
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 00 
+              #x0000000000000005 : 39  (9)
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2d  (-)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 223 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 222 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 221 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 220 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 219 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 230 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000005
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 00 
+              #x0000000000000005 : 00 
+              #x0000000000000004 : 39  (9)
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2d  (-)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 228 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 227 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 226 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 210 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 234 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000004
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 00 
+              #x0000000000000005 : 00 
+              #x0000000000000004 : 00 
+              #x0000000000000003 : 39  (9)
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2d  (-)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 232 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 231 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 167 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 238 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000003
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 00 
+              #x0000000000000005 : 00 
+              #x0000000000000004 : 00 
+              #x0000000000000003 : 00 
+              #x0000000000000002 : 39  (9)
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2d  (-)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 236 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 235 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 240 (uninterpreted "syscall") @ 0x002188b7
+[sse:error]  Assertion failed @ 0x00212830 (<runtime.lookupPanic>)
+              --- Model ---
+              # Variables
+              arg1_len!1 : 0x0000000000000002
+              arg3_len!2 : 0x0000000000000001
+              
+              -- empty memory --
+              # Array arg1
+              #x000000000000000a : 00 
+              #x0000000000000009 : 00 
+              #x0000000000000008 : 00 
+              #x0000000000000007 : 00 
+              #x0000000000000006 : 00 
+              #x0000000000000005 : 00 
+              #x0000000000000004 : 00 
+              #x0000000000000003 : 00 
+              #x0000000000000002 : 00 
+              #x0000000000000001 : 39  (9)
+              #x0000000000000000 : 2d  (-)
+              
+              # Array arg3
+              #x0000000000000001 : 00 
+              
+[sse:error] Cut path 166 (uninterpreted "syscall") @ 0x002188b7
+[sse:error] Cut path 1 (uninterpreted "syscall") @ 0x002188b7
+[sse:info] Empty path worklist: halting ...
+[sse:info] SMT queries
+             Preprocessing simplifications
+               total          76986
+               true           21105
+               false          36409
+               constant enum  19472
+             
+             Satisfiability queries
+               total          1725
+               sat            240
+               unsat          1485
+               unknown        0
+               time           1.90
+               average        0.00
+             
+           Exploration
+             total paths                      240
+             completed/cut paths              31
+             pending paths                    0
+             stale paths                      209
+             failed assertions                31
+             branching points                 78679
+             max path depth                   2665
+             visited instructions (unrolled)  466878
+             visited instructions (static)    4026

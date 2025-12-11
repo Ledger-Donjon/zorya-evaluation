@@ -1,0 +1,26 @@
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-08-14 14:33:10 UTC
+Mode: function
+Panic Address: 0x22f117
+------------------------------------------------------------
+=== EVALUATING TRACKED Z3 VARIABLES ===
+
+Argument 'num1':
+  num1_RDI!140 = #x0000000000000005
+    (decimal: 5)
+
+Argument 'num2':
+  num2_RCX!143 = #x0000000000000005
+    (decimal: 5)
+
+Argument 'operator__len':
+  operator__len!142 = #x0000000000000001
+    (decimal: 1)
+
+Argument 'operator__ptr':
+  operator__ptr!141 = #x0000000000000008
+    (decimal: 8)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================

@@ -1,0 +1,28 @@
+// All three radius2 commands panic at processor.rs:758 because radius2
+// tries to unwrap an Option that is None. 
+// This happens because:
+// 1. radius2 expects certain program state to exist (like argv setup, memory regions, or symbols),
+//    but TinyGo binaries don’t expose argv/stack in the standard way.
+// 2. Passing `-a 0x22af70` or `--crash` doesn’t help because the initial execution state
+//    is missing required structures.
+// 3. Using `-A a` to provide a concrete argument also fails because radius2 cannot correctly
+//    map it into the TinyGo program’s memory. 
+//
+// In short: radius2 panics due to incomplete modeling of TinyGo binaries, not because
+// the binary itself is invalid.
+
+
+$ radius2 -p ./crashme -a 0x22af70
+thread 'main' panicked at /home/kgorna/.cargo/registry/src/index.crates.io-6f17d22bba15001f/radius2-1.0.28/src/processor.rs:758:52:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+$ radius2 -p ./crashme -a 0x22af70 --crash
+thread 'main' panicked at /home/kgorna/.cargo/registry/src/index.crates.io-6f17d22bba15001f/radius2-1.0.28/src/processor.rs:758:52:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+$ radius2 -p ./crashme -A a           
+thread 'main' panicked at /home/kgorna/.cargo/registry/src/index.crates.io-6f17d22bba15001f/radius2-1.0.28/src/processor.rs:758:52:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

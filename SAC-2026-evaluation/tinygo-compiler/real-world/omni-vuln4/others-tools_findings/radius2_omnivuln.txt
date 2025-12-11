@@ -1,0 +1,26 @@
+// All three radius2 executions panic at processor.rs:758 when running the `omni-vuln4` binary.
+// Analysis:
+// 1. radius2 expects certain internal state structures (memory mappings, argv, or symbolic values)
+//    to be initialized at the start of execution.
+// 2. Running with `-a 0x0` or `-a 0x00230530 --crash` fails because radius2 cannot properly
+//    model the binary’s initial state, leading to an unwrap() on a None when accessing expected data.
+// 3. Running with `-A a` also fails because radius2 cannot inject concrete arguments into
+//    a TinyGo binary correctly; the argument mapping is missing, causing the same panic.
+//
+// Conclusion: The panics are caused by radius2’s incomplete support for TinyGo binaries’ memory layout
+// and argument handling, not by any error in the `omni-vuln4` binary itself.
+
+$ radius2 -p ./omni-vuln4 -a 0x0000000000230530
+thread 'main' panicked at /home/kgorna/.cargo/registry/src/index.crates.io-6f17d22bba15001f/radius2-1.0.28/src/processor.rs:758:52:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+$ radius2 -p ./omni-vuln4 -a 0x0000000000230530 --crash
+thread 'main' panicked at /home/kgorna/.cargo/registry/src/index.crates.io-6f17d22bba15001f/radius2-1.0.28/src/processor.rs:758:52:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+$ radius2 -p ./omni-vuln4 -a 0x0000000000230530 -A a
+thread 'main' panicked at /home/kgorna/.cargo/registry/src/index.crates.io-6f17d22bba15001f/radius2-1.0.28/src/processor.rs:758:52:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

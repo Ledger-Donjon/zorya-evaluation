@@ -1,0 +1,20 @@
+$ owi c /home/kgorna/go-exploits-database/tinygo-compiler/theoretical/panic-index/panic-index --entry-point=f --invoke-with-symbols --no-assert-failure-expression-printing --verbosity=error
+owi: [ERROR] clang failed (run with -vv if the full error message is not displayed above)
+
+$ owi c++ /home/kgorna/go-exploits-database/tinygo-compiler/theoretical/panic-index/panic-index --entry-point=f --invoke-with-symbols --no-assert-failure-expression-printing --verbosity=error
+owi: [ERROR] llc failed: run with --debug to get the full error message
+
+$ owi sym /home/kgorna/go-exploits-database/tinygo-compiler/theoretical/panic-index/main.go --entry-point=f --invoke-with-symbols --no-assert-failure-expression-printing --verbosity=error
+owi: [ERROR] unsupported file_extension ".go"
+
+$ owi c /home/kgorna/go-exploits-database/tinygo-compiler/theoretical/panic-index/main.go --entry-point=f --invoke-with-symbols --no-assert-failure-expression-printing --verbosity=error
+owi: [ERROR] clang failed (run with -vv if the full error message is not displayed above)
+
+$ owi c++ /home/kgorna/go-exploits-database/tinygo-compiler/theoretical/panic-index/main.go --entry-point=f --invoke-with-symbols --no-assert-failure-expression-printing --verbosity=error
+owi: [ERROR] llc failed: run with --debug to get the full error message
+
+$ owi rust /home/kgorna/go-exploits-database/tinygo-compiler/theoretical/panic-index/main.go --entry-point=f --invoke-with-symbols --no-assert-failure-expression-printing --verbosity=error
+owi: [ERROR] rustc failed: run with -vv to get the full error message if it was not displayed above
+
+$ owi zig /home/kgorna/go-exploits-database/tinygo-compiler/theoretical/panic-index/main.go --entry-point=f --invoke-with-symbols --no-assert-failure-expression-printing --verbosity=error
+owi: [ERROR] The `zig` binary was not found, please make sure it is in your path.

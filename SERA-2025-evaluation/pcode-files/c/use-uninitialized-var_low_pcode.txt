@@ -1,0 +1,737 @@
+0x401000
+0x401004
+(unique,0xf000,8) = COPY (register,0x28,8)
+(register,0x20,8) = INT_SUB (register,0x20,8) (const,0x8,8)
+STORE (ram) (register,0x20,8) (unique,0xf000,8)
+0x401005
+(register,0x28,8) = COPY (register,0x20,8)
+0x401008
+(register,0x200,1) = INT_LESS (register,0x20,8) (const,0x68,8)
+(register,0x20b,1) = INT_SBORROW (register,0x20,8) (const,0x68,8)
+(register,0x20,8) = INT_SUB (register,0x20,8) (const,0x68,8)
+(register,0x207,1) = INT_SLESS (register,0x20,8) (const,0x0,8)
+(register,0x206,1) = INT_EQUAL (register,0x20,8) (const,0x0,8)
+(unique,0x13480,8) = INT_AND (register,0x20,8) (const,0xff,8)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,8)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x40100c
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff28,8)
+(unique,0x5500,8) = COPY (register,0x38,8)
+STORE (ram) (unique,0x3200,8) (unique,0x5500,8)
+0x401013
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff58,8)
+(unique,0x5500,8) = COPY (register,0x30,8)
+STORE (ram) (unique,0x3200,8) (unique,0x5500,8)
+0x40101a
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff60,8)
+(unique,0x5500,8) = COPY (register,0x10,8)
+STORE (ram) (unique,0x3200,8) (unique,0x5500,8)
+0x401021
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff68,8)
+(unique,0x5500,8) = COPY (register,0x8,8)
+STORE (ram) (unique,0x3200,8) (unique,0x5500,8)
+0x401028
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff70,8)
+(unique,0x5500,8) = COPY (register,0x80,8)
+STORE (ram) (unique,0x3200,8) (unique,0x5500,8)
+0x40102f
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff78,8)
+(unique,0x5500,8) = COPY (register,0x88,8)
+STORE (ram) (unique,0x3200,8) (unique,0x5500,8)
+0x401036
+(register,0x200,1) = COPY (const,0x0,1)
+(register,0x20b,1) = COPY (const,0x0,1)
+(unique,0x56380,1) = INT_AND (register,0x0,1) (register,0x0,1)
+(register,0x207,1) = INT_SLESS (unique,0x56380,1) (const,0x0,1)
+(register,0x206,1) = INT_EQUAL (unique,0x56380,1) (const,0x0,1)
+(unique,0x13480,1) = INT_AND (unique,0x56380,1) (const,0xff,1)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,1)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x401038
+CBRANCH (ram,0x40105a,8) (register,0x206,1)
+0x40103a
+(unique,0x3100,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff80,8)
+(unique,0x5580,16) = COPY (register,0x1200,16)
+STORE (ram) (unique,0x3100,8) (unique,0x5580,16)
+0x40103e
+(unique,0x3100,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff90,8)
+(unique,0x5580,16) = COPY (register,0x1220,16)
+STORE (ram) (unique,0x3100,8) (unique,0x5580,16)
+0x401042
+(unique,0x3100,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffffa0,8)
+(unique,0x5580,16) = COPY (register,0x1240,16)
+STORE (ram) (unique,0x3100,8) (unique,0x5580,16)
+0x401046
+(unique,0x3100,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffffb0,8)
+(unique,0x5580,16) = COPY (register,0x1260,16)
+STORE (ram) (unique,0x3100,8) (unique,0x5580,16)
+0x40104a
+(unique,0x3100,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffffc0,8)
+(unique,0x5580,16) = COPY (register,0x1280,16)
+STORE (ram) (unique,0x3100,8) (unique,0x5580,16)
+0x40104e
+(unique,0x3100,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffffd0,8)
+(unique,0x5580,16) = COPY (register,0x12a0,16)
+STORE (ram) (unique,0x3100,8) (unique,0x5580,16)
+0x401052
+(unique,0x3100,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffffe0,8)
+(unique,0x5580,16) = COPY (register,0x12c0,16)
+STORE (ram) (unique,0x3100,8) (unique,0x5580,16)
+0x401056
+(unique,0x3100,8) = INT_ADD (register,0x28,8) (const,0xfffffffffffffff0,8)
+(unique,0x5580,16) = COPY (register,0x12e0,16)
+STORE (ram) (unique,0x3100,8) (unique,0x5580,16)
+0x40105a
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0x5800,4) = COPY (const,0x8,4)
+STORE (ram) (unique,0x3200,8) (unique,0x5800,4)
+0x401064
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff34,8)
+(unique,0x5800,4) = COPY (const,0x30,4)
+STORE (ram) (unique,0x3200,8) (unique,0x5800,4)
+0x40106e
+(unique,0x3100,8) = INT_ADD (register,0x28,8) (const,0x10,8)
+(register,0x0,8) = COPY (unique,0x3100,8)
+0x401072
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff38,8)
+(unique,0x5500,8) = COPY (register,0x0,8)
+STORE (ram) (unique,0x3200,8) (unique,0x5500,8)
+0x401079
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff50,8)
+(register,0x0,8) = COPY (unique,0x3200,8)
+0x401080
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff40,8)
+(unique,0x5500,8) = COPY (register,0x0,8)
+STORE (ram) (unique,0x3200,8) (unique,0x5500,8)
+0x401087
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,4) = COPY (unique,0xc200,4)
+(register,0x0,8) = INT_ZEXT (register,0x0,4)
+0x40108d
+(unique,0x25a00,4) = COPY (register,0x0,4)
+(register,0x200,1) = INT_LESS (unique,0x25a00,4) (const,0x2f,4)
+(register,0x20b,1) = INT_SBORROW (unique,0x25a00,4) (const,0x2f,4)
+(unique,0x25b00,4) = INT_SUB (unique,0x25a00,4) (const,0x2f,4)
+(register,0x207,1) = INT_SLESS (unique,0x25b00,4) (const,0x0,4)
+(register,0x206,1) = INT_EQUAL (unique,0x25b00,4) (const,0x0,4)
+(unique,0x13480,4) = INT_AND (unique,0x25b00,4) (const,0xff,4)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,4)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x401090
+(unique,0xcd80,1) = BOOL_OR (register,0x200,1) (register,0x206,1)
+(unique,0xce80,1) = BOOL_NEGATE (unique,0xcd80,1)
+CBRANCH (ram,0x4010b5,8) (unique,0xce80,1)
+0x401092
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff40,8)
+(unique,0xc300,8) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x401099
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x10,4) = COPY (unique,0xc200,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x40109f
+(register,0x10,4) = COPY (register,0x10,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x4010a1
+(register,0x200,1) = INT_CARRY (register,0x0,8) (register,0x10,8)
+(register,0x20b,1) = INT_SCARRY (register,0x0,8) (register,0x10,8)
+(register,0x0,8) = INT_ADD (register,0x0,8) (register,0x10,8)
+(register,0x207,1) = INT_SLESS (register,0x0,8) (const,0x0,8)
+(register,0x206,1) = INT_EQUAL (register,0x0,8) (const,0x0,8)
+(unique,0x13480,8) = INT_AND (register,0x0,8) (const,0xff,8)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,8)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x4010a4
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x10,4) = COPY (unique,0xc200,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x4010aa
+(register,0x200,1) = INT_CARRY (register,0x10,4) (const,0x8,4)
+(register,0x20b,1) = INT_SCARRY (register,0x10,4) (const,0x8,4)
+(register,0x10,4) = INT_ADD (register,0x10,4) (const,0x8,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+(register,0x207,1) = INT_SLESS (register,0x10,4) (const,0x0,4)
+(register,0x206,1) = INT_EQUAL (register,0x10,4) (const,0x0,4)
+(unique,0x13480,4) = INT_AND (register,0x10,4) (const,0xff,4)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,4)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x4010ad
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0x5480,4) = COPY (register,0x10,4)
+STORE (ram) (unique,0x3200,8) (unique,0x5480,4)
+0x4010b3
+BRANCH (ram,0x4010c7,8)
+0x4010b5
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff38,8)
+(unique,0xc300,8) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x4010bc
+(unique,0x3100,8) = INT_ADD (register,0x0,8) (const,0x8,8)
+(register,0x10,8) = COPY (unique,0x3100,8)
+0x4010c0
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff38,8)
+(unique,0x5500,8) = COPY (register,0x10,8)
+STORE (ram) (unique,0x3200,8) (unique,0x5500,8)
+0x4010c7
+(unique,0xc300,8) = LOAD (ram) (register,0x0,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x4010ca
+(register,0x90,8) = COPY (register,0x0,8)
+0x4010cd
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,4) = COPY (unique,0xc200,4)
+(register,0x0,8) = INT_ZEXT (register,0x0,4)
+0x4010d3
+(unique,0x25a00,4) = COPY (register,0x0,4)
+(register,0x200,1) = INT_LESS (unique,0x25a00,4) (const,0x2f,4)
+(register,0x20b,1) = INT_SBORROW (unique,0x25a00,4) (const,0x2f,4)
+(unique,0x25b00,4) = INT_SUB (unique,0x25a00,4) (const,0x2f,4)
+(register,0x207,1) = INT_SLESS (unique,0x25b00,4) (const,0x0,4)
+(register,0x206,1) = INT_EQUAL (unique,0x25b00,4) (const,0x0,4)
+(unique,0x13480,4) = INT_AND (unique,0x25b00,4) (const,0xff,4)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,4)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x4010d6
+(unique,0xcd80,1) = BOOL_OR (register,0x200,1) (register,0x206,1)
+(unique,0xce80,1) = BOOL_NEGATE (unique,0xcd80,1)
+CBRANCH (ram,0x4010fb,8) (unique,0xce80,1)
+0x4010d8
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff40,8)
+(unique,0xc300,8) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x4010df
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x10,4) = COPY (unique,0xc200,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x4010e5
+(register,0x10,4) = COPY (register,0x10,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x4010e7
+(register,0x200,1) = INT_CARRY (register,0x0,8) (register,0x10,8)
+(register,0x20b,1) = INT_SCARRY (register,0x0,8) (register,0x10,8)
+(register,0x0,8) = INT_ADD (register,0x0,8) (register,0x10,8)
+(register,0x207,1) = INT_SLESS (register,0x0,8) (const,0x0,8)
+(register,0x206,1) = INT_EQUAL (register,0x0,8) (const,0x0,8)
+(unique,0x13480,8) = INT_AND (register,0x0,8) (const,0xff,8)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,8)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x4010ea
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x10,4) = COPY (unique,0xc200,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x4010f0
+(register,0x200,1) = INT_CARRY (register,0x10,4) (const,0x8,4)
+(register,0x20b,1) = INT_SCARRY (register,0x10,4) (const,0x8,4)
+(register,0x10,4) = INT_ADD (register,0x10,4) (const,0x8,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+(register,0x207,1) = INT_SLESS (register,0x10,4) (const,0x0,4)
+(register,0x206,1) = INT_EQUAL (register,0x10,4) (const,0x0,4)
+(unique,0x13480,4) = INT_AND (register,0x10,4) (const,0xff,4)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,4)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x4010f3
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0x5480,4) = COPY (register,0x10,4)
+STORE (ram) (unique,0x3200,8) (unique,0x5480,4)
+0x4010f9
+BRANCH (ram,0x40110d,8)
+0x4010fb
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff38,8)
+(unique,0xc300,8) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x401102
+(unique,0x3100,8) = INT_ADD (register,0x0,8) (const,0x8,8)
+(register,0x10,8) = COPY (unique,0x3100,8)
+0x401106
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff38,8)
+(unique,0x5500,8) = COPY (register,0x10,8)
+STORE (ram) (unique,0x3200,8) (unique,0x5500,8)
+0x40110d
+(unique,0xc300,8) = LOAD (ram) (register,0x0,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x401110
+(register,0x80,8) = COPY (register,0x0,8)
+0x401113
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,4) = COPY (unique,0xc200,4)
+(register,0x0,8) = INT_ZEXT (register,0x0,4)
+0x401119
+(unique,0x25a00,4) = COPY (register,0x0,4)
+(register,0x200,1) = INT_LESS (unique,0x25a00,4) (const,0x2f,4)
+(register,0x20b,1) = INT_SBORROW (unique,0x25a00,4) (const,0x2f,4)
+(unique,0x25b00,4) = INT_SUB (unique,0x25a00,4) (const,0x2f,4)
+(register,0x207,1) = INT_SLESS (unique,0x25b00,4) (const,0x0,4)
+(register,0x206,1) = INT_EQUAL (unique,0x25b00,4) (const,0x0,4)
+(unique,0x13480,4) = INT_AND (unique,0x25b00,4) (const,0xff,4)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,4)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x40111c
+(unique,0xcd80,1) = BOOL_OR (register,0x200,1) (register,0x206,1)
+(unique,0xce80,1) = BOOL_NEGATE (unique,0xcd80,1)
+CBRANCH (ram,0x401141,8) (unique,0xce80,1)
+0x40111e
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff40,8)
+(unique,0xc300,8) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x401125
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x10,4) = COPY (unique,0xc200,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x40112b
+(register,0x10,4) = COPY (register,0x10,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x40112d
+(register,0x200,1) = INT_CARRY (register,0x0,8) (register,0x10,8)
+(register,0x20b,1) = INT_SCARRY (register,0x0,8) (register,0x10,8)
+(register,0x0,8) = INT_ADD (register,0x0,8) (register,0x10,8)
+(register,0x207,1) = INT_SLESS (register,0x0,8) (const,0x0,8)
+(register,0x206,1) = INT_EQUAL (register,0x0,8) (const,0x0,8)
+(unique,0x13480,8) = INT_AND (register,0x0,8) (const,0xff,8)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,8)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x401130
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x10,4) = COPY (unique,0xc200,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x401136
+(register,0x200,1) = INT_CARRY (register,0x10,4) (const,0x8,4)
+(register,0x20b,1) = INT_SCARRY (register,0x10,4) (const,0x8,4)
+(register,0x10,4) = INT_ADD (register,0x10,4) (const,0x8,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+(register,0x207,1) = INT_SLESS (register,0x10,4) (const,0x0,4)
+(register,0x206,1) = INT_EQUAL (register,0x10,4) (const,0x0,4)
+(unique,0x13480,4) = INT_AND (register,0x10,4) (const,0xff,4)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,4)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x401139
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0x5480,4) = COPY (register,0x10,4)
+STORE (ram) (unique,0x3200,8) (unique,0x5480,4)
+0x40113f
+BRANCH (ram,0x401153,8)
+0x401141
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff38,8)
+(unique,0xc300,8) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x401148
+(unique,0x3100,8) = INT_ADD (register,0x0,8) (const,0x8,8)
+(register,0x10,8) = COPY (unique,0x3100,8)
+0x40114c
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff38,8)
+(unique,0x5500,8) = COPY (register,0x10,8)
+STORE (ram) (unique,0x3200,8) (unique,0x5500,8)
+0x401153
+(unique,0xc300,8) = LOAD (ram) (register,0x0,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x401156
+(register,0x88,8) = COPY (register,0x0,8)
+0x401159
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,4) = COPY (unique,0xc200,4)
+(register,0x0,8) = INT_ZEXT (register,0x0,4)
+0x40115f
+(unique,0x25a00,4) = COPY (register,0x0,4)
+(register,0x200,1) = INT_LESS (unique,0x25a00,4) (const,0x2f,4)
+(register,0x20b,1) = INT_SBORROW (unique,0x25a00,4) (const,0x2f,4)
+(unique,0x25b00,4) = INT_SUB (unique,0x25a00,4) (const,0x2f,4)
+(register,0x207,1) = INT_SLESS (unique,0x25b00,4) (const,0x0,4)
+(register,0x206,1) = INT_EQUAL (unique,0x25b00,4) (const,0x0,4)
+(unique,0x13480,4) = INT_AND (unique,0x25b00,4) (const,0xff,4)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,4)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x401162
+(unique,0xcd80,1) = BOOL_OR (register,0x200,1) (register,0x206,1)
+(unique,0xce80,1) = BOOL_NEGATE (unique,0xcd80,1)
+CBRANCH (ram,0x401187,8) (unique,0xce80,1)
+0x401164
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff40,8)
+(unique,0xc300,8) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x40116b
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x10,4) = COPY (unique,0xc200,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x401171
+(register,0x10,4) = COPY (register,0x10,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x401173
+(register,0x200,1) = INT_CARRY (register,0x0,8) (register,0x10,8)
+(register,0x20b,1) = INT_SCARRY (register,0x0,8) (register,0x10,8)
+(register,0x0,8) = INT_ADD (register,0x0,8) (register,0x10,8)
+(register,0x207,1) = INT_SLESS (register,0x0,8) (const,0x0,8)
+(register,0x206,1) = INT_EQUAL (register,0x0,8) (const,0x0,8)
+(unique,0x13480,8) = INT_AND (register,0x0,8) (const,0xff,8)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,8)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x401176
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x10,4) = COPY (unique,0xc200,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x40117c
+(register,0x200,1) = INT_CARRY (register,0x10,4) (const,0x8,4)
+(register,0x20b,1) = INT_SCARRY (register,0x10,4) (const,0x8,4)
+(register,0x10,4) = INT_ADD (register,0x10,4) (const,0x8,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+(register,0x207,1) = INT_SLESS (register,0x10,4) (const,0x0,4)
+(register,0x206,1) = INT_EQUAL (register,0x10,4) (const,0x0,4)
+(unique,0x13480,4) = INT_AND (register,0x10,4) (const,0xff,4)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,4)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x40117f
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0x5480,4) = COPY (register,0x10,4)
+STORE (ram) (unique,0x3200,8) (unique,0x5480,4)
+0x401185
+BRANCH (ram,0x401199,8)
+0x401187
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff38,8)
+(unique,0xc300,8) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x40118e
+(unique,0x3100,8) = INT_ADD (register,0x0,8) (const,0x8,8)
+(register,0x10,8) = COPY (unique,0x3100,8)
+0x401192
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff38,8)
+(unique,0x5500,8) = COPY (register,0x10,8)
+STORE (ram) (unique,0x3200,8) (unique,0x5500,8)
+0x401199
+(unique,0xc300,8) = LOAD (ram) (register,0x0,8)
+(register,0x8,8) = COPY (unique,0xc300,8)
+0x40119c
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,4) = COPY (unique,0xc200,4)
+(register,0x0,8) = INT_ZEXT (register,0x0,4)
+0x4011a2
+(unique,0x25a00,4) = COPY (register,0x0,4)
+(register,0x200,1) = INT_LESS (unique,0x25a00,4) (const,0x2f,4)
+(register,0x20b,1) = INT_SBORROW (unique,0x25a00,4) (const,0x2f,4)
+(unique,0x25b00,4) = INT_SUB (unique,0x25a00,4) (const,0x2f,4)
+(register,0x207,1) = INT_SLESS (unique,0x25b00,4) (const,0x0,4)
+(register,0x206,1) = INT_EQUAL (unique,0x25b00,4) (const,0x0,4)
+(unique,0x13480,4) = INT_AND (unique,0x25b00,4) (const,0xff,4)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,4)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x4011a5
+(unique,0xcd80,1) = BOOL_OR (register,0x200,1) (register,0x206,1)
+(unique,0xce80,1) = BOOL_NEGATE (unique,0xcd80,1)
+CBRANCH (ram,0x4011ca,8) (unique,0xce80,1)
+0x4011a7
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff40,8)
+(unique,0xc300,8) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x4011ae
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x10,4) = COPY (unique,0xc200,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x4011b4
+(register,0x10,4) = COPY (register,0x10,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x4011b6
+(register,0x200,1) = INT_CARRY (register,0x0,8) (register,0x10,8)
+(register,0x20b,1) = INT_SCARRY (register,0x0,8) (register,0x10,8)
+(register,0x0,8) = INT_ADD (register,0x0,8) (register,0x10,8)
+(register,0x207,1) = INT_SLESS (register,0x0,8) (const,0x0,8)
+(register,0x206,1) = INT_EQUAL (register,0x0,8) (const,0x0,8)
+(unique,0x13480,8) = INT_AND (register,0x0,8) (const,0xff,8)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,8)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x4011b9
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x10,4) = COPY (unique,0xc200,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x4011bf
+(register,0x200,1) = INT_CARRY (register,0x10,4) (const,0x8,4)
+(register,0x20b,1) = INT_SCARRY (register,0x10,4) (const,0x8,4)
+(register,0x10,4) = INT_ADD (register,0x10,4) (const,0x8,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+(register,0x207,1) = INT_SLESS (register,0x10,4) (const,0x0,4)
+(register,0x206,1) = INT_EQUAL (register,0x10,4) (const,0x0,4)
+(unique,0x13480,4) = INT_AND (register,0x10,4) (const,0xff,4)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,4)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x4011c2
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0x5480,4) = COPY (register,0x10,4)
+STORE (ram) (unique,0x3200,8) (unique,0x5480,4)
+0x4011c8
+BRANCH (ram,0x4011dc,8)
+0x4011ca
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff38,8)
+(unique,0xc300,8) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x4011d1
+(unique,0x3100,8) = INT_ADD (register,0x0,8) (const,0x8,8)
+(register,0x10,8) = COPY (unique,0x3100,8)
+0x4011d5
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff38,8)
+(unique,0x5500,8) = COPY (register,0x10,8)
+STORE (ram) (unique,0x3200,8) (unique,0x5500,8)
+0x4011dc
+(unique,0xc300,8) = LOAD (ram) (register,0x0,8)
+(register,0x30,8) = COPY (unique,0xc300,8)
+0x4011df
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,4) = COPY (unique,0xc200,4)
+(register,0x0,8) = INT_ZEXT (register,0x0,4)
+0x4011e5
+(unique,0x25a00,4) = COPY (register,0x0,4)
+(register,0x200,1) = INT_LESS (unique,0x25a00,4) (const,0x2f,4)
+(register,0x20b,1) = INT_SBORROW (unique,0x25a00,4) (const,0x2f,4)
+(unique,0x25b00,4) = INT_SUB (unique,0x25a00,4) (const,0x2f,4)
+(register,0x207,1) = INT_SLESS (unique,0x25b00,4) (const,0x0,4)
+(register,0x206,1) = INT_EQUAL (unique,0x25b00,4) (const,0x0,4)
+(unique,0x13480,4) = INT_AND (unique,0x25b00,4) (const,0xff,4)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,4)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x4011e8
+(unique,0xcd80,1) = BOOL_OR (register,0x200,1) (register,0x206,1)
+(unique,0xce80,1) = BOOL_NEGATE (unique,0xcd80,1)
+CBRANCH (ram,0x40120d,8) (unique,0xce80,1)
+0x4011ea
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff40,8)
+(unique,0xc300,8) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x4011f1
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x10,4) = COPY (unique,0xc200,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x4011f7
+(register,0x10,4) = COPY (register,0x10,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x4011f9
+(register,0x200,1) = INT_CARRY (register,0x0,8) (register,0x10,8)
+(register,0x20b,1) = INT_SCARRY (register,0x0,8) (register,0x10,8)
+(register,0x0,8) = INT_ADD (register,0x0,8) (register,0x10,8)
+(register,0x207,1) = INT_SLESS (register,0x0,8) (const,0x0,8)
+(register,0x206,1) = INT_EQUAL (register,0x0,8) (const,0x0,8)
+(unique,0x13480,8) = INT_AND (register,0x0,8) (const,0xff,8)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,8)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x4011fc
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3200,8)
+(register,0x10,4) = COPY (unique,0xc200,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+0x401202
+(register,0x200,1) = INT_CARRY (register,0x10,4) (const,0x8,4)
+(register,0x20b,1) = INT_SCARRY (register,0x10,4) (const,0x8,4)
+(register,0x10,4) = INT_ADD (register,0x10,4) (const,0x8,4)
+(register,0x10,8) = INT_ZEXT (register,0x10,4)
+(register,0x207,1) = INT_SLESS (register,0x10,4) (const,0x0,4)
+(register,0x206,1) = INT_EQUAL (register,0x10,4) (const,0x0,4)
+(unique,0x13480,4) = INT_AND (register,0x10,4) (const,0xff,4)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,4)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x401205
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff30,8)
+(unique,0x5480,4) = COPY (register,0x10,4)
+STORE (ram) (unique,0x3200,8) (unique,0x5480,4)
+0x40120b
+BRANCH (ram,0x40121f,8)
+0x40120d
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff38,8)
+(unique,0xc300,8) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x401214
+(unique,0x3100,8) = INT_ADD (register,0x0,8) (const,0x8,8)
+(register,0x10,8) = COPY (unique,0x3100,8)
+0x401218
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff38,8)
+(unique,0x5500,8) = COPY (register,0x10,8)
+STORE (ram) (unique,0x3200,8) (unique,0x5500,8)
+0x40121f
+(unique,0xc300,8) = LOAD (ram) (register,0x0,8)
+(register,0x10,8) = COPY (unique,0xc300,8)
+0x401222
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff28,8)
+(unique,0xc300,8) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x401229
+(register,0x38,8) = COPY (register,0x8,8)
+0x40122c
+CALLOTHER (const,0x5,4)
+0x40122e
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff48,8)
+(unique,0x5500,8) = COPY (register,0x0,8)
+STORE (ram) (unique,0x3200,8) (unique,0x5500,8)
+0x401235
+(unique,0x3200,8) = INT_ADD (register,0x28,8) (const,0xffffffffffffff48,8)
+(unique,0xc300,8) = LOAD (ram) (unique,0x3200,8)
+(register,0x0,8) = COPY (unique,0xc300,8)
+0x40123c
+(register,0x20,8) = COPY (register,0x28,8)
+(register,0x28,8) = LOAD (ram) (register,0x20,8)
+(register,0x20,8) = INT_ADD (register,0x20,8) (const,0x8,8)
+0x40123d
+(register,0x288,8) = LOAD (ram) (register,0x20,8)
+(register,0x20,8) = INT_ADD (register,0x20,8) (const,0x8,8)
+RETURN (register,0x288,8)
+0x40123e
+0x401242
+(unique,0xf000,8) = COPY (register,0x28,8)
+(register,0x20,8) = INT_SUB (register,0x20,8) (const,0x8,8)
+STORE (ram) (register,0x20,8) (unique,0xf000,8)
+0x401243
+(register,0x28,8) = COPY (register,0x20,8)
+0x401246
+(register,0x200,1) = INT_LESS (register,0x20,8) (const,0x10,8)
+(register,0x20b,1) = INT_SBORROW (register,0x20,8) (const,0x10,8)
+(register,0x20,8) = INT_SUB (register,0x20,8) (const,0x10,8)
+(register,0x207,1) = INT_SLESS (register,0x20,8) (const,0x0,8)
+(register,0x206,1) = INT_EQUAL (register,0x20,8) (const,0x0,8)
+(unique,0x13480,8) = INT_AND (register,0x20,8) (const,0xff,8)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,8)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x40124a
+(unique,0x3100,8) = INT_ADD (register,0x28,8) (const,0xfffffffffffffffc,8)
+(unique,0x5480,4) = COPY (register,0x38,4)
+STORE (ram) (unique,0x3100,8) (unique,0x5480,4)
+0x40124d
+(unique,0x3100,8) = INT_ADD (register,0x28,8) (const,0xfffffffffffffffc,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3100,8)
+(register,0x0,4) = COPY (unique,0xc200,4)
+(register,0x0,8) = INT_ZEXT (register,0x0,4)
+0x401250
+(register,0x30,4) = COPY (register,0x0,4)
+(register,0x30,8) = INT_ZEXT (register,0x30,4)
+0x401252
+(register,0x38,8) = COPY (const,0x3c,8)
+0x401257
+(register,0x0,8) = COPY (const,0x0,8)
+0x40125c
+(register,0x20,8) = INT_SUB (register,0x20,8) (const,0x8,8)
+STORE (ram) (register,0x20,8) (const,0x401261,8)
+CALL (ram,0x401000,8)
+0x401261
+0x401262
+(register,0x20,8) = COPY (register,0x28,8)
+(register,0x28,8) = LOAD (ram) (register,0x20,8)
+(register,0x20,8) = INT_ADD (register,0x20,8) (const,0x8,8)
+0x401263
+(register,0x288,8) = LOAD (ram) (register,0x20,8)
+(register,0x20,8) = INT_ADD (register,0x20,8) (const,0x8,8)
+RETURN (register,0x288,8)
+0x401264
+0x401268
+(unique,0xf000,8) = COPY (register,0x28,8)
+(register,0x20,8) = INT_SUB (register,0x20,8) (const,0x8,8)
+STORE (ram) (register,0x20,8) (unique,0xf000,8)
+0x401269
+(register,0x28,8) = COPY (register,0x20,8)
+0x40126c
+(register,0x200,1) = INT_LESS (register,0x20,8) (const,0x10,8)
+(register,0x20b,1) = INT_SBORROW (register,0x20,8) (const,0x10,8)
+(register,0x20,8) = INT_SUB (register,0x20,8) (const,0x10,8)
+(register,0x207,1) = INT_SLESS (register,0x20,8) (const,0x0,8)
+(register,0x206,1) = INT_EQUAL (register,0x20,8) (const,0x0,8)
+(unique,0x13480,8) = INT_AND (register,0x20,8) (const,0xff,8)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,8)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x401270
+(register,0x0,8) = COPY (const,0x0,8)
+0x401275
+(register,0x20,8) = INT_SUB (register,0x20,8) (const,0x8,8)
+STORE (ram) (register,0x20,8) (const,0x40127a,8)
+CALL (ram,0x40128a,8)
+0x40127a
+(unique,0x3100,8) = INT_ADD (register,0x28,8) (const,0xfffffffffffffffc,8)
+(unique,0x5480,4) = COPY (register,0x0,4)
+STORE (ram) (unique,0x3100,8) (unique,0x5480,4)
+0x40127d
+(unique,0x3100,8) = INT_ADD (register,0x28,8) (const,0xfffffffffffffffc,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3100,8)
+(register,0x0,4) = COPY (unique,0xc200,4)
+(register,0x0,8) = INT_ZEXT (register,0x0,4)
+0x401280
+(register,0x38,4) = COPY (register,0x0,4)
+(register,0x38,8) = INT_ZEXT (register,0x38,4)
+0x401282
+(register,0x20,8) = INT_SUB (register,0x20,8) (const,0x8,8)
+STORE (ram) (register,0x20,8) (const,0x401287,8)
+CALL (ram,0x40123e,8)
+0x401287
+0x401288
+(register,0x20,8) = COPY (register,0x28,8)
+(register,0x28,8) = LOAD (ram) (register,0x20,8)
+(register,0x20,8) = INT_ADD (register,0x20,8) (const,0x8,8)
+0x401289
+(register,0x288,8) = LOAD (ram) (register,0x20,8)
+(register,0x20,8) = INT_ADD (register,0x20,8) (const,0x8,8)
+RETURN (register,0x288,8)
+0x40128a
+0x40128e
+(unique,0xf000,8) = COPY (register,0x28,8)
+(register,0x20,8) = INT_SUB (register,0x20,8) (const,0x8,8)
+STORE (ram) (register,0x20,8) (unique,0xf000,8)
+0x40128f
+(register,0x28,8) = COPY (register,0x20,8)
+0x401292
+(unique,0x3100,8) = INT_ADD (register,0x28,8) (const,0xfffffffffffffffc,8)
+(unique,0xc200,4) = LOAD (ram) (unique,0x3100,8)
+(register,0x0,4) = COPY (unique,0xc200,4)
+(register,0x0,8) = INT_ZEXT (register,0x0,4)
+0x401295
+(register,0x200,1) = INT_CARRY (register,0x0,4) (register,0x0,4)
+(register,0x20b,1) = INT_SCARRY (register,0x0,4) (register,0x0,4)
+(register,0x0,4) = INT_ADD (register,0x0,4) (register,0x0,4)
+(register,0x0,8) = INT_ZEXT (register,0x0,4)
+(register,0x207,1) = INT_SLESS (register,0x0,4) (const,0x0,4)
+(register,0x206,1) = INT_EQUAL (register,0x0,4) (const,0x0,4)
+(unique,0x13480,4) = INT_AND (register,0x0,4) (const,0xff,4)
+(unique,0x13500,1) = POPCOUNT (unique,0x13480,4)
+(unique,0x13580,1) = INT_AND (unique,0x13500,1) (const,0x1,1)
+(register,0x202,1) = INT_EQUAL (unique,0x13580,1) (const,0x0,1)
+0x401297
+(unique,0x3100,8) = INT_ADD (register,0x28,8) (const,0xfffffffffffffff8,8)
+(unique,0x5480,4) = COPY (register,0x0,4)
+STORE (ram) (unique,0x3100,8) (unique,0x5480,4)
+0x40129a
+(register,0x0,8) = COPY (const,0x0,8)
+0x40129f
+(unique,0x3c380,8) = COPY (const,0x0,8)
+(unique,0x3c380,8) = LOAD (ram) (register,0x20,8)
+(register,0x20,8) = INT_ADD (register,0x20,8) (const,0x8,8)
+(register,0x28,8) = COPY (unique,0x3c380,8)
+0x4012a0
+(register,0x288,8) = LOAD (ram) (register,0x20,8)
+(register,0x20,8) = INT_ADD (register,0x20,8) (const,0x8,8)
+RETURN (register,0x288,8)

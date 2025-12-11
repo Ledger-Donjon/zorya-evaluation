@@ -1,0 +1,84 @@
+Running command: /home/kgorna/Documents/zorya/zorya /home/kgorna/Documents/go-exploits-database/tinygo-compiler/theoretical/invalid-shift/invalid-shift --mode function 0x22af70 --lang go --compiler tinygo --arg "1000" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-08-28 14:34:55 UTC
+Mode: function
+Elapsed since start: 57.217s
+Instruction Address: 0x22af97
+Panic Address: 0x22afce
+------------------------------------------------------------
+=== EVALUATING TRACKED Z3 VARIABLES ===
+
+Argument 's__len':
+  s__len!141 = #x0000000000000001
+    (decimal: 1)
+
+Argument 's__ptr':
+  s__ptr!140 = #x0000000000000008
+    (decimal: 8)
+
+Argument 's_byte_0':
+  s_byte_0!142 = #x0000000000000040
+    (decimal: 64)
+    (ASCII: '@')
+
+Argument 's_byte_1':
+  s_byte_1!143 = #x0000000000000020
+    (decimal: 32)
+    (ASCII: ' ')
+
+Argument 's_byte_2':
+  s_byte_2!144 = #x0000000000000020
+    (decimal: 32)
+    (ASCII: ' ')
+
+Argument 's_byte_3':
+  s_byte_3!145 = #x0000000000000020
+    (decimal: 32)
+    (ASCII: ' ')
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/Documents/zorya/zorya /home/kgorna/Documents/go-exploits-database/tinygo-compiler/theoretical/invalid-shift/invalid-shift --mode function 0x22af70 --lang go --compiler tinygo --arg "1000" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-08-28 14:35:03 UTC
+Mode: function
+Elapsed since start: 65.128s
+Instruction Address: 0x22af97
+Panic Address: 0x22afce
+------------------------------------------------------------
+=== EVALUATING TRACKED Z3 VARIABLES ===
+
+Argument 's__len':
+  s__len!141 = #x0000000000000001
+    (decimal: 1)
+
+Argument 's__ptr':
+  s__ptr!140 = #x0000000000000008
+    (decimal: 8)
+
+Argument 's_byte_0':
+  s_byte_0!142 = #x0000000000000040
+    (decimal: 64)
+    (ASCII: '@')
+
+Argument 's_byte_1':
+  s_byte_1!143 = #x0000000000000020
+    (decimal: 32)
+    (ASCII: ' ')
+
+Argument 's_byte_2':
+  s_byte_2!144 = #x0000000000000020
+    (decimal: 32)
+    (ASCII: ' ')
+
+Argument 's_byte_3':
+  s_byte_3!145 = #x0000000000000020
+    (decimal: 32)
+    (ASCII: ' ')
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================

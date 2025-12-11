@@ -1,0 +1,64 @@
+root@Ubuntu-2204-jammy-amd64-base /home/kgorna/DuckeeGO # cat config2.json 
+{
+    "ProjectPath": "/home/kgorna/zorya-evaluation/vuln-2_index-out-of-range/tinygo_index-out-of-range/",
+    "Package": "main",
+    "ConfigData": [
+        {
+            "FilePath": "main.go",
+            "Functions": [
+                {
+                    "Name": "main",
+                    "Object": "nil",
+                    "Input": [],
+                    "Output": []
+                }
+            ]
+        }
+    ]
+}
+root@Ubuntu-2204-jammy-amd64-base /home/kgorna/DuckeeGO # bash src/run.sh ../config2.json
+root@Ubuntu-2204-jammy-amd64-base /home/kgorna/DuckeeGO # cd src/tmp/DuckieConcolic/ && ls
+go.mod  main.go
+root@Ubuntu-2204-jammy-amd64-base /home/kgorna/DuckeeGO/src/tmp/DuckieConcolic # cat main.go 
+package main
+
+import "concolicTypes"
+import "reflect"
+
+type Handler struct {
+}
+
+func main() {
+	h := new(Handler)
+	method := reflect.ValueOf(h).MethodByName("InstrumentedMainMethod")
+	concolicTypes.ConcolicExec(method, 100)
+}
+root@Ubuntu-2204-jammy-amd64-base /home/kgorna/DuckeeGO/src/tmp/DuckieConcolic # cat go.mod 
+module tinygo_index-out-of-range
+
+go 1.22.4
+root@Ubuntu-2204-jammy-amd64-base /home/kgorna/DuckeeGO/src/tmp/DuckieConcolic # nano go.mod 
+root@Ubuntu-2204-jammy-amd64-base /home/kgorna/DuckeeGO/src/tmp/DuckieConcolic # go mod tidy
+go: errors parsing go.mod:
+/home/kgorna/DuckeeGO/src/tmp/DuckieConcolic/go.mod:3: invalid go version '1.22.4': must match format 1.23
+root@Ubuntu-2204-jammy-amd64-base /home/kgorna/DuckeeGO/src/tmp/DuckieConcolic # nano go.mod 
+root@Ubuntu-2204-jammy-amd64-base /home/kgorna/DuckeeGO/src/tmp/DuckieConcolic # go mod tidy
+go: found concolicTypes in concolicTypes v0.0.0-00010101000000-000000000000
+root@Ubuntu-2204-jammy-amd64-base /home/kgorna/DuckeeGO/src/tmp/DuckieConcolic # go build .
+root@Ubuntu-2204-jammy-amd64-base /home/kgorna/DuckeeGO/src/tmp/DuckieConcolic # ls
+go.mod  go.sum  main.go  tinygo_index-out-of-range
+root@Ubuntu-2204-jammy-amd64-base /home/kgorna/DuckeeGO/src/tmp/DuckieConcolic # ./tinygo_index-out-of-range 
+panic: reflect: call of reflect.Value.Call on zero Value
+
+goroutine 1 [running]:
+reflect.flag.mustBe(...)
+	/usr/local/go/src/reflect/value.go:223
+reflect.Value.Call({0x0?, 0x0?, 0xffffffffffffff01?}, {0xc000123d70?, 0x538547?, 0xc000118050?})
+	/usr/local/go/src/reflect/value.go:368 +0x118
+concolicTypes.concolicExecInput({0x0?, 0x0?, 0x7f0c3980ac28?}, 0x7f0c623a15b8?)
+	/home/kgorna/DuckeeGO/src/concolicTypes/concolicExec.go:40 +0x105
+concolicTypes.ConcolicExec({0x0?, 0x0?, 0x53ef5d?}, 0x64)
+	/home/kgorna/DuckeeGO/src/concolicTypes/concolicExec.go:96 +0x2b7
+main.main()
+	/home/kgorna/DuckeeGO/src/tmp/DuckieConcolic/main.go:12 +0xd6
+root@Ubuntu-2204-jammy-amd64-base /home/kgorna/DuckeeGO/src/tmp/DuckieConcolic # 

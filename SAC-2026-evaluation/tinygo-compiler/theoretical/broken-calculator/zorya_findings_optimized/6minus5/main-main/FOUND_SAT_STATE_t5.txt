@@ -1,0 +1,775 @@
+Running command: /home/karolina-gorna/Documents/zorya/zorya /home/karolina-gorna/Documents/go-exploits-database/tinygo-compiler/theoretical/broken-calculator/broken-calculator-tinygo --mode main 0x000000000022f130 --lang go --compiler tinygo --arg "6 - 5" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2025-10-09 09:14:35 UTC
+Mode: main
+Elapsed since start: 338.724s
+Instruction Address: 0x22f068
+Panic Address: 0x22f074
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 37 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 63 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'arg1_byte_0' must be 53 (unsigned: 53; signed: 53; ASCII: '5')
+  - The input 'arg2_byte_0' must be 45 (unsigned: 45; signed: 45; ASCII: '-')
+  - The input 'arg3_byte_0' must be 48 (unsigned: 48; signed: 48; ASCII: '0')
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'arg0_byte_0':
+  arg0_byte_0!140 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_1':
+  arg0_byte_1!141 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_10':
+  arg0_byte_10!150 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_100':
+  arg0_byte_100!240 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_101':
+  arg0_byte_101!241 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_102':
+  arg0_byte_102!242 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_103':
+  arg0_byte_103!243 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_104':
+  arg0_byte_104!244 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_105':
+  arg0_byte_105!245 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_106':
+  arg0_byte_106!246 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_107':
+  arg0_byte_107!247 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_108':
+  arg0_byte_108!248 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_109':
+  arg0_byte_109!249 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_11':
+  arg0_byte_11!151 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_110':
+  arg0_byte_110!250 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_111':
+  arg0_byte_111!251 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_112':
+  arg0_byte_112!252 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_113':
+  arg0_byte_113!253 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_114':
+  arg0_byte_114!254 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_115':
+  arg0_byte_115!255 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_116':
+  arg0_byte_116!256 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_117':
+  arg0_byte_117!257 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_118':
+  arg0_byte_118!258 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_119':
+  arg0_byte_119!259 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_12':
+  arg0_byte_12!152 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_120':
+  arg0_byte_120!260 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_121':
+  arg0_byte_121!261 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_13':
+  arg0_byte_13!153 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_14':
+  arg0_byte_14!154 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_15':
+  arg0_byte_15!155 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_16':
+  arg0_byte_16!156 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_17':
+  arg0_byte_17!157 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_18':
+  arg0_byte_18!158 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_19':
+  arg0_byte_19!159 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_2':
+  arg0_byte_2!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_20':
+  arg0_byte_20!160 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_21':
+  arg0_byte_21!161 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_22':
+  arg0_byte_22!162 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_23':
+  arg0_byte_23!163 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_24':
+  arg0_byte_24!164 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_25':
+  arg0_byte_25!165 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_26':
+  arg0_byte_26!166 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_27':
+  arg0_byte_27!167 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_28':
+  arg0_byte_28!168 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_29':
+  arg0_byte_29!169 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_3':
+  arg0_byte_3!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_30':
+  arg0_byte_30!170 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_31':
+  arg0_byte_31!171 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_32':
+  arg0_byte_32!172 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_33':
+  arg0_byte_33!173 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_34':
+  arg0_byte_34!174 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_35':
+  arg0_byte_35!175 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_36':
+  arg0_byte_36!176 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_37':
+  arg0_byte_37!177 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_38':
+  arg0_byte_38!178 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_39':
+  arg0_byte_39!179 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_4':
+  arg0_byte_4!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_40':
+  arg0_byte_40!180 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_41':
+  arg0_byte_41!181 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_42':
+  arg0_byte_42!182 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_43':
+  arg0_byte_43!183 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_44':
+  arg0_byte_44!184 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_45':
+  arg0_byte_45!185 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_46':
+  arg0_byte_46!186 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_47':
+  arg0_byte_47!187 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_48':
+  arg0_byte_48!188 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_49':
+  arg0_byte_49!189 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_5':
+  arg0_byte_5!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_50':
+  arg0_byte_50!190 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_51':
+  arg0_byte_51!191 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_52':
+  arg0_byte_52!192 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_53':
+  arg0_byte_53!193 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_54':
+  arg0_byte_54!194 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_55':
+  arg0_byte_55!195 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_56':
+  arg0_byte_56!196 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_57':
+  arg0_byte_57!197 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_58':
+  arg0_byte_58!198 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_59':
+  arg0_byte_59!199 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_6':
+  arg0_byte_6!146 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_60':
+  arg0_byte_60!200 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_61':
+  arg0_byte_61!201 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_62':
+  arg0_byte_62!202 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_63':
+  arg0_byte_63!203 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_64':
+  arg0_byte_64!204 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_65':
+  arg0_byte_65!205 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_66':
+  arg0_byte_66!206 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_67':
+  arg0_byte_67!207 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_68':
+  arg0_byte_68!208 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_69':
+  arg0_byte_69!209 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_7':
+  arg0_byte_7!147 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_70':
+  arg0_byte_70!210 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_71':
+  arg0_byte_71!211 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_72':
+  arg0_byte_72!212 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_73':
+  arg0_byte_73!213 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_74':
+  arg0_byte_74!214 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_75':
+  arg0_byte_75!215 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_76':
+  arg0_byte_76!216 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_77':
+  arg0_byte_77!217 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_78':
+  arg0_byte_78!218 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_79':
+  arg0_byte_79!219 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_8':
+  arg0_byte_8!148 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_80':
+  arg0_byte_80!220 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_81':
+  arg0_byte_81!221 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_82':
+  arg0_byte_82!222 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_83':
+  arg0_byte_83!223 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_84':
+  arg0_byte_84!224 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_85':
+  arg0_byte_85!225 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_86':
+  arg0_byte_86!226 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_87':
+  arg0_byte_87!227 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_88':
+  arg0_byte_88!228 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_89':
+  arg0_byte_89!229 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_9':
+  arg0_byte_9!149 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_90':
+  arg0_byte_90!230 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_91':
+  arg0_byte_91!231 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_92':
+  arg0_byte_92!232 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_93':
+  arg0_byte_93!233 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_94':
+  arg0_byte_94!234 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_95':
+  arg0_byte_95!235 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_96':
+  arg0_byte_96!236 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_97':
+  arg0_byte_97!237 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_98':
+  arg0_byte_98!238 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg0_byte_99':
+  arg0_byte_99!239 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'arg1_byte_0':
+  arg1_byte_0!262 = #x0000000000000035
+    (unsigned: 53)
+    (signed: 53)
+    (ASCII: '5')
+
+Argument 'arg2_byte_0':
+  arg2_byte_0!263 = #x000000000000002d
+    (unsigned: 45)
+    (signed: 45)
+    (ASCII: '-')
+
+Argument 'arg3_byte_0':
+  arg3_byte_0!264 = #x0000000000000030
+    (unsigned: 48)
+    (signed: 48)
+    (ASCII: '0')
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================
