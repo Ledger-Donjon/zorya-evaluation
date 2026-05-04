@@ -1,0 +1,96 @@
+Running command: /home/kgorna/zorya/zorya /home/kgorna/go-projects/kubernetes/_output/bin/kubectl --mode function 0x36d6820 --lang go --compiler gc --arg "exec -it test-pod -- ls" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2026-02-12 15:43:47 UTC
+Mode: function
+Elapsed since start: 1233.811s
+Instruction Address: 0x36d6845
+Panic Address: 0x36d6845
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 0 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 0 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'a_ptr' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'a':
+  a_RAX!140 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'a.delegate.data':
+  a_delegate_data!143 = #x8200058640000c1a
+    (unsigned: 9367493299088133146)
+    (signed: -9079250774621418470)
+    (ASCII LSB: non-printable 0x1a)
+
+Argument 'a.delegate.itab':
+  a_delegate_itab!142 = #x6edff5ffcfb7f5f5
+    (unsigned: 7989374743028954613)
+    (signed: 7989374743028954613)
+    (ASCII LSB: non-printable 0xf5)
+
+Argument 'a_ptr':
+  a_ptr!141 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/zorya/zorya /home/kgorna/go-projects/kubernetes/_output/bin/kubectl --mode function 0x36d6820 --lang go --compiler gc --arg "exec -it test-pod -- ls" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2026-02-12 15:43:47 UTC
+Mode: function
+Elapsed since start: 1234.208s
+Instruction Address: 0x36d684a
+Panic Address: 0x36d684a
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 0 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 0 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The pointer 'a.delegate.itab' must be NULL (nil)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'a':
+  a_RAX!140 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'a.delegate.data':
+  a_delegate_data!143 = #x7d47e85dadd6ffff
+    (unsigned: 9027439467133599743)
+    (signed: 9027439467133599743)
+    (ASCII LSB: non-printable 0xff)
+
+Argument 'a.delegate.itab':
+  a_delegate_itab!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'a_ptr':
+  a_ptr!141 = #xa000000800800001
+    (unsigned: 11529215080436596737)
+    (signed: -6917528993272954879)
+    (ASCII LSB: non-printable 0x01)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================

@@ -1,0 +1,182 @@
+Running command: /home/kgorna/zorya/zorya /tmp/coredns-vulnerable --mode function 0x2f73520 --lang go --compiler gc --arg "-conf /tmp/Corefile.benign" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2026-02-26 10:43:02 UTC
+Mode: function
+Elapsed since start: 1560.585s
+Instruction Address: 0x2f735c6
+Panic Address: 0x2f735c6
+Opcode: LOAD
+Detection method: Exploring the current path with a symbolic check on the pointer
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 1 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 0 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'c_ptr' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'c.Key':
+  c_Key!143 = #x00000000000000000000000000000000
+    (unsigned: n/a)
+    (signed: n/a)
+
+Argument 'c.OncePerServerBlock':
+  c_OncePerServerBlock!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockIndex':
+  c_ServerBlockIndex!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockKeyIndex':
+  c_ServerBlockKeyIndex!146 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockKeys.cap':
+  c_ServerBlockKeys_cap!149 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockKeys.len':
+  c_ServerBlockKeys_len!148 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockKeys.ptr':
+  c_ServerBlockKeys_ptr!147 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockStorage.data':
+  c_ServerBlockStorage_data!151 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockStorage.itab':
+  c_ServerBlockStorage_itab!150 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.instance':
+  c_instance!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c_ptr':
+  c_ptr!141 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/zorya/zorya /tmp/coredns-vulnerable --mode function 0x2f73520 --lang go --compiler gc --arg "-conf /tmp/Corefile.benign" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2026-02-26 10:44:14 UTC
+Mode: function
+Elapsed since start: 1632.559s
+Instruction Address: 0x2f736a8
+Panic Address: 0x2f7374e
+Opcode: CBRANCH
+Detection method: Exploring the current path with a symbolic check on the pointer
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 5 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 0 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The pointer 'c.ServerBlockKeys.len' must be NULL (nil)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'c.Key':
+  c_Key!143 = #x00000000000000000000000000000000
+    (unsigned: n/a)
+    (signed: n/a)
+
+Argument 'c.OncePerServerBlock':
+  c_OncePerServerBlock!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockIndex':
+  c_ServerBlockIndex!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockKeyIndex':
+  c_ServerBlockKeyIndex!146 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockKeys.cap':
+  c_ServerBlockKeys_cap!149 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockKeys.len':
+  c_ServerBlockKeys_len!148 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockKeys.ptr':
+  c_ServerBlockKeys_ptr!147 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockStorage.data':
+  c_ServerBlockStorage_data!151 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockStorage.itab':
+  c_ServerBlockStorage_itab!150 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.instance':
+  c_instance!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c_ptr':
+  c_ptr!141 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================

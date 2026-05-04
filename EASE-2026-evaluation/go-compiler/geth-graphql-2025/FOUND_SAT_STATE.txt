@@ -1,0 +1,366 @@
+Running command: /home/kgorna/zorya/zorya /home/kgorna/go-ethereum/build/bin/geth --mode function 0x1a3acc0 --lang go --compiler gc --arg "--dev --http --graphql --http.api eth,web3,net,miner" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2026-02-17 16:11:48 UTC
+Mode: function
+Elapsed since start: 985.246s
+Instruction Address: 0x1a3ad2d
+Panic Address: 0x1a3ad2d
+Opcode: LOAD
+Detection method: Exploring the current path with a symbolic check on the pointer
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 1 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 0 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The pointer 'b.mu' must be NULL (nil)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'b.block':
+  b_block!146 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.header':
+  b_header!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.mu':
+  b_mu!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.numberOrHash':
+  b_numberOrHash!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.r':
+  b_r!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.receipts.cap':
+  b_receipts_cap!149 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.receipts.len':
+  b_receipts_len!148 = #xe4054544019e0440
+    (unsigned: 16430614973918348352)
+    (signed: -2016129099791203264)
+    (ASCII LSB: '@')
+
+Argument 'b.receipts.ptr':
+  b_receipts_ptr!147 = #x7d17ddb7393dffa7
+    (unsigned: 9013916958214455207)
+    (signed: 9013916958214455207)
+    (ASCII LSB: non-printable 0xa7)
+
+Argument 'b_ptr':
+  b_ptr!141 = #x874820001c640010
+    (unsigned: 9748076578291843088)
+    (signed: -8698667495417708528)
+    (ASCII LSB: non-printable 0x10)
+
+Argument 'ctx':
+  ctx_RBX!150 = #x8108000006408010
+    (unsigned: 9297681430811279376)
+    (signed: -9149062642898272240)
+    (ASCII LSB: non-printable 0x10)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/zorya/zorya /home/kgorna/go-ethereum/build/bin/geth --mode function 0x1a3acc0 --lang go --compiler gc --arg "--dev --http --graphql --http.api eth,web3,net,miner" --negate-path-exploration
+[*] CONCRETE VULNERABILITY FOUND (no Z3 evaluation needed)
+Timestamp: 2026-02-17 16:12:06 UTC
+Mode: function
+Elapsed since start: 1003.594s
+Instruction Address: 0x1a3ad7c
+------------------------------------------------------------
+Vulnerability: Concrete NULL pointer dereference
+Opcode: STORE
+Detection method: Exploring the not taken path with Overlay Execution
+Null pointer write (STORE) at instruction 1
+
+The pointer at this address is concretely NULL on the overlay (not-taken) path.
+No symbolic variable needs a specific value — any input reaching this path will dereference NULL.
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/zorya/zorya /home/kgorna/go-ethereum/build/bin/geth --mode function 0x1a3acc0 --lang go --compiler gc --arg "--dev --http --graphql --http.api eth,web3,net,miner" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2026-02-17 16:12:50 UTC
+Mode: function
+Elapsed since start: 1047.943s
+Instruction Address: 0x1a3ad89
+Panic Address: 0x1a3ad89
+Opcode: STORE
+Detection method: Exploring the current path with a symbolic check on the pointer
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 1 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 0 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The pointer 'b.mu' must be NULL (nil)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'b.block':
+  b_block!146 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.header':
+  b_header!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.mu':
+  b_mu!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.numberOrHash':
+  b_numberOrHash!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.r':
+  b_r!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.receipts.cap':
+  b_receipts_cap!149 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.receipts.len':
+  b_receipts_len!148 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.receipts.ptr':
+  b_receipts_ptr!147 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b_ptr':
+  b_ptr!141 = #x0000000000000001
+    (unsigned: 1)
+    (signed: 1)
+    (ASCII: non-printable, code 1)
+
+Argument 'ctx':
+  ctx_RBX!150 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/zorya/zorya /home/kgorna/go-ethereum/build/bin/geth --mode function 0x1a3acc0 --lang go --compiler gc --arg "--dev --http --graphql --http.api eth,web3,net,miner" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2026-02-17 17:41:46 UTC
+Mode: function
+Elapsed since start: 6383.706s
+Instruction Address: 0x1a3adb9
+Panic Address: 0x48c0ab
+Opcode: CBRANCH
+Detection method: Exploring the current path with a symbolic check on the pointer
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 1 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 0 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'b.header' must be 0x1 (unsigned: 1; signed: 1; ASCII: non-printable 0x01)
+  - The pointer 'b.mu' must be NULL (nil)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'b.block':
+  b_block!146 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.header':
+  b_header!145 = #x0000000000000001
+    (unsigned: 1)
+    (signed: 1)
+    (ASCII: non-printable, code 1)
+
+Argument 'b.mu':
+  b_mu!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.numberOrHash':
+  b_numberOrHash!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.r':
+  b_r!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.receipts.cap':
+  b_receipts_cap!149 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.receipts.len':
+  b_receipts_len!148 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.receipts.ptr':
+  b_receipts_ptr!147 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b_ptr':
+  b_ptr!141 = #xffffffffffffffff
+    (unsigned: 18446744073709551615)
+    (signed: -1)
+    (ASCII LSB: non-printable 0xff)
+
+Argument 'ctx':
+  ctx_RBX!150 = #xffffffff9e3df5ff
+    (unsigned: 18446744072069445119)
+    (signed: -1640106497)
+    (ASCII LSB: non-printable 0xff)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/zorya/zorya /home/kgorna/go-ethereum/build/bin/geth --mode function 0x1a3acc0 --lang go --compiler gc --arg "--dev --http --graphql --http.api eth,web3,net,miner" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2026-02-17 18:37:08 UTC
+Mode: function
+Elapsed since start: 9705.531s
+Instruction Address: 0x1a3ae3a
+Panic Address: 0x48c0ab
+Opcode: CBRANCH
+Detection method: Exploring the current path with a symbolic check on the pointer
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 1 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 0 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The pointer 'b.header' must be NULL (nil)
+  - The pointer 'b.mu' must be NULL (nil)
+  - The pointer 'b.numberOrHash' must be NULL (nil)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'b.block':
+  b_block!146 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.header':
+  b_header!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.mu':
+  b_mu!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.numberOrHash':
+  b_numberOrHash!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.r':
+  b_r!142 = #xc000e2054451a404
+    (unsigned: 13835306567531078660)
+    (signed: -4611437506178472956)
+    (ASCII LSB: non-printable 0x04)
+
+Argument 'b.receipts.cap':
+  b_receipts_cap!149 = #x8000000000400001
+    (unsigned: 9223372036858970113)
+    (signed: -9223372036850581503)
+    (ASCII LSB: non-printable 0x01)
+
+Argument 'b.receipts.len':
+  b_receipts_len!148 = #xc46c896501801f63
+    (unsigned: 14153838795828502371)
+    (signed: -4292905277881049245)
+    (ASCII LSB: 'c')
+
+Argument 'b.receipts.ptr':
+  b_receipts_ptr!147 = #xdefffce7f7dff3ae
+    (unsigned: 16068840068707513262)
+    (signed: -2377904005002038354)
+    (ASCII LSB: non-printable 0xae)
+
+Argument 'b_ptr':
+  b_ptr!141 = #x6f77e89697d06e50
+    (unsigned: 8032144193928326736)
+    (signed: 8032144193928326736)
+    (ASCII LSB: 'P')
+
+Argument 'ctx':
+  ctx_RBX!150 = #x3b253fcf6f5f1dff
+    (unsigned: 4261882782535327231)
+    (signed: 4261882782535327231)
+    (ASCII LSB: non-printable 0xff)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================

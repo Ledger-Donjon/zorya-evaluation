@@ -1,0 +1,568 @@
+Running command: /home/kgorna/zorya/zorya /home/kgorna/go-ethereum/build/bin/geth --mode function 0x1f36e80 --lang go --compiler gc --arg "--dev --http --http.api eth,debug,web3" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2026-02-18 12:40:41 UTC
+Mode: function
+Elapsed since start: 1049.817s
+Instruction Address: 0x1f36eb3
+Panic Address: 0x1f36eb3
+Opcode: LOAD
+Detection method: Exploring the current path with a symbolic check on the pointer
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 1 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 0 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'err' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+  - The input 't_ptr' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'err':
+  err_RCX!168 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlobGasPrice':
+  receipt_BlobGasPrice!165 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlobGasUsed':
+  receipt_BlobGasUsed!164 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlockNumber':
+  receipt_BlockNumber!166 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.CumulativeGasUsed':
+  receipt_CumulativeGasUsed!158 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.EffectiveGasPrice':
+  receipt_EffectiveGasPrice!163 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.GasUsed':
+  receipt_GasUsed!162 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.cap':
+  receipt_Logs_cap!161 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.len':
+  receipt_Logs_len!160 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.ptr':
+  receipt_Logs_ptr!159 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.cap':
+  receipt_PostState_cap!156 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.len':
+  receipt_PostState_len!155 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.ptr':
+  receipt_PostState_ptr!154 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Status':
+  receipt_Status!157 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.TransactionIndex':
+  receipt_TransactionIndex!167 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Type':
+  receipt_Type!153 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt_ptr':
+  receipt_ptr!152 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.cap':
+  t_callstack_cap!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.len':
+  t_callstack_len!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.ptr':
+  t_callstack_ptr!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.config':
+  t_config!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.depth':
+  t_depth!147 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.gasLimit':
+  t_gasLimit!146 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.interrupt':
+  t_interrupt!148 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.reason.data':
+  t_reason_data!150 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.reason.itab':
+  t_reason_itab!149 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't_ptr':
+  t_ptr!141 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/zorya/zorya /home/kgorna/go-ethereum/build/bin/geth --mode function 0x1f36e80 --lang go --compiler gc --arg "--dev --http --http.api eth,debug,web3" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2026-02-18 12:44:28 UTC
+Mode: function
+Elapsed since start: 1277.320s
+Instruction Address: 0x1f36eb5
+Panic Address: 0x1f36eb5
+Opcode: LOAD
+Detection method: Exploring the current path with a symbolic check on the pointer
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 1 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 0 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'err' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+  - The input 'receipt_ptr' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'err':
+  err_RCX!168 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlobGasPrice':
+  receipt_BlobGasPrice!165 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlobGasUsed':
+  receipt_BlobGasUsed!164 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlockNumber':
+  receipt_BlockNumber!166 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.CumulativeGasUsed':
+  receipt_CumulativeGasUsed!158 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.EffectiveGasPrice':
+  receipt_EffectiveGasPrice!163 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.GasUsed':
+  receipt_GasUsed!162 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.cap':
+  receipt_Logs_cap!161 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.len':
+  receipt_Logs_len!160 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.ptr':
+  receipt_Logs_ptr!159 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.cap':
+  receipt_PostState_cap!156 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.len':
+  receipt_PostState_len!155 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.ptr':
+  receipt_PostState_ptr!154 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Status':
+  receipt_Status!157 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.TransactionIndex':
+  receipt_TransactionIndex!167 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Type':
+  receipt_Type!153 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt_ptr':
+  receipt_ptr!152 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.cap':
+  t_callstack_cap!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.len':
+  t_callstack_len!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.ptr':
+  t_callstack_ptr!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.config':
+  t_config!145 = #xffff7ffffbfffffe
+    (unsigned: 18446603336154087422)
+    (signed: -140737555464194)
+    (ASCII LSB: non-printable 0xfe)
+
+Argument 't.depth':
+  t_depth!147 = #x66fba555db41e5ee
+    (unsigned: 7420706599192356334)
+    (signed: 7420706599192356334)
+    (ASCII LSB: non-printable 0xee)
+
+Argument 't.gasLimit':
+  t_gasLimit!146 = #x2fdfba7efffe67d4
+    (unsigned: 3449680894212597716)
+    (signed: 3449680894212597716)
+    (ASCII LSB: non-printable 0xd4)
+
+Argument 't.interrupt':
+  t_interrupt!148 = #x0000401020000008
+    (unsigned: 70438000525320)
+    (signed: 70438000525320)
+    (ASCII LSB: non-printable 0x08)
+
+Argument 't.reason.data':
+  t_reason_data!150 = #x0c7776be4d7aed77
+    (unsigned: 898317210399468919)
+    (signed: 898317210399468919)
+    (ASCII LSB: 'w')
+
+Argument 't.reason.itab':
+  t_reason_itab!149 = #xbb7ebd8c6bfb5299
+    (unsigned: 13510444342962770585)
+    (signed: -4936299730746781031)
+    (ASCII LSB: non-printable 0x99)
+
+Argument 't_ptr':
+  t_ptr!141 = #x8000402000000001
+    (unsigned: 9223442543037906945)
+    (signed: -9223301530671644671)
+    (ASCII LSB: non-printable 0x01)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/zorya/zorya /home/kgorna/go-ethereum/build/bin/geth --mode function 0x1f36e80 --lang go --compiler gc --arg "--dev --http --http.api eth,debug,web3" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2026-02-18 12:50:07 UTC
+Mode: function
+Elapsed since start: 1615.504s
+Instruction Address: 0x1f36ec8
+Panic Address: 0x1f36f16
+Opcode: CBRANCH
+Detection method: Exploring the current path with a symbolic check on the pointer
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 1 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 0 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'err' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+  - The pointer 't.callstack.len' must be NULL (nil)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'err':
+  err_RCX!168 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlobGasPrice':
+  receipt_BlobGasPrice!165 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlobGasUsed':
+  receipt_BlobGasUsed!164 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlockNumber':
+  receipt_BlockNumber!166 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.CumulativeGasUsed':
+  receipt_CumulativeGasUsed!158 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.EffectiveGasPrice':
+  receipt_EffectiveGasPrice!163 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.GasUsed':
+  receipt_GasUsed!162 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.cap':
+  receipt_Logs_cap!161 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.len':
+  receipt_Logs_len!160 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.ptr':
+  receipt_Logs_ptr!159 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.cap':
+  receipt_PostState_cap!156 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.len':
+  receipt_PostState_len!155 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.ptr':
+  receipt_PostState_ptr!154 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Status':
+  receipt_Status!157 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.TransactionIndex':
+  receipt_TransactionIndex!167 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Type':
+  receipt_Type!153 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt_ptr':
+  receipt_ptr!152 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.cap':
+  t_callstack_cap!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.len':
+  t_callstack_len!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.ptr':
+  t_callstack_ptr!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.config':
+  t_config!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.depth':
+  t_depth!147 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.gasLimit':
+  t_gasLimit!146 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.interrupt':
+  t_interrupt!148 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.reason.data':
+  t_reason_data!150 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.reason.itab':
+  t_reason_itab!149 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't_ptr':
+  t_ptr!141 = #xffffffffffffffff
+    (unsigned: 18446744073709551615)
+    (signed: -1)
+    (ASCII LSB: non-printable 0xff)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================

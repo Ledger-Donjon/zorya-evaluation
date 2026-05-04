@@ -1,0 +1,14 @@
+# CR with 2 elements in spec.items (indices 0 and 1).
+# The ksm-config.yaml requests index 1 — valid with this object.
+# Zorya discovers that if len(items) == 1, index 1 == len(s) triggers the off-by-one panic.
+apiVersion: example.com/v1
+kind: TestResource
+metadata:
+  name: test-oob
+  namespace: default
+spec:
+  items:
+    - name: "first-element"
+      value: "42"
+    - name: "second-element"
+      value: "99"

@@ -1,0 +1,283 @@
+$ binsec -sse -sse-script ./binsec_kubelet.ini ./core.snapshot -sse-depth 10000 -sse-engine multi-checks
+[sse:info] TTY: press [space] to switch between log and monitor modes.
+[sse:warning] Enumeration of jump targets @ 0x0048c086 hit the limit 3 and may be incomplete
+[sse:warning] Cut path 13 (non executable) @ 0x00000000
+[sse:warning] Cut path 12 (non executable) @ 0x0000d7dd
+[sse:warning] Enumeration of jump targets @ 0x0041facb hit the limit 3 and may be incomplete
+[sse:warning] Enumeration of jump targets @ 0x0041fb4d hit the limit 3 and may be incomplete
+[sse:warning] Enumeration of jump targets @ 0x00420048 hit the limit 3 and may be incomplete
+[sse:warning] Cut path 22 (non executable) @ 0x100000000042d8a5
+[sse:warning] Cut path 18 (non executable) @ 0x20005c400041d81a
+[sse:warning] Cut path 17 (non executable) @ 0x80017100041d81a
+[sse:warning] Cut path 16 (non executable) @ 0x00000000
+[sse:warning] Cut path 15 (non executable) @ 0x4000b8c1fb48
+[sse:warning] Dynamic jump @ 0x0041facb
+              could have led to invalid address 0x710000000041fb48; skipping
+[sse:warning] Enumeration of jump targets @ 0x0041facb hit the limit 3 and may be incomplete
+[sse:warning] Enumeration of jump targets @ 0x0041fb4d hit the limit 3 and may be incomplete
+[sse:warning] Enumeration of jump targets @ 0x00420048 hit the limit 3 and may be incomplete
+[sse:warning] Cut path 34 (non executable) @ 0x100000000042d8a5
+[sse:warning] Cut path 30 (non executable) @ 0x100000000041d81a
+[sse:warning] Cut path 11 (non executable) @ 0x10002e3fb48
+[sse:error] Cut path 10 (uninterpreted "syscall") @ 0x0048cab3
+[sse:warning] Enumeration of jump targets @ 0x0041facb hit the limit 3 and may be incomplete
+[sse:warning] Enumeration of jump targets @ 0x0041fb4d hit the limit 3 and may be incomplete
+[sse:warning] Cut path 54 (non executable) @ 0x200000000041d81a
+[sse:warning] Cut path 53 (non executable) @ 0x0800171a
+[sse:error] Cut path 52 (uninterpreted "KO") @ 0x00410003
+[sse:warning] Cut path 51 (non executable) @ 0x5c4000041fb48
+[sse:warning] Enumeration of jump targets @ 0x0041facb hit the limit 3 and may be incomplete
+[sse:warning] Dynamic jump @ 0x0041fb4d
+              could have led to invalid address 0x800171000041d81a; skipping
+[sse:warning] Enumeration of jump targets @ 0x0041fb4d hit the limit 3 and may be incomplete
+[sse:warning] Enumeration of jump targets @ 0x00420048 hit the limit 3 and may be incomplete
+[sse:warning] Cut path 63 (non executable) @ 0x200042d8a5
+[sse:error] Cut path 73 (uninterpreted "cvtsi2sd %rcx,%xmm0") @ 0x0041e23c
+[sse:error] Cut path 59 (uninterpreted "KO") @ 0x00410003
+[sse:warning] Cut path 57 (non executable) @ 0x00000080
+[amd64:error] Probable parse error at line 7, column 49
+              Lexeme was: (
+              Entry was: (address . 0x0000000000433fdd)
+                                                       (opcode . "66 0f 2e c1")
+                                                                               (size . 4)
+                                                                                         (mnemonic . "ucomisd %xmm1,%xmm0")
+                                                                                                                           (0x0000000000433fdd,0) %%0<64> := (ymm0<256> {0, 63}); goto 1
+                                         (0x0000000000433fdd,1) %%1<64> := (ymm1<256> {0, 63}); goto 2
+                                                                                                      (0x0000000000433fdd,2) %%2<1> := (not  opaque<64>(%%0<64>, %%1<64>)); goto 3
+                                   (0x0000000000433fdd,3) %%3<1> := (not  opaque<64>(%%0<64>, %%1<64>)); goto 4
+                                                                                                               (0x0000000000433fdd,4) %%4<1> := (%%3<1> and %%2<1>); goto 5
+                            (0x0000000000433fdd,5) %%5<1> := (%%3<1> = %%2<1>); goto 6
+                                                                                      (0x0000000000433fdd,6) of<1> := 0<1>; goto 7
+                                                                                                                                  (0x0000000000433fdd,7) sf<1> := 0<1>; goto 8
+                               (0x0000000000433fdd,8) zf<1> := %%5<1>; goto 9
+                                                                             (0x0000000000433fdd,9) af<1> := 0<1>; goto 10
+                                                                                                                          (0x0000000000433fdd,10) pf<1> := %%4<1>; goto 11
+                           (0x0000000000433fdd,11) cf<1> := %%3<1>; goto 12
+                                                                           (0x0000000000433fdd,12) goto (0x0000000000433fe1,0)
+
+              Getting basic infos only ... 
+[sse:error] Cut path 75 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 74 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 9 (uninterpreted "syscall") @ 0x0048cab3
+[sse:warning] Enumeration of jump targets @ 0x0041facb hit the limit 3 and may be incomplete
+[sse:warning] Enumeration of jump targets @ 0x0041fb4d hit the limit 3 and may be incomplete
+[sse:warning] Cut path 81 (non executable) @ 0x00000000
+[sse:warning] Cut path 80 (non executable) @ 0x00020005
+[sse:error] Cut path 79 (uninterpreted "KO") @ 0x00410003
+[sse:warning] Cut path 78 (non executable) @ 0x00000080
+[sse:warning] Enumeration of jump targets @ 0x0041facb hit the limit 3 and may be incomplete
+[sse:warning] Dynamic jump @ 0x0041fb4d
+              could have led to invalid address 0x710000000041d81a; skipping
+[sse:warning] Enumeration of jump targets @ 0x0041fb4d hit the limit 3 and may be incomplete
+[sse:warning] Cut path 85 (non executable) @ 0x00000080
+[sse:warning] Cut path 91 (non executable) @ 0xffffffff
+[sse:error] Cut path 76 (uninterpreted "KO") @ 0x0041fb85
+[sse:error] Cut path 96 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 95 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 94 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 100 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 99 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 98 (uninterpreted "syscall") @ 0x0048cab3
+[sse:warning] Enumeration of jump targets @ 0x0048c086 hit the limit 3 and may be incomplete
+[sse:warning] Cut path 106 (non executable) @ 0x00000000
+[sse:error] Cut path 103 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 102 (uninterpreted "syscall") @ 0x0048cab3
+[sse:warning] Enumeration of jump targets @ 0x0048c086 hit the limit 3 and may be incomplete
+[sse:warning] Cut path 115 (non executable) @ 0x00000000
+[sse:error] Cut path 101 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 120 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 119 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 93 (uninterpreted "syscall") @ 0x0048cab3
+[sse:warning] Enumeration of jump targets @ 0x0048c086 hit the limit 3 and may be incomplete
+[sse:warning] Cut path 125 (non executable) @ 0x00000000
+[sse:error] Cut path 123 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 122 (uninterpreted "syscall") @ 0x0048cab3
+[sse:warning] Enumeration of jump targets @ 0x0041facb hit the limit 3 and may be incomplete
+[sse:warning] Enumeration of jump targets @ 0x0041fb4d hit the limit 3 and may be incomplete
+[sse:warning] Cut path 139 (non executable) @ 0x4000b880041d81a
+[sse:warning] Cut path 138 (non executable) @ 0x20005c4041d81a
+[sse:warning] Cut path 137 (non executable) @ 0x00000000
+[sse:warning] Cut path 136 (non executable) @ 0x20005c40041fb48
+[sse:error] Cut path 121 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 143 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 142 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 92 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 145 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 144 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 8 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 149 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 148 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 147 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 146 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 152 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 151 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 150 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 7 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 157 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 156 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 155 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 161 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 160 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 159 (uninterpreted "syscall") @ 0x0048cab3
+[sse:warning] Enumeration of jump targets @ 0x0041facb hit the limit 3 and may be incomplete
+[sse:warning] Dynamic jump @ 0x0041fb4d
+              could have led to invalid address 0x710000000041d81a; skipping
+[sse:warning] Enumeration of jump targets @ 0x0041fb4d hit the limit 3 and may be incomplete
+[sse:warning] Cut path 169 (non executable) @ 0x1041ae3a
+[sse:warning] Cut path 168 (non executable) @ 0x4000b880041fb48
+[sse:error] Cut path 164 (uninterpreted "syscall") @ 0x0048cab3
+[sse:warning] Enumeration of jump targets @ 0x0041facb hit the limit 3 and may be incomplete
+[sse:warning] Enumeration of jump targets @ 0x0041fb4d hit the limit 3 and may be incomplete
+[sse:warning] Cut path 183 (non executable) @ 0x00000000
+[sse:warning] Cut path 182 (non executable) @ 0x00000800
+[sse:warning] Cut path 180 (non executable) @ 0x00000000
+[sse:warning] Enumeration of jump targets @ 0x0041facb hit the limit 3 and may be incomplete
+[sse:warning] Dynamic jump @ 0x0041fb4d
+              could have led to invalid address 0x400000000041d81a; skipping
+[sse:warning] Enumeration of jump targets @ 0x0041fb4d hit the limit 3 and may be incomplete
+[sse:warning] Cut path 178 (non executable) @ 0x5c4000041fb48
+[sse:error] Cut path 163 (uninterpreted "syscall") @ 0x0048cab3
+[sse:warning] Enumeration of jump targets @ 0x0041facb hit the limit 3 and may be incomplete
+[sse:warning] Enumeration of jump targets @ 0x0041fb4d hit the limit 3 and may be incomplete
+[sse:warning] Cut path 198 (non executable) @ 0x04000b8a
+[sse:warning] Cut path 197 (non executable) @ 0x00000000
+[sse:error] Cut path 196 (uninterpreted "KO") @ 0x00410003
+[sse:warning] Cut path 195 (non executable) @ 0x20005c41fb48
+[sse:warning] Enumeration of jump targets @ 0x0041facb hit the limit 3 and may be incomplete
+[sse:warning] Dynamic jump @ 0x0041fb4d
+              could have led to invalid address 0x710000000041d81a; skipping
+[sse:warning] Enumeration of jump targets @ 0x0041fb4d hit the limit 3 and may be incomplete
+[sse:warning] Cut path 202 (non executable) @ 0x1041fe3a
+[sse:warning] Cut path 193 (non executable) @ 0x80017141fb48
+[sse:error] Cut path 162 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 208 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 207 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 154 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 153 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 211 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 210 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 209 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 6 (uninterpreted "syscall") @ 0x0048cab3
+[sse:warning] Enumeration of jump targets @ 0x0048bfc3 hit the limit 3 and may be incomplete
+[sse:warning] Cut path 218 (non executable) @ 0x00000000
+[sse:error] Cut path 217 (uninterpreted "KO") @ 0x00410003
+[sse:error] Cut path 215 (uninterpreted "syscall") @ 0x0048cab3
+[sse:warning] Enumeration of jump targets @ 0x0048bfc3 hit the limit 3 and may be incomplete
+[sse:warning] Cut path 222 (non executable) @ 0x00000000
+[sse:error] Cut path 221 (uninterpreted "KO") @ 0x00410003
+[sse:warning] Enumeration of jump targets @ 0x0041facb hit the limit 3 and may be incomplete
+[sse:warning] Cut path 225 (non executable) @ 0x2041fb48
+[sse:warning] Enumeration of jump targets @ 0x0041facb hit the limit 3 and may be incomplete
+[sse:warning] Enumeration of jump targets @ 0x0041fb4d hit the limit 3 and may be incomplete
+[sse:warning] Cut path 230 (non executable) @ 0x10000000041d81a
+[sse:warning] Cut path 228 (non executable) @ 0x100000000041fb48
+[sse:warning] Cut path 220 (non executable) @ 0x10000000041fb48
+[sse:error] Cut path 238 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 237 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 236 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 242 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 241 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 240 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 245 (uninterpreted "syscall") @ 0x0048cab3
+[sse:warning] Enumeration of jump targets @ 0x0048bfc3 hit the limit 3 and may be incomplete
+[sse:warning] Cut path 251 (non executable) @ 0x00000000
+[sse:error] Cut path 250 (uninterpreted "KO") @ 0x00410003
+[sse:error] Cut path 243 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 255 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 254 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 235 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 259 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 266 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 265 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 258 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 273 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 272 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 271 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 277 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 276 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 275 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 281 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 280 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 279 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 285 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 284 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 283 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 289 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 288 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 287 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 293 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 292 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 291 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 296 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 301 (uninterpreted "syscall") @ 0x0048cab3
+[sse:warning] Enumeration of jump targets @ 0x0048bfc3 hit the limit 3 and may be incomplete
+[sse:warning] Cut path 306 (non executable) @ 0x00000000
+[sse:error] Cut path 305 (uninterpreted "KO") @ 0x00410003
+[sse:error] Cut path 299 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 310 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 309 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 282 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 313 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 318 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 317 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 316 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 326 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 325 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 274 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 329 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 328 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 327 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 341 (uninterpreted "syscall") @ 0x0048cab3
+[sse:warning] Enumeration of jump targets @ 0x0048bfc3 hit the limit 3 and may be incomplete
+[sse:warning] Cut path 346 (non executable) @ 0x00000000
+[sse:error] Cut path 345 (uninterpreted "KO") @ 0x00410003
+[sse:error] Cut path 340 (uninterpreted "syscall") @ 0x0048cab3
+[sse:warning] Enumeration of jump targets @ 0x0048bfc3 hit the limit 3 and may be incomplete
+[sse:warning] Cut path 350 (non executable) @ 0x00000000
+[sse:warning] Cut path 349 (non executable) @ 0x000000dd
+[sse:error] Cut path 339 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 353 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 352 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 269 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 355 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 354 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 257 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 359 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 358 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 357 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 356 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 362 (uninterpreted "ucomisd %xmm1,%xmm0") @ 0x00433fdd
+[sse:error] Cut path 361 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 360 (uninterpreted "syscall") @ 0x0048cab3
+[sse:error] Cut path 256 (uninterpreted "syscall") @ 0x0048cab3
+[sse:info] Empty path worklist: halting ...
+[sse:info] SMT queries
+             Preprocessing simplifications
+               total          8369
+               true           1235
+               false          3932
+               constant enum  3202
+             
+             Satisfiability queries
+               total          1648
+               sat            622
+               unsat          849
+               unknown        177
+               time           2253.83
+               average        1.37
+             
+           Exploration
+             total paths                      402
+             completed/cut paths              2
+             pending paths                    0
+             stale paths                      400
+             failed assertions                0
+             branching points                 9534
+             max path depth                   3763
+             visited instructions (unrolled)  60258
+             visited instructions (static)    4513
+             
+           
+[sse:warning] Threat to completeness :
+              - some jump targets may have been omitted (-sse-jump-enum)
+              - 177 SMT solver queries remain unsolved (-fml-solver-timeout)

@@ -1,0 +1,34 @@
+# Command:
+# ../binsec/_build/install/default/bin/binsec -sse \
+#        -sse-script binsec_p224.ini \
+#        -sse-depth 10000 \
+#        /tmp/p224-core.snapshot
+
+[sse:info] TTY: press [space] to switch between log and monitor modes.
+[sse:error] Cut path 0 (uninterpreted "0f 05 # syscall") @ 0x4669a1
+[sse:info] Empty path worklist: halting ...
+[sse:info] SMT queries
+             Preprocessing simplifications
+               total          9
+               sat            9
+               unsat          0
+               time           0.00
+             
+             Satisfiability queries
+               total          4
+               sat            4
+               unsat          0
+               unknown        0
+               time           0.00
+               average        0.00
+             
+           Exploration
+             total paths                      1
+             completed/cut paths              0
+             pending paths                    0
+             discontinued paths               1
+             failed assertions                0
+             branching points                 121
+             max path depth                   1135
+             visited instructions (unrolled)  1135
+             visited instructions (static)    766

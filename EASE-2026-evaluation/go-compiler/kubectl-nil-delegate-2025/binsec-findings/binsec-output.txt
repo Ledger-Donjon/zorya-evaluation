@@ -1,0 +1,44 @@
+$ binsec -sse -sse-script ./binsec_kubectl.ini ./core.snapshot -sse-depth 10000 -sse-engine multi-checks
+[sse:warning] Symbol fmt.Println comes from the file /home/kgorna/go-projects/kubernetes/_output/local/bin/linux/amd64/kubectl and shadows other definitions
+              Use "import <fmt.Println> from FILE" to disambiguate
+[sse:warning] Symbol fmt.Printf comes from the file /home/kgorna/go-projects/kubernetes/_output/local/bin/linux/amd64/kubectl and shadows other definitions
+              Use "import <fmt.Printf> from FILE" to disambiguate
+[sse:warning] Symbol fmt.Fprintf comes from the file /home/kgorna/go-projects/kubernetes/_output/local/bin/linux/amd64/kubectl and shadows other definitions
+              Use "import <fmt.Fprintf> from FILE" to disambiguate
+[sse:warning] Symbol fmt.Sprintf comes from the file /home/kgorna/go-projects/kubernetes/_output/local/bin/linux/amd64/kubectl and shadows other definitions
+              Use "import <fmt.Sprintf> from FILE" to disambiguate
+[sse:warning] Symbol runtime.panicmem comes from the file /home/kgorna/go-projects/kubernetes/_output/local/bin/linux/amd64/kubectl and shadows other definitions
+              Use "import <runtime.panicmem> from FILE" to disambiguate
+[sse:warning] Symbol runtime.gopanic comes from the file /home/kgorna/go-projects/kubernetes/_output/local/bin/linux/amd64/kubectl and shadows other definitions
+              Use "import <runtime.gopanic> from FILE" to disambiguate
+[sse:info] TTY: press [space] to switch between log and monitor modes.
+[sse:info] Empty path worklist: halting ...
+[sse:info] SMT queries
+             Preprocessing simplifications
+               total          3
+               true           1
+               false          1
+               constant enum  1
+             
+             Satisfiability queries
+               total          372
+               sat            371
+               unsat          0
+               unknown        1
+               time           5.02
+               average        0.01
+             
+           Exploration
+             total paths                      1
+             completed/cut paths              0
+             pending paths                    0
+             stale paths                      1
+             failed assertions                0
+             branching points                 2
+             max path depth                   14
+             visited instructions (unrolled)  14
+             visited instructions (static)    137
+             
+           
+[sse:warning] Threat to completeness :
+              - 1 SMT solver queries remain unsolved (-fml-solver-timeout)

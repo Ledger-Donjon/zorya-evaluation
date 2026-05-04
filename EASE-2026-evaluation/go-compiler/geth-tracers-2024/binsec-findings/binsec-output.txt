@@ -1,0 +1,68 @@
+../binsec/_build/install/default/bin/binsec \
+  -sse -sse-script ./binsec_geth.ini ./core.snapshot \
+  -sse-depth 10000
+[sse:info] TTY: press [space] to switch between log and monitor modes.
+[sse:error]  Assertion failed @ 0x48d660 (<runtime.panicIndex>)
+              --- Model ---
+              # Variables
+              receipt_ptr!1 : 0x000000002d357427
+              
+              # Memory
+              ; unamed section
+              (_ bv18446744073709551119 64) : 00 
+              (_ bv18446744073709551118 64) : 00 
+              (_ bv18446744073709551117 64) : 00 
+              (_ bv18446744073709551116 64) : 00 
+              (_ bv18446744073709551115 64) : 00 
+              (_ bv18446744073709551114 64) : 00 
+              (_ bv18446744073709551113 64) : 00 
+              (_ bv18446744073709551112 64) : 00 
+              
+[sse:warning] Enumeration of jump targets @ 0x1f36f0e hit the limit 3 and may be incomplete
+[sse:error] Cut path 1 (uninterpreted "0f 05 # syscall") @ 0x48ea53
+[sse:error] Cut path 4 (uninterpreted "0f 05 # syscall") @ 0x48f0a1
+[sse:warning] Enumeration of jump targets @ 0x448382 hit the limit 3 and may be incomplete
+[sse:error] Cut path 3 (uninterpreted "KO") @ 0x417c8b
+[sse:warning] Enumeration of jump targets @ 0x48ce63 hit the limit 3 and may be incomplete
+[sse:warning] Cut path 9 (non executable) @ 0x10000000000
+[sse:warning] Cut path 11 (non executable) @ 0x203a642520686374
+[sse:warning] Cut path 10 (non executable) @ 0x1e0660001e05e0
+[sse:error] Cut path 7 (uninterpreted "0f 05 # syscall") @ 0x48f0a1
+[sse:error] Cut path 14 (uninterpreted "0f 05 # syscall") @ 0x48f0a1
+[sse:warning] Enumeration of jump targets @ 0x41d1b2 hit the limit 3 and may be incomplete
+[sse:warning] Enumeration of jump targets @ 0x41d007 hit the limit 3 and may be incomplete
+[sse:warning] Cut path 13 (non executable) @ 0x000000
+[sse:warning] Enumeration of jump targets @ 0x4524b9 hit the limit 3 and may be incomplete
+[sse:warning] Cut path 19 (non executable) @ 0xc001d00008
+[sse:error] Cut path 32 (uninterpreted "cd 03 # int $0x3") @ 0x48d0c0
+[sse:warning] Enumeration of jump targets @ 0x48a44e hit the limit 3 and may be incomplete
+[sse:warning] Enumeration of jump targets @ 0x48b2a8 hit the limit 3 and may be incomplete
+[sse:info] SMT queries
+             Preprocessing simplifications
+               total          134
+               sat            134
+               unsat          0
+               time           0.00
+             
+             Satisfiability queries
+               total          99
+               sat            40
+               unsat          59
+               unknown        0
+               time           1789.25
+               average        18.07
+             
+           Exploration
+             total paths                      49
+             completed/cut paths              1
+             pending paths                    29
+             discontinued paths               19
+             failed assertions                1
+             branching points                 76
+             max path depth                   369
+             visited instructions (unrolled)  757
+             visited instructions (static)    1345
+             
+           
+[sse:warning] Threat to completeness :
+              - some jump targets may have been omitted (-sse-jump-enum)

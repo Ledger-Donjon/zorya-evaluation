@@ -1,0 +1,1308 @@
+Initializing State...
+
+Initializing mock CPU state...
+
+Uploading dumps to CPU registers...
+
+Initializing virtual file system...
+
+Initializing memory...
+
+Initializing the State...
+
+Checking for multi-thread dumps...
+
+Found threads directory, loading thread dumps...
+
+Found thread index: main_tid=2818751, 27 thread(s)
+Thread states:
+  - TID 2818755: waiting
+  - TID 2818753: waiting
+  - TID 2818752: waiting
+  - TID 2818750: waiting
+  - TID 2818760: waiting
+  - TID 2818748: waiting
+  - TID 2818732: waiting
+  - TID 2818759: waiting
+  - TID 2818738: waiting
+  - TID 2818744: waiting
+  - TID 2818758: background
+  - TID 2818756: waiting
+  - TID 2818754: waiting
+  - TID 2818736: waiting
+  - TID 2818737: waiting
+  - TID 2818739: waiting
+  - TID 2818743: waiting
+  - TID 2818751: background
+  - TID 2818740: waiting
+  - TID 2818757: waiting
+  - TID 2818749: waiting
+  - TID 2818745: waiting
+  - TID 2818747: waiting
+  - TID 2818735: waiting
+  - TID 2818741: waiting
+  - TID 2818746: waiting
+  - TID 2818742: waiting
+Found 27 total thread dump(s) on disk
+  Loading TID 2818732 (fs_base=0x7ffff7fb0740, gs_base=0x0)
+  Loading TID 2818735 (fs_base=0x7fffb115f6c0, gs_base=0x0)
+  Loading TID 2818736 (fs_base=0x7fffb095e6c0, gs_base=0x0)
+  Loading TID 2818737 (fs_base=0x7fffabfff6c0, gs_base=0x0)
+  Loading TID 2818738 (fs_base=0x7fffab7fe6c0, gs_base=0x0)
+  Loading TID 2818739 (fs_base=0x7fffaaffd6c0, gs_base=0x0)
+  Loading TID 2818740 (fs_base=0x7fffaa7bc6c0, gs_base=0x0)
+  Loading TID 2818741 (fs_base=0x7fffa9f7b6c0, gs_base=0x0)
+  Loading TID 2818742 (fs_base=0x7fffa977a6c0, gs_base=0x0)
+  Loading TID 2818743 (fs_base=0x7fffa8f396c0, gs_base=0x0)
+  Loading TID 2818744 (fs_base=0x7fff8ffff6c0, gs_base=0x0)
+  Loading TID 2818745 (fs_base=0x7fff8f7fe6c0, gs_base=0x0)
+  Loading TID 2818746 (fs_base=0x7fff8effd6c0, gs_base=0x0)
+  Loading TID 2818747 (fs_base=0x7fff8e7fc6c0, gs_base=0x0)
+  Loading TID 2818748 (fs_base=0x7fff8dffb6c0, gs_base=0x0)
+  Loading TID 2818749 (fs_base=0x7fff8d7fa6c0, gs_base=0x0)
+  Loading TID 2818750 (fs_base=0x7fff8cff96c0, gs_base=0x0)
+  Loading TID 2818751 (fs_base=0x7fff6bfff6c0, gs_base=0x0)
+  Loading TID 2818752 (fs_base=0x7fff6b7fe6c0, gs_base=0x0)
+  Loading TID 2818753 (fs_base=0x7fff6affd6c0, gs_base=0x0)
+  Loading TID 2818754 (fs_base=0x7fff6a7fc6c0, gs_base=0x0)
+  Loading TID 2818755 (fs_base=0x7fff69ffb6c0, gs_base=0x0)
+  Loading TID 2818756 (fs_base=0x7fff697fa6c0, gs_base=0x0)
+  Loading TID 2818757 (fs_base=0x7fff68ff96c0, gs_base=0x0)
+  Loading TID 2818758 (fs_base=0x7fff47fff6c0, gs_base=0x0)
+  Loading TID 2818759 (fs_base=0x7fff477fe6c0, gs_base=0x0)
+  Loading TID 2818760 (fs_base=0x7fff46ffd6c0, gs_base=0x0)
+Successfully loaded 27 thread(s) from dumps
+Successfully loaded multi-thread state
+
+Creating the P-Code for the executable sections of libc.so and ld-linux-x86-64.so if they exist...
+
+Using base address 0x7ffff7c00000 for /usr/lib/x86_64-linux-gnu/libc.so.6
+Using base address 0x7ffff7fc5000 for /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+Initializing jump tables...
+
+✓ Successfully loaded 6 jump table(s)
+Configuration and context have been initialized.
+Acquired target information.
+Binary path: /home/kgorna/go-ethereum/build/bin/geth
+The symbols table has been populated.
+Path to the p-code file: /home/kgorna/zorya/external/pcode-generator/results/geth_low_pcode.txt
+Preprocessing the p-code file...
+Completed preprocessing.
+
+Merging VDSO p-code from: "/home/kgorna/zorya/results/initialization_data/vdso/vdso_low_pcode.txt"
+
+Preprocessing the p-code file...
+Completed preprocessing.
+
+Successfully merged 640 VDSO instruction blocks
+
+Mode is 'function'. Adapting the context...
+Start address is "1f36e80"
+Extracting Go function signatures using llvm-dwarfdump...
+Loading Go signatures from results/function_signatures_go.json...
+Loaded 59908 functions from JSON.
+Processed 57819 Go signatures.
+Found 3 arguments for function 'github.com/ethereum/go-ethereum/eth/tracers/native.(*callTracer).OnTxEnd' at 0x1f36e80
+=== PHASE 1: Initializing argument structures ===
+Assigning symbolic var 't' to register 'RAX' of type github.com/ethereum/go-ethereum/eth/tracers/native.callTracer *
+Initialized 't' => RAX (0x0) as symbolic github.com/ethereum/go-ethereum/eth/tracers/native.callTracer *
+Detected struct pointer 't' -> 'github.com/ethereum/go-ethereum/eth/tracers/native.callTracer', symbolizing struct fields...
+=== INITIALIZING STRUCT POINTER FIELDS ===
+Argument 't' is a pointer to struct 'github.com/ethereum/go-ethereum/eth/tracers/native.callTracer'
+Found struct 'github.com/ethereum/go-ethereum/eth/tracers/native.callTracer' with 72 bytes and 6 members
+[DEBUG]: get_concrete_value_from_location called with 'RAX'
+[DEBUG]: Register 'RAX' resolved to offset 0x0, bit_width=64
+[DEBUG]: Register 'RAX' concrete value = 0xc00003f450
+Struct pointer 't' = 0xc00003f450
+Struct pointer 't' left nullable (Go allows nil receivers and parameters)
+Made pointer 't' symbolic (non-null) in register 'RAX'
+Processing field 'callstack' at offset 0 (0xc00003f450), type: '[]github.com/ethereum/go-ethereum/eth/tracers/native.callFrame', layout_size: 24 bytes
+Symbolizing field 't.callstack' at 0xc00003f450 (size: 192 bits, is_pointer: false)
+Field 't.callstack' is a slice type ([]github.com/ethereum/go-ethereum/eth/tracers/native.callFrame), symbolizing as 24-byte composite (ptr+len+cap)
+Symbolizing slice field 't.callstack': []github.com/ethereum/go-ethereum/eth/tracers/native.callFrame (24 bytes = ptr + len + cap)
+✓ Symbolized slice.ptr at 0xc00003f450
+✓ Symbolized slice.len at 0xc00003f458
+✓ Symbolized slice.cap at 0xc00003f460
+✓ Successfully symbolized slice field 't.callstack' at 0xc00003f450 (ptr + len + cap, all symbolic)
+Processing field 'config' at offset 24 (0xc00003f468), type: 'github.com/ethereum/go-ethereum/eth/tracers/native.callTracerConfig', layout_size: 8 bytes
+Symbolizing field 't.config' at 0xc00003f468 (size: 64 bits, is_pointer: false)
+✓ Successfully symbolized field 't.config' at 0xc00003f468
+Processing field 'gasLimit' at offset 32 (0xc00003f470), type: 'uint64', layout_size: 8 bytes
+Symbolizing field 't.gasLimit' at 0xc00003f470 (size: 64 bits, is_pointer: false)
+✓ Successfully symbolized field 't.gasLimit' at 0xc00003f470
+Processing field 'depth' at offset 40 (0xc00003f478), type: 'int', layout_size: 8 bytes
+Symbolizing field 't.depth' at 0xc00003f478 (size: 64 bits, is_pointer: false)
+✓ Successfully symbolized field 't.depth' at 0xc00003f478
+Processing field 'interrupt' at offset 48 (0xc00003f480), type: 'sync/atomic.Bool', layout_size: 8 bytes
+Symbolizing field 't.interrupt' at 0xc00003f480 (size: 64 bits, is_pointer: false)
+✓ Successfully symbolized field 't.interrupt' at 0xc00003f480
+Processing field 'reason' at offset 56 (0xc00003f488), type: 'error', layout_size: 16 bytes
+Detected Go interface field 't.reason' at 0xc00003f488 (type: 'error', 16 bytes = itab + data)
+✓ Successfully symbolized Go interface field 't.reason' at 0xc00003f488 (itab + data, both nil-able)
+=== STRUCT FIELD SYMBOLIZATION COMPLETE: 6/6 fields symbolized ===
+Assigning symbolic var 'receipt' to register 'RBX' of type github.com/ethereum/go-ethereum/core/types.Receipt *
+Initialized 'receipt' => RBX (0x18) as symbolic github.com/ethereum/go-ethereum/core/types.Receipt *
+Detected struct pointer 'receipt' -> 'github.com/ethereum/go-ethereum/core/types.Receipt', symbolizing struct fields...
+=== INITIALIZING STRUCT POINTER FIELDS ===
+Argument 'receipt' is a pointer to struct 'github.com/ethereum/go-ethereum/core/types.Receipt'
+Found struct 'github.com/ethereum/go-ethereum/core/types.Receipt' with 464 bytes and 15 members
+[DEBUG]: get_concrete_value_from_location called with 'RBX'
+[DEBUG]: Register 'RBX' resolved to offset 0x18, bit_width=64
+[DEBUG]: Register 'RBX' concrete value = 0xc0002dda40
+Struct pointer 'receipt' = 0xc0002dda40
+Struct pointer 'receipt' left nullable (Go allows nil receivers and parameters)
+Made pointer 'receipt' symbolic (non-null) in register 'RBX'
+Processing field 'Type' at offset 0 (0xc0002dda40), type: 'uint8', layout_size: 8 bytes
+Using layout-based size 64 bits (type-based was 8 bits) for field 'receipt.Type'
+Symbolizing field 'receipt.Type' at 0xc0002dda40 (size: 64 bits, is_pointer: false)
+✓ Successfully symbolized field 'receipt.Type' at 0xc0002dda40
+Processing field 'PostState' at offset 8 (0xc0002dda48), type: '[]uint8', layout_size: 24 bytes
+Symbolizing field 'receipt.PostState' at 0xc0002dda48 (size: 192 bits, is_pointer: false)
+Field 'receipt.PostState' is a slice type ([]uint8), symbolizing as 24-byte composite (ptr+len+cap)
+Symbolizing slice field 'receipt.PostState': []uint8 (24 bytes = ptr + len + cap)
+✓ Symbolized slice.ptr at 0xc0002dda48
+✓ Symbolized slice.len at 0xc0002dda50
+✓ Symbolized slice.cap at 0xc0002dda58
+✓ Successfully symbolized slice field 'receipt.PostState' at 0xc0002dda48 (ptr + len + cap, all symbolic)
+Processing field 'Status' at offset 32 (0xc0002dda60), type: 'uint64', layout_size: 8 bytes
+Symbolizing field 'receipt.Status' at 0xc0002dda60 (size: 64 bits, is_pointer: false)
+✓ Successfully symbolized field 'receipt.Status' at 0xc0002dda60
+Processing field 'CumulativeGasUsed' at offset 40 (0xc0002dda68), type: 'uint64', layout_size: 8 bytes
+Symbolizing field 'receipt.CumulativeGasUsed' at 0xc0002dda68 (size: 64 bits, is_pointer: false)
+✓ Successfully symbolized field 'receipt.CumulativeGasUsed' at 0xc0002dda68
+Processing field 'Bloom' at offset 48 (0xc0002dda70), type: 'github.com/ethereum/go-ethereum/core/types.Bloom', layout_size: 256 bytes
+Using layout-based size 2048 bits (type-based was 64 bits) for field 'receipt.Bloom'
+Symbolizing field 'receipt.Bloom' at 0xc0002dda70 (size: 2048 bits, is_pointer: false)
+WARNING: Field 'receipt.Bloom' is too large (256 bytes) - skipping
+Processing field 'Logs' at offset 304 (0xc0002ddb70), type: '[]*github.com/ethereum/go-ethereum/core/types.Log', layout_size: 24 bytes
+Symbolizing field 'receipt.Logs' at 0xc0002ddb70 (size: 192 bits, is_pointer: false)
+Field 'receipt.Logs' is a slice type ([]*github.com/ethereum/go-ethereum/core/types.Log), symbolizing as 24-byte composite (ptr+len+cap)
+Symbolizing slice field 'receipt.Logs': []*github.com/ethereum/go-ethereum/core/types.Log (24 bytes = ptr + len + cap)
+✓ Symbolized slice.ptr at 0xc0002ddb70
+✓ Symbolized slice.len at 0xc0002ddb78
+✓ Symbolized slice.cap at 0xc0002ddb80
+✓ Successfully symbolized slice field 'receipt.Logs' at 0xc0002ddb70 (ptr + len + cap, all symbolic)
+Processing field 'TxHash' at offset 328 (0xc0002ddb88), type: 'github.com/ethereum/go-ethereum/common.Hash', layout_size: 32 bytes
+Using layout-based size 256 bits (type-based was 64 bits) for field 'receipt.TxHash'
+Symbolizing field 'receipt.TxHash' at 0xc0002ddb88 (size: 256 bits, is_pointer: false)
+WARNING: Field 'receipt.TxHash' is too large (32 bytes) - skipping
+Processing field 'ContractAddress' at offset 360 (0xc0002ddba8), type: 'github.com/ethereum/go-ethereum/common.Address', layout_size: 24 bytes
+Using layout-based size 192 bits (type-based was 64 bits) for field 'receipt.ContractAddress'
+Symbolizing field 'receipt.ContractAddress' at 0xc0002ddba8 (size: 192 bits, is_pointer: false)
+WARNING: Field 'receipt.ContractAddress' is too large (24 bytes) - skipping
+Processing field 'GasUsed' at offset 384 (0xc0002ddbc0), type: 'uint64', layout_size: 8 bytes
+Symbolizing field 'receipt.GasUsed' at 0xc0002ddbc0 (size: 64 bits, is_pointer: false)
+✓ Successfully symbolized field 'receipt.GasUsed' at 0xc0002ddbc0
+Processing field 'EffectiveGasPrice' at offset 392 (0xc0002ddbc8), type: 'math/big.Int *', layout_size: 8 bytes
+Symbolizing field 'receipt.EffectiveGasPrice' at 0xc0002ddbc8 (size: 64 bits, is_pointer: true)
+✓ Field 'receipt.EffectiveGasPrice' is a pointer - allowing nil values
+✓ Successfully symbolized field 'receipt.EffectiveGasPrice' at 0xc0002ddbc8
+Processing field 'BlobGasUsed' at offset 400 (0xc0002ddbd0), type: 'uint64', layout_size: 8 bytes
+Symbolizing field 'receipt.BlobGasUsed' at 0xc0002ddbd0 (size: 64 bits, is_pointer: false)
+✓ Successfully symbolized field 'receipt.BlobGasUsed' at 0xc0002ddbd0
+Processing field 'BlobGasPrice' at offset 408 (0xc0002ddbd8), type: 'math/big.Int *', layout_size: 8 bytes
+Symbolizing field 'receipt.BlobGasPrice' at 0xc0002ddbd8 (size: 64 bits, is_pointer: true)
+✓ Field 'receipt.BlobGasPrice' is a pointer - allowing nil values
+✓ Successfully symbolized field 'receipt.BlobGasPrice' at 0xc0002ddbd8
+Processing field 'BlockHash' at offset 416 (0xc0002ddbe0), type: 'github.com/ethereum/go-ethereum/common.Hash', layout_size: 32 bytes
+Using layout-based size 256 bits (type-based was 64 bits) for field 'receipt.BlockHash'
+Symbolizing field 'receipt.BlockHash' at 0xc0002ddbe0 (size: 256 bits, is_pointer: false)
+WARNING: Field 'receipt.BlockHash' is too large (32 bytes) - skipping
+Processing field 'BlockNumber' at offset 448 (0xc0002ddc00), type: 'math/big.Int *', layout_size: 8 bytes
+Symbolizing field 'receipt.BlockNumber' at 0xc0002ddc00 (size: 64 bits, is_pointer: true)
+✓ Field 'receipt.BlockNumber' is a pointer - allowing nil values
+✓ Successfully symbolized field 'receipt.BlockNumber' at 0xc0002ddc00
+Processing field 'TransactionIndex' at offset 456 (0xc0002ddc08), type: 'uint', layout_size: 8 bytes
+Symbolizing field 'receipt.TransactionIndex' at 0xc0002ddc08 (size: 64 bits, is_pointer: false)
+✓ Successfully symbolized field 'receipt.TransactionIndex' at 0xc0002ddc08
+=== STRUCT FIELD SYMBOLIZATION COMPLETE: 11/15 fields symbolized ===
+Assigning symbolic var 'err' to register 'RCX,RDI' of type error
+WARNING: multiple registers 'RCX,RDI' for non-slice/string argument 'err', using first register
+Initialized 'err' => RCX (0x8) as symbolic error
+=== PHASE 2: Initializing slice memory contents ===
+No slice arguments found, skipping memory initialization
+Initializing string memory contents...
+=== INITIALIZING STRING MEMORY CONTENTS ===
+=== FINISHED STRING MEMORY INITIALIZATION ===
+=== INITIALIZATION COMPLETE: 3 total arguments processed ===
+[GO-INIT] Checking for goroutine stackPreempt flag...
+[GO-PREEMPT] stackguard0 = 0xc000ae03a0 (not stackPreempt) - no clearing needed
+Logging the addresses of the XREFs of Panic functions...
+Beginning execution from address: 0x1f36e80
+Loading function arguments map...
+Loading Go function arguments map...
+Loading function signatures from results/function_signatures_go.json...
+Loaded 59908 functions from JSON.
+Processed 57819 function signatures.
+*******************************************
+EXECUTING INSTRUCTIONS AT ADDRESS: 0x1f36e80
+*******************************************
+
+...
+
+Current RIP: 0x1f36eb3
+local_line_number: 1, instructions.len()-1: 9
+-------> Processing instruction at index: 2, Inst { opcode: Load, output: Some(Varnode { var: Unique(0xd900), size: Byte }), inputs: [Varnode { var: MemoryRam, size: Quad }, Varnode { var: Register(0, Quad), size: Quad }] }
+* FYI, the space ID is not used during zorya execution.
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Register(0, Quad)
+Varnode is a CPU register with offset: 0x0 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x0
+Pointer offset to be dereferenced : c00003f450
+[NULL-CHECK] Checking if 't_ptr' can be NULL (LOAD at 0x1f36eb3, concrete ptr: 0xc00003f450, constraints: 1)
+>>> Using panic address from caller: 0x1f36eb3
+Asserting NULL pointer condition to the solver: pointer == 0
+Pointer expression: t_ptr!141
+=== CONSTRAINT ANALYSIS ===
+=== CUSTOM SIMPLIFIED CONSTRAINTS ===
+Constraint #1 (Bool) with Custom Simplification: (not (not (= err_RCX!168 #x0000000000000000)))
+=== ASSERTING SIMPLIFIED CONSTRAINTS TO SOLVER ===
+Adding 1 simplified constraints to solver...
+=== END CONSTRAINT ANALYSIS ===
+~~~~~~~~~~~
+SATISFIABLE: Symbolic execution can lead to a panic function.
+~~~~~~~~~~~
+To enter a panic function, the following conditions must be satisfied:
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'err' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+  - The input 't_ptr' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'err':
+  err_RCX!168 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlobGasPrice':
+  receipt_BlobGasPrice!165 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlobGasUsed':
+  receipt_BlobGasUsed!164 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlockNumber':
+  receipt_BlockNumber!166 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.CumulativeGasUsed':
+  receipt_CumulativeGasUsed!158 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.EffectiveGasPrice':
+  receipt_EffectiveGasPrice!163 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.GasUsed':
+  receipt_GasUsed!162 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.cap':
+  receipt_Logs_cap!161 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.len':
+  receipt_Logs_len!160 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.ptr':
+  receipt_Logs_ptr!159 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.cap':
+  receipt_PostState_cap!156 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.len':
+  receipt_PostState_len!155 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.ptr':
+  receipt_PostState_ptr!154 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Status':
+  receipt_Status!157 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.TransactionIndex':
+  receipt_TransactionIndex!167 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Type':
+  receipt_Type!153 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt_ptr':
+  receipt_ptr!152 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.cap':
+  t_callstack_cap!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.len':
+  t_callstack_len!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.ptr':
+  t_callstack_ptr!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.config':
+  t_config!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.depth':
+  t_depth!147 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.gasLimit':
+  t_gasLimit!146 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.interrupt':
+  t_interrupt!148 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.reason.data':
+  t_reason_data!150 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.reason.itab':
+  t_reason_itab!149 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't_ptr':
+  t_ptr!141 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+========================================================================
+VULNERABILITY: Symbolic NULL pointer dereference
+  Address: 0x1f36eb3
+  Elapsed: 1049.818s
+  Opcode: LOAD
+  Detection method: Exploring the current path with a symbolic check on the pointer
+  More details in: results/FOUND_SAT_STATE.txt
+========================================================================
+
+~~~~~~~~~~~
+Load size in bits: 8
+Memory size in bits: 64
+Padded concrete from 1 to 8 bytes: [80, 00, 00, 00, 00, 00, 00, 00]
+Extracting memory value from 64 bits to 8 bits
+Dereferenced value: 0x80, with size 64, and symbolic: Int(((_ extract 7 0) t_callstack_ptr!142))
+Output is a Unique type with ID: 0xd900
+Updated Unique(0xd900) with concrete value 0x80 and size 64
+The value of register at offset 0x0 - RAX is c00003f450 and symbolic t_ptr!141
+The value of register at offset 0x8 - RCX is 0 and symbolic err_RCX!168
+The value of register at offset 0x10 - RDX is c00084aa60 and symbolic #x000000c00084aa60
+The value of register at offset 0x18 - RBX is c0002dda40 and symbolic receipt_ptr!152
+The value of register at offset 0x20 - RSP is c000ae1c78 and symbolic #x000000c000ae1c78
+The value of register at offset 0x28 - RBP is c000ae1c90 and symbolic #x000000c000ae1c90
+The value of register at offset 0x30 - RSI is c000ae20d0 and symbolic #x000000c000ae20d0
+The value of register at offset 0x38 - RDI is 0 and symbolic #x0000000000000000
+The value of register at offset 0x80 - R8 is c000ae20c8 and symbolic #x000000c000ae20c8
+The value of register at offset 0x88 - R9 is c0002ddfe8 and symbolic #x000000c0002ddfe8
+The value of register at offset 0x90 - R10 is 14 and symbolic #x0000000000000014
+The value of register at offset 0x98 - R11 is 8 and symbolic #x0000000000000008
+The value of register at offset 0xa0 - R12 is 0 and symbolic #x0000000000000000
+The value of register at offset 0xa8 - R13 is e9f491e1391f0603 and symbolic #xe9f491e1391f0603
+The value of register at offset 0xb0 - R14 is c0006fd180 and symbolic #x000000c0006fd180
+The value of register at offset 0xb8 - R15 is 2a7457fa5ce630f4 and symbolic #x2a7457fa5ce630f4
+The value of register at offset 0x1200 - YMM0 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x1220 - YMM1 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x200 - CF is 0 and symbolic #x00
+The value of register at offset 0x202 - PF is 1 and symbolic (ite (= ((_ extract 0 0) err_RCX!168)
+        (bvadd ((_ extract 1 1) err_RCX!168)
+               ((_ extract 2 2) err_RCX!168)
+               ((_ extract 3 3) err_RCX!168)
+               ((_ extract 4 4) err_RCX!168)
+               ((_ extract 5 5) err_RCX!168)
+               ((_ extract 6 6) err_RCX!168)
+               ((_ extract 7 7) err_RCX!168)))
+     #x01
+     #x00)
+The value of register at offset 0x206 - ZF is 1 and symbolic (ite (= err_RCX!168 #x0000000000000000) #x01 #x00)
+The value of register at offset 0x207 - SF is 0 and symbolic (ite (bvsle #x0000000000000000 err_RCX!168) #x00 #x01)
+The value of register at offset 0x20b - OF is 0 and symbolic #x00
+The value of register at offset 0x110 - FS_OFFSET is 7fff6bfff6c0
+Possible new RIP: 0x1f36eb3
+Current RIP: 0x1f36eb3
+
+...
+
+Current RIP: 0x1f36eb5
+local_line_number: 1, instructions.len()-1: 9
+-------> Processing instruction at index: 2, Inst { opcode: Load, output: Some(Varnode { var: Unique(0xd900), size: Byte }), inputs: [Varnode { var: MemoryRam, size: Quad }, Varnode { var: Register(18, Quad), size: Quad }] }
+* FYI, the space ID is not used during zorya execution.
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Register(18, Quad)
+Varnode is a CPU register with offset: 0x18 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x18
+Pointer offset to be dereferenced : c0002dda40
+[NULL-CHECK] Checking if 'receipt_ptr' can be NULL (LOAD at 0x1f36eb5, concrete ptr: 0xc0002dda40, constraints: 1)
+>>> Using panic address from caller: 0x1f36eb5
+Asserting NULL pointer condition to the solver: pointer == 0
+Pointer expression: receipt_ptr!152
+=== CONSTRAINT ANALYSIS ===
+=== CUSTOM SIMPLIFIED CONSTRAINTS ===
+Constraint #1 (Bool) with Custom Simplification: (not (not (= err_RCX!168 #x0000000000000000)))
+=== ASSERTING SIMPLIFIED CONSTRAINTS TO SOLVER ===
+Adding 1 simplified constraints to solver...
+=== END CONSTRAINT ANALYSIS ===
+~~~~~~~~~~~
+SATISFIABLE: Symbolic execution can lead to a panic function.
+~~~~~~~~~~~
+To enter a panic function, the following conditions must be satisfied:
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'err' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+  - The input 'receipt_ptr' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'err':
+  err_RCX!168 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlobGasPrice':
+  receipt_BlobGasPrice!165 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlobGasUsed':
+  receipt_BlobGasUsed!164 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlockNumber':
+  receipt_BlockNumber!166 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.CumulativeGasUsed':
+  receipt_CumulativeGasUsed!158 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.EffectiveGasPrice':
+  receipt_EffectiveGasPrice!163 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.GasUsed':
+  receipt_GasUsed!162 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.cap':
+  receipt_Logs_cap!161 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.len':
+  receipt_Logs_len!160 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.ptr':
+  receipt_Logs_ptr!159 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.cap':
+  receipt_PostState_cap!156 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.len':
+  receipt_PostState_len!155 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.ptr':
+  receipt_PostState_ptr!154 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Status':
+  receipt_Status!157 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.TransactionIndex':
+  receipt_TransactionIndex!167 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Type':
+  receipt_Type!153 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt_ptr':
+  receipt_ptr!152 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.cap':
+  t_callstack_cap!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.len':
+  t_callstack_len!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.ptr':
+  t_callstack_ptr!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.config':
+  t_config!145 = #xffff7ffffbfffffe
+    (unsigned: 18446603336154087422)
+    (signed: -140737555464194)
+    (ASCII LSB: non-printable 0xfe)
+
+Argument 't.depth':
+  t_depth!147 = #x66fba555db41e5ee
+    (unsigned: 7420706599192356334)
+    (signed: 7420706599192356334)
+    (ASCII LSB: non-printable 0xee)
+
+Argument 't.gasLimit':
+  t_gasLimit!146 = #x2fdfba7efffe67d4
+    (unsigned: 3449680894212597716)
+    (signed: 3449680894212597716)
+    (ASCII LSB: non-printable 0xd4)
+
+Argument 't.interrupt':
+  t_interrupt!148 = #x0000401020000008
+    (unsigned: 70438000525320)
+    (signed: 70438000525320)
+    (ASCII LSB: non-printable 0x08)
+
+Argument 't.reason.data':
+  t_reason_data!150 = #x0c7776be4d7aed77
+    (unsigned: 898317210399468919)
+    (signed: 898317210399468919)
+    (ASCII LSB: 'w')
+
+Argument 't.reason.itab':
+  t_reason_itab!149 = #xbb7ebd8c6bfb5299
+    (unsigned: 13510444342962770585)
+    (signed: -4936299730746781031)
+    (ASCII LSB: non-printable 0x99)
+
+Argument 't_ptr':
+  t_ptr!141 = #x8000402000000001
+    (unsigned: 9223442543037906945)
+    (signed: -9223301530671644671)
+    (ASCII LSB: non-printable 0x01)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+========================================================================
+VULNERABILITY: Symbolic NULL pointer dereference
+  Address: 0x1f36eb5
+  Elapsed: 1277.320s
+  Opcode: LOAD
+  Detection method: Exploring the current path with a symbolic check on the pointer
+  More details in: results/FOUND_SAT_STATE.txt
+========================================================================
+
+~~~~~~~~~~~
+Load size in bits: 8
+Memory size in bits: 64
+Padded concrete from 1 to 8 bytes: [02, 00, 00, 00, 00, 00, 00, 00]
+Extracting memory value from 64 bits to 8 bits
+Dereferenced value: 0x2, with size 64, and symbolic: Int(((_ extract 7 0) receipt_Type!153))
+Output is a Unique type with ID: 0xd900
+Updated Unique(0xd900) with concrete value 0x2 and size 64
+The value of register at offset 0x0 - RAX is c00003f450 and symbolic t_ptr!141
+The value of register at offset 0x8 - RCX is 0 and symbolic err_RCX!168
+The value of register at offset 0x10 - RDX is c00084aa60 and symbolic #x000000c00084aa60
+The value of register at offset 0x18 - RBX is c0002dda40 and symbolic receipt_ptr!152
+The value of register at offset 0x20 - RSP is c000ae1c78 and symbolic #x000000c000ae1c78
+The value of register at offset 0x28 - RBP is c000ae1c90 and symbolic #x000000c000ae1c90
+The value of register at offset 0x30 - RSI is c000ae20d0 and symbolic #x000000c000ae20d0
+The value of register at offset 0x38 - RDI is 0 and symbolic #x0000000000000000
+The value of register at offset 0x80 - R8 is c000ae20c8 and symbolic #x000000c000ae20c8
+The value of register at offset 0x88 - R9 is c0002ddfe8 and symbolic #x000000c0002ddfe8
+The value of register at offset 0x90 - R10 is 14 and symbolic #x0000000000000014
+The value of register at offset 0x98 - R11 is 8 and symbolic #x0000000000000008
+The value of register at offset 0xa0 - R12 is 0 and symbolic #x0000000000000000
+The value of register at offset 0xa8 - R13 is e9f491e1391f0603 and symbolic #xe9f491e1391f0603
+The value of register at offset 0xb0 - R14 is c0006fd180 and symbolic #x000000c0006fd180
+The value of register at offset 0xb8 - R15 is 2a7457fa5ce630f4 and symbolic #x2a7457fa5ce630f4
+The value of register at offset 0x1200 - YMM0 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x1220 - YMM1 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x200 - CF is 0 and symbolic #x00
+The value of register at offset 0x202 - PF is 1 and symbolic (ite (= (bvnot (bvor (bvnot ((_ extract 0 0) t_callstack_ptr!142))
+                     (bvnot ((_ extract 0 0) t_ptr!141))))
+        (bvadd (bvnot (bvor (bvnot ((_ extract 1 1) t_callstack_ptr!142))
+                            (bvnot ((_ extract 1 1) t_ptr!141))))
+               (bvnot (bvor (bvnot ((_ extract 2 2) t_callstack_ptr!142))
+                            (bvnot ((_ extract 2 2) t_ptr!141))))
+               (bvnot (bvor (bvnot ((_ extract 3 3) t_callstack_ptr!142))
+                            (bvnot ((_ extract 3 3) t_ptr!141))))
+               (bvnot (bvor (bvnot ((_ extract 4 4) t_callstack_ptr!142))
+                            (bvnot ((_ extract 4 4) t_ptr!141))))
+               (bvnot (bvor (bvnot ((_ extract 5 5) t_callstack_ptr!142))
+                            (bvnot ((_ extract 5 5) t_ptr!141))))
+               (bvnot (bvor (bvnot ((_ extract 6 6) t_callstack_ptr!142))
+                            (bvnot ((_ extract 6 6) t_ptr!141))))
+               (bvnot (bvor (bvnot ((_ extract 7 7) t_callstack_ptr!142))
+                            (bvnot ((_ extract 7 7) t_ptr!141))))))
+     #x01
+     #x00)
+The value of register at offset 0x206 - ZF is 1 and symbolic (ite (= (bvnot (bvor (bvnot ((_ extract 7 0) t_callstack_ptr!142))
+                     (bvnot ((_ extract 7 0) t_ptr!141))))
+        #x00)
+     #x01
+     #x00)
+The value of register at offset 0x207 - SF is 0 and symbolic (ite (bvsle #x00
+            (bvnot (bvor (bvnot ((_ extract 7 0) t_callstack_ptr!142))
+                         (bvnot ((_ extract 7 0) t_ptr!141)))))
+     #x00
+     #x01)
+The value of register at offset 0x20b - OF is 0 and symbolic #x00
+The value of register at offset 0x110 - FS_OFFSET is 7fff6bfff6c0
+Possible new RIP: 0x1f36eb5
+Current RIP: 0x1f36eb5
+
+...
+
+Current RIP: 0x1f36ec8
+local_line_number: 1, instructions.len()-1: 2
+-------> Processing instruction at index: 2, Inst { opcode: CBranch, output: None, inputs: [Varnode { var: Memory(0x1f36ecc), size: Quad }, Varnode { var: Unique(0xe780), size: Byte }] }
+Converting Varnode to concolic type: Unique(0xe780)
+Varnode is of type 'unique' with ID: 0xe780 and size: 8 bits
+Retrieved unique variable: Int(1) with symbolic size: 8
+Branch at 0x1f36ec8 involves tracked symbolic variables; performing overlay analysis...
+ Possible panic function reference detected: entrying symbolic checks...
+Converting Varnode to concolic type: Unique(0xe780)
+Varnode is of type 'unique' with ID: 0xe780 and size: 8 bits
+Retrieved unique variable: Int(1) with symbolic size: 8
+>>> Branch condition is true (0x1), performing lightweight path analysis on the other branch...
+>>> Real branch target (non-internal) with tracked symbolic variables - performing overlay exploration.
+>>> Performing concolic overlay path analysis on negated path at 0x1f36eca...
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  OVERLAY MODE: Exploring UNTAKEN path (speculative execution)        ║
+║  Starting address: 0x1f36eca  |  Max depth: 15 instructions           ║
+╚══════════════════════════════════════════════════════════════════════╝
+[OVERLAY] Saved 2 unique variables before overlay exploration
+[OVERLAY] Saved current_address before overlay: Some(32730824)
+[OVERLAY] Saved call stack state: depth=0, freed_frames=0
+[OVERLAY] Speculative execution starting at 0x1f36eca
+[OVERLAY] [depth 1] 0x1f36eca:0 Branch
+* Fetching branch target from instruction.input[0]
+Branch target is a specific memory address: 0x1f36f16
+Branch target is an absolute address: 0x1f36f16
+Updated RIP register with branch target: 0x1f36f16
+[OVERLAY] Following branch to 0x1f36f16
+[OVERLAY] [depth 2] 0x1f36f16:0 Copy
+Output size in bits: 8
+* Fetching source from instruction.input[0]
+Converting Varnode to concolic type: Const(0x0)
+Varnode is a constant with value: 0x0
+Parsed value (signed): 0
+Constant treated as memory value: 0 with symbolic size 8
+[OVERLAY] [depth 3] 0x1f36f16:1 Copy
+Output size in bits: 8
+* Fetching source from instruction.input[0]
+Converting Varnode to concolic type: Const(0x0)
+Varnode is a constant with value: 0x0
+Parsed value (signed): 0
+Constant treated as memory value: 0 with symbolic size 8
+[OVERLAY] [depth 4] 0x1f36f16:2 IntXor
+* Fetching instruction.input[0] for INT_XOR
+Converting Varnode to concolic type: Register(0, Word)
+Varnode is a CPU register with offset: 0x0 and requested bit size: 32
+Register at offset 0x0 exists but with size 64 bits, needs 32 bits, extraction needed
+* Fetching instruction.input[1] for INT_XOR
+Converting Varnode to concolic type: Register(0, Word)
+Varnode is a CPU register with offset: 0x0 and requested bit size: 32
+Register at offset 0x0 exists but with size 64 bits, needs 32 bits, extraction needed
+input0_var: 259152, input1_var: 259152
+Output size in bits: 32
+*** The result of INT_XOR is: 0x0
+Output is a Register type
+Updated register at offset 0x0 with concrete value 0x3f450, concrete size 32 bits and symbolic size 32 bits
+[OVERLAY] [depth 5] 0x1f36f16:3 IntZExt
+* Fetching instruction.input[0] for INT_ZEXT
+Converting Varnode to concolic type: Register(0, Word)
+Varnode is a CPU register with offset: 0x0 and requested bit size: 32
+Register at offset 0x0 exists but with size 64 bits, needs 32 bits, extraction needed
+*** INT_ZEXT concrete result: 0x0
+Output is a Register type
+Updated register at offset 0x0 with concrete value 0x0, concrete size 64 bits and symbolic size 64 bits
+[OVERLAY] [depth 6] 0x1f36f16:4 IntSLess
+* Fetching instruction.input[0] for INT_SLESS
+Converting Varnode to concolic type: Register(0, Word)
+Varnode is a CPU register with offset: 0x0 and requested bit size: 32
+Register at offset 0x0 exists but with size 64 bits, needs 32 bits, extraction needed
+* Fetching instruction.input[1] for INT_SLESS
+Converting Varnode to concolic type: Const(0x0)
+Varnode is a constant with value: 0x0
+Parsed value (signed): 0
+Constant treated as memory value: 0 with symbolic size 32
+Output size in bits: 8
+input0_var concrete: 0, input1_var concrete: 0
+input0 bit width: 32, input1 bit width: 32
+Signed comparison: 0 < 0 = false
+result_concrete: false
+result_symbolic (Bool): false
+result_value symbolic (BV): #x00
+*** The result of INT_SLESS is: 0
+Output is a Register type
+Updated register at offset 0x207 with concrete value 0x0, concrete size 8 bits and symbolic size 8 bits
+[OVERLAY] [depth 7] 0x1f36f16:5 IntEqual
+=== STARTING INT_EQUAL DEBUG ===
+* Fetching instruction.input[0] for INT_EQUAL
+Converting Varnode to concolic type: Register(0, Word)
+Varnode is a CPU register with offset: 0x0 and requested bit size: 32
+Register at offset 0x0 exists but with size 64 bits, needs 32 bits, extraction needed
+* Fetching instruction.input[1] for INT_EQUAL
+Converting Varnode to concolic type: Const(0x0)
+Varnode is a constant with value: 0x0
+Parsed value (signed): 0
+Constant treated as memory value: 0 with symbolic size 32
+input0_var concrete: 0, input1_var concrete: 0
+=== CHECKING AFTER get_symbolic_value_bv ===
+input0_bv: #x00000000
+input1_bv: #x00000000
+=== CHECKING AFTER SIMPLIFY ===
+input0 simplified: #x00000000
+input1 simplified: #x00000000
+Output size in bits: 8
+=== PERFORMING EQUALITY COMPARISON ===
+result_concrete: true
+result_symbolic (Bool): true
+=== CREATING CONCOLIC VAR ===
+result_value symbolic (Bool): true
+*** The result of INT_EQUAL is: 1
+=== CALLING handle_output ===
+Output is a Register type
+Updated register at offset 0x206 with concrete value 0x0, concrete size 8 bits and symbolic size 8 bits
+=== AFTER handle_output - CHECKING FINAL REGISTER STATE ===
+Final register symbolic: Int((ite (= t_callstack_len!143 #x0000000000000000) #x01 #x00))
+=== END INT_EQUAL DEBUG ===
+[OVERLAY] [depth 8] 0x1f36f16:6 IntAnd
+* Fetching instruction.input[0] for INT_AND
+Converting Varnode to concolic type: Register(0, Word)
+Varnode is a CPU register with offset: 0x0 and requested bit size: 32
+Register at offset 0x0 exists but with size 64 bits, needs 32 bits, extraction needed
+* Fetching instruction.input[1] for INT_AND
+Converting Varnode to concolic type: Const(0xff)
+Varnode is a constant with value: 0xff
+Parsed value (signed): 255
+Constant treated as memory value: 255 with symbolic size 32
+Output size in bits: 32
+*** The result of INT_AND is: 0
+
+Writing 0 to the unique variable with ID: 0x15100
+Updated unique variable: Unique(0x15100) with concrete part : 0, concrete size 32 bits and symbolic size 32 bits
+[OVERLAY] [depth 9] 0x1f36f16:7 PopCount
+* Fetching instruction.input[0] for POPCOUNT
+Converting Varnode to concolic type: Unique(0x15100)
+Varnode is of type 'unique' with ID: 0x15100 and size: 32 bits
+Retrieved unique variable: Int(0) with symbolic size: 32
+Writing 0 to the unique variable with ID: 0x15180
+Updated unique variable: Unique(0x15180) with concrete part : 0, concrete size 8 bits and symbolic size 8 bits
+[OVERLAY] [depth 10] 0x1f36f16:8 IntAnd
+* Fetching instruction.input[0] for INT_AND
+Converting Varnode to concolic type: Unique(0x15180)
+Varnode is of type 'unique' with ID: 0x15180 and size: 8 bits
+Retrieved unique variable: Int(0) with symbolic size: 8
+* Fetching instruction.input[1] for INT_AND
+Converting Varnode to concolic type: Const(0x1)
+Varnode is a constant with value: 0x1
+Parsed value (signed): 1
+Constant treated as memory value: 1 with symbolic size 8
+Output size in bits: 8
+*** The result of INT_AND is: 0
+
+Writing 0 to the unique variable with ID: 0x15200
+Updated unique variable: Unique(0x15200) with concrete part : 0, concrete size 8 bits and symbolic size 8 bits
+[OVERLAY] [depth 11] 0x1f36f16:9 IntEqual
+=== STARTING INT_EQUAL DEBUG ===
+* Fetching instruction.input[0] for INT_EQUAL
+Converting Varnode to concolic type: Unique(0x15200)
+Varnode is of type 'unique' with ID: 0x15200 and size: 8 bits
+Retrieved unique variable: Int(0) with symbolic size: 8
+* Fetching instruction.input[1] for INT_EQUAL
+Converting Varnode to concolic type: Const(0x0)
+Varnode is a constant with value: 0x0
+Parsed value (signed): 0
+Constant treated as memory value: 0 with symbolic size 8
+input0_var concrete: 0, input1_var concrete: 0
+=== CHECKING AFTER get_symbolic_value_bv ===
+input0_bv: #x00
+input1_bv: #x00
+=== CHECKING AFTER SIMPLIFY ===
+input0 simplified: #x00
+input1 simplified: #x00
+Output size in bits: 8
+=== PERFORMING EQUALITY COMPARISON ===
+result_concrete: true
+result_symbolic (Bool): true
+=== CREATING CONCOLIC VAR ===
+result_value symbolic (Bool): true
+*** The result of INT_EQUAL is: 1
+=== CALLING handle_output ===
+Output is a Register type
+Updated register at offset 0x202 with concrete value 0x0, concrete size 8 bits and symbolic size 8 bits
+=== AFTER handle_output - CHECKING FINAL REGISTER STATE ===
+Final register symbolic: Int((ite (= ((_ extract 0 0) t_callstack_len!143)
+        (bvadd ((_ extract 1 1) t_callstack_len!143)
+               ((_ extract 2 2) t_callstack_len!143)
+               ((_ extract 3 3) t_callstack_len!143)
+               ((_ extract 4 4) t_callstack_len!143)
+               ((_ extract 5 5) t_callstack_len!143)
+               ((_ extract 6 6) t_callstack_len!143)
+               ((_ extract 7 7) t_callstack_len!143)))
+     #x01
+     #x00))
+=== END INT_EQUAL DEBUG ===
+[OVERLAY] [depth 12] 0x1f36f18:0 IntSub
+* Fetching instruction.input[0] for INT_SUB
+Converting Varnode to concolic type: Register(20, Quad)
+Varnode is a CPU register with offset: 0x20 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x20
+* Fetching instruction.input[1] for INT_SUB
+Converting Varnode to concolic type: Const(0x8)
+Varnode is a constant with value: 0x8
+Parsed value (signed): 8
+Constant treated as memory value: 8 with symbolic size 64
+Output size in bits: 64
+*** The result of INT_SUB is: 824645131376
+
+Output is a Register type
+Updated register at offset 0x20 with concrete value 0xc000ae1c70, concrete size 64 bits and symbolic size 64 bits
+[OVERLAY] [depth 13] 0x1f36f18:1 Store
+Converting Varnode to concolic type: Register(20, Quad)
+Varnode is a CPU register with offset: 0x20 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x20
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Register(20, Quad)
+Varnode is a CPU register with offset: 0x20 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x20
+Pointer offset concrete: c000ae1c70
+Marked address 0xc000ae1c70 as initialized
+* Fetching data to store from instruction.input[2]
+Converting Varnode to concolic type: Const(0x1f36f1d)
+Varnode is a constant with value: 0x1f36f1d
+Parsed value (signed): 32730909
+Constant treated as memory value: 32730909 with symbolic size 64
+Data size in bits: 64
+Creating single MemoryValue: concrete=0x1f36f1d, symbolic=#x0000000001f36f1d, size=64
+Stored single value 0x1f36f1d to memory at address 0xc000ae1c70
+Verified single value at 0xc000ae1c70: stored=0x1f36f1d, expected=0x1f36f1d
+Marked address 0xc000ae1c70 as initialized
+[OVERLAY] [depth 14] 0x1f36f18:2 Call
+* Fetching data to store from instruction.input[0]
+Data to store is a constant with value: 0x48d660
+Data to call: 48d660
+[STACK_FRAME] Pushed frame for func 0x48d660, RSP=0xc000ae1c78 (depth: 1)
+[OVERLAY] [depth 15] 0x1f36f1e:0 IntAdd
+* Fetching instruction.input[0]
+Converting Varnode to concolic type: Const(0x8)
+Varnode is a constant with value: 0x8
+Parsed value (signed): 8
+Constant treated as memory value: 8 with symbolic size 64
+* Fetching instruction.input[1]
+Converting Varnode to concolic type: Register(20, Quad)
+Varnode is a CPU register with offset: 0x20 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x20
+Output size in bits: 64
+*** The result of INT_ADD is: c000ae1c78
+
+Writing c000ae1c78 to the unique variable with ID: 0x4b00
+Updated unique variable: Unique(0x4b00) with concrete part : c000ae1c78, concrete size 64 bits and symbolic size 64 bits
+[OVERLAY] Reached max depth at 0x1f36f1e, stopping speculative execution
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  OVERLAY EXECUTION METRICS                                           ║
+╚══════════════════════════════════════════════════════════════════════╝
+[OVERLAY METRICS] Modified registers: 8
+[OVERLAY METRICS] Register changes:
+  - RAX = 0x0
+  - RSP = 0xc000ae1c70
+  - CF = 0x0
+  - PF = 0x1
+  - ZF = 0x1
+  - SF = 0x0
+  - OF = 0x0
+  - RIP = 0x48d660
+[OVERLAY METRICS] Modified memory regions: 1
+[OVERLAY METRICS] Memory changes:
+  - Region [0xc000000000 - 0xc002800000]:
+    Specific addresses modified: 1
+      * 0xc000ae1c70
+[OVERLAY METRICS] Exploration depth reached: 0
+╚══════════════════════════════════════════════════════════════════════╝
+
+[OVERLAY] Restored call stack state: depth=0, freed_frames=0
+[OVERLAY] Restored 2 unique variables after overlay exploration
+[OVERLAY] Restored current_address after overlay: Some(32730824)
+[OVERLAY] RIP after clearing overlay: 0x1f36ec8
+╔══════════════════════════════════════════════════════════════════════╗
+║  OVERLAY MODE ENDED - Returning to real execution path               ║
+║  RIP value after overlay: 0x1f36ec8                                   ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+>>> Concolic overlay analysis reached depth limit
+>>> Performing AST-based panic exploration...
+Exploring AST for panic at address 0x1f36eca
+AST exploration result:
+FOUND_PANIC_XREF_AT 0x01f36f16
+
+>>> The AST exploration found a potential call to a panic address at 0x1f36f16
+>>> Using panic address from caller: 0x1f36f16
+Conditional flag BV simplified: (ite (= (ite (= (ite (= t_callstack_len!143 #x0000000000000000) #x01 #x00) #x00)
+             #x00
+             #x01)
+        #x00)
+     #x01
+     #x00)
+Asserting branch condition to the solver: (not (= (ite (= (ite (= t_callstack_len!143 #x0000000000000000) #x01 #x00) #x00)
+             #x00
+             #x01)
+        #x00))
+=== CONSTRAINT ANALYSIS ===
+=== CUSTOM SIMPLIFIED CONSTRAINTS ===
+Constraint #1 (Bool) with Custom Simplification: (not (not (= err_RCX!168 #x0000000000000000)))
+=== ASSERTING SIMPLIFIED CONSTRAINTS TO SOLVER ===
+Adding 1 simplified constraints to solver...
+=== END CONSTRAINT ANALYSIS ===
+~~~~~~~~~~~
+SATISFIABLE: Symbolic execution can lead to a panic function.
+~~~~~~~~~~~
+To enter a panic function, the following conditions must be satisfied:
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'err' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+  - The pointer 't.callstack.len' must be NULL (nil)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'err':
+  err_RCX!168 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlobGasPrice':
+  receipt_BlobGasPrice!165 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlobGasUsed':
+  receipt_BlobGasUsed!164 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.BlockNumber':
+  receipt_BlockNumber!166 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.CumulativeGasUsed':
+  receipt_CumulativeGasUsed!158 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.EffectiveGasPrice':
+  receipt_EffectiveGasPrice!163 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.GasUsed':
+  receipt_GasUsed!162 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.cap':
+  receipt_Logs_cap!161 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.len':
+  receipt_Logs_len!160 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Logs.ptr':
+  receipt_Logs_ptr!159 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.cap':
+  receipt_PostState_cap!156 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.len':
+  receipt_PostState_len!155 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.PostState.ptr':
+  receipt_PostState_ptr!154 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Status':
+  receipt_Status!157 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.TransactionIndex':
+  receipt_TransactionIndex!167 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt.Type':
+  receipt_Type!153 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'receipt_ptr':
+  receipt_ptr!152 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.cap':
+  t_callstack_cap!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.len':
+  t_callstack_len!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.callstack.ptr':
+  t_callstack_ptr!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.config':
+  t_config!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.depth':
+  t_depth!147 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.gasLimit':
+  t_gasLimit!146 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.interrupt':
+  t_interrupt!148 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.reason.data':
+  t_reason_data!150 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.reason.itab':
+  t_reason_itab!149 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't_ptr':
+  t_ptr!141 = #xffffffffffffffff
+    (unsigned: 18446744073709551615)
+    (signed: -1)
+    (ASCII LSB: non-printable 0xff)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+========================================================================
+VULNERABILITY: Satisfiable path to panic/vulnerability
+  Address: 0x1f36ec8
+  Elapsed: 1615.504s
+  Opcode: CBRANCH
+  Detection method: Exploring the not taken path with Overlay Execution
+  More details in: results/FOUND_SAT_STATE.txt
+========================================================================
+
+~~~~~~~~~~~
+* Fetching branch target from instruction.input[0]
+Converting Varnode to concolic type: Unique(0xe780)
+Varnode is of type 'unique' with ID: 0xe780 and size: 8 bits
+Retrieved unique variable: Int(1) with symbolic size: 8
+Branch condition concrete: true
+Branching condition symbolic: Int((ite (= (ite (= (ite (= t_callstack_len!143 #x0000000000000000) #x01 #x00) #x00)
+             #x00
+             #x01)
+        #x00)
+     #x01
+     #x00))
+Extracting condition from Int BV: (ite (= (ite (= (ite (= t_callstack_len!143 #x0000000000000000) #x01 #x00) #x00)
+             #x00
+             #x01)
+        #x00)
+     #x01
+     #x00)
+Found tracked symbolic variable 't.callstack.len' in expression
+Branch condition involves tracked symbolic variables, adding to constraint vector
+Adding constraint to vector (path taken (branch executed))
+Branch target is a specific memory address: 0x1f36ecc
+Branch condition is true, branching to address 0x1f36ecc
+Updated RIP register with branch target: 0x1f36ecc
+The value of register at offset 0x0 - RAX is c00003f450 and symbolic t_ptr!141
+The value of register at offset 0x8 - RCX is 1 and symbolic t_callstack_len!143
+The value of register at offset 0x10 - RDX is c0008faa80 and symbolic t_callstack_ptr!142
+The value of register at offset 0x18 - RBX is c0002dda40 and symbolic receipt_ptr!152
+The value of register at offset 0x20 - RSP is c000ae1c78 and symbolic #x000000c000ae1c78
+The value of register at offset 0x28 - RBP is c000ae1c90 and symbolic #x000000c000ae1c90
+The value of register at offset 0x30 - RSI is 5208 and symbolic receipt_GasUsed!162
+The value of register at offset 0x38 - RDI is 0 and symbolic #x0000000000000000
+The value of register at offset 0x80 - R8 is c000ae20c8 and symbolic #x000000c000ae20c8
+The value of register at offset 0x88 - R9 is c0002ddfe8 and symbolic #x000000c0002ddfe8
+The value of register at offset 0x90 - R10 is 14 and symbolic #x0000000000000014
+The value of register at offset 0x98 - R11 is 8 and symbolic #x0000000000000008
+The value of register at offset 0xa0 - R12 is 0 and symbolic #x0000000000000000
+The value of register at offset 0xa8 - R13 is e9f491e1391f0603 and symbolic #xe9f491e1391f0603
+The value of register at offset 0xb0 - R14 is c0006fd180 and symbolic #x000000c0006fd180
+The value of register at offset 0xb8 - R15 is 2a7457fa5ce630f4 and symbolic #x2a7457fa5ce630f4
+The value of register at offset 0x1200 - YMM0 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x1220 - YMM1 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x200 - CF is 0 and symbolic #x00
+The value of register at offset 0x202 - PF is 0 and symbolic (ite (= ((_ extract 0 0) t_callstack_len!143)
+        (bvadd ((_ extract 1 1) t_callstack_len!143)
+               ((_ extract 2 2) t_callstack_len!143)
+               ((_ extract 3 3) t_callstack_len!143)
+               ((_ extract 4 4) t_callstack_len!143)
+               ((_ extract 5 5) t_callstack_len!143)
+               ((_ extract 6 6) t_callstack_len!143)
+               ((_ extract 7 7) t_callstack_len!143)))
+     #x01
+     #x00)
+The value of register at offset 0x206 - ZF is 0 and symbolic (ite (= t_callstack_len!143 #x0000000000000000) #x01 #x00)
+The value of register at offset 0x207 - SF is 0 and symbolic (ite (bvsle #x0000000000000000 t_callstack_len!143) #x00 #x01)
+The value of register at offset 0x20b - OF is 0 and symbolic #x00
+The value of register at offset 0x110 - FS_OFFSET is 7fff6bfff6c0
+Possible new RIP: 0x1f36ecc
+Current RIP: 0x1f36ec8
+local_line_number: 2, instructions.len()-1: 2
+Control flow change detected, new RIP: 0x1f36ecc

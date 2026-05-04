@@ -1,0 +1,17 @@
+$ echo "" | $SYMQEMU_BIN /home/kgorna/go-projects/kubernetes/_output/bin/kubectl exec -it test-pod -- ls 2>&1 | tee symqemu-symbolic.log
+This is SymCC running with the QSYM backend
+Unable to use a TTY - input is not a terminal or the right kind of file
+bin
+dev
+etc
+home
+lib
+lib64
+proc
+product_name
+product_uuid
+root
+sys
+tmp
+usr
+var

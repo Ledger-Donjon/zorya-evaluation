@@ -1,0 +1,397 @@
+Initializing State...
+
+Initializing mock CPU state...
+
+Uploading dumps to CPU registers...
+
+Initializing virtual file system...
+
+Initializing memory...
+
+Initializing the State...
+
+Checking for multi-thread dumps...
+
+Found threads directory, loading thread dumps...
+
+Found thread index: main_tid=2509254, 18 thread(s)
+Thread states:
+  - TID 2509263: waiting
+  - TID 2509261: waiting
+  - TID 2509260: waiting
+  - TID 2509244: waiting
+  - TID 2509250: waiting
+  - TID 2509259: waiting
+  - TID 2509257: background
+  - TID 2509248: waiting
+  - TID 2509256: waiting
+  - TID 2509251: waiting
+  - TID 2509249: waiting
+  - TID 2509252: waiting
+  - TID 2509254: background
+  - TID 2509262: background
+  - TID 2509253: waiting
+  - TID 2509247: waiting
+  - TID 2509255: waiting
+  - TID 2509258: waiting
+Found 18 total thread dump(s) on disk
+  Loading TID 2509244 (fs_base=0x7ffff7fb0740, gs_base=0x0)
+  Loading TID 2509247 (fs_base=0x7fffb119f6c0, gs_base=0x0)
+  Loading TID 2509248 (fs_base=0x7fffb095e6c0, gs_base=0x0)
+  Loading TID 2509249 (fs_base=0x7fffabfff6c0, gs_base=0x0)
+  Loading TID 2509250 (fs_base=0x7fffab7fe6c0, gs_base=0x0)
+  Loading TID 2509251 (fs_base=0x7fffaaffd6c0, gs_base=0x0)
+  Loading TID 2509252 (fs_base=0x7fffaa7fc6c0, gs_base=0x0)
+  Loading TID 2509253 (fs_base=0x7fffa9ffb6c0, gs_base=0x0)
+  Loading TID 2509254 (fs_base=0x7fffa97fa6c0, gs_base=0x0)
+  Loading TID 2509255 (fs_base=0x7fffa8ef96c0, gs_base=0x0)
+  Loading TID 2509256 (fs_base=0x7fff87fff6c0, gs_base=0x0)
+  Loading TID 2509257 (fs_base=0x7fff877fe6c0, gs_base=0x0)
+  Loading TID 2509258 (fs_base=0x7fff86ffd6c0, gs_base=0x0)
+  Loading TID 2509259 (fs_base=0x7fff867fc6c0, gs_base=0x0)
+  Loading TID 2509260 (fs_base=0x7fff85ffb6c0, gs_base=0x0)
+  Loading TID 2509261 (fs_base=0x7fff857fa6c0, gs_base=0x0)
+  Loading TID 2509262 (fs_base=0x7fff84ff96c0, gs_base=0x0)
+  Loading TID 2509263 (fs_base=0x7fff67fff6c0, gs_base=0x0)
+Successfully loaded 18 thread(s) from dumps
+Successfully loaded multi-thread state
+
+Creating the P-Code for the executable sections of libc.so and ld-linux-x86-64.so if they exist...
+
+Using base address 0x7ffff7c00000 for /usr/lib/x86_64-linux-gnu/libc.so.6
+Using base address 0x7ffff7fc5000 for /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+Initializing jump tables...
+
+✓ Successfully loaded 7 jump table(s)
+Configuration and context have been initialized.
+Acquired target information.
+Binary path: /home/kgorna/go-projects/kubernetes/_output/bin/kubectl
+The symbols table has been populated.
+Path to the p-code file: /home/kgorna/zorya/external/pcode-generator/results/kubectl_low_pcode.txt
+Preprocessing the p-code file...
+Completed preprocessing.
+
+Merging VDSO p-code from: "/home/kgorna/zorya/results/initialization_data/vdso/vdso_low_pcode.txt"
+
+Preprocessing the p-code file...
+Completed preprocessing.
+
+Successfully merged 640 VDSO instruction blocks
+
+Mode is 'function'. Adapting the context...
+Start address is "36d6820"
+Extracting Go function signatures using llvm-dwarfdump...
+Loading Go signatures from results/function_signatures_go.json...
+Loaded 87727 functions from JSON.
+Processed 87624 Go signatures.
+Found 1 arguments for function 'k8s.io/kubectl/pkg/cmd/exec.(*terminalSizeQueueAdapter).Next' at 0x36d6820
+=== PHASE 1: Initializing argument structures ===
+Assigning symbolic var 'a' to register 'RAX' of type k8s.io/kubectl/pkg/cmd/exec.terminalSizeQueueAdapter *
+Initialized 'a' => RAX (0x0) as symbolic k8s.io/kubectl/pkg/cmd/exec.terminalSizeQueueAdapter *
+Detected struct pointer 'a' -> 'k8s.io/kubectl/pkg/cmd/exec.terminalSizeQueueAdapter', symbolizing struct fields...
+=== INITIALIZING STRUCT POINTER FIELDS ===
+Argument 'a' is a pointer to struct 'k8s.io/kubectl/pkg/cmd/exec.terminalSizeQueueAdapter'
+Found struct 'k8s.io/kubectl/pkg/cmd/exec.terminalSizeQueueAdapter' with 16 bytes and 1 members
+[DEBUG]: get_concrete_value_from_location called with 'RAX'
+[DEBUG]: Register 'RAX' resolved to offset 0x0, bit_width=64
+[DEBUG]: Register 'RAX' concrete value = 0xc0008fef90
+Struct pointer 'a' = 0xc0008fef90
+✓ Made pointer 'a' symbolic (nullable) in register 'RAX'
+Processing field 'delegate' at offset 0 (0xc0008fef90), type: 'k8s.io/kubectl/pkg/util/term.TerminalSizeQueue', layout_size: 16 bytes
+Detected Go interface field 'a.delegate' at 0xc0008fef90 (type: 'k8s.io/kubectl/pkg/util/term.TerminalSizeQueue', 16 bytes = itab + data)
+✓ Successfully symbolized Go interface field 'a.delegate' at 0xc0008fef90 (itab + data, both nil-able)
+=== STRUCT FIELD SYMBOLIZATION COMPLETE: 1/1 fields symbolized ===
+=== PHASE 2: Initializing slice memory contents ===
+No slice arguments found, skipping memory initialization
+Initializing string memory contents...
+=== INITIALIZING STRING MEMORY CONTENTS ===
+=== FINISHED STRING MEMORY INITIALIZATION ===
+=== INITIALIZATION COMPLETE: 1 total arguments processed ===
+[GO-INIT] Checking for goroutine stackPreempt flag...
+[GO-PREEMPT] stackguard0 = 0xc0005063a0 (not stackPreempt) - no clearing needed
+Logging the addresses of the XREFs of Panic functions...
+Beginning execution from address: 0x36d6820
+Loading function arguments map...
+Loading Go function arguments map...
+Loading function signatures from results/function_signatures_go.json...
+Loaded 87727 functions from JSON.
+Processed 87624 function signatures.
+*******************************************
+EXECUTING INSTRUCTIONS AT ADDRESS: 0x36d6820
+*******************************************
+-------> Processing instruction at index: 0, Inst { opcode: IntAdd, output: Some(Varnode { var: Unique(0x4400), size: Quad }), inputs: [Varnode { var: Register(b0, Quad), size: Quad }, Varnode { var: Const(0x10), size: Quad }] }
+* Fetching instruction.input[0]
+Converting Varnode to concolic type: Register(b0, Quad)
+Varnode is a CPU register with offset: 0xb0 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0xb0
+* Fetching instruction.input[1]
+Converting Varnode to concolic type: Const(0x10)
+Varnode is a constant with value: 0x10
+Parsed value (signed): 16
+Constant treated as memory value: 16 with symbolic size 64
+Output size in bits: 64
+*** The result of INT_ADD is: c000603890
+
+Writing c000603890 to the unique variable with ID: 0x4400
+Updated unique variable: Unique(0x4400) with concrete part : c000603890, concrete size 64 bits and symbolic size 64 bits
+The value of register at offset 0x0 - RAX is c0008fef90 and symbolic a_ptr!141
+The value of register at offset 0x8 - RCX is 36d6820 and symbolic #x00000000036d6820
+The value of register at offset 0x10 - RDX is 4434580 and symbolic #x0000000004434580
+The value of register at offset 0x18 - RBX is 8 and symbolic #x0000000000000008
+The value of register at offset 0x20 - RSP is c000506740 and symbolic #x000000c000506740
+The value of register at offset 0x28 - RBP is c0005067d0 and symbolic #x000000c0005067d0
+The value of register at offset 0x30 - RSI is 80000 and symbolic #x0000000000080000
+The value of register at offset 0x38 - RDI is c000526058 and symbolic #x000000c000526058
+The value of register at offset 0x80 - R8 is 3ea73a0 and symbolic #x0000000003ea73a0
+The value of register at offset 0x88 - R9 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x90 - R10 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x98 - R11 is 0 and symbolic #x0000000000000000
+The value of register at offset 0xa0 - R12 is c0005067c8 and symbolic #x000000c0005067c8
+The value of register at offset 0xa8 - R13 is c0006036c0 and symbolic #x000000c0006036c0
+The value of register at offset 0xb0 - R14 is c000603880 and symbolic #x000000c000603880
+The value of register at offset 0xb8 - R15 is 1 and symbolic #x0000000000000001
+The value of register at offset 0x1200 - YMM0 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x1220 - YMM1 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x200 - CF is 0 and symbolic #x00
+The value of register at offset 0x202 - PF is 0 and symbolic #x00
+The value of register at offset 0x206 - ZF is 0 and symbolic #x00
+The value of register at offset 0x207 - SF is 0 and symbolic #x00
+The value of register at offset 0x20b - OF is 0 and symbolic #x00
+The value of register at offset 0x110 - FS_OFFSET is 7fffa97fa6c0
+Possible new RIP: 0x36d6820
+Current RIP: 0x36d6820
+
+...
+
+Current RIP: 0x36d6845
+local_line_number: 1, instructions.len()-1: 9
+-------> Processing instruction at index: 2, Inst { opcode: Load, output: Some(Varnode { var: Unique(0xd900), size: Byte }), inputs: [Varnode { var: MemoryRam, size: Quad }, Varnode { var: Register(8, Quad), size: Quad }] }
+* FYI, the space ID is not used during zorya execution.
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Register(8, Quad)
+Varnode is a CPU register with offset: 0x8 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x8
+Pointer offset to be dereferenced : c0008fef90
+[NULL-CHECK] Checking if pointer can be NULL:
+  Operation: LOAD at 0x36d6845
+  Pointer expression: a_ptr!141
+  Concrete value: 0xc0008fef90
+  Path constraints: 0 (empty = unconstrained, any value possible)
+>>> Using panic address from caller: 0x36d6845
+Asserting NULL pointer condition to the solver: pointer == 0
+Pointer expression: a_ptr!141
+=== CONSTRAINT ANALYSIS ===
+=== CUSTOM SIMPLIFIED CONSTRAINTS ===
+=== ASSERTING SIMPLIFIED CONSTRAINTS TO SOLVER ===
+Adding 0 simplified constraints to solver...
+=== END CONSTRAINT ANALYSIS ===
+~~~~~~~~~~~
+SATISFIABLE: Symbolic execution can lead to a panic function.
+~~~~~~~~~~~
+To enter a panic function, the following conditions must be satisfied:
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'a_ptr' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'a':
+  a_RAX!140 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'a.delegate.data':
+  a_delegate_data!143 = #x8200058640000c1a
+    (unsigned: 9367493299088133146)
+    (signed: -9079250774621418470)
+    (ASCII LSB: non-printable 0x1a)
+
+Argument 'a.delegate.itab':
+  a_delegate_itab!142 = #x6edff5ffcfb7f5f5
+    (unsigned: 7989374743028954613)
+    (signed: 7989374743028954613)
+    (ASCII LSB: non-printable 0xf5)
+
+Argument 'a_ptr':
+  a_ptr!141 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+========================================================================
+VULNERABILITY: Symbolic NULL pointer dereference
+  Address: 0x36d6845
+  Elapsed: 1233.812s
+  Opcode: LOAD
+  Detection method: Exploring the current path with a symbolic check on the pointer
+  More details in: results/FOUND_SAT_STATE.txt
+========================================================================
+
+~~~~~~~~~~~
+Load size in bits: 8
+Memory size in bits: 64
+Padded concrete from 1 to 8 bytes: [a0, 00, 00, 00, 00, 00, 00, 00]
+Extracting memory value from 64 bits to 8 bits
+Dereferenced value: 0xa0, with size 64, and symbolic: Int(((_ extract 7 0) a_delegate_itab!142))
+Output is a Unique type with ID: 0xd900
+Updated Unique(0xd900) with concrete value 0xa0 and size 64
+The value of register at offset 0x0 - RAX is c0008fef90 and symbolic a_ptr!141
+The value of register at offset 0x8 - RCX is c0008fef90 and symbolic a_ptr!141
+The value of register at offset 0x10 - RDX is 4434580 and symbolic #x0000000004434580
+The value of register at offset 0x18 - RBX is 8 and symbolic #x0000000000000008
+The value of register at offset 0x20 - RSP is c000506710 and symbolic #x000000c000506710
+The value of register at offset 0x28 - RBP is c000506738 and symbolic #x000000c000506738
+The value of register at offset 0x30 - RSI is 80000 and symbolic #x0000000000080000
+The value of register at offset 0x38 - RDI is c000526058 and symbolic #x000000c000526058
+The value of register at offset 0x80 - R8 is 3ea73a0 and symbolic #x0000000003ea73a0
+The value of register at offset 0x88 - R9 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x90 - R10 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x98 - R11 is 0 and symbolic #x0000000000000000
+The value of register at offset 0xa0 - R12 is c0005067c8 and symbolic #x000000c0005067c8
+The value of register at offset 0xa8 - R13 is c0006036c0 and symbolic #x000000c0006036c0
+The value of register at offset 0xb0 - R14 is c000603880 and symbolic #x000000c000603880
+The value of register at offset 0xb8 - R15 is 1 and symbolic #x0000000000000001
+The value of register at offset 0x1200 - YMM0 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x1220 - YMM1 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x200 - CF is 0 and symbolic #x00
+The value of register at offset 0x202 - PF is 0 and symbolic #x00
+The value of register at offset 0x206 - ZF is 0 and symbolic #x00
+The value of register at offset 0x207 - SF is 0 and symbolic #x00
+The value of register at offset 0x20b - OF is 0 and symbolic #x00
+The value of register at offset 0x110 - FS_OFFSET is 7fffa97fa6c0
+Possible new RIP: 0x36d6845
+Current RIP: 0x36d6845
+
+...
+
+Current RIP: 0x36d684a
+local_line_number: 1, instructions.len()-1: 9
+-------> Processing instruction at index: 2, Inst { opcode: Load, output: Some(Varnode { var: Unique(0xd900), size: Byte }), inputs: [Varnode { var: MemoryRam, size: Quad }, Varnode { var: Register(10, Quad), size: Quad }] }
+* FYI, the space ID is not used during zorya execution.
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Register(10, Quad)
+Varnode is a CPU register with offset: 0x10 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x10
+Pointer offset to be dereferenced : 44359a0
+[NULL-CHECK] Checking if pointer can be NULL:
+  Operation: LOAD at 0x36d684a
+  Pointer expression: a_delegate_itab!142
+  Concrete value: 0x44359a0
+  Path constraints: 0 (empty = unconstrained, any value possible)
+>>> Using panic address from caller: 0x36d684a
+Asserting NULL pointer condition to the solver: pointer == 0
+Pointer expression: a_delegate_itab!142
+=== CONSTRAINT ANALYSIS ===
+=== CUSTOM SIMPLIFIED CONSTRAINTS ===
+=== ASSERTING SIMPLIFIED CONSTRAINTS TO SOLVER ===
+Adding 0 simplified constraints to solver...
+=== END CONSTRAINT ANALYSIS ===
+~~~~~~~~~~~
+SATISFIABLE: Symbolic execution can lead to a panic function.
+~~~~~~~~~~~
+To enter a panic function, the following conditions must be satisfied:
+RESULTS
+The program can panic if its inputs are the following:
+  - The pointer 'a.delegate.itab' must be NULL (nil)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'a':
+  a_RAX!140 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'a.delegate.data':
+  a_delegate_data!143 = #x7d47e85dadd6ffff
+    (unsigned: 9027439467133599743)
+    (signed: 9027439467133599743)
+    (ASCII LSB: non-printable 0xff)
+
+Argument 'a.delegate.itab':
+  a_delegate_itab!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'a_ptr':
+  a_ptr!141 = #xa000000800800001
+    (unsigned: 11529215080436596737)
+    (signed: -6917528993272954879)
+    (ASCII LSB: non-printable 0x01)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+========================================================================
+VULNERABILITY: Symbolic NULL pointer dereference
+  Address: 0x36d684a
+  Elapsed: 1234.209s
+  Opcode: LOAD
+  Detection method: Exploring the current path with a symbolic check on the pointer
+  More details in: results/FOUND_SAT_STATE.txt
+========================================================================
+
+~~~~~~~~~~~
+Load size in bits: 8
+Memory size in bits: 64
+Padded concrete from 1 to 8 bytes: [e0, 00, 00, 00, 00, 00, 00, 00]
+Extracting memory value from 64 bits to 8 bits
+Dereferenced value: 0xe0, with size 64, and symbolic: Int(#xe0)
+Output is a Unique type with ID: 0xd900
+Updated Unique(0xd900) with concrete value 0xe0 and size 64
+The value of register at offset 0x0 - RAX is c0008fef90 and symbolic a_ptr!141
+The value of register at offset 0x8 - RCX is c0008fef90 and symbolic a_ptr!141
+The value of register at offset 0x10 - RDX is 44359a0 and symbolic a_delegate_itab!142
+The value of register at offset 0x18 - RBX is 8 and symbolic #x0000000000000008
+The value of register at offset 0x20 - RSP is c000506710 and symbolic #x000000c000506710
+The value of register at offset 0x28 - RBP is c000506738 and symbolic #x000000c000506738
+The value of register at offset 0x30 - RSI is 80000 and symbolic #x0000000000080000
+The value of register at offset 0x38 - RDI is c000526058 and symbolic #x000000c000526058
+The value of register at offset 0x80 - R8 is 3ea73a0 and symbolic #x0000000003ea73a0
+The value of register at offset 0x88 - R9 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x90 - R10 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x98 - R11 is 0 and symbolic #x0000000000000000
+The value of register at offset 0xa0 - R12 is c0005067c8 and symbolic #x000000c0005067c8
+The value of register at offset 0xa8 - R13 is c0006036c0 and symbolic #x000000c0006036c0
+The value of register at offset 0xb0 - R14 is c000603880 and symbolic #x000000c000603880
+The value of register at offset 0xb8 - R15 is 1 and symbolic #x0000000000000001
+The value of register at offset 0x1200 - YMM0 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x1220 - YMM1 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x200 - CF is 0 and symbolic #x00
+The value of register at offset 0x202 - PF is 0 and symbolic (ite (= (bvnot (bvor (bvnot ((_ extract 0 0) a_delegate_itab!142))
+                     (bvnot ((_ extract 0 0) a_ptr!141))))
+        (bvadd (bvnot (bvor (bvnot ((_ extract 1 1) a_delegate_itab!142))
+                            (bvnot ((_ extract 1 1) a_ptr!141))))
+               (bvnot (bvor (bvnot ((_ extract 2 2) a_delegate_itab!142))
+                            (bvnot ((_ extract 2 2) a_ptr!141))))
+               (bvnot (bvor (bvnot ((_ extract 3 3) a_delegate_itab!142))
+                            (bvnot ((_ extract 3 3) a_ptr!141))))
+               (bvnot (bvor (bvnot ((_ extract 4 4) a_delegate_itab!142))
+                            (bvnot ((_ extract 4 4) a_ptr!141))))
+               (bvnot (bvor (bvnot ((_ extract 5 5) a_delegate_itab!142))
+                            (bvnot ((_ extract 5 5) a_ptr!141))))
+               (bvnot (bvor (bvnot ((_ extract 6 6) a_delegate_itab!142))
+                            (bvnot ((_ extract 6 6) a_ptr!141))))
+               (bvnot (bvor (bvnot ((_ extract 7 7) a_delegate_itab!142))
+                            (bvnot ((_ extract 7 7) a_ptr!141))))))
+     #x01
+     #x00)
+The value of register at offset 0x206 - ZF is 0 and symbolic (ite (= (bvnot (bvor (bvnot ((_ extract 7 0) a_delegate_itab!142))
+                     (bvnot ((_ extract 7 0) a_ptr!141))))
+        #x00)
+     #x01
+     #x00)
+The value of register at offset 0x207 - SF is 1 and symbolic (ite (bvsle #x00
+            (bvnot (bvor (bvnot ((_ extract 7 0) a_delegate_itab!142))
+                         (bvnot ((_ extract 7 0) a_ptr!141)))))
+     #x00
+     #x01)
+The value of register at offset 0x20b - OF is 0 and symbolic #x00
+The value of register at offset 0x110 - FS_OFFSET is 7fffa97fa6c0
+Possible new RIP: 0x36d684a
+Current RIP: 0x36d684a

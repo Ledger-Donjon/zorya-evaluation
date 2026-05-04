@@ -1,0 +1,289 @@
+Initializing State...
+
+Initializing mock CPU state...
+
+Uploading dumps to CPU registers...
+
+Initializing virtual file system...
+
+Initializing memory...
+
+Initializing the State...
+
+Checking for multi-thread dumps...
+
+Found threads directory, loading thread dumps...
+
+Found thread index: main_tid=38750, 12 thread(s)
+Thread states:
+  - TID 38760: waiting
+  - TID 38761: waiting
+  - TID 38758: waiting
+  - TID 38759: waiting
+  - TID 38757: waiting
+  - TID 38756: waiting
+  - TID 38762: waiting
+  - TID 38755: waiting
+  - TID 38754: waiting
+  - TID 38763: waiting
+  - TID 38753: waiting
+  - TID 38750: at_main
+Found 12 total thread dump(s) on disk
+  Loading TID 38750 (fs_base=0x7ffff7fb0740, gs_base=0x0) [AT MAIN]
+  Loading TID 38753 (fs_base=0x7fffb119f6c0, gs_base=0x0)
+  Loading TID 38754 (fs_base=0x7fffb095e6c0, gs_base=0x0)
+  Loading TID 38755 (fs_base=0x7fffa7fff6c0, gs_base=0x0)
+  Loading TID 38756 (fs_base=0x7fffa77fe6c0, gs_base=0x0)
+  Loading TID 38757 (fs_base=0x7fffa6ffd6c0, gs_base=0x0)
+  Loading TID 38758 (fs_base=0x7fffa67fc6c0, gs_base=0x0)
+  Loading TID 38759 (fs_base=0x7fffa5ffb6c0, gs_base=0x0)
+  Loading TID 38760 (fs_base=0x7fffa57fa6c0, gs_base=0x0)
+  Loading TID 38761 (fs_base=0x7fffa4ff96c0, gs_base=0x0)
+  Loading TID 38762 (fs_base=0x7fff87fff6c0, gs_base=0x0)
+  Loading TID 38763 (fs_base=0x7fff877fe6c0, gs_base=0x0)
+Successfully loaded 12 thread(s) from dumps
+Successfully loaded multi-thread state
+
+Creating the P-Code for the executable sections of libc.so and ld-linux-x86-64.so if they exist...
+
+Using base address 0x7ffff7c00000 for /usr/lib/x86_64-linux-gnu/libc.so.6
+Using base address 0x7ffff7fc5000 for /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+Initializing jump tables...
+
+✓ Successfully loaded 6 jump table(s)
+Configuration and context have been initialized.
+Acquired target information.
+Binary path: /tmp/coredns-vulnerable
+The symbols table has been populated.
+Path to the p-code file: /home/kgorna/zorya/external/pcode-generator/results/coredns-vulnerable_low_pcode.txt
+Preprocessing the p-code file...
+Completed preprocessing.
+
+Merging VDSO p-code from: "/home/kgorna/zorya/results/initialization_data/vdso/vdso_low_pcode.txt"
+
+Preprocessing the p-code file...
+Completed preprocessing.
+
+Successfully merged 640 VDSO instruction blocks
+
+Mode is 'function'. Adapting the context...
+Start address is "2f73520"
+Extracting Go function signatures using llvm-dwarfdump...
+Loading Go signatures from results/function_signatures_go.json...
+Loaded 110190 functions from JSON.
+Processed 110085 Go signatures.
+Found 1 arguments for function 'github.com/coredns/coredns/plugin/loop.parse' at 0x2f73520
+=== PHASE 1: Initializing argument structures ===
+Assigning symbolic var 'c' to register 'RAX' of type github.com/coredns/caddy.Controller *
+Initialized 'c' => RAX (0x0) as symbolic github.com/coredns/caddy.Controller *
+Detected struct pointer 'c' -> 'github.com/coredns/caddy.Controller', symbolizing struct fields...
+=== INITIALIZING STRUCT POINTER FIELDS ===
+Argument 'c' is a pointer to struct 'github.com/coredns/caddy.Controller'
+Found struct 'github.com/coredns/caddy.Controller' with 144 bytes and 8 members
+[DEBUG]: get_concrete_value_from_location called with 'RAX'
+[DEBUG]: Register 'RAX' resolved to offset 0x0, bit_width=64
+[DEBUG]: Register 'RAX' concrete value = 0xc00023f5f0
+Struct pointer 'c' = 0xc00023f5f0
+Struct pointer 'c' left nullable (Go allows nil receivers and parameters)
+Made pointer 'c' symbolic (non-null) in register 'RAX'
+Processing field 'Dispenser' at offset 0 (0xc00023f5f0), type: 'github.com/coredns/caddy/caddyfile.Dispenser', layout_size: 56 bytes
+Using layout-based size 448 bits (type-based was 64 bits) for field 'c.Dispenser'
+Symbolizing field 'c.Dispenser' at 0xc00023f5f0 (size: 448 bits, is_pointer: false)
+WARNING: Field 'c.Dispenser' is too large (56 bytes) - skipping
+Processing field 'instance' at offset 56 (0xc00023f628), type: 'github.com/coredns/caddy.Instance *', layout_size: 8 bytes
+Symbolizing field 'c.instance' at 0xc00023f628 (size: 64 bits, is_pointer: true)
+✓ Field 'c.instance' is a pointer - allowing nil values
+✓ Successfully symbolized field 'c.instance' at 0xc00023f628
+Processing field 'Key' at offset 64 (0xc00023f630), type: 'string', layout_size: 16 bytes
+Symbolizing field 'c.Key' at 0xc00023f630 (size: 128 bits, is_pointer: false)
+Reading 128-bit value from address 0xc00023f630
+✓ Successfully symbolized field 'c.Key' at 0xc00023f630
+Processing field 'OncePerServerBlock' at offset 80 (0xc00023f640), type: 'func(func() error) error', layout_size: 8 bytes
+Symbolizing field 'c.OncePerServerBlock' at 0xc00023f640 (size: 64 bits, is_pointer: false)
+✓ Successfully symbolized field 'c.OncePerServerBlock' at 0xc00023f640
+Processing field 'ServerBlockIndex' at offset 88 (0xc00023f648), type: 'int', layout_size: 8 bytes
+Symbolizing field 'c.ServerBlockIndex' at 0xc00023f648 (size: 64 bits, is_pointer: false)
+✓ Successfully symbolized field 'c.ServerBlockIndex' at 0xc00023f648
+Processing field 'ServerBlockKeyIndex' at offset 96 (0xc00023f650), type: 'int', layout_size: 8 bytes
+Symbolizing field 'c.ServerBlockKeyIndex' at 0xc00023f650 (size: 64 bits, is_pointer: false)
+✓ Successfully symbolized field 'c.ServerBlockKeyIndex' at 0xc00023f650
+Processing field 'ServerBlockKeys' at offset 104 (0xc00023f658), type: '[]string', layout_size: 24 bytes
+Symbolizing field 'c.ServerBlockKeys' at 0xc00023f658 (size: 192 bits, is_pointer: false)
+Field 'c.ServerBlockKeys' is a slice type ([]string), symbolizing as 24-byte composite (ptr+len+cap)
+Symbolizing slice field 'c.ServerBlockKeys': []string (24 bytes = ptr + len + cap)
+✓ Symbolized slice.ptr at 0xc00023f658
+✓ Symbolized slice.len at 0xc00023f660
+✓ Symbolized slice.cap at 0xc00023f668
+✓ Successfully symbolized slice field 'c.ServerBlockKeys' at 0xc00023f658 (ptr + len + cap, all symbolic)
+Processing field 'ServerBlockStorage' at offset 128 (0xc00023f670), type: 'interface {}', layout_size: 16 bytes
+Detected Go interface field 'c.ServerBlockStorage' at 0xc00023f670 (type: 'interface {}', 16 bytes = itab + data)
+✓ Successfully symbolized Go interface field 'c.ServerBlockStorage' at 0xc00023f670 (itab + data, both nil-able)
+=== STRUCT FIELD SYMBOLIZATION COMPLETE: 7/8 fields symbolized ===
+=== PHASE 2: Initializing slice memory contents ===
+No slice arguments found, skipping memory initialization
+Initializing string memory contents...
+=== INITIALIZING STRING MEMORY CONTENTS ===
+=== FINISHED STRING MEMORY INITIALIZATION ===
+=== INITIALIZATION COMPLETE: 1 total arguments processed ===
+[GO-INIT] Checking for goroutine stackPreempt flag...
+[GO-PREEMPT] stackguard0 = 0xc0006a83a0 (not stackPreempt) - no clearing needed
+Logging the addresses of the XREFs of Panic functions...
+Beginning execution from address: 0x2f73520
+Loading function arguments map...
+Loading Go function arguments map...
+Loading function signatures from results/function_signatures_go.json...
+Loaded 110190 functions from JSON.
+Processed 110085 function signatures.
+*******************************************
+EXECUTING INSTRUCTIONS AT ADDRESS: 0x2f73520
+*******************************************
+
+...
+
+Current RIP: 0x2f735c6
+local_line_number: 1, instructions.len()-1: 9
+-------> Processing instruction at index: 2, Inst { opcode: Load, output: Some(Varnode { var: Unique(0xd900), size: Byte }), inputs: [Varnode { var: MemoryRam, size: Quad }, Varnode { var: Register(0, Quad), size: Quad }] }
+* FYI, the space ID is not used during zorya execution.
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Register(0, Quad)
+Varnode is a CPU register with offset: 0x0 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x0
+Pointer offset to be dereferenced : c00023f5f0
+[NULL-CHECK] Checking if 'c_ptr' can be NULL (LOAD at 0x2f735c6, concrete ptr: 0xc00023f5f0, constraints: 0)
+>>> Using panic address from caller: 0x2f735c6
+Asserting NULL pointer condition to the solver: pointer == 0
+Pointer expression: c_ptr!141
+[Z3-SOLVER] NULL pointer check took 0.002s (result: Sat)
+~~~~~~~~~~~
+SATISFIABLE: Symbolic execution can lead to a panic function.
+~~~~~~~~~~~
+To enter a panic function, the following conditions must be satisfied:
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'c_ptr' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'c.Key':
+  c_Key!143 = #x00000000000000000000000000000000
+    (unsigned: n/a)
+    (signed: n/a)
+
+Argument 'c.OncePerServerBlock':
+  c_OncePerServerBlock!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockIndex':
+  c_ServerBlockIndex!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockKeyIndex':
+  c_ServerBlockKeyIndex!146 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockKeys.cap':
+  c_ServerBlockKeys_cap!149 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockKeys.len':
+  c_ServerBlockKeys_len!148 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockKeys.ptr':
+  c_ServerBlockKeys_ptr!147 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockStorage.data':
+  c_ServerBlockStorage_data!151 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.ServerBlockStorage.itab':
+  c_ServerBlockStorage_itab!150 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c.instance':
+  c_instance!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'c_ptr':
+  c_ptr!141 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+========================================================================
+VULNERABILITY: Symbolic NULL pointer dereference
+  Address: 0x2f735c6
+  Elapsed: 1560.586s
+  Opcode: LOAD
+  Detection method: Exploring the current path with a symbolic check on the pointer
+  More details in: results/FOUND_SAT_STATE.txt
+========================================================================
+
+~~~~~~~~~~~
+Load size in bits: 8
+Memory size in bits: 64
+Padded concrete from 1 to 8 bytes: [c9, 00, 00, 00, 00, 00, 00, 00]
+Extracting memory value from 64 bits to 8 bits
+Dereferenced value: 0xc9, with size 64, and symbolic: Int(#xc9)
+Output is a Unique type with ID: 0xd900
+Updated Unique(0xd900) with concrete value 0xc9 and size 64
+The value of register at offset 0x0 - RAX is c00023f5f0 and symbolic c_ptr!141
+The value of register at offset 0x8 - RCX is c0006b7178 and symbolic #x000000c0006b7178
+The value of register at offset 0x10 - RDX is 43bf4a0 and symbolic #x00000000043bf4a0
+The value of register at offset 0x18 - RBX is 0 and symbolic #x0000000000000000
+The value of register at offset 0x20 - RSP is c0006b70d0 and symbolic #x000000c0006b70d0
+The value of register at offset 0x28 - RBP is c0006b7190 and symbolic #x000000c0006b7190
+The value of register at offset 0x30 - RSI is 0 and symbolic #x0000000000000000
+The value of register at offset 0x38 - RDI is 4 and symbolic #x0000000000000004
+The value of register at offset 0x80 - R8 is 4288920 and symbolic #x0000000004288920
+The value of register at offset 0x88 - R9 is c00023ffd0 and symbolic #x000000c00023ffd0
+The value of register at offset 0x90 - R10 is 14 and symbolic #x0000000000000014
+The value of register at offset 0x98 - R11 is 1 and symbolic #x0000000000000001
+The value of register at offset 0xa0 - R12 is c0006b7150 and symbolic #x000000c0006b7150
+The value of register at offset 0xa8 - R13 is 36 and symbolic #x0000000000000036
+The value of register at offset 0xb0 - R14 is c000002380 and symbolic #x000000c000002380
+The value of register at offset 0xb8 - R15 is c0006a6c00 and symbolic #x000000c0006a6c00
+The value of register at offset 0x1200 - YMM0 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x1220 - YMM1 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x200 - CF is 0 and symbolic #x00
+The value of register at offset 0x202 - PF is 1 and symbolic (ite (= ((_ extract 5 5) c_ptr!141) ((_ extract 7 7) c_ptr!141)) #x01 #x00)
+The value of register at offset 0x206 - ZF is 0 and symbolic (ite (and (= ((_ extract 5 5) c_ptr!141) #b0)
+          (= ((_ extract 7 7) c_ptr!141) #b0))
+     #x01
+     #x00)
+The value of register at offset 0x207 - SF is 1 and symbolic (ite (bvsle #x00
+            (concat ((_ extract 7 7) c_ptr!141)
+                    #b0
+                    ((_ extract 5 5) c_ptr!141)
+                    #b00000))
+     #x00
+     #x01)
+The value of register at offset 0x20b - OF is 0 and symbolic #x00
+The value of register at offset 0x110 - FS_OFFSET is 7ffff7fb0740
+Possible new RIP: 0x2f735c6
+Current RIP: 0x2f735c6
+
+...
+

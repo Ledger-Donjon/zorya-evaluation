@@ -1,0 +1,83 @@
+# go test -fuzz FuzzP224_NoOracle -fuzztime 120s -v .
+=== RUN   FuzzP224_WithOracle
+=== RUN   FuzzP224_WithOracle/seed#0
+=== RUN   FuzzP224_WithOracle/seed#1
+--- PASS: FuzzP224_WithOracle (0.00s)
+    --- PASS: FuzzP224_WithOracle/seed#0 (0.00s)
+    --- PASS: FuzzP224_WithOracle/seed#1 (0.00s)
+=== RUN   FuzzP224_NoOracle
+fuzz: elapsed: 0s, gathering baseline coverage: 0/3 completed
+fuzz: elapsed: 0s, gathering baseline coverage: 3/3 completed, now fuzzing with 24 workers
+fuzz: elapsed: 3s, execs: 2284762 (761332/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 6s, execs: 4547515 (754307/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 9s, execs: 6763103 (738564/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 12s, execs: 9043772 (760133/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 15s, execs: 11288807 (748348/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 18s, execs: 13523381 (744854/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 21s, execs: 15792552 (755873/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 24s, execs: 18027527 (745661/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 27s, execs: 20272404 (747644/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 30s, execs: 22519176 (749160/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 33s, execs: 24762840 (748291/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 36s, execs: 26995978 (743747/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 39s, execs: 29249385 (751843/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 42s, execs: 31487735 (745924/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 45s, execs: 33729301 (747167/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 48s, execs: 35983292 (751345/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 51s, execs: 38222750 (746605/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 54s, execs: 40469028 (748141/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 57s, execs: 42709678 (747593/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m0s, execs: 44934007 (741224/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m3s, execs: 47156215 (740501/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m6s, execs: 49369030 (737850/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m9s, execs: 51564662 (732030/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m12s, execs: 53779676 (737690/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m15s, execs: 55990028 (737307/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m18s, execs: 58192277 (734149/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m21s, execs: 60363867 (723924/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m24s, execs: 62516060 (717231/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m27s, execs: 64713211 (732460/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m30s, execs: 66926814 (737938/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m33s, execs: 69143136 (738639/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m36s, execs: 71335912 (730683/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m39s, execs: 73544054 (736322/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m42s, execs: 75748608 (735018/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m45s, execs: 77951578 (734278/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m48s, execs: 80202956 (750495/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m51s, execs: 82422851 (739948/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m54s, execs: 84656661 (744585/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 1m57s, execs: 86891473 (745014/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 2m0s, execs: 89111775 (739745/sec), new interesting: 0 (total: 3)
+fuzz: elapsed: 2m0s, execs: 89111775 (0/sec), new interesting: 0 (total: 3)
+--- PASS: FuzzP224_NoOracle (120.10s)
+=== NAME  
+PASS
+ok  	p224fuzz	120.101s
+
+# go test -fuzz FuzzP224_WithOracle -fuzztime 30s -v .
+=== RUN   FuzzP224_NoOracle
+=== RUN   FuzzP224_NoOracle/seed#0
+=== RUN   FuzzP224_NoOracle/seed#1
+=== RUN   FuzzP224_NoOracle/seed#2
+--- PASS: FuzzP224_NoOracle (0.00s)
+    --- PASS: FuzzP224_NoOracle/seed#0 (0.00s)
+    --- PASS: FuzzP224_NoOracle/seed#1 (0.00s)
+    --- PASS: FuzzP224_NoOracle/seed#2 (0.00s)
+=== RUN   FuzzP224_WithOracle
+fuzz: elapsed: 0s, gathering baseline coverage: 0/2 completed
+fuzz: elapsed: 0s, gathering baseline coverage: 2/2 completed, now fuzzing with 24 workers
+fuzz: elapsed: 0s, execs: 3 (98/sec), new interesting: 0 (total: 2)
+--- FAIL: FuzzP224_WithOracle (0.03s)
+    --- FAIL: FuzzP224_WithOracle (0.00s)
+        fuzz_oracle_test.go:46: p224Contract wrong!
+              in  = [0 1 0 268431360 268435455 268435455 268435455 268435431]
+              expected = 26959944256743573406181601774076492161814012476721817469321081782272
+              got      = 26959942750239151301211910195871123182912241769479406753892278468607
+    
+    Failing input written to testdata/fuzz/FuzzP224_WithOracle/8f7065230be9b658
+    To re-run:
+    go test -run=FuzzP224_WithOracle/8f7065230be9b658
+=== NAME  
+FAIL
+exit status 1
+FAIL	p224fuzz	0.033s

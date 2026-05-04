@@ -1,0 +1,666 @@
+Initializing State...
+
+Initializing mock CPU state...
+
+Uploading dumps to CPU registers...
+
+Initializing virtual file system...
+
+Initializing memory...
+
+Initializing the State...
+
+Checking for multi-thread dumps...
+
+Found threads directory, loading thread dumps...
+
+Found thread index: main_tid=3041248, 7 thread(s)
+Thread states:
+  - TID 3041254: waiting
+  - TID 3041253: waiting
+  - TID 3041252: background
+  - TID 3041251: waiting
+  - TID 3041256: background
+  - TID 3041255: waiting
+  - TID 3041248: at_main
+Found 7 total thread dump(s) on disk
+  Loading TID 3041248 (fs_base=0x7ffff7fb0740, gs_base=0x0) [AT MAIN]
+  Loading TID 3041251 (fs_base=0x7fffb12ff6c0, gs_base=0x0)
+  Loading TID 3041252 (fs_base=0x7fffb0abe6c0, gs_base=0x0)
+  Loading TID 3041253 (fs_base=0x7fffabfff6c0, gs_base=0x0)
+  Loading TID 3041254 (fs_base=0x7fffab7fe6c0, gs_base=0x0)
+  Loading TID 3041255 (fs_base=0x7fffaaffd6c0, gs_base=0x0)
+  Loading TID 3041256 (fs_base=0x7fffaa7fc6c0, gs_base=0x0)
+Successfully loaded 7 thread(s) from dumps
+Successfully loaded multi-thread state
+
+Creating the P-Code for the executable sections of libc.so and ld-linux-x86-64.so if they exist...
+
+Using base address 0x7ffff7c00000 for /usr/lib/x86_64-linux-gnu/libc.so.6
+Using base address 0x7ffff7fc5000 for /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+Initializing jump tables...
+
+✓ Successfully loaded 6 jump table(s)
+Configuration and context have been initialized.
+Acquired target information.
+Binary path: /tmp/geth-160/evm
+The symbols table has been populated.
+Path to the p-code file: /home/kgorna/zorya/external/pcode-generator/results/evm_low_pcode.txt
+Preprocessing the p-code file...
+Completed preprocessing.
+
+Merging VDSO p-code from: "/home/kgorna/zorya/results/initialization_data/vdso/vdso_low_pcode.txt"
+
+Preprocessing the p-code file...
+Completed preprocessing.
+
+Successfully merged 640 VDSO instruction blocks
+
+Mode is 'function'. Adapting the context...
+Start address is "7b6a40"
+Extracting Go function signatures using llvm-dwarfdump...
+Loading Go signatures from results/function_signatures_go.json...
+Loaded 17597 functions from JSON.
+Processed 17178 Go signatures.
+Found 2 arguments for function 'github.com/ethereum/go-ethereum/core/vm.memoryGasCost' at 0x7b6a40
+=== PHASE 1: Initializing argument structures ===
+Assigning symbolic var 'mem' to register 'RAX' of type github.com/ethereum/go-ethereum/core/vm.Memory *
+Initialized 'mem' => RAX (0x0) as symbolic github.com/ethereum/go-ethereum/core/vm.Memory *
+Detected struct pointer 'mem' -> 'github.com/ethereum/go-ethereum/core/vm.Memory', symbolizing struct fields...
+=== INITIALIZING STRUCT POINTER FIELDS ===
+Argument 'mem' is a pointer to struct 'github.com/ethereum/go-ethereum/core/vm.Memory'
+Found struct 'github.com/ethereum/go-ethereum/core/vm.Memory' with 32 bytes and 2 members
+[DEBUG]: get_concrete_value_from_location called with 'RAX'
+[DEBUG]: Register 'RAX' resolved to offset 0x0, bit_width=64
+[DEBUG]: Register 'RAX' concrete value = 0xc0001fd0c0
+Struct pointer 'mem' = 0xc0001fd0c0
+Struct pointer 'mem' left nullable (Go allows nil receivers and parameters)
+Made pointer 'mem' symbolic (non-null) in register 'RAX'
+Processing field 'store' at offset 0 (0xc0001fd0c0), type: '[]uint8', layout_size: 24 bytes
+Symbolizing field 'mem.store' at 0xc0001fd0c0 (size: 192 bits, is_pointer: false)
+Field 'mem.store' is a slice type ([]uint8), symbolizing as 24-byte composite (ptr+len+cap)
+Symbolizing slice field 'mem.store': []uint8 (24 bytes = ptr + len + cap)
+✓ Symbolized slice.ptr at 0xc0001fd0c0
+✓ Symbolized slice.len at 0xc0001fd0c8
+✓ Symbolized slice.cap at 0xc0001fd0d0
+✓ Successfully symbolized slice field 'mem.store' at 0xc0001fd0c0 (ptr + len + cap, all symbolic)
+Processing field 'lastGasCost' at offset 24 (0xc0001fd0d8), type: 'uint64', layout_size: 8 bytes
+Symbolizing field 'mem.lastGasCost' at 0xc0001fd0d8 (size: 64 bits, is_pointer: false)
+✓ Successfully symbolized field 'mem.lastGasCost' at 0xc0001fd0d8
+=== STRUCT FIELD SYMBOLIZATION COMPLETE: 2/2 fields symbolized ===
+Assigning symbolic var 'newMemSize' to register 'RBX' of type uint64
+Applied unsigned int domain for 'newMemSize' [0..18446744073709551615] (64 bits logical, 64 bits reg)
+Initialized 'newMemSize' => RBX (0x18) as symbolic uint64
+=== PHASE 2: Initializing slice memory contents ===
+No slice arguments found, skipping memory initialization
+Initializing string memory contents...
+=== INITIALIZING STRING MEMORY CONTENTS ===
+=== FINISHED STRING MEMORY INITIALIZATION ===
+=== INITIALIZATION COMPLETE: 2 total arguments processed ===
+[GO-INIT] Checking for goroutine stackPreempt flag...
+[GO-PREEMPT] stackguard0 = 0xc0002b63a0 (not stackPreempt) - no clearing needed
+Logging the addresses of the XREFs of Panic functions...
+Beginning execution from address: 0x7b6a40
+Loading function arguments map...
+Loading Go function arguments map...
+Loading function signatures from results/function_signatures_go.json...
+Loaded 17597 functions from JSON.
+Processed 17178 function signatures.
+*******************************************
+EXECUTING INSTRUCTIONS AT ADDRESS: 0x7b6a40
+*******************************************
+
+...
+
+Current RIP: 0x7cab55
+local_line_number: 1, instructions.len()-1: 9
+-------> Processing instruction at index: 2, Inst { opcode: Load, output: Some(Varnode { var: Unique(0xd900), size: Byte }), inputs: [Varnode { var: MemoryRam, size: Quad }, Varnode { var: Register(0, Quad), size: Quad }] }
+* FYI, the space ID is not used during zorya execution.
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Register(0, Quad)
+Varnode is a CPU register with offset: 0x0 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x0
+Pointer offset to be dereferenced : c0001fd0c0
+[NULL-CHECK] Checking if 'mem_ptr' can be NULL (LOAD at 0x7cab55, concrete ptr: 0xc0001fd0c0, constraints: 3)
+>>> Using panic address from caller: 0x7cab55
+Asserting NULL pointer condition to the solver: pointer == 0
+Pointer expression: mem_ptr!141
+[Z3-SOLVER] NULL pointer check took 0.004s (result: Sat)
+~~~~~~~~~~~
+SATISFIABLE: Symbolic execution can lead to a panic function.
+~~~~~~~~~~~
+To enter a panic function, the following conditions must be satisfied:
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'mem_ptr' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+  - The input 'newMemSize' must be 2 (unsigned: 2; signed: 2; ASCII: non-printable 0x02)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'mem.lastGasCost':
+  mem_lastGasCost!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'mem.store.cap':
+  mem_store_cap!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'mem.store.len':
+  mem_store_len!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'mem.store.ptr':
+  mem_store_ptr!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'mem_ptr':
+  mem_ptr!141 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'newMemSize':
+  newMemSize_RBX!146 = #x0000000000000002
+    (unsigned: 2)
+    (signed: 2)
+    (ASCII: non-printable, code 2)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+========================================================================
+VULNERABILITY: Symbolic NULL pointer dereference
+  Address: 0x7cab55
+  Elapsed: 98.123s
+  Opcode: LOAD
+  Detection method: Exploring the current path with a symbolic check on the pointer
+  More details in: results/FOUND_SAT_STATE.txt
+========================================================================
+
+~~~~~~~~~~~
+Load size in bits: 8
+Memory size in bits: 64
+Padded concrete from 1 to 8 bytes: [00, 00, 00, 00, 00, 00, 00, 00]
+Extracting memory value from 64 bits to 8 bits
+Dereferenced value: 0x0, with size 64, and symbolic: Int(((_ extract 7 0) mem_store_ptr!142))
+Output is a Unique type with ID: 0xd900
+Updated Unique(0xd900) with concrete value 0x0 and size 64
+The value of register at offset 0x0 - RAX is c0001fd0c0 and symbolic mem_ptr!141
+The value of register at offset 0x8 - RCX is 190 and symbolic #x0000000000000190
+The value of register at offset 0x10 - RDX is de95d0 and symbolic #x0000000000de95d0
+The value of register at offset 0x18 - RBX is 20 and symbolic newMemSize_RBX!146
+The value of register at offset 0x20 - RSP is c0002bdc38 and symbolic #x000000c0002bdc38
+The value of register at offset 0x28 - RBP is c0002bdc48 and symbolic #x000000c0002bdc48
+The value of register at offset 0x30 - RSI is 2bc and symbolic #x00000000000002bc
+The value of register at offset 0x38 - RDI is c8 and symbolic #x00000000000000c8
+The value of register at offset 0x80 - R8 is 1388 and symbolic #x0000000000001388
+The value of register at offset 0x88 - R9 is 32 and symbolic #x0000000000000032
+The value of register at offset 0x90 - R10 is 61a8 and symbolic #x00000000000061a8
+The value of register at offset 0x98 - R11 is c0002c8008 and symbolic #x000000c0002c8008
+The value of register at offset 0xa0 - R12 is c0002bdd40 and symbolic #x000000c0002bdd40
+The value of register at offset 0xa8 - R13 is 7b8740 and symbolic #x00000000007b8740
+The value of register at offset 0xb0 - R14 is c000002380 and symbolic #x000000c000002380
+The value of register at offset 0xb8 - R15 is c00029c6f0 and symbolic #x000000c00029c6f0
+The value of register at offset 0x1200 - YMM0 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x1220 - YMM1 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x200 - CF is 0 and symbolic #x00
+The value of register at offset 0x202 - PF is 0 and symbolic #x00
+The value of register at offset 0x206 - ZF is 0 and symbolic #x00
+The value of register at offset 0x207 - SF is 0 and symbolic #x00
+The value of register at offset 0x20b - OF is 0 and symbolic #x00
+The value of register at offset 0x110 - FS_OFFSET is 7ffff7fb0740
+Possible new RIP: 0x7cab55
+Current RIP: 0x7cab55
+
+...
+
+Current RIP: 0x7b6b03
+local_line_number: 2, instructions.len()-1: 7
+-------> Processing instruction at index: 3, Inst { opcode: IntMult, output: Some(Varnode { var: Register(30, Quad), size: Quad }), inputs: [Varnode { var: Register(30, Quad), size: Quad }, Varnode { var: Register(10, Quad), size: Quad }] }
+* Fetching instruction.input[0] for INT_MULT
+Converting Varnode to concolic type: Register(30, Quad)
+Varnode is a CPU register with offset: 0x30 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x30
+* Fetching instruction.input[1] for INT_MULT
+Converting Varnode to concolic type: Register(10, Quad)
+Varnode is a CPU register with offset: 0x10 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x10
+Output size in bits: 64
+*** The result of INT_MULT is: 1
+
+[OVERFLOW-CHECK] Checking for integer overflow in INT_MULT at 0x7b6b03 (operand width: 64 bits)
+[Z3-SOLVER] Integer overflow check at INT_MULT took 0.390s (result: Sat)
+~~~~~~~~~~~
+SATISFIABLE: Integer overflow detected in INT_MULT — the 128-bit product differs from the 64-bit product
+~~~~~~~~~~~
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'mem.store.len' must be 0x2049180867b11c0 (unsigned: 145401069180752320; signed: 145401069180752320; ASCII: n/a)
+  - The input 'newMemSize' must be 16286302133676609730 (unsigned: 16286302133676609730; signed: -2160441940032941886; ASCII: n/a)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'mem.lastGasCost':
+  mem_lastGasCost!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'mem.store.cap':
+  mem_store_cap!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'mem.store.len':
+  mem_store_len!143 = #x02049180867b11c0
+    (unsigned: 145401069180752320)
+    (signed: 145401069180752320)
+    (ASCII LSB: non-printable 0xc0)
+
+Argument 'mem.store.ptr':
+  mem_store_ptr!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'mem_ptr':
+  mem_ptr!141 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'newMemSize':
+  newMemSize_RBX!146 = #xe2049180867b10c2
+    (unsigned: 16286302133676609730)
+    (signed: -2160441940032941886)
+    (ASCII LSB: non-printable 0xc2)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+========================================================================
+VULNERABILITY: Integer overflow in multiplication
+  Address: 0x7b6b03
+  Elapsed: 119.992s
+  Opcode: INT_MULT
+  The 128-bit product differs from the 64-bit product
+  More details in: results/FOUND_SAT_STATE.txt
+========================================================================
+
+Output is a Register type
+Updated register at offset 0x30 with concrete value 0x1, concrete size 64 bits and symbolic size 64 bits
+The value of register at offset 0x0 - RAX is 0 and symbolic mem_store_len!143
+The value of register at offset 0x8 - RCX is 190 and symbolic #x0000000000000190
+The value of register at offset 0x10 - RDX is 1 and symbolic (concat #b00000
+        ((_ extract 63 5) (bvadd #x000000000000001f newMemSize_RBX!146)))
+The value of register at offset 0x18 - RBX is 20 and symbolic newMemSize_RBX!146
+The value of register at offset 0x20 - RSP is c0002bdc58 and symbolic #x000000c0002bdc58
+The value of register at offset 0x28 - RBP is c0002bdcb0 and symbolic #x000000c0002bdcb0
+The value of register at offset 0x30 - RSI is 1 and symbolic (bvmul (concat #b00000
+               ((_ extract 63 5) (bvadd #x000000000000001f newMemSize_RBX!146)))
+       (concat #b00000
+               ((_ extract 63 5) (bvadd #x000000000000001f newMemSize_RBX!146))))
+The value of register at offset 0x38 - RDI is c8 and symbolic #x00000000000000c8
+The value of register at offset 0x80 - R8 is 1388 and symbolic #x0000000000001388
+The value of register at offset 0x88 - R9 is 32 and symbolic #x0000000000000032
+The value of register at offset 0x90 - R10 is 61a8 and symbolic #x00000000000061a8
+The value of register at offset 0x98 - R11 is c0002c8008 and symbolic #x000000c0002c8008
+The value of register at offset 0xa0 - R12 is c0002bdd40 and symbolic #x000000c0002bdd40
+The value of register at offset 0xa8 - R13 is 7b8740 and symbolic #x00000000007b8740
+The value of register at offset 0xb0 - R14 is c000002380 and symbolic #x000000c000002380
+The value of register at offset 0xb8 - R15 is c00029c6f0 and symbolic #x000000c00029c6f0
+The value of register at offset 0x1200 - YMM0 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x1220 - YMM1 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x200 - CF is 0 and symbolic (ite (bvule mem_store_len!143
+            (concat ((_ extract 63 5)
+                      (bvadd #x000000000000001f newMemSize_RBX!146))
+                    #b00000))
+     #x00
+     #x01)
+The value of register at offset 0x202 - PF is 0 and symbolic (ite (= ((_ extract 0 0) mem_store_len!143)
+        (bvadd ((_ extract 1 1)
+                 (bvadd (concat ((_ extract 7 5)
+                                  (bvadd #x000000000000001f newMemSize_RBX!146))
+                                #b00000)
+                        (bvmul #xff ((_ extract 7 0) mem_store_len!143))))
+               ((_ extract 2 2)
+                 (bvadd (concat ((_ extract 7 5)
+                                  (bvadd #x000000000000001f newMemSize_RBX!146))
+                                #b00000)
+                        (bvmul #xff ((_ extract 7 0) mem_store_len!143))))
+               ((_ extract 3 3)
+                 (bvadd (concat ((_ extract 7 5)
+                                  (bvadd #x000000000000001f newMemSize_RBX!146))
+                                #b00000)
+                        (bvmul #xff ((_ extract 7 0) mem_store_len!143))))
+               ((_ extract 4 4)
+                 (bvadd (concat ((_ extract 7 5)
+                                  (bvadd #x000000000000001f newMemSize_RBX!146))
+                                #b00000)
+                        (bvmul #xff ((_ extract 7 0) mem_store_len!143))))
+               ((_ extract 5 5)
+                 (bvadd (concat ((_ extract 7 5)
+                                  (bvadd #x000000000000001f newMemSize_RBX!146))
+                                #b00000)
+                        (bvmul #xff ((_ extract 7 0) mem_store_len!143))))
+               ((_ extract 6 6)
+                 (bvadd (concat ((_ extract 7 5)
+                                  (bvadd #x000000000000001f newMemSize_RBX!146))
+                                #b00000)
+                        (bvmul #xff ((_ extract 7 0) mem_store_len!143))))
+               ((_ extract 7 7)
+                 (bvadd (concat ((_ extract 7 5)
+                                  (bvadd #x000000000000001f newMemSize_RBX!146))
+                                #b00000)
+                        (bvmul #xff ((_ extract 7 0) mem_store_len!143))))))
+     #x01
+     #x00)
+The value of register at offset 0x206 - ZF is 0 and symbolic (ite (= (concat ((_ extract 63 5) (bvadd #x000000000000001f newMemSize_RBX!146))
+                #b00000)
+        mem_store_len!143)
+     #x01
+     #x00)
+The value of register at offset 0x207 - SF is 0 and symbolic (ite (bvsle #x0000000000000000
+            (bvadd (concat ((_ extract 63 5)
+                             (bvadd #x000000000000001f newMemSize_RBX!146))
+                           #b00000)
+                   (bvmul #xffffffffffffffff mem_store_len!143)))
+     #x00
+     #x01)
+The value of register at offset 0x20b - OF is 0 and symbolic (ite (ite (= mem_store_len!143 #x8000000000000000)
+          (not (bvsle #x0000000000000000
+                      (concat ((_ extract 63 5)
+                                (bvadd #x000000000000001f newMemSize_RBX!146))
+                              #b00000)))
+          (or (not (bvsle (bvadd (concat ((_ extract 63 5)
+                                           (bvadd #x000000000000001f
+                                                  newMemSize_RBX!146))
+                                         #b00000)
+                                 (bvmul #xffffffffffffffff mem_store_len!143))
+                          #x0000000000000000))
+              (not (and (not (bvsle (concat ((_ extract 63 5)
+                                              (bvadd #x000000000000001f
+                                                     newMemSize_RBX!146))
+                                            #b00000)
+                                    #x0000000000000000))
+                        (not (bvsle (bvmul #xffffffffffffffff mem_store_len!143)
+                                    #x0000000000000000))))))
+     #x00
+     #x01)
+The value of register at offset 0x110 - FS_OFFSET is 7ffff7fb0740
+Possible new RIP: 0x7b6b03
+Current RIP: 0x7b6b03
+
+...
+
+Current RIP: 0x7b6b46
+local_line_number: 1, instructions.len()-1: 9
+-------> Processing instruction at index: 2, Inst { opcode: Load, output: Some(Varnode { var: Unique(0xd900), size: Byte }), inputs: [Varnode { var: MemoryRam, size: Quad }, Varnode { var: Register(10, Quad), size: Quad }] }
+* FYI, the space ID is not used during zorya execution.
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Register(10, Quad)
+Varnode is a CPU register with offset: 0x10 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x10
+Pointer offset to be dereferenced : c0001fd0c0
+[NULL-CHECK] Checking if 'mem.lastGasCost' can be NULL (LOAD at 0x7b6b46, concrete ptr: 0xc0001fd0c0, constraints: 4)
+>>> Using panic address from caller: 0x7b6b46
+Asserting NULL pointer condition to the solver: pointer == 0
+Pointer expression: mem_lastGasCost!145
+[Z3-SOLVER] NULL pointer check took 0.006s (result: Sat)
+~~~~~~~~~~~
+SATISFIABLE: Symbolic execution can lead to a panic function.
+~~~~~~~~~~~
+To enter a panic function, the following conditions must be satisfied:
+RESULTS
+The program can panic if its inputs are the following:
+  - The pointer 'mem.lastGasCost' must be NULL (nil)
+  - The pointer 'mem.store.len' must be NULL (nil)
+  - The input 'newMemSize' must be 18446726481523507170 (unsigned: 18446726481523507170; signed: -17592186044446; ASCII: n/a)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'mem.lastGasCost':
+  mem_lastGasCost!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'mem.store.cap':
+  mem_store_cap!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'mem.store.len':
+  mem_store_len!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'mem.store.ptr':
+  mem_store_ptr!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'mem_ptr':
+  mem_ptr!141 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'newMemSize':
+  newMemSize_RBX!146 = #xffffefffffffffe2
+    (unsigned: 18446726481523507170)
+    (signed: -17592186044446)
+    (ASCII LSB: non-printable 0xe2)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+========================================================================
+VULNERABILITY: Symbolic NULL pointer dereference
+  Address: 0x7b6b46
+  Elapsed: 138.253s
+  Opcode: LOAD
+  Detection method: Exploring the current path with a symbolic check on the pointer
+  More details in: results/FOUND_SAT_STATE.txt
+========================================================================
+
+~~~~~~~~~~~
+Load size in bits: 8
+Memory size in bits: 64
+Padded concrete from 1 to 8 bytes: [00, 00, 00, 00, 00, 00, 00, 00]
+Extracting memory value from 64 bits to 8 bits
+Dereferenced value: 0x0, with size 64, and symbolic: Int(((_ extract 7 0) mem_store_ptr!142))
+Output is a Unique type with ID: 0xd900
+Updated Unique(0xd900) with concrete value 0x0 and size 64
+The value of register at offset 0x0 - RAX is 0 and symbolic mem_store_len!143
+The value of register at offset 0x8 - RCX is 190 and symbolic #x0000000000000190
+The value of register at offset 0x10 - RDX is c0001fd0c0 and symbolic mem_ptr!141
+The value of register at offset 0x18 - RBX is 20 and symbolic newMemSize_RBX!146
+The value of register at offset 0x20 - RSP is c0002bdc58 and symbolic #x000000c0002bdc58
+The value of register at offset 0x28 - RBP is c0002bdcb0 and symbolic #x000000c0002bdcb0
+The value of register at offset 0x30 - RSI is 0 and symbolic mem_lastGasCost!145
+The value of register at offset 0x38 - RDI is 3 and symbolic (bvadd (bvmul #x0000000000000003
+              (concat #b00000
+                      ((_ extract 63 5)
+                        (bvadd #x000000000000001f newMemSize_RBX!146))))
+       (concat #b000000000
+               ((_ extract 63 9)
+                 (bvmul (concat #b00000
+                                ((_ extract 63 5)
+                                  (bvadd #x000000000000001f newMemSize_RBX!146)))
+                        (concat #b00000
+                                ((_ extract 63 5)
+                                  (bvadd #x000000000000001f newMemSize_RBX!146)))))))
+The value of register at offset 0x80 - R8 is 1388 and symbolic #x0000000000001388
+The value of register at offset 0x88 - R9 is 32 and symbolic #x0000000000000032
+The value of register at offset 0x90 - R10 is 61a8 and symbolic #x00000000000061a8
+The value of register at offset 0x98 - R11 is c0002c8008 and symbolic #x000000c0002c8008
+The value of register at offset 0xa0 - R12 is c0002bdd40 and symbolic #x000000c0002bdd40
+The value of register at offset 0xa8 - R13 is 7b8740 and symbolic #x00000000007b8740
+The value of register at offset 0xb0 - R14 is c000002380 and symbolic #x000000c000002380
+The value of register at offset 0xb8 - R15 is c00029c6f0 and symbolic #x000000c00029c6f0
+The value of register at offset 0x1200 - YMM0 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x1220 - YMM1 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x200 - CF is 0 and symbolic #x00
+The value of register at offset 0x202 - PF is 1 and symbolic (ite (= ((_ extract 5 5) (bvadd #x000000000000001f newMemSize_RBX!146))
+        (bvadd ((_ extract 9 9)
+                 (bvmul (concat #b00000
+                                ((_ extract 63 5)
+                                  (bvadd #x000000000000001f newMemSize_RBX!146)))
+                        (concat #b00000
+                                ((_ extract 63 5)
+                                  (bvadd #x000000000000001f newMemSize_RBX!146)))))
+               ((_ extract 0 0) mem_lastGasCost!145)
+               ((_ extract 1 1)
+                 (bvadd (bvmul #x03
+                               ((_ extract 12 5)
+                                 (bvadd #x000000000000001f newMemSize_RBX!146)))
+                        ((_ extract 16 9)
+                          (bvmul (concat #b00000
+                                         ((_ extract 63 5)
+                                           (bvadd #x000000000000001f
+                                                  newMemSize_RBX!146)))
+                                 (concat #b00000
+                                         ((_ extract 63 5)
+                                           (bvadd #x000000000000001f
+                                                  newMemSize_RBX!146)))))
+                        (bvmul #xff ((_ extract 7 0) mem_lastGasCost!145))))
+               ((_ extract 2 2)
+                 (bvadd (bvmul #x03
+                               ((_ extract 12 5)
+                                 (bvadd #x000000000000001f newMemSize_RBX!146)))
+                        ((_ extract 16 9)
+                          (bvmul (concat #b00000
+                                         ((_ extract 63 5)
+                                           (bvadd #x000000000000001f
+                                                  newMemSize_RBX!146)))
+                                 (concat #b00000
+                                         ((_ extract 63 5)
+                                           (bvadd #x000000000000001f
+                                                  newMemSize_RBX!146)))))
+                        (bvmul #xff ((_ extract 7 0) mem_lastGasCost!145))))
+               ((_ extract 3 3)
+                 (bvadd (bvmul #x03
+                               ((_ extract 12 5)
+                                 (bvadd #x000000000000001f newMemSize_RBX!146)))
+                        ((_ extract 16 9)
+                          (bvmul (concat #b00000
+                                         ((_ extract 63 5)
+                                           (bvadd #x000000000000001f
+                                                  newMemSize_RBX!146)))
+                                 (concat #b00000
+                                         ((_ extract 63 5)
+                                           (bvadd #x000000000000001f
+                                                  newMemSize_RBX!146)))))
+                        (bvmul #xff ((_ extract 7 0) mem_lastGasCost!145))))
+               ((_ extract 4 4)
+                 (bvadd (bvmul #x03
+                               ((_ extract 12 5)
+                                 (bvadd #x000000000000001f newMemSize_RBX!146)))
+                        ((_ extract 16 9)
+                          (bvmul (concat #b00000
+                                         ((_ extract 63 5)
+                                           (bvadd #x000000000000001f
+                                                  newMemSize_RBX!146)))
+                                 (concat #b00000
+                                         ((_ extract 63 5)
+                                           (bvadd #x000000000000001f
+                                                  newMemSize_RBX!146)))))
+                        (bvmul #xff ((_ extract 7 0) mem_lastGasCost!145))))
+               ((_ extract 5 5)
+                 (bvadd (bvmul #x03
+                               ((_ extract 12 5)
+                                 (bvadd #x000000000000001f newMemSize_RBX!146)))
+                        ((_ extract 16 9)
+                          (bvmul (concat #b00000
+                                         ((_ extract 63 5)
+                                           (bvadd #x000000000000001f
+                                                  newMemSize_RBX!146)))
+                                 (concat #b00000
+                                         ((_ extract 63 5)
+                                           (bvadd #x000000000000001f
+                                                  newMemSize_RBX!146)))))
+                        (bvmul #xff ((_ extract 7 0) mem_lastGasCost!145))))
+               ((_ extract 6 6)
+                 (bvadd (bvmul #x03
+                               ((_ extract 12 5)
+                                 (bvadd #x000000000000001f newMemSize_RBX!146)))
+                        ((_ extract 16 9)
+                          (bvmul (concat #b00000
+                                         ((_ extract 63 5)
+                                           (bvadd #x000000000000001f
+                                                  newMemSize_RBX!146)))
+                                 (concat #b00000
+                                         ((_ extract 63 5)
+                                           (bvadd #x000000000000001f
+                                                  newMemSize_RBX!146)))))
+                        (bvmul #xff ((_ extract 7 0) mem_lastGasCost!145))))
+               ((_ extract 7 7)
+                 (bvadd (bvmul #x03
+                               ((_ extract 12 5)
+                                 (bvadd #x000000000000001f newMemSize_RBX!146)))
+                        ((_ extract 16 9)
+                          (bvmul (concat #b00000
+                                         ((_ extract 63 5)
+                                           (bvadd #x000000000000001f
+                                                  newMemSize_RBX!146)))
+                                 (concat #b00000
+                                         ((_ extract 63 5)
+                                           (bvadd #x000000000000001f
+                                                  newMemSize_RBX!146)))))
+                        (bvmul #xff ((_ extract 7 0) mem_lastGasCost!145))))))
+     #x01
+     #x00)
+The value of register at offset 0x206 - ZF is 0 and symbolic (ite (= (bvmul #x0000000000000003
+               (concat #b00000
+                       ((_ extract 63 5)
+                         (bvadd #x000000000000001f newMemSize_RBX!146))))
+        (bvadd (bvmul #xffffffffffffffff
+                      (concat #b000000000
+                              ((_ extract 63 9)
+                                (bvmul (concat #b00000
+                                               ((_ extract 63 5)
+                                                 (bvadd #x000000000000001f
+                                                        newMemSize_RBX!146)))
+                                       (concat #b00000
+                                               ((_ extract 63 5)
+                                                 (bvadd #x000000000000001f
+                                                        newMemSize_RBX!146)))))))
+               mem_lastGasCost!145))
+     #x01
+     #x00)
+The value of register at offset 0x207 - SF is 0 and symbolic (ite (bvsle #x0000000000000000
+            (bvadd (bvmul #x0000000000000003
+                          (concat #b00000
+                                  ((_ extract 63 5)
+                                    (bvadd #x000000000000001f
+                                           newMemSize_RBX!146))))
+                   (concat #b000000000
+                           ((_ extract 63 9)
+                             (bvmul (concat #b00000
+                                            ((_ extract 63 5)
+                                              (bvadd #x000000000000001f
+                                                     newMemSize_RBX!146)))
+                                    (concat #b00000
+                                            ((_ extract 63 5)
+                                              (bvadd #x000000000000001f
+                                                     newMemSize_RBX!146))))))
+                   (bvmul #xffffffffffffffff mem_lastGasCost!145)))
+     #x00
+     #x01)
+The value of register at offset 0x20b - OF is 0 and symbolic #x00
+The value of register at offset 0x110 - FS_OFFSET is 7ffff7fb0740
+Possible new RIP: 0x7b6b46
+Current RIP: 0x7b6b46

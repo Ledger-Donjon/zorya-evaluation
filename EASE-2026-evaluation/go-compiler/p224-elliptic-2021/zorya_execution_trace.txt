@@ -1,0 +1,210 @@
+# zorya /tmp/p224-driver   --mode function 0x4d7840   --lang go   --compiler gc   --thread-scheduling main-only   --arg "0000000000000000000000000001"   --negate-path-exploration
+
+ZORYA - Next Generation Concolic Analysis
+*************************************************************************************
+Running command: /home/kgorna/zorya/zorya /tmp/p224-driver --mode function 0x4d7840 --lang go --compiler gc --thread-scheduling main-only --arg "0000000000000000000000000001" --negate-path-exploration
+
+    Finished `release` profile [optimized] target(s) in 0.04s
+     Running `target/release/pcode_generator /tmp/p224-driver --low-pcode`
+
+[PCODE GENERATOR] Generating low pcode...
+[PCODE GENERATOR] Output file will be created at: "/home/kgorna/zorya/external/pcode-generator/results/p224-driver_low_pcode.txt"
+[PCODE GENERATOR] [GHIDRA DECOMPILER] specfile='/home/kgorna/zorya/external/pcode-generator/ghidra/Ghidra/Processors/x86/data/languages/x86-64.sla' base_addr=0x0
+[PCODE GENERATOR] [GHIDRA DECOMPILER] Sleigh initialization SUCCESS
+[PCODE GENERATOR] Low pcode generation completed.
+
+Generating memory and CPU register dumps…
+Cleaning up existing contents in the dumps directory...
+Cleaning up existing thread dumps from previous runs...
+Running GDB locally to generate CPU and memory mappings...
+Generating dump_commands.txt using parse_and_generate.py...
+Command file generated successfully with 22 commands.
+Executing memory dumps, registers, and thread state capture in single GDB session...
+Dump commands executed successfully in GDB.
+Dumping thread states (registers + TLS bases)...
+Successfully dumped 5 thread(s) to /home/kgorna/zorya/results/initialization_data/threads
+All dumps completed. Logs available in /home/kgorna/zorya/results/initialization_data/gdb_log.txt.
+Outputs available in /home/kgorna/zorya/results/initialization_data.
+
+Extracting VDSO from process memory…
+Extracting VDSO from /tmp/p224-driver...
+VDSO extracted successfully: /home/kgorna/zorya/results/initialization_data/vdso/vdso.so
+VDSO base address: 0x7ffff7ffd000
+VDSO extraction completed!
+
+Generating p-code for VDSO (base: 0x7ffff7ffd000)…
+Generating P-Code for VDSO...
+VDSO file: /home/kgorna/zorya/results/initialization_data/vdso/vdso.so
+Base address: 0x7ffff7ffd000
+    Finished `release` profile [optimized] target(s) in 0.04s
+     Running `target/release/pcode_generator /home/kgorna/zorya/results/initialization_data/vdso/vdso.so --low-pcode --base-addr 0x7ffff7ffd000`
+
+[PCODE GENERATOR] Generating low pcode...
+[PCODE GENERATOR] Output file will be created at: "/home/kgorna/zorya/external/pcode-generator/results/vdso.so_low_pcode.txt"
+[PCODE GENERATOR] [GHIDRA DECOMPILER] specfile='/home/kgorna/zorya/external/pcode-generator/ghidra/Ghidra/Processors/x86/data/languages/x86-64.sla' base_addr=0x7ffff7ffd000
+[PCODE GENERATOR] [GHIDRA DECOMPILER] Sleigh initialization SUCCESS
+[PCODE GENERATOR] Low pcode generation completed.
+VDSO P-Code generated: /home/kgorna/zorya/results/initialization_data/vdso/vdso_low_pcode.txt
+
+*********************************************************************************************
+Completed the generation of memory and CPU register dumps, and the P-Code file of the binary.
+Launching Zorya now...
+*********************************************************************************************
+
+    Finished `release` profile [optimized] target(s) in 0.05s
+     Running `target/release/zorya --write-args 0000000000000000000000000001`
+[THREAD-CONFIG] Using main-only thread policy (single goroutine execution)
+
+************************************************
+Initializing Zorya with the CPU and memory dumps
+************************************************
+Initializing State...
+
+Initializing mock CPU state...
+
+Uploading dumps to CPU registers...
+
+Updated register RAX at offset 0x0 with value 0xc000073c48
+Updated register RBX at offset 0x18 with value 0xc000073c68
+Updated register RCX at offset 0x8 with value 0xc000000180
+Updated register RDX at offset 0x10 with value 0xffffffff
+Updated register RSI at offset 0x30 with value 0x7
+Updated register RDI at offset 0x38 with value 0xc000073ad8
+Updated register RBP at offset 0x28 with value 0xc000073888
+Updated register RSP at offset 0x20 with value 0xc000073800
+Updated register R8 at offset 0x80 with value 0xc000073c68
+Updated register R9 at offset 0x88 with value 0x0
+Updated register R10 at offset 0x90 with value 0x7fffd13f8403
+Updated register R11 at offset 0x98 with value 0x0
+Updated register R12 at offset 0xa0 with value 0x203000
+Updated register R13 at offset 0xa8 with value 0x0
+Updated register R14 at offset 0xb0 with value 0x68
+Updated register R15 at offset 0xb8 with value 0x3
+Updated register RIP at offset 0x288 with value 0x4d7840
+Updated register CS at offset 0x102 with value 0x33
+Updated register SS at offset 0x104 with value 0x2b
+Updated register DS at offset 0x106 with value 0x0
+Updated register ES at offset 0x100 with value 0x0
+Updated register FS at offset 0x108 with value 0x0
+Updated register GS at offset 0x10a with value 0x0
+Updated register MXCSR at offset 0x1094 with value 0x1fa0
+Updated register FS_OFFSET at offset 0x110 with value 0x5cf9d0
+Updated register GS_OFFSET at offset 0x118 with value 0x0
+Updated flag CF at offset 0x200 with value 0
+Updated flag PF at offset 0x202 with value 0
+Updated flag ZF at offset 0x206 with value 0
+Updated flag SF at offset 0x207 with value 0
+Updated flag TF at offset 0x208 with value 0
+Updated flag IF at offset 0x209 with value 1
+Updated flag DF at offset 0x20a with value 0
+Updated flag OF at offset 0x20b with value 0
+Updated flag NT at offset 0x20d with value 0
+Updated flag RF at offset 0x20f with value 0
+Updated flag AC at offset 0x211 with value 0
+Updated flag ID at offset 0x214 with value 0
+Initializing virtual file system...
+
+Initializing memory...
+
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7ff9000-0x7ffff7ffd000_zero.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffd3600000-0x7fffe3780000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7e39000-0x7ffff7e99000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7ffd000-0x7ffff7fff000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x400000-0x4e3000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7a06000-0x7ffff7a07000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7f1a000-0x7ffff7f99000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffe3780000-0x7fffe3781000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff5631000-0x7ffff7a06000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff5630000-0x7ffff5631000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffffffde000-0x7ffffffff000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0xffffffffff600000-0xffffffffff601000_zero.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7f19000-0x7ffff7f1a000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x5b8000-0x5cf000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffe3781000-0x7ffff5630000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7a07000-0x7ffff7e00000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffd12ef000-0x7fffd3600000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x5cf000-0x5fc000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7e99000-0x7ffff7f19000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7f99000-0x7ffff7ff9000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0xc000000000-0xc004000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x4e3000-0x5b8000.bin"
+Initialized CPUID memory variables at address 0x300000
+Initializing the State...
+
+[SCHEDULER] Detected Go GC binary, thread scheduling available
+[SCHEDULER] Thread scheduling disabled (main thread only)
+[THREAD] Loaded TID=3118726 from dump (fs_base=0x5cf9d0, gs_base=0x0)
+[THREAD] Loaded TID=3118729 from dump (fs_base=0xc000066090, gs_base=0x0)
+[THREAD] Loaded TID=3118730 from dump (fs_base=0xc000066410, gs_base=0x0)
+[THREAD] Loaded TID=3118731 from dump (fs_base=0xc000066790, gs_base=0x0)
+[THREAD] Loaded TID=3118732 from dump (fs_base=0xc000088090, gs_base=0x0)
+Successfully loaded multi-thread state
+
+Creating the P-Code for the executable sections of libc.so and ld-linux-x86-64.so if they exist...
+libc ELF or its base address not found, skipping...
+ld-linux ELF or its base address not found, skipping...
+
+Initializing jump tables...
+
+Building the P-Code for the VDSO section (this may take a moment)...
+Merged 640 VDSO instruction blocks into execution map
+
+Precomputing the tables of cross references of potential panics in the programs (for bug detection)...
+[GHIDRA] Launching Ghidra + Pyhidra to collect panic cross-references (this may take a bit)...
+[GHIDRA] Panic cross-reference analysis completed. Results written to results/xref_addresses.txt.
+
+[STRUCT-TYPES] Loaded 0 struct type definitions
+[GHIDRA] Project not found or stale — will analyze from scratch
+[GHIDRA] Jump table loading took 0.0s
+[GHIDRA] Panic seed collection took 0.1s (1997 seeds)
+
+[GHIDRA] Starting reverse BFS from 1997 panic blocks...
+Iteration 1: 1997 reachable blocks (+1997), 20773 in queue, 756 tainted functions, elapsed: 1.9s
+Iteration 2: 12876 reachable blocks (+10879), 20040 in queue, 1430 tainted functions, elapsed: 4.0s
+Iteration 3: 20175 reachable blocks (+7299), 11941 in queue, 1972 tainted functions, elapsed: 5.4s
+Iteration 4: 25365 reachable blocks (+5190), 4323 in queue, 2017 tainted functions, elapsed: 6.1s
+Iteration 5: 27026 reachable blocks (+1661), 2777 in queue, 2020 tainted functions, elapsed: 6.3s
+Iteration 6: 28025 reachable blocks (+999), 1707 in queue, 2020 tainted functions, elapsed: 6.4s
+Iteration 7: 28637 reachable blocks (+612), 1131 in queue, 2020 tainted functions, elapsed: 6.5s
+Iteration 8: 29030 reachable blocks (+393), 735 in queue, 2020 tainted functions, elapsed: 6.5s
+Iteration 9: 29283 reachable blocks (+253), 445 in queue, 2020 tainted functions, elapsed: 6.5s
+Iteration 10: 29439 reachable blocks (+156), 310 in queue, 2020 tainted functions, elapsed: 6.6s
+Iteration 11: 29547 reachable blocks (+108), 216 in queue, 2020 tainted functions, elapsed: 6.6s
+Iteration 20: 29790 reachable blocks (+3), 6 in queue, 2020 tainted functions, elapsed: 6.6s
+
+REVERSE BFS PANIC REACHABILITY ANALYSIS COMPLETE:
+-------------------------------------------------
+Total execution time: 6.60 seconds
+Iterations completed: 22
+Initial panic seeds: 1997
+Final reachable blocks: 29793
+Tainted functions: 2020
+Processed functions: 2020
+
+CACHE PERFORMANCE:
+  Indirect calls encountered: 0
+
+ITERATION BREAKDOWN:
+  Iteration 1: +1997 blocks
+  Iteration 2: +10879 blocks
+  Iteration 3: +7299 blocks
+  Iteration 4: +5190 blocks
+  Iteration 5: +1661 blocks
+  Iteration 6: +999 blocks
+  Iteration 7: +612 blocks
+  Iteration 8: +393 blocks
+  Iteration 9: +253 blocks
+  Iteration 10: +156 blocks
+  ... and 12 more iterations
+
+Writing 29793 reachable blocks to results/panic_reachable.txt
+Writing 2020 tainted functions to results/tainted_functions.txt
+Writing coverage analysis to results/panic_coverage.json
+Writing unreachable summary to results/unreachable_summary.txt and results/unreachable_summary.json
+**************************************************************************
+THE CONCOLIC EXECUTION OF THE BINARY HAS STARTED!
+Find the logs in results/execution_log.txt and results/execution_trace.txt
+**************************************************************************
+Address: 4d7840, Symbol: crypto/elliptic.p224Contract
+Address: 4659e0, Symbol: runtime.memmove
+^C

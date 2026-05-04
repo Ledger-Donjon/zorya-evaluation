@@ -1,0 +1,126 @@
+Running command: /home/kgorna/zorya/zorya /home/kgorna/go-projects/kubernetes/_output/bin/kubelet --mode function 0x38152a0 --lang go --compiler gc --arg "--help" --negate-path-exploration
+[*] CONCRETE VULNERABILITY FOUND (no Z3 evaluation needed)
+Timestamp: 2026-02-11 15:48:16 UTC
+Mode: function
+Elapsed since start: 1593.815s
+Instruction Address: 0x3815320
+------------------------------------------------------------
+Vulnerability: Concrete NULL pointer dereference
+Opcode: LOAD
+Detection method: Exploring the not taken path with Overlay Execution
+Null pointer dereference (LOAD) at instruction 0
+
+The pointer at this address is concretely NULL on the overlay (not-taken) path.
+No symbolic variable needs a specific value — any input reaching this path will dereference NULL.
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/zorya/zorya /home/kgorna/go-projects/kubernetes/_output/bin/kubelet --mode function 0x38152a0 --lang go --compiler gc --arg "--help" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2026-02-11 15:48:26 UTC
+Mode: function
+Elapsed since start: 1603.777s
+Instruction Address: 0x38152c8
+Panic Address: 0x3815300
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 0 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 0 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 't_ptr' must be 0 (unsigned: 0; signed: 0; ASCII: \0)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 't':
+  t_RAX!140 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.Value.cap':
+  t_Value_cap!144 = #x7abbfeffffdf7ffa
+    (unsigned: 8843942668735053818)
+    (signed: 8843942668735053818)
+    (ASCII LSB: non-printable 0xfa)
+
+Argument 't.Value.len':
+  t_Value_len!143 = #x8080000000000100
+    (unsigned: 9259400833873740032)
+    (signed: -9187343239835811584)
+    (ASCII LSB: \0)
+
+Argument 't.Value.ptr':
+  t_Value_ptr!142 = #x83d2e449b7029db0
+    (unsigned: 9498905569331944880)
+    (signed: -8947838504377606736)
+    (ASCII LSB: non-printable 0xb0)
+
+Argument 't_ptr':
+  t_ptr!141 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================
+
+================================================================================
+Running command: /home/kgorna/zorya/zorya /home/kgorna/go-projects/kubernetes/_output/bin/kubelet --mode function 0x38152a0 --lang go --compiler gc --arg "--help" --negate-path-exploration
+[*] SATISFIABLE STATE FOUND
+Timestamp: 2026-02-11 15:48:32 UTC
+Mode: function
+Elapsed since start: 1610.038s
+Instruction Address: 0x3814e33
+Panic Address: 0x3814e33
+------------------------------------------------------------
+Panic gating stats:
+  gated_by_reach = 0 (branches skipped by reverse CFG reachability)
+  allowed_by_xref_fallback = 0 (branches allowed because target matched a known panic xref)
+------------------------------------------------------------
+RESULTS
+The program can panic if its inputs are the following:
+  - The pointer 't.Value.ptr' must be NULL (nil)
+  - The input 't_ptr' must be 18446744073709486079 (unsigned: 18446744073709486079; signed: -65537; ASCII: n/a)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 't':
+  t_RAX!140 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.Value.cap':
+  t_Value_cap!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.Value.len':
+  t_Value_len!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't.Value.ptr':
+  t_Value_ptr!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 't_ptr':
+  t_ptr!141 = #xfffffffffffeffff
+    (unsigned: 18446744073709486079)
+    (signed: -65537)
+    (ASCII LSB: non-printable 0xff)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+
+================================================================================

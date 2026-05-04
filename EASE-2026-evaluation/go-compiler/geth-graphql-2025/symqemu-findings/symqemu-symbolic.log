@@ -1,0 +1,81 @@
+$ echo "" | $SYMQEMU_BIN /home/kgorna/go-ethereum/build/bin/geth \
+    --dev --http --graphql --http.api eth,web3,net,miner \
+    2>&1 | tee symqemu-symbolic.log
+This is SymCC running with the QSYM backend
+INFO [02-18|10:41:22.099] Starting Geth on Ethereum mainnet...
+INFO [02-18|10:41:22.449] Maximum peer count                       ETH=50 total=50
+INFO [02-18|10:41:23.113] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
+INFO [02-18|10:41:24.228] Set global gas cap                       cap=50,000,000
+INFO [02-18|10:42:18.444] Using developer account                  address=0x71562b71999873DB5b286dF957af199Ec94617F7
+INFO [02-18|10:42:18.506] Initializing the KZG library             backend=gokzg
+INFO [02-18|10:42:19.053] Allocated trie memory caches             clean=154.00MiB dirty=256.00MiB
+WARN [02-18|10:42:19.061] Head block is not reachable
+INFO [02-18|10:42:19.067] State schema set to default              scheme=path
+INFO [02-18|10:42:19.219] Initialising Ethereum protocol           network=1337 dbversion=<nil>
+INFO [02-18|10:42:19.223] Load database journal from disk
+INFO [02-18|10:42:19.285] State snapshot generator is not found
+INFO [02-18|10:42:19.287] Starting snapshot generation             root=56e81f..63b421 accounts=0 slots=0 storage=0.00B dangling=0 elapsed=1.334ms
+INFO [02-18|10:42:19.296] Initialized path database                triecache=154.00MiB statecache=102.00MiB buffer=256.00MiB state-history="last 90000 blocks"
+INFO [02-18|10:42:19.297] Resuming snapshot generation             root=56e81f..63b421 accounts=0 slots=0 storage=0.00B dangling=0 elapsed=10.853ms
+INFO [02-18|10:42:19.298] Writing custom genesis block
+INFO [02-18|10:42:19.316] Generated snapshot                       accounts=0 slots=0 storage=0.00B dangling=0 elapsed=29.671ms
+INFO [02-18|10:42:19.503] 
+INFO [02-18|10:42:19.503] ---------------------------------------------------------------------------------------------------------------------------------------------------------
+INFO [02-18|10:42:19.511] Chain ID:  1337 (unknown)
+INFO [02-18|10:42:19.512] Consensus: unknown
+INFO [02-18|10:42:19.512] 
+INFO [02-18|10:42:19.512] Pre-Merge hard forks (block based):
+INFO [02-18|10:42:19.513]  - Homestead:                   #0       
+INFO [02-18|10:42:19.513]  - Tangerine Whistle (EIP 150): #0       
+INFO [02-18|10:42:19.513]  - Spurious Dragon/1 (EIP 155): #0       
+INFO [02-18|10:42:19.514]  - Spurious Dragon/2 (EIP 158): #0       
+INFO [02-18|10:42:19.514]  - Byzantium:                   #0       
+INFO [02-18|10:42:19.514]  - Constantinople:              #0       
+INFO [02-18|10:42:19.515]  - Petersburg:                  #0       
+INFO [02-18|10:42:19.515]  - Istanbul:                    #0       
+INFO [02-18|10:42:19.515]  - Muir Glacier:                #0       
+INFO [02-18|10:42:19.516]  - Berlin:                      #0       
+INFO [02-18|10:42:19.516]  - London:                      #0       
+INFO [02-18|10:42:19.516]  - Arrow Glacier:               #0       
+INFO [02-18|10:42:19.517]  - Gray Glacier:                #0       
+INFO [02-18|10:42:19.517] 
+INFO [02-18|10:42:19.517] Merge configured:
+INFO [02-18|10:42:19.517]  - Total terminal difficulty:  0
+INFO [02-18|10:42:19.518] 
+INFO [02-18|10:42:19.518] Post-Merge hard forks (timestamp based):
+INFO [02-18|10:42:19.518]  - Shanghai:                    @0         
+INFO [02-18|10:42:19.519]  - Cancun:                      @0          blob: (target: 3, max: 6, fraction: 3338477)
+INFO [02-18|10:42:19.519]  - Prague:                      @0          blob: (target: 6, max: 9, fraction: 5007716)
+INFO [02-18|10:42:19.519]  - Osaka:                       @0          blob: (target: 6, max: 9, fraction: 5007716)
+INFO [02-18|10:42:19.520] 
+INFO [02-18|10:42:19.521] ---------------------------------------------------------------------------------------------------------------------------------------------------------
+INFO [02-18|10:42:19.545] Loaded most recent local block           number=0 hash=fa742c..504fec age=56y11mo1w
+INFO [02-18|10:42:19.553] Initialized transaction indexer          range="last 2350000 blocks"
+INFO [02-18|10:42:28.206] Enabled full-sync                        head=0 hash=fa742c..504fec
+INFO [02-18|10:42:28.221] Gasprice oracle is ignoring threshold set threshold=2
+INFO [02-18|10:42:29.395] Registered sync override service
+WARN [02-18|10:42:29.430] You are running Geth in --dev mode. Please note the following:
+WARN [02-18|10:42:29.435] 
+INFO [02-18|10:42:29.439] Starting peer-to-peer node               instance=Geth/v1.16.8-unstable-bf141fbf-20251219/linux-amd64/go1.24.0
+WARN [02-18|10:42:29.440] P2P server will be useless, neither dialing nor listening
+INFO [02-18|10:42:29.876] New local node record                    seq=1,771,411,349,768 id=6b5f951f6a9aceb7 ip=127.0.0.1 udp=0 tcp=0
+INFO [02-18|10:42:29.884] Started P2P networking                   self=enode://c439be30...@127.0.0.1:0
+INFO [02-18|10:42:29.987] IPC endpoint opened                      url=/tmp/geth.ipc
+INFO [02-18|10:42:30.028] HTTP server started                      endpoint=127.0.0.1:8545 auth=false prefix= cors= vhosts=localhost
+INFO [02-18|10:42:30.032] GraphQL enabled                          url=http://127.0.0.1:8545/graphql
+INFO [02-18|10:42:30.032] GraphQL UI enabled                       url=http://127.0.0.1:8545/graphql/ui
+INFO [02-18|10:42:30.045] Started log indexer
+INFO [02-18|10:43:56.445] Submitted transaction                    hash=0xf2a1e49ccfac253639fd75d263ec521270d2ddccb04ad722298104e4699abd86 from=0x71562b71999873DB5b286dF957af199Ec94617F7 nonce=0 recipient=0x71562b71999873DB5b286dF957af199Ec94617F7 value=1
+INFO [02-18|10:43:56.583] Starting work on payload                 id=0x03673bbbbadfe2d9
+INFO [02-18|10:43:56.649] Updated payload                          id=0x03673bbbbadfe2d9 number=1 hash=9bf493..d609bb txs=1 withdrawals=0 gas=21000 fees=2.1e-14 root=b4e405..b39521 elapsed=60.584ms
+INFO [02-18|10:43:56.657] Stopping work on payload                 id=0x03673bbbbadfe2d9 reason=delivery
+INFO [02-18|10:43:56.749] Imported new potential chain segment     number=1 hash=9bf493..d609bb blocks=1 txs=1 mgas=0.021 elapsed=75.108ms mgasps=0.280 triediffs=1.90KiB triedirty=0.00B
+INFO [02-18|10:43:56.777] Chain head was updated                   number=1 hash=9bf493..d609bb root=b4e405..b39521 elapsed=12.957457ms
+INFO [02-18|10:43:56.793] Indexed transactions                     blocks=2 txs=1 tail=0 elapsed=12.201ms
+INFO [02-18|10:44:20.263] Log index head rendering in progress     firstblock=0 lastblock=1 processed=2 remaining=0 elapsed=23.458s
+INFO [02-18|10:44:20.266] Log index head rendering finished        firstblock=0 lastblock=1 processed=2 elapsed=23.462s
+
+$ ls -la /tmp/symqemu-geth-output/
+total 8
+drwxrwxr-x  2 kgorna kgorna 4096 Feb 18 10:44 .
+drwxrwxrwt 13 root   root   4096 Feb 18 10:41 ..

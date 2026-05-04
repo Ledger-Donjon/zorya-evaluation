@@ -1,0 +1,1366 @@
+Initializing State...
+
+Initializing mock CPU state...
+
+Uploading dumps to CPU registers...
+
+Initializing virtual file system...
+
+Initializing memory...
+
+Initializing the State...
+
+Checking for multi-thread dumps...
+
+Found threads directory, loading thread dumps...
+
+Found thread index: main_tid=2766503, 30 thread(s)
+Thread states:
+  - TID 2766524: waiting
+  - TID 2766502: waiting
+  - TID 2766500: waiting
+  - TID 2766504: waiting
+  - TID 2766508: waiting
+  - TID 2766501: waiting
+  - TID 2766497: waiting
+  - TID 2766505: waiting
+  - TID 2766517: waiting
+  - TID 2766503: background
+  - TID 2766515: waiting
+  - TID 2766499: waiting
+  - TID 2766496: waiting
+  - TID 2766494: waiting
+  - TID 2766495: waiting
+  - TID 2766491: waiting
+  - TID 2766506: waiting
+  - TID 2766509: waiting
+  - TID 2766507: waiting
+  - TID 2766510: waiting
+  - TID 2766498: waiting
+  - TID 2766512: background
+  - TID 2766521: waiting
+  - TID 2766511: waiting
+  - TID 2766516: waiting
+  - TID 2766513: waiting
+  - TID 2766518: waiting
+  - TID 2766514: waiting
+  - TID 2766519: waiting
+  - TID 2766520: waiting
+Found 30 total thread dump(s) on disk
+  Loading TID 2766491 (fs_base=0x7ffff7fb0740, gs_base=0x0)
+  Loading TID 2766494 (fs_base=0x7fffb115f6c0, gs_base=0x0)
+  Loading TID 2766495 (fs_base=0x7fffb095e6c0, gs_base=0x0)
+  Loading TID 2766496 (fs_base=0x7fffa7fff6c0, gs_base=0x0)
+  Loading TID 2766497 (fs_base=0x7fffa77fe6c0, gs_base=0x0)
+  Loading TID 2766498 (fs_base=0x7fffa6ffd6c0, gs_base=0x0)
+  Loading TID 2766499 (fs_base=0x7fffa67fc6c0, gs_base=0x0)
+  Loading TID 2766500 (fs_base=0x7fffa5ffb6c0, gs_base=0x0)
+  Loading TID 2766501 (fs_base=0x7fffa57fa6c0, gs_base=0x0)
+  Loading TID 2766502 (fs_base=0x7fffa4f296c0, gs_base=0x0)
+  Loading TID 2766503 (fs_base=0x7fff87fff6c0, gs_base=0x0)
+  Loading TID 2766504 (fs_base=0x7fff877fe6c0, gs_base=0x0)
+  Loading TID 2766505 (fs_base=0x7fff86ffd6c0, gs_base=0x0)
+  Loading TID 2766506 (fs_base=0x7fff867fc6c0, gs_base=0x0)
+  Loading TID 2766507 (fs_base=0x7fff85ffb6c0, gs_base=0x0)
+  Loading TID 2766508 (fs_base=0x7fff857fa6c0, gs_base=0x0)
+  Loading TID 2766509 (fs_base=0x7fff84ff96c0, gs_base=0x0)
+  Loading TID 2766510 (fs_base=0x7fff63fff6c0, gs_base=0x0)
+  Loading TID 2766511 (fs_base=0x7fff637fe6c0, gs_base=0x0)
+  Loading TID 2766512 (fs_base=0x7fff62ffd6c0, gs_base=0x0)
+  Loading TID 2766513 (fs_base=0x7fff627fc6c0, gs_base=0x0)
+  Loading TID 2766514 (fs_base=0x7fff61ffb6c0, gs_base=0x0)
+  Loading TID 2766515 (fs_base=0x7fff617fa6c0, gs_base=0x0)
+  Loading TID 2766516 (fs_base=0x7fff60ff96c0, gs_base=0x0)
+  Loading TID 2766517 (fs_base=0x7fff43fff6c0, gs_base=0x0)
+  Loading TID 2766518 (fs_base=0x7fff437fe6c0, gs_base=0x0)
+  Loading TID 2766519 (fs_base=0x7fff42ffd6c0, gs_base=0x0)
+  Loading TID 2766520 (fs_base=0x7fff427fc6c0, gs_base=0x0)
+  Loading TID 2766521 (fs_base=0x7fff41ffb6c0, gs_base=0x0)
+  Loading TID 2766524 (fs_base=0x7fff417fa6c0, gs_base=0x0)
+Successfully loaded 30 thread(s) from dumps
+Successfully loaded multi-thread state
+
+Creating the P-Code for the executable sections of libc.so and ld-linux-x86-64.so if they exist...
+
+Using base address 0x7ffff7c00000 for /usr/lib/x86_64-linux-gnu/libc.so.6
+Using base address 0x7ffff7fc5000 for /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+Initializing jump tables...
+
+✓ Successfully loaded 6 jump table(s)
+Configuration and context have been initialized.
+Acquired target information.
+Binary path: /home/kgorna/go-ethereum/build/bin/geth
+The symbols table has been populated.
+Path to the p-code file: /home/kgorna/zorya/external/pcode-generator/results/geth_low_pcode.txt
+Preprocessing the p-code file...
+Completed preprocessing.
+
+Merging VDSO p-code from: "/home/kgorna/zorya/results/initialization_data/vdso/vdso_low_pcode.txt"
+
+Preprocessing the p-code file...
+Completed preprocessing.
+
+Successfully merged 640 VDSO instruction blocks
+
+Mode is 'function'. Adapting the context...
+Start address is "1a3acc0"
+Extracting Go function signatures using llvm-dwarfdump...
+Loading Go signatures from results/function_signatures_go.json...
+Loaded 63431 functions from JSON.
+Processed 61280 Go signatures.
+Found 2 arguments for function 'github.com/ethereum/go-ethereum/graphql.(*Block).resolveHeader' at 0x1a3acc0
+=== PHASE 1: Initializing argument structures ===
+Assigning symbolic var 'b' to register 'RAX' of type github.com/ethereum/go-ethereum/graphql.Block *
+Initialized 'b' => RAX (0x0) as symbolic github.com/ethereum/go-ethereum/graphql.Block *
+Detected struct pointer 'b' -> 'github.com/ethereum/go-ethereum/graphql.Block', symbolizing struct fields...
+=== INITIALIZING STRUCT POINTER FIELDS ===
+Argument 'b' is a pointer to struct 'github.com/ethereum/go-ethereum/graphql.Block'
+Found struct 'github.com/ethereum/go-ethereum/graphql.Block' with 96 bytes and 7 members
+[DEBUG]: get_concrete_value_from_location called with 'RAX'
+[DEBUG]: Register 'RAX' resolved to offset 0x0, bit_width=64
+[DEBUG]: Register 'RAX' concrete value = 0xc000eb3080
+Struct pointer 'b' = 0xc000eb3080
+Added non-null constraint for Go struct pointer 'b' (receiver pointers are never nil in practice)
+Made pointer 'b' symbolic (non-null) in register 'RAX'
+Processing field 'r' at offset 0 (0xc000eb3080), type: 'github.com/ethereum/go-ethereum/graphql.Resolver *', layout_size: 8 bytes
+Symbolizing field 'b.r' at 0xc000eb3080 (size: 64 bits, is_pointer: true)
+✓ Field 'b.r' is a pointer - allowing nil values
+✓ Successfully symbolized field 'b.r' at 0xc000eb3080
+Processing field 'numberOrHash' at offset 8 (0xc000eb3088), type: 'github.com/ethereum/go-ethereum/rpc.BlockNumberOrHash *', layout_size: 8 bytes
+Symbolizing field 'b.numberOrHash' at 0xc000eb3088 (size: 64 bits, is_pointer: true)
+✓ Field 'b.numberOrHash' is a pointer - allowing nil values
+✓ Successfully symbolized field 'b.numberOrHash' at 0xc000eb3088
+Processing field 'mu' at offset 16 (0xc000eb3090), type: 'sync.Mutex', layout_size: 8 bytes
+Symbolizing field 'b.mu' at 0xc000eb3090 (size: 64 bits, is_pointer: false)
+✓ Successfully symbolized field 'b.mu' at 0xc000eb3090
+Processing field 'hash' at offset 24 (0xc000eb3098), type: 'github.com/ethereum/go-ethereum/common.Hash', layout_size: 32 bytes
+Using layout-based size 256 bits (type-based was 64 bits) for field 'b.hash'
+Symbolizing field 'b.hash' at 0xc000eb3098 (size: 256 bits, is_pointer: false)
+WARNING: Field 'b.hash' is too large (32 bytes) - skipping
+Processing field 'header' at offset 56 (0xc000eb30b8), type: 'github.com/ethereum/go-ethereum/core/types.Header *', layout_size: 8 bytes
+Symbolizing field 'b.header' at 0xc000eb30b8 (size: 64 bits, is_pointer: true)
+✓ Field 'b.header' is a pointer - allowing nil values
+✓ Successfully symbolized field 'b.header' at 0xc000eb30b8
+Processing field 'block' at offset 64 (0xc000eb30c0), type: 'github.com/ethereum/go-ethereum/core/types.Block *', layout_size: 8 bytes
+Symbolizing field 'b.block' at 0xc000eb30c0 (size: 64 bits, is_pointer: true)
+✓ Field 'b.block' is a pointer - allowing nil values
+✓ Successfully symbolized field 'b.block' at 0xc000eb30c0
+Processing field 'receipts' at offset 72 (0xc000eb30c8), type: '[]*github.com/ethereum/go-ethereum/core/types.Receipt', layout_size: 24 bytes
+Symbolizing field 'b.receipts' at 0xc000eb30c8 (size: 192 bits, is_pointer: false)
+Field 'b.receipts' is a slice type ([]*github.com/ethereum/go-ethereum/core/types.Receipt), symbolizing as 24-byte composite (ptr+len+cap)
+Symbolizing slice field 'b.receipts': []*github.com/ethereum/go-ethereum/core/types.Receipt (24 bytes = ptr + len + cap)
+✓ Symbolized slice.ptr at 0xc000eb30c8
+✓ Symbolized slice.len at 0xc000eb30d0
+✓ Symbolized slice.cap at 0xc000eb30d8
+✓ Successfully symbolized slice field 'b.receipts' at 0xc000eb30c8 (ptr + len + cap, all symbolic)
+=== STRUCT FIELD SYMBOLIZATION COMPLETE: 6/7 fields symbolized ===
+Assigning symbolic var 'ctx' to register 'RBX,RCX' of type context.Context
+WARNING: multiple registers 'RBX,RCX' for non-slice/string argument 'ctx', using first register
+Initialized 'ctx' => RBX (0x18) as symbolic context.Context
+=== PHASE 2: Initializing slice memory contents ===
+No slice arguments found, skipping memory initialization
+Initializing string memory contents...
+=== INITIALIZING STRING MEMORY CONTENTS ===
+=== FINISHED STRING MEMORY INITIALIZATION ===
+=== INITIALIZATION COMPLETE: 2 total arguments processed ===
+[GO-INIT] Checking for goroutine stackPreempt flag...
+[GO-PREEMPT] stackguard0 = 0xc0013043a0 (not stackPreempt) - no clearing needed
+Logging the addresses of the XREFs of Panic functions...
+Beginning execution from address: 0x1a3acc0
+Loading function arguments map...
+Loading Go function arguments map...
+Loading function signatures from results/function_signatures_go.json...
+Loaded 63431 functions from JSON.
+Processed 61280 function signatures.
+*******************************************
+EXECUTING INSTRUCTIONS AT ADDRESS: 0x1a3acc0
+*******************************************
+
+...
+
+Current RIP: 0x1a3ad2d
+local_line_number: 1, instructions.len()-1: 9
+-------> Processing instruction at index: 2, Inst { opcode: Load, output: Some(Varnode { var: Unique(0xd900), size: Byte }), inputs: [Varnode { var: MemoryRam, size: Quad }, Varnode { var: Register(8, Quad), size: Quad }] }
+* FYI, the space ID is not used during zorya execution.
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Register(8, Quad)
+Varnode is a CPU register with offset: 0x8 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x8
+Pointer offset to be dereferenced : c000eb3080
+[NULL-CHECK] Checking if 'b.mu' can be NULL (LOAD at 0x1a3ad2d, concrete ptr: 0xc000eb3080, constraints: 2)
+>>> Using panic address from caller: 0x1a3ad2d
+Asserting NULL pointer condition to the solver: pointer == 0
+Pointer expression: b_mu!144
+=== CONSTRAINT ANALYSIS ===
+=== CUSTOM SIMPLIFIED CONSTRAINTS ===
+Constraint #1 (Bool) with Custom Simplification: (= ((_ extract 31 0) b_mu!144) #x00000000)
+Constraint #2 (Bool) with Custom Simplification: (= ((_ extract 31 0) b_mu!144) #x00000000)
+=== ASSERTING SIMPLIFIED CONSTRAINTS TO SOLVER ===
+Adding 2 simplified constraints to solver...
+=== END CONSTRAINT ANALYSIS ===
+~~~~~~~~~~~
+SATISFIABLE: Symbolic execution can lead to a panic function.
+~~~~~~~~~~~
+To enter a panic function, the following conditions must be satisfied:
+RESULTS
+The program can panic if its inputs are the following:
+  - The pointer 'b.mu' must be NULL (nil)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'b.block':
+  b_block!146 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.header':
+  b_header!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.mu':
+  b_mu!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.numberOrHash':
+  b_numberOrHash!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.r':
+  b_r!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.receipts.cap':
+  b_receipts_cap!149 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.receipts.len':
+  b_receipts_len!148 = #xe4054544019e0440
+    (unsigned: 16430614973918348352)
+    (signed: -2016129099791203264)
+    (ASCII LSB: '@')
+
+Argument 'b.receipts.ptr':
+  b_receipts_ptr!147 = #x7d17ddb7393dffa7
+    (unsigned: 9013916958214455207)
+    (signed: 9013916958214455207)
+    (ASCII LSB: non-printable 0xa7)
+
+Argument 'b_ptr':
+  b_ptr!141 = #x874820001c640010
+    (unsigned: 9748076578291843088)
+    (signed: -8698667495417708528)
+    (ASCII LSB: non-printable 0x10)
+
+Argument 'ctx':
+  ctx_RBX!150 = #x8108000006408010
+    (unsigned: 9297681430811279376)
+    (signed: -9149062642898272240)
+    (ASCII LSB: non-printable 0x10)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+========================================================================
+VULNERABILITY: Symbolic NULL pointer dereference
+  Address: 0x1a3ad2d
+  Elapsed: 985.247s
+  Opcode: LOAD
+  Detection method: Exploring the current path with a symbolic check on the pointer
+  More details in: results/FOUND_SAT_STATE.txt
+========================================================================
+
+~~~~~~~~~~~
+Load size in bits: 8
+Memory size in bits: 64
+Padded concrete from 1 to 8 bytes: [60, 00, 00, 00, 00, 00, 00, 00]
+Extracting memory value from 64 bits to 8 bits
+Dereferenced value: 0x60, with size 64, and symbolic: Int(((_ extract 7 0) b_r!142))
+Output is a Unique type with ID: 0xd900
+Updated Unique(0xd900) with concrete value 0x60 and size 64
+The value of register at offset 0x0 - RAX is 0 and symbolic #x0000000000000000
+The value of register at offset 0x8 - RCX is c000eb3080 and symbolic b_ptr!141
+The value of register at offset 0x10 - RDX is 1 and symbolic #x0000000000000001
+The value of register at offset 0x18 - RBX is 2ccf300 and symbolic ctx_RBX!150
+The value of register at offset 0x20 - RSP is c001304c78 and symbolic #x000000c001304c78
+The value of register at offset 0x28 - RBP is c001304df0 and symbolic #x000000c001304df0
+The value of register at offset 0x30 - RSI is 0 and symbolic #x0000000000000000
+The value of register at offset 0x38 - RDI is 0 and symbolic #x0000000000000000
+The value of register at offset 0x80 - R8 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x88 - R9 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x90 - R10 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x98 - R11 is 0 and symbolic #x0000000000000000
+The value of register at offset 0xa0 - R12 is c001304cf8 and symbolic #x000000c001304cf8
+The value of register at offset 0xa8 - R13 is 1a09600 and symbolic #x0000000001a09600
+The value of register at offset 0xb0 - R14 is c0008e76c0 and symbolic #x000000c0008e76c0
+The value of register at offset 0xb8 - R15 is c000eb3080 and symbolic #x000000c000eb3080
+The value of register at offset 0x1200 - YMM0 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x1220 - YMM1 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x200 - CF is 0 and symbolic #x00
+The value of register at offset 0x202 - PF is 0 and symbolic #x00
+The value of register at offset 0x206 - ZF is 0 and symbolic #x00
+The value of register at offset 0x207 - SF is 0 and symbolic #x00
+The value of register at offset 0x20b - OF is 0 and symbolic #x00
+The value of register at offset 0x110 - FS_OFFSET is 7fff87fff6c0
+Possible new RIP: 0x1a3ad2d
+Current RIP: 0x1a3ad2d
+
+...
+
+Current RIP: 0x1a3ad89
+local_line_number: 1, instructions.len()-1: 2
+-------> Processing instruction at index: 2, Inst { opcode: Store, output: None, inputs: [Varnode { var: MemoryRam, size: Quad }, Varnode { var: Unique(0x4400), size: Quad }, Varnode { var: Unique(0x6800), size: Quad }] }
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Unique(0x4400)
+Varnode is of type 'unique' with ID: 0x4400 and size: 64 bits
+Retrieved unique variable: Int(824653663680) with symbolic size: 64
+Pointer offset concrete: c001304dc0
+Marked address 0xc001304dc0 as initialized
+[NULL-CHECK] Checking if 'b.mu' can be NULL (STORE at 0x1a3ad89, concrete ptr: 0xc001304dc0, constraints: 2)
+>>> Using panic address from caller: 0x1a3ad89
+Asserting NULL pointer condition to the solver: pointer == 0
+Pointer expression: b_mu!144
+=== CONSTRAINT ANALYSIS ===
+=== CUSTOM SIMPLIFIED CONSTRAINTS ===
+Constraint #1 (Bool) with Custom Simplification: (= ((_ extract 31 0) b_mu!144) #x00000000)
+Constraint #2 (Bool) with Custom Simplification: (= ((_ extract 31 0) b_mu!144) #x00000000)
+=== ASSERTING SIMPLIFIED CONSTRAINTS TO SOLVER ===
+Adding 2 simplified constraints to solver...
+=== END CONSTRAINT ANALYSIS ===
+~~~~~~~~~~~
+SATISFIABLE: Symbolic execution can lead to a panic function.
+~~~~~~~~~~~
+To enter a panic function, the following conditions must be satisfied:
+RESULTS
+The program can panic if its inputs are the following:
+  - The pointer 'b.mu' must be NULL (nil)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'b.block':
+  b_block!146 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.header':
+  b_header!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.mu':
+  b_mu!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.numberOrHash':
+  b_numberOrHash!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.r':
+  b_r!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.receipts.cap':
+  b_receipts_cap!149 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.receipts.len':
+  b_receipts_len!148 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.receipts.ptr':
+  b_receipts_ptr!147 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b_ptr':
+  b_ptr!141 = #x0000000000000001
+    (unsigned: 1)
+    (signed: 1)
+    (ASCII: non-printable, code 1)
+
+Argument 'ctx':
+  ctx_RBX!150 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+========================================================================
+VULNERABILITY: Symbolic NULL pointer dereference
+  Address: 0x1a3ad89
+  Elapsed: 1047.944s
+  Opcode: STORE
+  Detection method: Exploring the current path with a symbolic check on the pointer
+  More details in: results/FOUND_SAT_STATE.txt
+========================================================================
+
+~~~~~~~~~~~
+* Fetching data to store from instruction.input[2]
+Converting Varnode to concolic type: Unique(0x6800)
+Varnode is of type 'unique' with ID: 0x6800 and size: 64 bits
+Retrieved unique variable: Int(824649134224) with symbolic size: 64
+Data size in bits: 64
+Creating single MemoryValue: concrete=0xc000eb3090, symbolic=(concat ((_ extract 63 8) (bvadd #x0000000000000010 b_ptr!141))
+        (bvadd #x10 ((_ extract 7 0) b_ptr!141))), size=64
+Stored single value 0xc000eb3090 to memory at address 0xc001304dc0
+Verified single value at 0xc001304dc0: stored=0xc000eb3090, expected=0xc000eb3090
+Marked address 0xc001304dc0 as initialized
+The value of register at offset 0x0 - RAX is 0 and symbolic #x0000000000000000
+The value of register at offset 0x8 - RCX is c001304db8 and symbolic #x000000c001304db8
+The value of register at offset 0x10 - RDX is c000eb3090 and symbolic (concat ((_ extract 63 8) (bvadd #x0000000000000010 b_ptr!141))
+        (bvadd #x10 ((_ extract 7 0) b_ptr!141)))
+The value of register at offset 0x18 - RBX is 2ccf300 and symbolic ctx_RBX!150
+The value of register at offset 0x20 - RSP is c001304c78 and symbolic #x000000c001304c78
+The value of register at offset 0x28 - RBP is c001304df0 and symbolic #x000000c001304df0
+The value of register at offset 0x30 - RSI is 0 and symbolic #x0000000000000000
+The value of register at offset 0x38 - RDI is 0 and symbolic #x0000000000000000
+The value of register at offset 0x80 - R8 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x88 - R9 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x90 - R10 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x98 - R11 is 0 and symbolic #x0000000000000000
+The value of register at offset 0xa0 - R12 is c001304cf8 and symbolic #x000000c001304cf8
+The value of register at offset 0xa8 - R13 is 1a09600 and symbolic #x0000000001a09600
+The value of register at offset 0xb0 - R14 is c0008e76c0 and symbolic #x000000c0008e76c0
+The value of register at offset 0xb8 - R15 is c000eb3080 and symbolic #x000000c000eb3080
+The value of register at offset 0x1200 - YMM0 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x1220 - YMM1 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x200 - CF is 0 and symbolic #x00
+The value of register at offset 0x202 - PF is 1 and symbolic #x01
+The value of register at offset 0x206 - ZF is 1 and symbolic #x01
+The value of register at offset 0x207 - SF is 0 and symbolic #x00
+The value of register at offset 0x20b - OF is 0 and symbolic #x00
+The value of register at offset 0x110 - FS_OFFSET is 7fff87fff6c0
+Possible new RIP: 0x1a3ad89
+Current RIP: 0x1a3ad89
+local_line_number: 2, instructions.len()-1: 2
+Moving to next address block: 0x1a3ad8d
+
+...
+
+Current RIP: 0x1a3adb9
+local_line_number: 0, instructions.len()-1: 1
+-------> Processing instruction at index: 1, Inst { opcode: CBranch, output: None, inputs: [Varnode { var: Memory(0x1a3adbd), size: Quad }, Varnode { var: Unique(0xe500), size: Byte }] }
+Converting Varnode to concolic type: Unique(0xe500)
+Varnode is of type 'unique' with ID: 0xe500 and size: 8 bits
+Retrieved unique variable: Int(0) with symbolic size: 8
+Branch at 0x1a3adb9 involves tracked symbolic variables; performing overlay analysis...
+ Possible panic function reference detected: entrying symbolic checks...
+Converting Varnode to concolic type: Unique(0xe500)
+Varnode is of type 'unique' with ID: 0xe500 and size: 8 bits
+Retrieved unique variable: Int(0) with symbolic size: 8
+>>> Branch condition is false (0x0), performing lightweight path analysis on the other branch...
+>>> Real branch target (non-internal) with tracked symbolic variables - performing overlay exploration.
+>>> Performing concolic overlay path analysis on negated path at 0x1a3adbd...
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  OVERLAY MODE: Exploring UNTAKEN path (speculative execution)        ║
+║  Starting address: 0x1a3adbd  |  Max depth: 15 instructions           ║
+╚══════════════════════════════════════════════════════════════════════╝
+[OVERLAY] Saved 1 unique variables before overlay exploration
+[OVERLAY] Saved current_address before overlay: Some(27504057)
+[OVERLAY] Saved call stack state: depth=0, freed_frames=0
+[OVERLAY] Speculative execution starting at 0x1a3adbd
+[OVERLAY] [depth 1] 0x1a3adbd:0 IntAdd
+* Fetching instruction.input[0]
+Converting Varnode to concolic type: Const(0x130)
+Varnode is a constant with value: 0x130
+Parsed value (signed): 304
+Constant treated as memory value: 304 with symbolic size 64
+* Fetching instruction.input[1]
+Converting Varnode to concolic type: Register(20, Quad)
+Varnode is a CPU register with offset: 0x20 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x20
+Output size in bits: 64
+*** The result of INT_ADD is: c001304da8
+
+Writing c001304da8 to the unique variable with ID: 0x4f80
+Updated unique variable: Unique(0x4f80) with concrete part : c001304da8, concrete size 64 bits and symbolic size 64 bits
+[OVERLAY] [depth 2] 0x1a3adbd:1 Copy
+Output size in bits: 128
+* Fetching source from instruction.input[0]
+Converting Varnode to concolic type: Register(15c0, DoubleQuad)
+Varnode is a CPU register with offset: 0x15c0 and requested bit size: 128
+No direct register match found at offset 0x15c0, extraction required
+Containing register found at offset 0x13e0 with size 256
+[OVERLAY] [depth 3] 0x1a3adbd:2 Store
+Converting Varnode to concolic type: Unique(0x4f80)
+Varnode is of type 'unique' with ID: 0x4f80 and size: 64 bits
+Retrieved unique variable: Int(824653663656) with symbolic size: 64
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Unique(0x4f80)
+Varnode is of type 'unique' with ID: 0x4f80 and size: 64 bits
+Retrieved unique variable: Int(824653663656) with symbolic size: 64
+Pointer offset concrete: c001304da8
+Marked address 0xc001304da8 as initialized
+* Fetching data to store from instruction.input[2]
+Converting Varnode to concolic type: Unique(0x6880)
+Varnode is of type 'unique' with ID: 0x6880 and size: 128 bits
+Retrieved unique variable: LargeInt([0, 0]) with symbolic size: 128
+Data size in bits: 128
+Storing LargeInt with 2 chunks: [0, 0]
+Creating chunk 0 MemoryValue: concrete=0x0, symbolic=#x0000000000000000, size=64
+Stored chunk 0 (0x0) at address 0xc001304da8
+Creating chunk 1 MemoryValue: concrete=0x0, symbolic=#x0000000000000000, size=64
+Stored chunk 1 (0x0) at address 0xc001304db0
+Stored complete LargeInt value starting at 0xc001304da8 (2 chunks)
+Verified chunk 0 at 0xc001304da8: stored=0x0, expected=0x0
+Verified chunk 1 at 0xc001304db0: stored=0x0, expected=0x0
+Marked address 0xc001304da8 as initialized
+[OVERLAY] [depth 4] 0x1a3adc6:0 IntAdd
+* Fetching instruction.input[0]
+Converting Varnode to concolic type: Const(0x188)
+Varnode is a constant with value: 0x188
+Parsed value (signed): 392
+Constant treated as memory value: 392 with symbolic size 64
+* Fetching instruction.input[1]
+Converting Varnode to concolic type: Register(20, Quad)
+Varnode is a CPU register with offset: 0x20 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x20
+Output size in bits: 64
+*** The result of INT_ADD is: c001304e00
+
+Writing c001304e00 to the unique variable with ID: 0x4f80
+Updated unique variable: Unique(0x4f80) with concrete part : c001304e00, concrete size 64 bits and symbolic size 64 bits
+[OVERLAY] [depth 5] 0x1a3adc6:1 Load
+Converting Varnode to concolic type: Unique(0x4f80)
+Varnode is of type 'unique' with ID: 0x4f80 and size: 64 bits
+Retrieved unique variable: Int(824653663744) with symbolic size: 64
+* FYI, the space ID is not used during zorya execution.
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Unique(0x4f80)
+Varnode is of type 'unique' with ID: 0x4f80 and size: 64 bits
+Retrieved unique variable: Int(824653663744) with symbolic size: 64
+Pointer offset to be dereferenced : c001304e00
+Load size in bits: 64
+Memory size in bits: 64
+Reading from overlay at address 0xc001304e00
+Dereferenced value: 0xc000eb3080, with size 64, and symbolic: Int((concat ((_ extract 7 0) b_ptr!141)
+        ((_ extract 7 0) b_ptr!141)
+        ((_ extract 7 0) b_ptr!141)
+        ((_ extract 7 0) b_ptr!141)
+        ((_ extract 7 0) b_ptr!141)
+        ((_ extract 7 0) b_ptr!141)
+        ((_ extract 7 0) b_ptr!141)
+        ((_ extract 7 0) b_ptr!141)))
+Output is a Unique type with ID: 0xdc00
+Updated Unique(0xdc00) with concrete value 0xc000eb3080 and size 64
+[OVERLAY] [depth 6] 0x1a3adc6:2 Copy
+Output size in bits: 64
+* Fetching source from instruction.input[0]
+Converting Varnode to concolic type: Unique(0xdc00)
+Varnode is of type 'unique' with ID: 0xdc00 and size: 64 bits
+Retrieved unique variable: Int(824649134208) with symbolic size: 64
+[OVERLAY] [depth 7] 0x1a3adce:0 Copy
+Output size in bits: 8
+* Fetching source from instruction.input[0]
+Converting Varnode to concolic type: Const(0x0)
+Varnode is a constant with value: 0x0
+Parsed value (signed): 0
+Constant treated as memory value: 0 with symbolic size 8
+[OVERLAY] [depth 8] 0x1a3adce:1 Copy
+Output size in bits: 8
+* Fetching source from instruction.input[0]
+Converting Varnode to concolic type: Const(0x0)
+Varnode is a constant with value: 0x0
+Parsed value (signed): 0
+Constant treated as memory value: 0 with symbolic size 8
+[OVERLAY] [depth 9] 0x1a3adce:2 Load
+Converting Varnode to concolic type: Register(0, Quad)
+Varnode is a CPU register with offset: 0x0 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x0
+* FYI, the space ID is not used during zorya execution.
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Register(0, Quad)
+Varnode is a CPU register with offset: 0x0 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x0
+Pointer offset to be dereferenced : c000eb3080
+[NULL-CHECK] Checking if 'b_ptr' can be NULL (LOAD at 0x1a3adce, concrete ptr: 0xc000eb3080, constraints: 2)
+>>> Using panic address from caller: 0x1a3adce
+Asserting NULL pointer condition to the solver: pointer == 0
+Pointer expression: b_ptr!141
+=== CONSTRAINT ANALYSIS ===
+=== CUSTOM SIMPLIFIED CONSTRAINTS ===
+Constraint #1 (Bool) with Custom Simplification: (= ((_ extract 31 0) b_mu!144) #x00000000)
+Constraint #2 (Bool) with Custom Simplification: (= ((_ extract 31 0) b_mu!144) #x00000000)
+=== ASSERTING SIMPLIFIED CONSTRAINTS TO SOLVER ===
+Adding 2 simplified constraints to solver...
+=== END CONSTRAINT ANALYSIS ===
+~~~~~~~~~~~
+Branch to panic is UNSAT => no input can make that branch lead to panic
+~~~~~~~~~~~
+[NULL-CHECK] 'b_ptr' cannot be NULL (UNSAT)
+Load size in bits: 8
+Memory size in bits: 64
+Reading from overlay at address 0xc000eb3080
+Extracting memory value from 64 bits to 8 bits
+Dereferenced value: 0x60, with size 64, and symbolic: Int(((_ extract 7 0) b_r!142))
+Output is a Unique type with ID: 0xd900
+Updated Unique(0xd900) with concrete value 0x60 and size 64
+[OVERLAY] [depth 10] 0x1a3adce:3 IntAnd
+* Fetching instruction.input[0] for INT_AND
+Converting Varnode to concolic type: Unique(0xd900)
+Varnode is of type 'unique' with ID: 0xd900 and size: 8 bits
+Retrieved unique variable: Int(96) with symbolic size: 8
+* Fetching instruction.input[1] for INT_AND
+Converting Varnode to concolic type: Register(0, Byte)
+Varnode is a CPU register with offset: 0x0 and requested bit size: 8
+Register at offset 0x0 exists but with size 64 bits, needs 8 bits, extraction needed
+Output size in bits: 8
+*** The result of INT_AND is: 0
+
+Writing 0 to the unique variable with ID: 0x58e80
+Updated unique variable: Unique(0x58e80) with concrete part : 0, concrete size 8 bits and symbolic size 8 bits
+[OVERLAY] [depth 11] 0x1a3adce:4 IntSLess
+* Fetching instruction.input[0] for INT_SLESS
+Converting Varnode to concolic type: Unique(0x58e80)
+Varnode is of type 'unique' with ID: 0x58e80 and size: 8 bits
+Retrieved unique variable: Int(0) with symbolic size: 8
+* Fetching instruction.input[1] for INT_SLESS
+Converting Varnode to concolic type: Const(0x0)
+Varnode is a constant with value: 0x0
+Parsed value (signed): 0
+Constant treated as memory value: 0 with symbolic size 8
+Output size in bits: 8
+input0_var concrete: 0, input1_var concrete: 0
+input0 bit width: 8, input1 bit width: 8
+Signed comparison: 0 < 0 = false
+result_concrete: false
+result_symbolic (Bool): (not (bvsle #x00
+            (bvnot (bvor (bvnot ((_ extract 7 0) b_r!142))
+                         (bvnot ((_ extract 7 0) b_ptr!141))))))
+result_value symbolic (BV): (ite (bvsle #x00
+            (bvnot (bvor (bvnot ((_ extract 7 0) b_r!142))
+                         (bvnot ((_ extract 7 0) b_ptr!141)))))
+     #x00
+     #x01)
+*** The result of INT_SLESS is: 0
+Output is a Register type
+Updated register at offset 0x207 with concrete value 0x0, concrete size 8 bits and symbolic size 8 bits
+[OVERLAY] [depth 12] 0x1a3adce:5 IntEqual
+=== STARTING INT_EQUAL DEBUG ===
+* Fetching instruction.input[0] for INT_EQUAL
+Converting Varnode to concolic type: Unique(0x58e80)
+Varnode is of type 'unique' with ID: 0x58e80 and size: 8 bits
+Retrieved unique variable: Int(0) with symbolic size: 8
+* Fetching instruction.input[1] for INT_EQUAL
+Converting Varnode to concolic type: Const(0x0)
+Varnode is a constant with value: 0x0
+Parsed value (signed): 0
+Constant treated as memory value: 0 with symbolic size 8
+input0_var concrete: 0, input1_var concrete: 0
+=== CHECKING AFTER get_symbolic_value_bv ===
+input0_bv: (bvnot (bvor (bvnot ((_ extract 7 0) b_r!142))
+             (bvnot ((_ extract 7 0) b_ptr!141))))
+input1_bv: #x00
+=== CHECKING AFTER SIMPLIFY ===
+input0 simplified: (bvnot (bvor (bvnot ((_ extract 7 0) b_r!142))
+             (bvnot ((_ extract 7 0) b_ptr!141))))
+input1 simplified: #x00
+Output size in bits: 8
+=== PERFORMING EQUALITY COMPARISON ===
+result_concrete: true
+result_symbolic (Bool): (= (bvnot (bvor (bvnot ((_ extract 7 0) b_r!142))
+                (bvnot ((_ extract 7 0) b_ptr!141))))
+   #x00)
+=== CREATING CONCOLIC VAR ===
+result_value symbolic (Bool): (= (bvnot (bvor (bvnot ((_ extract 7 0) b_r!142))
+                (bvnot ((_ extract 7 0) b_ptr!141))))
+   #x00)
+*** The result of INT_EQUAL is: 1
+=== CALLING handle_output ===
+Output is a Register type
+Updated register at offset 0x206 with concrete value 0x1, concrete size 8 bits and symbolic size 8 bits
+=== AFTER handle_output - CHECKING FINAL REGISTER STATE ===
+Final register symbolic: Int((ite (= b_header!145 #x0000000000000000) #x01 #x00))
+=== END INT_EQUAL DEBUG ===
+[OVERLAY] [depth 13] 0x1a3adce:6 IntAnd
+* Fetching instruction.input[0] for INT_AND
+Converting Varnode to concolic type: Unique(0x58e80)
+Varnode is of type 'unique' with ID: 0x58e80 and size: 8 bits
+Retrieved unique variable: Int(0) with symbolic size: 8
+* Fetching instruction.input[1] for INT_AND
+Converting Varnode to concolic type: Const(0xff)
+Varnode is a constant with value: 0xff
+Parsed value (signed): -1
+Constant treated as memory value: 255 with symbolic size 8
+Output size in bits: 8
+*** The result of INT_AND is: 0
+
+Writing 0 to the unique variable with ID: 0x15100
+Updated unique variable: Unique(0x15100) with concrete part : 0, concrete size 8 bits and symbolic size 8 bits
+[OVERLAY] [depth 14] 0x1a3adce:7 PopCount
+* Fetching instruction.input[0] for POPCOUNT
+Converting Varnode to concolic type: Unique(0x15100)
+Varnode is of type 'unique' with ID: 0x15100 and size: 8 bits
+Retrieved unique variable: Int(0) with symbolic size: 8
+Writing 0 to the unique variable with ID: 0x15180
+Updated unique variable: Unique(0x15180) with concrete part : 0, concrete size 8 bits and symbolic size 8 bits
+[OVERLAY] [depth 15] 0x1a3adce:8 IntAnd
+* Fetching instruction.input[0] for INT_AND
+Converting Varnode to concolic type: Unique(0x15180)
+Varnode is of type 'unique' with ID: 0x15180 and size: 8 bits
+Retrieved unique variable: Int(0) with symbolic size: 8
+* Fetching instruction.input[1] for INT_AND
+Converting Varnode to concolic type: Const(0x1)
+Varnode is a constant with value: 0x1
+Parsed value (signed): 1
+Constant treated as memory value: 1 with symbolic size 8
+Output size in bits: 8
+*** The result of INT_AND is: 0
+
+Writing 0 to the unique variable with ID: 0x15200
+Updated unique variable: Unique(0x15200) with concrete part : 0, concrete size 8 bits and symbolic size 8 bits
+[OVERLAY] Reached max depth at 0x1a3adce, stopping speculative execution
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  OVERLAY EXECUTION METRICS                                           ║
+╚══════════════════════════════════════════════════════════════════════╝
+[OVERLAY METRICS] Modified registers: 6
+[OVERLAY METRICS] Register changes:
+  - RAX = 0xc000eb3080
+  - CF = 0x0
+  - ZF = 0x1
+  - SF = 0x0
+  - OF = 0x0
+  - RIP = 0x1a3adbd
+[OVERLAY METRICS] Modified memory regions: 1
+[OVERLAY METRICS] Memory changes:
+  - Region [0xc000000000 - 0xc002c00000]:
+    Specific addresses modified: 2
+      * 0xc001304da8
+      * 0xc001304db0
+[OVERLAY METRICS] Exploration depth reached: 0
+╚══════════════════════════════════════════════════════════════════════╝
+
+[OVERLAY] Restored call stack state: depth=0, freed_frames=0
+[OVERLAY] Restored 1 unique variables after overlay exploration
+[OVERLAY] Restored current_address after overlay: Some(27504057)
+[OVERLAY] RIP after clearing overlay: 0x1a3adb9
+╔══════════════════════════════════════════════════════════════════════╗
+║  OVERLAY MODE ENDED - Returning to real execution path               ║
+║  RIP value after overlay: 0x1a3adb9                                   ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+>>> Concolic overlay analysis reached depth limit
+>>> Performing AST-based panic exploration...
+Exploring AST for panic at address 0x1a3adbd
+AST exploration result:
+FOUND_PANIC_XREF_AT 0x0048c0ab
+
+>>> The AST exploration found a potential call to a panic address at 0x48c0ab
+>>> Using panic address from caller: 0x48c0ab
+Conditional flag BV simplified: (ite (= (ite (= b_header!145 #x0000000000000000) #x01 #x00) #x00) #x01 #x00)
+Asserting branch condition to the solver: (= (ite (= b_header!145 #x0000000000000000) #x01 #x00) #x00)
+=== CONSTRAINT ANALYSIS ===
+=== CUSTOM SIMPLIFIED CONSTRAINTS ===
+Constraint #1 (Bool) with Custom Simplification: (= ((_ extract 31 0) b_mu!144) #x00000000)
+Constraint #2 (Bool) with Custom Simplification: (= ((_ extract 31 0) b_mu!144) #x00000000)
+=== ASSERTING SIMPLIFIED CONSTRAINTS TO SOLVER ===
+Adding 2 simplified constraints to solver...
+=== END CONSTRAINT ANALYSIS ===
+~~~~~~~~~~~
+SATISFIABLE: Symbolic execution can lead to a panic function.
+~~~~~~~~~~~
+To enter a panic function, the following conditions must be satisfied:
+RESULTS
+The program can panic if its inputs are the following:
+  - The input 'b.header' must be 0x1 (unsigned: 1; signed: 1; ASCII: non-printable 0x01)
+  - The pointer 'b.mu' must be NULL (nil)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'b.block':
+  b_block!146 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.header':
+  b_header!145 = #x0000000000000001
+    (unsigned: 1)
+    (signed: 1)
+    (ASCII: non-printable, code 1)
+
+Argument 'b.mu':
+  b_mu!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.numberOrHash':
+  b_numberOrHash!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.r':
+  b_r!142 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.receipts.cap':
+  b_receipts_cap!149 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.receipts.len':
+  b_receipts_len!148 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.receipts.ptr':
+  b_receipts_ptr!147 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b_ptr':
+  b_ptr!141 = #xffffffffffffffff
+    (unsigned: 18446744073709551615)
+    (signed: -1)
+    (ASCII LSB: non-printable 0xff)
+
+Argument 'ctx':
+  ctx_RBX!150 = #xffffffff9e3df5ff
+    (unsigned: 18446744072069445119)
+    (signed: -1640106497)
+    (ASCII LSB: non-printable 0xff)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+========================================================================
+VULNERABILITY: Satisfiable path to panic/vulnerability
+  Address: 0x1a3adb9
+  Elapsed: 6383.707s
+  Opcode: CBRANCH
+  Detection method: Exploring the not taken path with Overlay Execution
+  More details in: results/FOUND_SAT_STATE.txt
+========================================================================
+
+~~~~~~~~~~~
+* Fetching branch target from instruction.input[0]
+Converting Varnode to concolic type: Unique(0xe500)
+Varnode is of type 'unique' with ID: 0xe500 and size: 8 bits
+Retrieved unique variable: Int(0) with symbolic size: 8
+Branch condition concrete: false
+Branching condition symbolic: Int((ite (= (ite (= b_header!145 #x0000000000000000) #x01 #x00) #x00) #x01 #x00))
+Extracting condition from Int BV: (ite (= (ite (= b_header!145 #x0000000000000000) #x01 #x00) #x00) #x01 #x00)
+Found tracked symbolic variable 'b.header' in expression
+Branch condition involves tracked symbolic variables, adding to constraint vector
+Adding constraint to vector (path NOT taken (branch not executed))
+Branch target is a specific memory address: 0x1a3adbd
+Branch condition is false, continuing to next instruction (0x1a3adbb)
+The value of register at offset 0x0 - RAX is 0 and symbolic #x0000000000000000
+The value of register at offset 0x8 - RCX is c0013059c0 and symbolic #x000000c0013059c0
+The value of register at offset 0x10 - RDX is c000eb3080 and symbolic b_ptr!141
+The value of register at offset 0x18 - RBX is 2ccf300 and symbolic ctx_RBX!150
+The value of register at offset 0x20 - RSP is c001304c78 and symbolic #x000000c001304c78
+The value of register at offset 0x28 - RBP is c001304df0 and symbolic #x000000c001304df0
+The value of register at offset 0x30 - RSI is 0 and symbolic #x0000000000000000
+The value of register at offset 0x38 - RDI is 0 and symbolic #x0000000000000000
+The value of register at offset 0x80 - R8 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x88 - R9 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x90 - R10 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x98 - R11 is 0 and symbolic #x0000000000000000
+The value of register at offset 0xa0 - R12 is c001304cf8 and symbolic #x000000c001304cf8
+The value of register at offset 0xa8 - R13 is 1a09600 and symbolic #x0000000001a09600
+The value of register at offset 0xb0 - R14 is c0008e76c0 and symbolic #x000000c0008e76c0
+The value of register at offset 0xb8 - R15 is c000eb3080 and symbolic #x000000c000eb3080
+The value of register at offset 0x1200 - YMM0 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x1220 - YMM1 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x200 - CF is 0 and symbolic #x00
+The value of register at offset 0x202 - PF is 1 and symbolic (ite (= ((_ extract 0 0) b_header!145)
+        (bvadd ((_ extract 1 1) b_header!145)
+               ((_ extract 2 2) b_header!145)
+               ((_ extract 3 3) b_header!145)
+               ((_ extract 4 4) b_header!145)
+               ((_ extract 5 5) b_header!145)
+               ((_ extract 6 6) b_header!145)
+               ((_ extract 7 7) b_header!145)))
+     #x01
+     #x00)
+The value of register at offset 0x206 - ZF is 1 and symbolic (ite (= b_header!145 #x0000000000000000) #x01 #x00)
+The value of register at offset 0x207 - SF is 0 and symbolic (ite (bvsle #x0000000000000000 b_header!145) #x00 #x01)
+The value of register at offset 0x20b - OF is 0 and symbolic #x00
+The value of register at offset 0x110 - FS_OFFSET is 7fff87fff6c0
+Possible new RIP: 0x1a3adb9
+Current RIP: 0x1a3adb9
+
+...
+
+Current RIP: 0x1a3ae3a
+local_line_number: 0, instructions.len()-1: 1
+-------> Processing instruction at index: 1, Inst { opcode: CBranch, output: None, inputs: [Varnode { var: Memory(0x1a3ae40), size: Quad }, Varnode { var: Unique(0xe500), size: Byte }] }
+Converting Varnode to concolic type: Unique(0xe500)
+Varnode is of type 'unique' with ID: 0xe500 and size: 8 bits
+Retrieved unique variable: Int(1) with symbolic size: 8
+Branch at 0x1a3ae3a involves tracked symbolic variables; performing overlay analysis...
+ Possible panic function reference detected: entrying symbolic checks...
+Converting Varnode to concolic type: Unique(0xe500)
+Varnode is of type 'unique' with ID: 0xe500 and size: 8 bits
+Retrieved unique variable: Int(1) with symbolic size: 8
+>>> Branch condition is true (0x1), performing lightweight path analysis on the other branch...
+>>> Real branch target (non-internal) with tracked symbolic variables - performing overlay exploration.
+>>> Performing concolic overlay path analysis on negated path at 0x1a3ae3c...
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  OVERLAY MODE: Exploring UNTAKEN path (speculative execution)        ║
+║  Starting address: 0x1a3ae3c  |  Max depth: 15 instructions           ║
+╚══════════════════════════════════════════════════════════════════════╝
+[OVERLAY] Saved 1 unique variables before overlay exploration
+[OVERLAY] Saved current_address before overlay: Some(27504186)
+[OVERLAY] Saved call stack state: depth=0, freed_frames=0
+[OVERLAY] Speculative execution starting at 0x1a3ae3c
+[OVERLAY] [depth 1] 0x1a3ae3c:0 Branch
+* Fetching branch target from instruction.input[0]
+Branch target is a specific memory address: 0x1a3ae42
+Branch target is an absolute address: 0x1a3ae42
+Updated RIP register with branch target: 0x1a3ae42
+[OVERLAY] Following branch to 0x1a3ae42
+[OVERLAY] [depth 2] 0x1a3ae42:0 IntAdd
+* Fetching instruction.input[0]
+Converting Varnode to concolic type: Const(0x37)
+Varnode is a constant with value: 0x37
+Parsed value (signed): 55
+Constant treated as memory value: 55 with symbolic size 64
+* Fetching instruction.input[1]
+Converting Varnode to concolic type: Register(20, Quad)
+Varnode is a CPU register with offset: 0x20 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x20
+Output size in bits: 64
+*** The result of INT_ADD is: c001304caf
+
+Writing c001304caf to the unique variable with ID: 0x4b00
+Updated unique variable: Unique(0x4b00) with concrete part : c001304caf, concrete size 64 bits and symbolic size 64 bits
+[OVERLAY] [depth 3] 0x1a3ae42:1 Copy
+Output size in bits: 128
+* Fetching source from instruction.input[0]
+Converting Varnode to concolic type: Register(15c0, DoubleQuad)
+Varnode is a CPU register with offset: 0x15c0 and requested bit size: 128
+No direct register match found at offset 0x15c0, extraction required
+Containing register found at offset 0x13e0 with size 256
+[OVERLAY] [depth 4] 0x1a3ae42:2 Store
+Converting Varnode to concolic type: Unique(0x4b00)
+Varnode is of type 'unique' with ID: 0x4b00 and size: 64 bits
+Retrieved unique variable: Int(824653663407) with symbolic size: 64
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Unique(0x4b00)
+Varnode is of type 'unique' with ID: 0x4b00 and size: 64 bits
+Retrieved unique variable: Int(824653663407) with symbolic size: 64
+Pointer offset concrete: c001304caf
+Marked address 0xc001304caf as initialized
+* Fetching data to store from instruction.input[2]
+Converting Varnode to concolic type: Unique(0x6880)
+Varnode is of type 'unique' with ID: 0x6880 and size: 128 bits
+Retrieved unique variable: LargeInt([0, 0]) with symbolic size: 128
+Data size in bits: 128
+Storing LargeInt with 2 chunks: [0, 0]
+Creating chunk 0 MemoryValue: concrete=0x0, symbolic=#x0000000000000000, size=64
+Stored chunk 0 (0x0) at address 0xc001304caf
+Creating chunk 1 MemoryValue: concrete=0x0, symbolic=#x0000000000000000, size=64
+Stored chunk 1 (0x0) at address 0xc001304cb7
+Stored complete LargeInt value starting at 0xc001304caf (2 chunks)
+Verified chunk 0 at 0xc001304caf: stored=0x0, expected=0x0
+Verified chunk 1 at 0xc001304cb7: stored=0x0, expected=0x0
+Marked address 0xc001304caf as initialized
+[OVERLAY] [depth 5] 0x1a3ae48:0 IntAdd
+* Fetching instruction.input[0]
+Converting Varnode to concolic type: Const(0x47)
+Varnode is a constant with value: 0x47
+Parsed value (signed): 71
+Constant treated as memory value: 71 with symbolic size 64
+* Fetching instruction.input[1]
+Converting Varnode to concolic type: Register(20, Quad)
+Varnode is a CPU register with offset: 0x20 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x20
+Output size in bits: 64
+*** The result of INT_ADD is: c001304cbf
+
+Writing c001304cbf to the unique variable with ID: 0x4b00
+Updated unique variable: Unique(0x4b00) with concrete part : c001304cbf, concrete size 64 bits and symbolic size 64 bits
+[OVERLAY] [depth 6] 0x1a3ae48:1 Copy
+Output size in bits: 128
+* Fetching source from instruction.input[0]
+Converting Varnode to concolic type: Register(15c0, DoubleQuad)
+Varnode is a CPU register with offset: 0x15c0 and requested bit size: 128
+No direct register match found at offset 0x15c0, extraction required
+Containing register found at offset 0x13e0 with size 256
+[OVERLAY] [depth 7] 0x1a3ae48:2 Store
+Converting Varnode to concolic type: Unique(0x4b00)
+Varnode is of type 'unique' with ID: 0x4b00 and size: 64 bits
+Retrieved unique variable: Int(824653663423) with symbolic size: 64
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Unique(0x4b00)
+Varnode is of type 'unique' with ID: 0x4b00 and size: 64 bits
+Retrieved unique variable: Int(824653663423) with symbolic size: 64
+Pointer offset concrete: c001304cbf
+Marked address 0xc001304cbf as initialized
+* Fetching data to store from instruction.input[2]
+Converting Varnode to concolic type: Unique(0x6880)
+Varnode is of type 'unique' with ID: 0x6880 and size: 128 bits
+Retrieved unique variable: LargeInt([0, 0]) with symbolic size: 128
+Data size in bits: 128
+Storing LargeInt with 2 chunks: [0, 0]
+Creating chunk 0 MemoryValue: concrete=0x0, symbolic=#x0000000000000000, size=64
+Stored chunk 0 (0x0) at address 0xc001304cbf
+Creating chunk 1 MemoryValue: concrete=0x0, symbolic=#x0000000000000000, size=64
+Stored chunk 1 (0x0) at address 0xc001304cc7
+Stored complete LargeInt value starting at 0xc001304cbf (2 chunks)
+Verified chunk 0 at 0xc001304cbf: stored=0x0, expected=0x0
+Verified chunk 1 at 0xc001304cc7: stored=0x0, expected=0x0
+Marked address 0xc001304cbf as initialized
+[OVERLAY] [depth 8] 0x1a3ae4e:0 IntAdd
+* Fetching instruction.input[0]
+Converting Varnode to concolic type: Const(0x188)
+Varnode is a constant with value: 0x188
+Parsed value (signed): 392
+Constant treated as memory value: 392 with symbolic size 64
+* Fetching instruction.input[1]
+Converting Varnode to concolic type: Register(20, Quad)
+Varnode is a CPU register with offset: 0x20 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x20
+Output size in bits: 64
+*** The result of INT_ADD is: c001304e00
+
+Writing c001304e00 to the unique variable with ID: 0x4f80
+Updated unique variable: Unique(0x4f80) with concrete part : c001304e00, concrete size 64 bits and symbolic size 64 bits
+[OVERLAY] [depth 9] 0x1a3ae4e:1 Load
+Converting Varnode to concolic type: Unique(0x4f80)
+Varnode is of type 'unique' with ID: 0x4f80 and size: 64 bits
+Retrieved unique variable: Int(824653663744) with symbolic size: 64
+* FYI, the space ID is not used during zorya execution.
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Unique(0x4f80)
+Varnode is of type 'unique' with ID: 0x4f80 and size: 64 bits
+Retrieved unique variable: Int(824653663744) with symbolic size: 64
+Pointer offset to be dereferenced : c001304e00
+Load size in bits: 64
+Memory size in bits: 64
+Reading from overlay at address 0xc001304e00
+Dereferenced value: 0xc000eb3080, with size 64, and symbolic: Int((concat ((_ extract 7 0) b_ptr!141)
+        ((_ extract 7 0) b_ptr!141)
+        ((_ extract 7 0) b_ptr!141)
+        ((_ extract 7 0) b_ptr!141)
+        ((_ extract 7 0) b_ptr!141)
+        ((_ extract 7 0) b_ptr!141)
+        ((_ extract 7 0) b_ptr!141)
+        ((_ extract 7 0) b_ptr!141)))
+Output is a Unique type with ID: 0xdc00
+Updated Unique(0xdc00) with concrete value 0xc000eb3080 and size 64
+[OVERLAY] [depth 10] 0x1a3ae4e:2 Copy
+Output size in bits: 64
+* Fetching source from instruction.input[0]
+Converting Varnode to concolic type: Unique(0xdc00)
+Varnode is of type 'unique' with ID: 0xdc00 and size: 64 bits
+Retrieved unique variable: Int(824649134208) with symbolic size: 64
+[OVERLAY] [depth 11] 0x1a3ae56:0 Copy
+Output size in bits: 8
+* Fetching source from instruction.input[0]
+Converting Varnode to concolic type: Const(0x0)
+Varnode is a constant with value: 0x0
+Parsed value (signed): 0
+Constant treated as memory value: 0 with symbolic size 8
+[OVERLAY] [depth 12] 0x1a3ae56:1 Copy
+Output size in bits: 8
+* Fetching source from instruction.input[0]
+Converting Varnode to concolic type: Const(0x0)
+Varnode is a constant with value: 0x0
+Parsed value (signed): 0
+Constant treated as memory value: 0 with symbolic size 8
+[OVERLAY] [depth 13] 0x1a3ae56:2 Load
+Converting Varnode to concolic type: Register(0, Quad)
+Varnode is a CPU register with offset: 0x0 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x0
+* FYI, the space ID is not used during zorya execution.
+* Fetching pointer offset from instruction.input[1]
+Converting Varnode to concolic type: Register(0, Quad)
+Varnode is a CPU register with offset: 0x0 and requested bit size: 64
+Directly processing register found in register_map with matching size at offset 0x0
+Pointer offset to be dereferenced : c000eb3080
+[NULL-CHECK] Checking if 'b_ptr' can be NULL (LOAD at 0x1a3ae56, concrete ptr: 0xc000eb3080, constraints: 3)
+>>> Using panic address from caller: 0x1a3ae56
+Asserting NULL pointer condition to the solver: pointer == 0
+Pointer expression: b_ptr!141
+=== CONSTRAINT ANALYSIS ===
+=== CUSTOM SIMPLIFIED CONSTRAINTS ===
+Constraint #1 (Bool) with Custom Simplification: (= ((_ extract 31 0) b_mu!144) #x00000000)
+Constraint #2 (Bool) with Custom Simplification: (= ((_ extract 31 0) b_mu!144) #x00000000)
+Constraint #3 (Bool) with Custom Simplification: (not (not (= b_header!145 #x0000000000000000)))
+=== ASSERTING SIMPLIFIED CONSTRAINTS TO SOLVER ===
+Adding 3 simplified constraints to solver...
+=== END CONSTRAINT ANALYSIS ===
+~~~~~~~~~~~
+Branch to panic is UNSAT => no input can make that branch lead to panic
+~~~~~~~~~~~
+[NULL-CHECK] 'b_ptr' cannot be NULL (UNSAT)
+Load size in bits: 8
+Memory size in bits: 64
+Reading from overlay at address 0xc000eb3080
+Extracting memory value from 64 bits to 8 bits
+Dereferenced value: 0x60, with size 64, and symbolic: Int(((_ extract 7 0) b_r!142))
+Output is a Unique type with ID: 0xd900
+Updated Unique(0xd900) with concrete value 0x60 and size 64
+[OVERLAY] [depth 14] 0x1a3ae56:3 IntAnd
+* Fetching instruction.input[0] for INT_AND
+Converting Varnode to concolic type: Unique(0xd900)
+Varnode is of type 'unique' with ID: 0xd900 and size: 8 bits
+Retrieved unique variable: Int(96) with symbolic size: 8
+* Fetching instruction.input[1] for INT_AND
+Converting Varnode to concolic type: Register(0, Byte)
+Varnode is a CPU register with offset: 0x0 and requested bit size: 8
+Register at offset 0x0 exists but with size 64 bits, needs 8 bits, extraction needed
+Output size in bits: 8
+*** The result of INT_AND is: 0
+
+Writing 0 to the unique variable with ID: 0x58e80
+Updated unique variable: Unique(0x58e80) with concrete part : 0, concrete size 8 bits and symbolic size 8 bits
+[OVERLAY] [depth 15] 0x1a3ae56:4 IntSLess
+* Fetching instruction.input[0] for INT_SLESS
+Converting Varnode to concolic type: Unique(0x58e80)
+Varnode is of type 'unique' with ID: 0x58e80 and size: 8 bits
+Retrieved unique variable: Int(0) with symbolic size: 8
+* Fetching instruction.input[1] for INT_SLESS
+Converting Varnode to concolic type: Const(0x0)
+Varnode is a constant with value: 0x0
+Parsed value (signed): 0
+Constant treated as memory value: 0 with symbolic size 8
+Output size in bits: 8
+input0_var concrete: 0, input1_var concrete: 0
+input0 bit width: 8, input1 bit width: 8
+Signed comparison: 0 < 0 = false
+result_concrete: false
+result_symbolic (Bool): (not (bvsle #x00
+            (bvnot (bvor (bvnot ((_ extract 7 0) b_r!142))
+                         (bvnot ((_ extract 7 0) b_ptr!141))))))
+result_value symbolic (BV): (ite (bvsle #x00
+            (bvnot (bvor (bvnot ((_ extract 7 0) b_r!142))
+                         (bvnot ((_ extract 7 0) b_ptr!141)))))
+     #x00
+     #x01)
+*** The result of INT_SLESS is: 0
+Output is a Register type
+Updated register at offset 0x207 with concrete value 0x0, concrete size 8 bits and symbolic size 8 bits
+[OVERLAY] Reached max depth at 0x1a3ae56, stopping speculative execution
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  OVERLAY EXECUTION METRICS                                           ║
+╚══════════════════════════════════════════════════════════════════════╝
+[OVERLAY METRICS] Modified registers: 5
+[OVERLAY METRICS] Register changes:
+  - RAX = 0xc000eb3080
+  - CF = 0x0
+  - SF = 0x0
+  - OF = 0x0
+  - RIP = 0x1a3ae42
+[OVERLAY METRICS] Modified memory regions: 1
+[OVERLAY METRICS] Memory changes:
+  - Region [0xc000000000 - 0xc002c00000]:
+    Specific addresses modified: 4
+      * 0xc001304caf
+      * 0xc001304cb7
+      * 0xc001304cbf
+      * 0xc001304cc7
+[OVERLAY METRICS] Exploration depth reached: 0
+╚══════════════════════════════════════════════════════════════════════╝
+
+[OVERLAY] Restored call stack state: depth=0, freed_frames=0
+[OVERLAY] Restored 1 unique variables after overlay exploration
+[OVERLAY] Restored current_address after overlay: Some(27504186)
+[OVERLAY] RIP after clearing overlay: 0x1a3ae3a
+╔══════════════════════════════════════════════════════════════════════╗
+║  OVERLAY MODE ENDED - Returning to real execution path               ║
+║  RIP value after overlay: 0x1a3ae3a                                   ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+>>> Concolic overlay analysis reached depth limit
+>>> Performing AST-based panic exploration...
+Exploring AST for panic at address 0x1a3ae3c
+AST exploration result:
+FOUND_PANIC_XREF_AT 0x0048c0ab
+
+>>> The AST exploration found a potential call to a panic address at 0x48c0ab
+>>> Using panic address from caller: 0x48c0ab
+Conditional flag BV simplified: (ite (= (ite (= b_numberOrHash!143 #x0000000000000000) #x01 #x00) #x00)
+     #x01
+     #x00)
+Asserting branch condition to the solver: (not (= (ite (= b_numberOrHash!143 #x0000000000000000) #x01 #x00) #x00))
+=== CONSTRAINT ANALYSIS ===
+=== CUSTOM SIMPLIFIED CONSTRAINTS ===
+Constraint #1 (Bool) with Custom Simplification: (= ((_ extract 31 0) b_mu!144) #x00000000)
+Constraint #2 (Bool) with Custom Simplification: (= ((_ extract 31 0) b_mu!144) #x00000000)
+Constraint #3 (Bool) with Custom Simplification: (not (not (= b_header!145 #x0000000000000000)))
+=== ASSERTING SIMPLIFIED CONSTRAINTS TO SOLVER ===
+Adding 3 simplified constraints to solver...
+=== END CONSTRAINT ANALYSIS ===
+~~~~~~~~~~~
+SATISFIABLE: Symbolic execution can lead to a panic function.
+~~~~~~~~~~~
+To enter a panic function, the following conditions must be satisfied:
+RESULTS
+The program can panic if its inputs are the following:
+  - The pointer 'b.header' must be NULL (nil)
+  - The pointer 'b.mu' must be NULL (nil)
+  - The pointer 'b.numberOrHash' must be NULL (nil)
+
+(If the result is not in the expected format, try to set the ARG_ASCII_PROFILE environment variable to 'printable' or 'digits', by running 'ARG_ASCII_PROFILE=printable zorya ...' for instance)
+------------------------------------------------------------
+=== FULL EVALUATION OF Z3 VARIABLES (TRACKED AND UNTRACKED) ===
+
+Argument 'b.block':
+  b_block!146 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.header':
+  b_header!145 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.mu':
+  b_mu!144 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.numberOrHash':
+  b_numberOrHash!143 = #x0000000000000000
+    (unsigned: 0)
+    (signed: 0)
+    (ASCII: '\0' - null byte)
+
+Argument 'b.r':
+  b_r!142 = #xc000e2054451a404
+    (unsigned: 13835306567531078660)
+    (signed: -4611437506178472956)
+    (ASCII LSB: non-printable 0x04)
+
+Argument 'b.receipts.cap':
+  b_receipts_cap!149 = #x8000000000400001
+    (unsigned: 9223372036858970113)
+    (signed: -9223372036850581503)
+    (ASCII LSB: non-printable 0x01)
+
+Argument 'b.receipts.len':
+  b_receipts_len!148 = #xc46c896501801f63
+    (unsigned: 14153838795828502371)
+    (signed: -4292905277881049245)
+    (ASCII LSB: 'c')
+
+Argument 'b.receipts.ptr':
+  b_receipts_ptr!147 = #xdefffce7f7dff3ae
+    (unsigned: 16068840068707513262)
+    (signed: -2377904005002038354)
+    (ASCII LSB: non-printable 0xae)
+
+Argument 'b_ptr':
+  b_ptr!141 = #x6f77e89697d06e50
+    (unsigned: 8032144193928326736)
+    (signed: 8032144193928326736)
+    (ASCII LSB: 'P')
+
+Argument 'ctx':
+  ctx_RBX!150 = #x3b253fcf6f5f1dff
+    (unsigned: 4261882782535327231)
+    (signed: 4261882782535327231)
+    (ASCII LSB: non-printable 0xff)
+
+=== END TRACKED Z3 VARIABLES EVALUATION ===
+========================================================================
+VULNERABILITY: Satisfiable path to panic/vulnerability
+  Address: 0x1a3ae3a
+  Elapsed: 9705.531s
+  Opcode: CBRANCH
+  Detection method: Exploring the not taken path with Overlay Execution
+  More details in: results/FOUND_SAT_STATE.txt
+========================================================================
+
+~~~~~~~~~~~
+* Fetching branch target from instruction.input[0]
+Converting Varnode to concolic type: Unique(0xe500)
+Varnode is of type 'unique' with ID: 0xe500 and size: 8 bits
+Retrieved unique variable: Int(1) with symbolic size: 8
+Branch condition concrete: true
+Branching condition symbolic: Int((ite (= (ite (= b_numberOrHash!143 #x0000000000000000) #x01 #x00) #x00)
+     #x01
+     #x00))
+Extracting condition from Int BV: (ite (= (ite (= b_numberOrHash!143 #x0000000000000000) #x01 #x00) #x00)
+     #x01
+     #x00)
+Found tracked symbolic variable 'b.numberOrHash' in expression
+Branch condition involves tracked symbolic variables, adding to constraint vector
+Adding constraint to vector (path taken (branch executed))
+Branch target is a specific memory address: 0x1a3ae40
+Branch condition is true, branching to address 0x1a3ae40
+Updated RIP register with branch target: 0x1a3ae40
+The value of register at offset 0x0 - RAX is 0 and symbolic #x0000000000000000
+The value of register at offset 0x8 - RCX is c0013059c0 and symbolic #x000000c0013059c0
+The value of register at offset 0x10 - RDX is c000eb3080 and symbolic b_ptr!141
+The value of register at offset 0x18 - RBX is 2ccf300 and symbolic ctx_RBX!150
+The value of register at offset 0x20 - RSP is c001304c78 and symbolic #x000000c001304c78
+The value of register at offset 0x28 - RBP is c001304df0 and symbolic #x000000c001304df0
+The value of register at offset 0x30 - RSI is 0 and symbolic #x0000000000000000
+The value of register at offset 0x38 - RDI is 0 and symbolic #x0000000000000000
+The value of register at offset 0x80 - R8 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x88 - R9 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x90 - R10 is 0 and symbolic #x0000000000000000
+The value of register at offset 0x98 - R11 is 0 and symbolic #x0000000000000000
+The value of register at offset 0xa0 - R12 is c001304cf8 and symbolic #x000000c001304cf8
+The value of register at offset 0xa8 - R13 is 1a09600 and symbolic #x0000000001a09600
+The value of register at offset 0xb0 - R14 is c0008e76c0 and symbolic #x000000c0008e76c0
+The value of register at offset 0xb8 - R15 is c000eb3080 and symbolic #x000000c000eb3080
+The value of register at offset 0x1200 - YMM0 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x1220 - YMM1 is 0000000000000000000000000000000000000000000000000000000000000000, i.e. LargeInt([0, 0, 0, 0])
+The value of register at offset 0x200 - CF is 0 and symbolic #x00
+The value of register at offset 0x202 - PF is 0 and symbolic (ite (= ((_ extract 0 0) b_numberOrHash!143)
+        (bvadd ((_ extract 1 1) b_numberOrHash!143)
+               ((_ extract 2 2) b_numberOrHash!143)
+               ((_ extract 3 3) b_numberOrHash!143)
+               ((_ extract 4 4) b_numberOrHash!143)
+               ((_ extract 5 5) b_numberOrHash!143)
+               ((_ extract 6 6) b_numberOrHash!143)
+               ((_ extract 7 7) b_numberOrHash!143)))
+     #x01
+     #x00)
+The value of register at offset 0x206 - ZF is 0 and symbolic (ite (= b_numberOrHash!143 #x0000000000000000) #x01 #x00)
+The value of register at offset 0x207 - SF is 0 and symbolic (ite (bvsle #x0000000000000000 b_numberOrHash!143) #x00 #x01)
+The value of register at offset 0x20b - OF is 0 and symbolic #x00
+The value of register at offset 0x110 - FS_OFFSET is 7fff87fff6c0
+Possible new RIP: 0x1a3ae40
+Current RIP: 0x1a3ae3a
+local_line_number: 1, instructions.len()-1: 1
+Control flow change detected, new RIP: 0x1a3ae40
+Control flow change detected, switching execution to new address: 0x1a3ae40
+
+...
+

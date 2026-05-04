@@ -1,0 +1,64 @@
+$ ../binsec/_build/install/default/bin/binsec \
+  -sse -sse-script ./binsec_geth.ini ./core.snapshot \
+  -sse-depth 10000
+[sse:info] TTY: press [space] to switch between log and monitor modes.
+[sse:error] Cut path 5 (uninterpreted "KO") @ 0x7ffff7fc3b00
+[sse:error] Cut path 3 (uninterpreted "0f 05 # syscall") @ 0x7ffff7fc3bb0
+[sse:error] Cut path 7 (uninterpreted "0f 05 # syscall") @ 0x7ffff7fc3bb0
+[sse:error] Cut path 8 (uninterpreted "KO") @ 0x7ffff7fc3707
+[sse:error] Cut path 9 (uninterpreted "KO") @ 0x7ffff7fc3c67
+[sse:error] Cut path 6 (uninterpreted "0f 05 # syscall") @ 0x7ffff7fc3bb0
+[sse:warning] Cut path 4 (max depth) @ 0x7ffff7fc3aed
+[sse:error] Cut path 12 (uninterpreted "KO") @ 0x7ffff7fc3765
+[sse:error] Cut path 10 (uninterpreted "0f 05 # syscall") @ 0x7ffff7fc3bb0
+[sse:error] Cut path 14 (uninterpreted "0f 05 # syscall") @ 0x7ffff7fc3bb0
+[sse:error] Cut path 15 (uninterpreted "KO") @ 0x7ffff7fc3707
+[sse:error] Cut path 16 (uninterpreted "KO") @ 0x7ffff7fc37c4
+[sse:error] Cut path 13 (uninterpreted "0f 05 # syscall") @ 0x7ffff7fc3bb0
+[sse:warning] Cut path 11 (max depth) @ 0x7ffff7fc3ce0
+[sse:error] Cut path 2 (uninterpreted "0f 05 # syscall") @ 0x48f773
+[sse:error] Cut path 18 (uninterpreted "KO") @ 0x7ffff7fc3b00
+[sse:error] Cut path 1 (uninterpreted "0f 05 # syscall") @ 0x7ffff7fc3bb0
+[sse:error] Cut path 20 (uninterpreted "0f 05 # syscall") @ 0x7ffff7fc3bb0
+[sse:error] Cut path 21 (uninterpreted "KO") @ 0x7ffff7fc3707
+[sse:error] Cut path 22 (uninterpreted "KO") @ 0x7ffff7fc3c67
+[sse:error] Cut path 19 (uninterpreted "0f 05 # syscall") @ 0x7ffff7fc3bb0
+[sse:warning] Cut path 17 (max depth) @ 0x7ffff7fc3bd1
+[sse:error] Cut path 25 (uninterpreted "KO") @ 0x7ffff7fc3765
+[sse:error] Cut path 23 (uninterpreted "0f 05 # syscall") @ 0x7ffff7fc3bb0
+[sse:error] Cut path 27 (uninterpreted "0f 05 # syscall") @ 0x7ffff7fc3bb0
+[sse:error] Cut path 28 (uninterpreted "KO") @ 0x7ffff7fc3707
+[sse:error] Cut path 29 (uninterpreted "KO") @ 0x7ffff7fc37c4
+[sse:error] Cut path 26 (uninterpreted "0f 05 # syscall") @ 0x7ffff7fc3bb0
+[sse:warning] Cut path 24 (max depth) @ 0x7ffff7fc3de9
+[sse:error] Cut path 0 (uninterpreted "0f 05 # syscall") @ 0x48f773
+[sse:info] Empty path worklist: halting ...
+[sse:info] SMT queries
+             Preprocessing simplifications
+               total          2885
+               sat            2885
+               unsat          0
+               time           0.01
+             
+             Satisfiability queries
+               total          2838
+               sat            29
+               unsat          2809
+               unknown        0
+               time           0.86
+               average        0.00
+             
+           Exploration
+             total paths                      30
+             completed/cut paths              0
+             pending paths                    0
+             discontinued paths               30
+             failed assertions                0
+             branching points                 9689
+             max path depth                   10003
+             visited instructions (unrolled)  40590
+             visited instructions (static)    1645
+             
+           
+[sse:warning] Threat to completeness :
+              - 4 paths have reached the maximal depth and have been cut (-sse-depth)

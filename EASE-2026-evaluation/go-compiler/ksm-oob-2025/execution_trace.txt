@@ -1,0 +1,426 @@
+# zorya /home/kgorna/go-projects/kube-state-metrics/kube-state-metrics   --mode function 0x2b04240   --lang go   --compiler gc   --thread-scheduling main-only   --arg "--kubeconfig=/root/.kube/config --custom-resource-state-config-file=/home/kgorna/go-projects/kube-state-metrics/ksm-config.yaml --custom-resource-state-only"   --negate-path-exploration
+
+ZORYA - Next Generation Concolic Analysis
+*************************************************************************************
+Running command: /home/kgorna/zorya/zorya /home/kgorna/go-projects/kube-state-metrics/kube-state-metrics --mode function 0x2b04240 --lang go --compiler gc --thread-scheduling main-only --arg "--kubeconfig=/root/.kube/config --custom-resource-state-config-file=/home/kgorna/go-projects/kube-state-metrics/ksm-config.yaml --custom-resource-state-only" --negate-path-exploration
+
+    Finished `release` profile [optimized] target(s) in 0.05s
+     Running `target/release/pcode_generator /home/kgorna/go-projects/kube-state-metrics/kube-state-metrics --low-pcode`
+
+[PCODE GENERATOR] Generating low pcode...
+[PCODE GENERATOR] Output file will be created at: "/home/kgorna/zorya/external/pcode-generator/results/kube-state-metrics_low_pcode.txt"
+[PCODE GENERATOR] [GHIDRA DECOMPILER] specfile='/home/kgorna/zorya/external/pcode-generator/ghidra/Ghidra/Processors/x86/data/languages/x86-64.sla' base_addr=0x0
+[PCODE GENERATOR] [GHIDRA DECOMPILER] Sleigh initialization SUCCESS
+LowlevelError at address 0x8a08d5: r0x008a08d5: Unable to resolve constructor
+[PCODE GENERATOR] [GHIDRA DECOMPILER] specfile='/home/kgorna/zorya/external/pcode-generator/ghidra/Ghidra/Processors/x86/data/languages/x86-64.sla' base_addr=0x0
+[PCODE GENERATOR] [GHIDRA DECOMPILER] Sleigh initialization SUCCESS
+[PCODE GENERATOR] Low pcode generation completed.
+
+Generating memory and CPU register dumps…
+Cleaning up existing contents in the dumps directory...
+Cleaning up existing thread dumps from previous runs...
+Running GDB locally to generate CPU and memory mappings...
+Generating dump_commands.txt using parse_and_generate.py...
+Command file generated successfully with 102 commands.
+Executing memory dumps, registers, and thread state capture in single GDB session...
+Dump commands executed successfully in GDB.
+Dumping thread states (registers + TLS bases)...
+Successfully dumped 15 thread(s) to /home/kgorna/zorya/results/initialization_data/threads
+All dumps completed. Logs available in /home/kgorna/zorya/results/initialization_data/gdb_log.txt.
+Outputs available in /home/kgorna/zorya/results/initialization_data.
+
+Extracting VDSO from process memory…
+Extracting VDSO from /home/kgorna/go-projects/kube-state-metrics/kube-state-metrics...
+VDSO extracted successfully: /home/kgorna/zorya/results/initialization_data/vdso/vdso.so
+VDSO base address: 0x7ffff7fc3000
+VDSO extraction completed!
+
+Generating p-code for VDSO (base: 0x7ffff7fc3000)…
+Generating P-Code for VDSO...
+VDSO file: /home/kgorna/zorya/results/initialization_data/vdso/vdso.so
+Base address: 0x7ffff7fc3000
+    Finished `release` profile [optimized] target(s) in 0.04s
+     Running `target/release/pcode_generator /home/kgorna/zorya/results/initialization_data/vdso/vdso.so --low-pcode --base-addr 0x7ffff7fc3000`
+
+[PCODE GENERATOR] Generating low pcode...
+[PCODE GENERATOR] Output file will be created at: "/home/kgorna/zorya/external/pcode-generator/results/vdso.so_low_pcode.txt"
+[PCODE GENERATOR] [GHIDRA DECOMPILER] specfile='/home/kgorna/zorya/external/pcode-generator/ghidra/Ghidra/Processors/x86/data/languages/x86-64.sla' base_addr=0x7ffff7fc3000
+[PCODE GENERATOR] [GHIDRA DECOMPILER] Sleigh initialization SUCCESS
+[PCODE GENERATOR] Low pcode generation completed.
+VDSO P-Code generated: /home/kgorna/zorya/results/initialization_data/vdso/vdso_low_pcode.txt
+
+*********************************************************************************************
+Completed the generation of memory and CPU register dumps, and the P-Code file of the binary.
+Launching Zorya now...
+*********************************************************************************************
+
+    Finished `release` profile [optimized] target(s) in 0.05s
+     Running `target/release/zorya --write-args '--kubeconfig=/root/.kube/config --custom-resource-state-config-file=/home/kgorna/go-projects/kube-state-metrics/ksm-config.yaml --custom-resource-state-only'`
+[THREAD-CONFIG] Using main-only thread policy (single goroutine execution)
+Cleaned up previous SAT state file: results/FOUND_SAT_STATE.txt
+
+************************************************
+Initializing Zorya with the CPU and memory dumps
+************************************************
+Initializing State...
+
+Initializing mock CPU state...
+
+Uploading dumps to CPU registers...
+
+Updated register RAX at offset 0x0 with value 0xc0008984e0
+Updated register RBX at offset 0x18 with value 0x2
+Updated register RCX at offset 0x8 with value 0x2
+Updated register RDX at offset 0x10 with value 0xffffffffffffffff
+Updated register RSI at offset 0x30 with value 0xc000899350
+Updated register RDI at offset 0x38 with value 0x2f11060
+Updated register RBP at offset 0x28 with value 0xc0008c2dd0
+Updated register RSP at offset 0x20 with value 0xc0008c2b80
+Updated register R8 at offset 0x80 with value 0x2
+Updated register R9 at offset 0x88 with value 0x86f10420
+Updated register R10 at offset 0x90 with value 0x370dafda
+Updated register R11 at offset 0x98 with value 0x20fe9613
+Updated register R12 at offset 0xa0 with value 0xc0008c2b48
+Updated register R13 at offset 0xa8 with value 0x62a55f38
+Updated register R14 at offset 0xb0 with value 0xc00089e380
+Updated register R15 at offset 0xb8 with value 0x0
+Updated register RIP at offset 0x288 with value 0x2b04240
+Updated register CS at offset 0x102 with value 0x33
+Updated register SS at offset 0x104 with value 0x2b
+Updated register DS at offset 0x106 with value 0x0
+Updated register ES at offset 0x100 with value 0x0
+Updated register FS at offset 0x108 with value 0x0
+Updated register GS at offset 0x10a with value 0x0
+Updated register MXCSR at offset 0x1094 with value 0x1fa0
+Updated register FS_OFFSET at offset 0x110 with value 0x7fff85ffb6c0
+Updated register GS_OFFSET at offset 0x118 with value 0x0
+Updated flag CF at offset 0x200 with value 0
+Updated flag PF at offset 0x202 with value 1
+Updated flag ZF at offset 0x206 with value 1
+Updated flag SF at offset 0x207 with value 0
+Updated flag TF at offset 0x208 with value 0
+Updated flag IF at offset 0x209 with value 1
+Updated flag DF at offset 0x20a with value 0
+Updated flag OF at offset 0x20b with value 0
+Updated flag NT at offset 0x20d with value 0
+Updated flag RF at offset 0x20f with value 0
+Updated flag AC at offset 0x211 with value 0
+Updated flag ID at offset 0x214 with value 0
+Initializing virtual file system...
+
+Initializing memory...
+
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffa87f9000-0x7fffa87fa000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffb015f000-0x7fffb095f000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0xc000000000-0xc000c00000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x400000-0x2c20000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7ed1000-0x7ffff7f50000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff74021000-0x7fff78000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7ed0000-0x7ffff7ed1000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff857fb000-0x7fff857fc000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7e1f000-0x7ffff7e50000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffb099f000-0x7fffb09a0000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7fbf000-0x7ffff7fc3000_zero.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff9c000000-0x7fff9c021000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffb095f000-0x7fffb099f000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffa0000000-0x7fffa0021000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffb015e000-0x7fffb015f000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffaa7fe000-0x7fffaaffe000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff90000000-0x7fff90021000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7db0000-0x7ffff7dff000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7ff1000-0x7ffff7ffb000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x479c000-0x47bd000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7ffd000-0x7ffff7fff000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff78000000-0x7fff78021000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffab800000-0x7fffac000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffb000e000-0x7fffb015e000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7807000-0x7ffff7c00000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffa97fb000-0x7fffa97fc000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff86ffe000-0x7fff86fff000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffc3581000-0x7fffe3580000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff857fc000-0x7fff85ffc000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff90021000-0x7fff94000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffe3580000-0x7fffe3581000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffa8ffa000-0x7fffa8ffb000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff87800000-0x7fff88000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffa0021000-0x7fffa4000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff94021000-0x7fff98000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7e50000-0x7ffff7ed0000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffb11a0000-0x7fffb1300000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff94000000-0x7fff94021000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7806000-0x7ffff7807000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7c28000-0x7ffff7db0000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffb09a0000-0x7fffb11a0000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffa87fa000-0x7fffa8ffa000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff88021000-0x7fff8c000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffaafff000-0x7fffab7ff000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff74000000-0x7fff74021000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffa8ffb000-0x7fffa97fb000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffac000000-0x7fffac021000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff877ff000-0x7fff87800000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffffffde000-0x7ffffffff000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff7c021000-0x7fff80000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff8c021000-0x7fff90000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffa8529000-0x7fffa87f9000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff84ffa000-0x7fff84ffb000_zero.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7fc5000-0x7ffff7fc6000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff5430000-0x7ffff5431000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x4747000-0x479c000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7c00000-0x7ffff7c28000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff8c000000-0x7fff8c021000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffab7ff000-0x7fffab800000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0xffffffffff600000-0xffffffffff601000_zero.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffa97fc000-0x7fffa9ffc000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff7c000000-0x7fff7c021000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff98000000-0x7fff98021000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff80021000-0x7fff84000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff70000000-0x7fff70021000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x4683000-0x4747000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff9c021000-0x7fffa0000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffaa7fd000-0x7fffaa7fe000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffa4021000-0x7fffa8000000_zero.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff98021000-0x7fff9c000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffaaffe000-0x7fffaafff000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff86fff000-0x7fff877ff000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff867fd000-0x7fff867fe000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffac021000-0x7fffb0000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffb1300000-0x7fffb3400000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7ffb000-0x7ffff7ffd000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7fbd000-0x7ffff7fbf000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7fc6000-0x7ffff7ff1000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff68021000-0x7fff6c000000_zero.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffb3400000-0x7fffc3580000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff84ffb000-0x7fff857fb000_zero.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff5431000-0x7ffff7806000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0xc000c00000-0xc004000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7e05000-0x7ffff7e12000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffa9ffd000-0x7fffaa7fd000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff80000000-0x7fff80021000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7fc3000-0x7ffff7fc5000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff68000000-0x7fff68021000_zero.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff78021000-0x7fff7c000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff88000000-0x7fff88021000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7e03000-0x7ffff7e05000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffc3580000-0x7fffc3581000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffe3581000-0x7ffff5430000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7dff000-0x7ffff7e03000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x2c20000-0x4683000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff85ffc000-0x7fff85ffd000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff867fe000-0x7fff86ffe000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff85ffd000-0x7fff867fd000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fff70021000-0x7fff74000000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7ffff7f50000-0x7ffff7fb3000.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffa4000000-0x7fffa4021000_zero.bin"
+Initializing memory section from file: "/home/kgorna/zorya/results/initialization_data/dumps/0x7fffa9ffc000-0x7fffa9ffd000.bin"
+Initialized CPUID memory variables at address 0x300000
+Initializing the State...
+
+[SCHEDULER] Detected Go GC binary, thread scheduling available
+[SCHEDULER] Thread scheduling disabled (main thread only)
+[THREAD] Loaded TID=2998512 from dump (fs_base=0x7ffff7fb0740, gs_base=0x0)
+[THREAD] Loaded TID=2998515 from dump (fs_base=0x7fffb119f6c0, gs_base=0x0)
+[THREAD] Loaded TID=2998516 from dump (fs_base=0x7fffb095e6c0, gs_base=0x0)
+[THREAD] Loaded TID=2998517 from dump (fs_base=0x7fffa7fff6c0, gs_base=0x0)
+[THREAD] Loaded TID=2998518 from dump (fs_base=0x7fffa77fe6c0, gs_base=0x0)
+[THREAD] Loaded TID=2998519 from dump (fs_base=0x7fffa6ffd6c0, gs_base=0x0)
+[THREAD] Loaded TID=2998520 from dump (fs_base=0x7fffa67fc6c0, gs_base=0x0)
+[THREAD] Loaded TID=2998521 from dump (fs_base=0x7fffa5ffb6c0, gs_base=0x0)
+[THREAD] Loaded TID=2998522 from dump (fs_base=0x7fffa57fa6c0, gs_base=0x0)
+[THREAD] Loaded TID=2998523 from dump (fs_base=0x7fffa4f696c0, gs_base=0x0)
+[THREAD] Loaded TID=2998524 from dump (fs_base=0x7fff877fe6c0, gs_base=0x0)
+[THREAD] Loaded TID=2998525 from dump (fs_base=0x7fff87fff6c0, gs_base=0x0)
+[THREAD] Loaded TID=2998526 from dump (fs_base=0x7fff86ffd6c0, gs_base=0x0)
+[THREAD] Loaded TID=2998527 from dump (fs_base=0x7fff867fc6c0, gs_base=0x0)
+[THREAD] Loaded TID=2998528 from dump (fs_base=0x7fff85ffb6c0, gs_base=0x0)
+Successfully loaded multi-thread state
+
+Creating the P-Code for the executable sections of libc.so and ld-linux-x86-64.so if they exist...
+P-Code generation started for: /usr/lib/x86_64-linux-gnu/libc.so.6
+Validated ELF file exists: /usr/lib/x86_64-linux-gnu/libc.so.6
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.04s
+     Running `target/debug/pcode_generator /usr/lib/x86_64-linux-gnu/libc.so.6 --low-pcode --base-addr 0x7ffff7c00000`
+
+[PCODE GENERATOR] Generating low pcode...
+[PCODE GENERATOR] Output file will be created at: "/home/kgorna/zorya/external/pcode-generator/results/libc.so.6_low_pcode.txt"
+[PCODE GENERATOR] [GHIDRA DECOMPILER] specfile='/home/kgorna/zorya/external/pcode-generator/ghidra/Ghidra/Processors/x86/data/languages/x86-64.sla' base_addr=0x7ffff7c00000
+[PCODE GENERATOR] [GHIDRA DECOMPILER] Sleigh initialization SUCCESS
+LowlevelError at address 0xc7b85: r0x7ffff7cc7b85: Unable to resolve constructor
+LowlevelError at address 0xc7d0c: r0x7ffff7cc7d0c: Unable to resolve constructor
+LowlevelError at address 0xc7d0d: r0x7ffff7cc7d0d: Unable to resolve constructor
+LowlevelError at address 0xc7d98: r0x7ffff7cc7d98: Unable to resolve constructor
+LowlevelError at address 0xc7dac: r0x7ffff7cc7dac: Unable to resolve constructor
+LowlevelError at address 0xc7dc3: r0x7ffff7cc7dc3: Unable to resolve constructor
+LowlevelError at address 0x1985f5: r0x7ffff7d985f5: Unable to resolve constructor
+LowlevelError at address 0x1985f6: r0x7ffff7d985f6: Unable to resolve constructor
+LowlevelError at address 0x198662: r0x7ffff7d98662: Unable to resolve constructor
+LowlevelError at address 0x198666: r0x7ffff7d98666: Unable to resolve constructor
+LowlevelError at address 0x198667: r0x7ffff7d98667: Unable to resolve constructor
+LowlevelError at address 0x1986b0: r0x7ffff7d986b0: Unable to resolve constructor
+LowlevelError at address 0x1986b6: r0x7ffff7d986b6: Unable to resolve constructor
+LowlevelError at address 0x1986b7: r0x7ffff7d986b7: Unable to resolve constructor
+LowlevelError at address 0x1986b8: r0x7ffff7d986b8: Unable to resolve constructor
+LowlevelError at address 0x19af25: r0x7ffff7d9af25: Unable to resolve constructor
+LowlevelError at address 0x19af26: r0x7ffff7d9af26: Unable to resolve constructor
+LowlevelError at address 0x19af29: r0x7ffff7d9af29: Unable to resolve constructor
+LowlevelError at address 0x19af91: r0x7ffff7d9af91: Unable to resolve constructor
+LowlevelError at address 0x19afa0: r0x7ffff7d9afa0: Unable to resolve constructor
+LowlevelError at address 0x19b108: r0x7ffff7d9b108: Unable to resolve constructor
+LowlevelError at address 0x19b109: r0x7ffff7d9b109: Unable to resolve constructor
+LowlevelError at address 0x19b10c: r0x7ffff7d9b10c: Unable to resolve constructor
+LowlevelError at address 0x1a11b5: r0x7ffff7da11b5: Unable to resolve constructor
+LowlevelError at address 0x1a1dc5: r0x7ffff7da1dc5: Unable to resolve constructor
+LowlevelError at address 0x1a1e66: r0x7ffff7da1e66: Unable to resolve constructor
+LowlevelError at address 0x1a1eb1: r0x7ffff7da1eb1: Unable to resolve constructor
+LowlevelError at address 0x1a1ee3: r0x7ffff7da1ee3: Unable to resolve constructor
+LowlevelError at address 0x1a1f05: r0x7ffff7da1f05: Unable to resolve constructor
+LowlevelError at address 0x1a1f27: r0x7ffff7da1f27: Unable to resolve constructor
+LowlevelError at address 0x1a1f49: r0x7ffff7da1f49: Unable to resolve constructor
+LowlevelError at address 0x1a1f5e: r0x7ffff7da1f5e: Unable to resolve constructor
+LowlevelError at address 0x1a1f5f: r0x7ffff7da1f5f: Unable to resolve constructor
+LowlevelError at address 0x1a1f75: r0x7ffff7da1f75: Unable to resolve constructor
+LowlevelError at address 0x1a1f87: r0x7ffff7da1f87: Unable to resolve constructor
+LowlevelError at address 0x1a1f88: r0x7ffff7da1f88: Unable to resolve constructor
+LowlevelError at address 0x1a1f95: r0x7ffff7da1f95: Unable to resolve constructor
+LowlevelError at address 0x1a1f9b: r0x7ffff7da1f9b: Unable to resolve constructor
+LowlevelError at address 0x1a1f9c: r0x7ffff7da1f9c: Unable to resolve constructor
+LowlevelError at address 0x1a2066: r0x7ffff7da2066: Unable to resolve constructor
+LowlevelError at address 0x1a20a4: r0x7ffff7da20a4: Unable to resolve constructor
+LowlevelError at address 0x1a20d1: r0x7ffff7da20d1: Unable to resolve constructor
+LowlevelError at address 0x1a20f3: r0x7ffff7da20f3: Unable to resolve constructor
+LowlevelError at address 0x1a2115: r0x7ffff7da2115: Unable to resolve constructor
+LowlevelError at address 0x1a2137: r0x7ffff7da2137: Unable to resolve constructor
+LowlevelError at address 0x1a214c: r0x7ffff7da214c: Unable to resolve constructor
+LowlevelError at address 0x1a214d: r0x7ffff7da214d: Unable to resolve constructor
+LowlevelError at address 0x1a2163: r0x7ffff7da2163: Unable to resolve constructor
+LowlevelError at address 0x1a2175: r0x7ffff7da2175: Unable to resolve constructor
+LowlevelError at address 0x1a2176: r0x7ffff7da2176: Unable to resolve constructor
+LowlevelError at address 0x1a2183: r0x7ffff7da2183: Unable to resolve constructor
+LowlevelError at address 0x1a2189: r0x7ffff7da2189: Unable to resolve constructor
+LowlevelError at address 0x1a218a: r0x7ffff7da218a: Unable to resolve constructor
+LowlevelError at address 0x1a26d8: r0x7ffff7da26d8: Unable to resolve constructor
+LowlevelError at address 0x1a26d9: r0x7ffff7da26d9: Unable to resolve constructor
+LowlevelError at address 0x1a27d8: r0x7ffff7da27d8: Unable to resolve constructor
+LowlevelError at address 0x1a27d9: r0x7ffff7da27d9: Unable to resolve constructor
+LowlevelError at address 0x1a3705: r0x7ffff7da3705: Unable to resolve constructor
+[PCODE GENERATOR] [GHIDRA DECOMPILER] specfile='/home/kgorna/zorya/external/pcode-generator/ghidra/Ghidra/Processors/x86/data/languages/x86-64.sla' base_addr=0x7ffff7c00000
+[PCODE GENERATOR] [GHIDRA DECOMPILER] Sleigh initialization SUCCESS
+[PCODE GENERATOR] Low pcode generation completed.
+P-Code generation completed successfully for /usr/lib/x86_64-linux-gnu/libc.so.6
+Appended P-code from '/home/kgorna/zorya/external/pcode-generator/results/libc.so.6_low_pcode.txt' into '/home/kgorna/zorya/external/pcode-generator/results/kube-state-metrics_low_pcode.txt'
+P-Code generation started for: /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+Validated ELF file exists: /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.04s
+     Running `target/debug/pcode_generator /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 --low-pcode --base-addr 0x7ffff7fc5000`
+
+[PCODE GENERATOR] Generating low pcode...
+[PCODE GENERATOR] Output file will be created at: "/home/kgorna/zorya/external/pcode-generator/results/ld-linux-x86-64.so.2_low_pcode.txt"
+[PCODE GENERATOR] [GHIDRA DECOMPILER] specfile='/home/kgorna/zorya/external/pcode-generator/ghidra/Ghidra/Processors/x86/data/languages/x86-64.sla' base_addr=0x7ffff7fc5000
+[PCODE GENERATOR] [GHIDRA DECOMPILER] Sleigh initialization SUCCESS
+[PCODE GENERATOR] Low pcode generation completed.
+P-Code generation completed successfully for /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+Appended P-code from '/home/kgorna/zorya/external/pcode-generator/results/ld-linux-x86-64.so.2_low_pcode.txt' into '/home/kgorna/zorya/external/pcode-generator/results/kube-state-metrics_low_pcode.txt'
+Initializing jump tables...
+
+Building the P-Code for the VDSO section (this may take a moment)...
+Merged 640 VDSO instruction blocks into execution map
+
+Precomputing the tables of cross references of potential panics in the programs (for bug detection)...
+[GHIDRA] Launching Ghidra + Pyhidra to collect panic cross-references (this may take a bit)...
+[GHIDRA] Panic cross-reference analysis completed. Results written to results/xref_addresses.txt.
+
+[STRUCT-TYPES] Loaded 13509 struct type definitions
+Function mode: initializing 2 symbolic argument(s) for function 'k8s.io/kube-state-metrics/v2/pkg/customresourcestate.valuePath.Get' at 0x2b04240...
+Retrieved single-register argument 'p' of type 'k8s.io/kube-state-metrics/v2/pkg/customresourcestate.valuePath' in 'RAX' – creating a symbolic register variable...
+Retrieved single-register argument 'obj' of type 'interface {}' in 'RDI' – creating a symbolic register variable...
+[GHIDRA] Project not found or stale — will analyze from scratch
+[GHIDRA] Jump table loading took 0.0s
+[GHIDRA] Panic seed collection took 2.4s (71300 seeds)
+
+[GHIDRA] Starting reverse BFS from 71300 panic blocks...
+Iteration 1: 71300 reachable blocks (+71300), 679687 in queue, 19325 tainted functions, elapsed: 51.6s
+Iteration 2: 442264 reachable blocks (+370964), 856180 in queue, 35715 tainted functions, elapsed: 135.0s
+Iteration 3: 773626 reachable blocks (+331362), 804201 in queue, 68996 tainted functions, elapsed: 232.2s
+Iteration 4: 1119857 reachable blocks (+346231), 323308 in queue, 77018 tainted functions, elapsed: 292.9s
+Iteration 5: 1231649 reachable blocks (+111792), 213062 in queue, 77036 tainted functions, elapsed: 313.3s
+Iteration 6: 1304799 reachable blocks (+73150), 195660 in queue, 77050 tainted functions, elapsed: 330.5s
+Iteration 7: 1363050 reachable blocks (+58251), 127564 in queue, 77052 tainted functions, elapsed: 342.9s
+Iteration 8: 1407010 reachable blocks (+43960), 79725 in queue, 77052 tainted functions, elapsed: 352.1s
+Iteration 9: 1439200 reachable blocks (+32190), 72909 in queue, 77052 tainted functions, elapsed: 358.6s
+Iteration 10: 1464106 reachable blocks (+24906), 35076 in queue, 77052 tainted functions, elapsed: 363.3s
+Iteration 11: 1476216 reachable blocks (+12110), 10520 in queue, 77052 tainted functions, elapsed: 365.4s
+Iteration 12: 1480063 reachable blocks (+3847), 4464 in queue, 77052 tainted functions, elapsed: 366.2s
+Iteration 13: 1481603 reachable blocks (+1540), 2880 in queue, 77052 tainted functions, elapsed: 366.4s
+Iteration 14: 1482592 reachable blocks (+989), 1837 in queue, 77052 tainted functions, elapsed: 366.9s
+Iteration 15: 1483240 reachable blocks (+648), 979 in queue, 77052 tainted functions, elapsed: 367.0s
+Iteration 16: 1483592 reachable blocks (+352), 642 in queue, 77052 tainted functions, elapsed: 367.1s
+Iteration 17: 1483817 reachable blocks (+225), 418 in queue, 77052 tainted functions, elapsed: 367.1s
+Iteration 18: 1483964 reachable blocks (+147), 287 in queue, 77052 tainted functions, elapsed: 367.1s
+Iteration 19: 1484065 reachable blocks (+101), 200 in queue, 77052 tainted functions, elapsed: 367.1s
+Iteration 20: 1484140 reachable blocks (+75), 203 in queue, 77052 tainted functions, elapsed: 367.1s
+Iteration 30: 1484470 reachable blocks (+11), 30 in queue, 77052 tainted functions, elapsed: 367.2s
+Iteration 40: 1484569 reachable blocks (+4), 12 in queue, 77052 tainted functions, elapsed: 367.2s
+Iteration 50: 1484606 reachable blocks (+4), 9 in queue, 77052 tainted functions, elapsed: 367.2s
+
+REVERSE BFS PANIC REACHABILITY ANALYSIS COMPLETE:
+-------------------------------------------------
+Total execution time: 367.23 seconds
+Iterations completed: 52
+Initial panic seeds: 71300
+Final reachable blocks: 1484610
+Tainted functions: 77052
+Processed functions: 77052
+
+CACHE PERFORMANCE:
+  Indirect calls encountered: 0
+
+ITERATION BREAKDOWN:
+  Iteration 1: +71300 blocks
+  Iteration 2: +370964 blocks
+  Iteration 3: +331362 blocks
+  Iteration 4: +346231 blocks
+  Iteration 5: +111792 blocks
+  Iteration 6: +73150 blocks
+  Iteration 7: +58251 blocks
+  Iteration 8: +43960 blocks
+  Iteration 9: +32190 blocks
+  Iteration 10: +24906 blocks
+  ... and 42 more iterations
+
+Writing 1484610 reachable blocks to results/panic_reachable.txt
+Writing 77052 tainted functions to results/tainted_functions.txt
+Writing coverage analysis to results/panic_coverage.json
+Writing unreachable summary to results/unreachable_summary.txt and results/unreachable_summary.json
+**************************************************************************
+THE CONCOLIC EXECUTION OF THE BINARY HAS STARTED!
+Find the logs in results/execution_log.txt and results/execution_trace.txt
+**************************************************************************
+Address: 2b04240, Symbol: k8s.io/kube-state-metrics/v2/pkg/customresourcestate.valuePath.Get -> p=0xc0008984e0 (reg=RAX @0x0), p=0x2 (reg=RBX @0x18), p=0x2 (reg=RCX @0x8), obj=0x2f11060 (reg=RDI @0x38), obj=0xc000899350 (reg=RSI @0x30)
+[Z3-SOLVER] NULL pointer check took 0.002s
+
+========================================================================
+VULNERABILITY: Symbolic NULL pointer dereference
+  Address: 0x2b042e2
+  Elapsed: 421.642s
+  Opcode: LOAD
+  Detection method: Exploring the current path with a symbolic check on the pointer
+  More details in: results/FOUND_SAT_STATE.txt
+========================================================================
+
+Address: 2b04e00, Symbol: k8s.io/kube-state-metrics/v2/pkg/customresourcestate.compilePath.func2 -> m=0x2f11060 (reg=RAX @0x0), m=0xc000899350 (reg=RBX @0x18)
+[Z3-OPTIMIZE] CBranch evaluation took 0.020s
+
+========================================================================
+VULNERABILITY: Satisfiable path to panic/vulnerability
+  Address: 0x2b04e71
+  Elapsed: 434.053s
+  Opcode: CBRANCH
+  Detection method: Exploring the not taken path with Overlay Execution
+  More details in: results/FOUND_SAT_STATE.txt
+========================================================================
+
+Address: 5a6340, Symbol: strings.Split -> s=0xc000292660 (reg=RAX @0x0), s=0x8 (reg=RBX @0x18), sep=0x34a1938 (reg=RCX @0x8), sep=0x1 (reg=RDI @0x38)
+Address: 5a5e60, Symbol: strings.genSplit -> s=0xc000292660 (reg=RAX @0x0), s=0x8 (reg=RBX @0x18), sep=0x34a1938 (reg=RCX @0x8), sep=0x1 (reg=RDI @0x38), sepSave=0x0 (reg=RSI @0x30), n=0xffffffffffffffff (reg=R8 @0x80)
+Address: 5a46c0, Symbol: strings.Count -> s=0xc000292660 (reg=RAX @0x0), s=0x8 (reg=RBX @0x18), substr=0x34a1938 (reg=RCX @0x8), substr=0x1 (reg=RDI @0x38)
+Address: 486280, Symbol: runtime.makeslice -> et=0x2d5e920 (reg=RAX @0x0), len=0x1 (reg=RBX @0x18), cap=0x1 (reg=RCX @0x8)
+Address: 481720, Symbol: runtime.mallocgc -> size=0x10 (reg=RAX @0x0), typ=0x2d5e920 (reg=RBX @0x18), needzero=0x1 (reg=RCX @0x8)
+/usr/local/bin/zorya: line 330: 2998605 Killed                  RUSTFLAGS="--cap-lints=allow" cargo run --release -- --write-args "$ARGS"

@@ -1,0 +1,21 @@
+# kube-state-metrics CustomResourceState config.
+# Requests spec.items[1].value — valid when len(items) == 2, but panics when len(items) == 1
+# because the guard uses `i > len(s)` instead of `i >= len(s)`.
+kind: CustomResourceStateMetrics
+spec:
+  resources:
+    - groupVersionKind:
+        group: "example.com"
+        kind: "TestResource"
+        version: "v1"
+      labelsFromPath:
+        name: [metadata, name]
+        namespace: [metadata, namespace]
+      metrics:
+        - name: "test_resource_value"
+          help: "Value from test resource item"
+          each:
+            type: Gauge
+            gauge:
+              path: [spec, items, 1, value]
+              nilIsZero: true
